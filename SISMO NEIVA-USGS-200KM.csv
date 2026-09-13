@@ -1,0 +1,471 @@
+time,latitude,longitude,depth,mag,magType,nst,gap,dmin,rms,net,id,updated,place,type,horizontalError,depthError,magError,magNst,status,locationSource,magSource
+2026-06-26T08:31:45.349Z,4.0074,-76.5596,10,4.2,mb,25,111,3.492,1.02,us,us6000t9y4,2026-07-12T06:52:04.040Z,"11 km NW of Darien, Colombia",earthquake,11.93,1.947,0.124,18,reviewed,us,us
+2025-12-21T14:05:26.416Z,3.0699,-75.1055,10,4.4,mb,43,73,1.929,0.7,us,us7000rpwp,2026-03-19T13:56:10.040Z,"3 km E of Tello, Colombia",earthquake,8.56,1.931,0.101,28,reviewed,us,us
+2025-11-01T19:52:42.346Z,3.8376,-76.5812,136.419,4.3,mb,20,95,2.466,0.74,us,us6000rpet,2026-01-27T17:59:10.040Z,"6 km WNW of Restrepo, Colombia",earthquake,8.46,3.87,0.202,7,reviewed,us,us
+2025-08-27T09:31:35.740Z,2.7226,-76.7369,10,4.4,mb,47,155,2.253,0.55,us,us7000qr9r,2025-11-19T21:59:41.040Z,"12 km WSW of Morales, Colombia",earthquake,8.29,1.956,0.093,33,reviewed,us,us
+2025-08-11T00:16:32.147Z,4.3578,-76.1928,150.107,4.7,mww,74,106,1.927,0.87,us,us6000qzq9,2025-10-25T13:40:39.040Z,"2 km NNW of Bolívar, Colombia",earthquake,8.24,6.887,0.11,8,reviewed,us,us
+2025-06-20T19:58:33.019Z,2.4911,-76.2254,35.053,4.4,mb,51,72,2.355,0.68,us,us6000qli3,2025-09-02T21:23:39.040Z,"18 km WSW of Inzá, Colombia",earthquake,7.8,6.209,0.089,37,reviewed,us,us
+2025-05-18T06:17:26.554Z,4.0695,-75.4801,10,4.3,mb,35,100,1.389,1.24,us,us7000pzz7,2025-07-25T17:06:18.040Z,"7 km W of Playarrica, Colombia",earthquake,8.34,1.883,0.098,29,reviewed,us,us
+2025-04-09T12:41:00.584Z,4.4562,-75.6179,164.813,4.2,mb,13,121,4.301,0.28,us,us6000q4wr,2025-06-14T18:26:38.040Z,"8 km SSE of Calarcá, Colombia",earthquake,11.13,10.64,0.305,3,reviewed,us,us
+2024-07-30T05:32:17.757Z,3.3996,-74.3109,10,4.2,mb,15,129,2.762,1.27,us,us6000ngu2,2024-10-11T19:39:06.040Z,"29 km W of Mesetas, Colombia",earthquake,5.93,1.737,0.186,8,reviewed,us,us
+2024-06-07T07:55:57.321Z,4.3193,-75.9119,11.719,4.5,mb,49,92,1.898,1,us,us7000mqwq,2024-08-16T21:59:25.040Z,"6 km NNE of Sevilla, Colombia",earthquake,7.87,5.061,0.081,44,reviewed,us,us
+2024-05-05T06:11:07.336Z,2.0194,-76.027,12.009,4.4,mb,23,171,2.184,0.56,us,us6000mwfa,2024-07-15T03:57:55.040Z,"3 km NNE of Saladoblanco, Colombia",earthquake,8.08,5.829,0.219,6,reviewed,us,us
+2023-11-26T14:30:56.609Z,4.2967,-76.0903,145.003,4.2,mb,24,77,1.963,0.96,us,us6000lqvk,2024-02-06T21:53:52.040Z,"11 km S of Zarzal, Colombia",earthquake,6.86,6.677,0.128,17,reviewed,us,us
+2023-08-03T22:09:36.236Z,3.5131,-76.2356,161.146,5.1,mww,95,75,2.323,0.5,us,us6000kxnn,2024-01-19T13:14:23.295Z,"Colombia",earthquake,4.63,5.306,0.08,15,reviewed,us,us
+2023-06-30T01:52:28.221Z,2.9948,-73.6029,10,4.7,mb,51,61,1.973,0.97,us,us6000kp0m,2023-09-08T14:18:29.040Z,"21 km SE of Vistahermosa, Colombia",earthquake,7.49,1.856,0.052,115,reviewed,us,us
+2023-06-10T06:53:57.656Z,3.8178,-76.489,146.602,4.3,mb,37,98,2.39,0.79,us,us7000k7li,2023-08-12T17:15:15.040Z,"3 km E of Restrepo, Colombia",earthquake,7.72,9.868,0.119,20,reviewed,us,us
+2023-05-22T17:14:14.864Z,4.3829,-76.2681,120.179,4.5,mb,56,64,1.941,1.01,us,us6000kdxg,2023-07-29T22:00:28.040Z,"10 km WNW of Bolívar, Colombia",earthquake,7.28,6.094,0.056,94,reviewed,us,us
+2023-05-07T08:05:32.757Z,3.0134,-74.7041,182.956,4.3,mb,13,175,1.859,0.51,us,us6000ka69,2023-07-22T19:16:16.040Z,"41 km SSE of Colombia, Colombia",earthquake,5.12,11.796,0.308,3,reviewed,us,us
+2023-04-15T20:52:53.218Z,3.3662,-74.2162,10,4.5,mb,37,129,1.473,0.91,us,us6000k4sq,2023-06-17T21:36:57.040Z,"19 km W of Mesetas, Colombia",earthquake,8.17,1.922,0.076,51,reviewed,us,us
+2023-03-15T21:50:42.459Z,3.9045,-76.0855,177.822,4.5,mb,63,83,1.992,0.85,us,us7000jka7,2023-05-20T23:20:28.040Z,"18 km ESE of San Pedro, Colombia",earthquake,7.24,2.13,0.085,41,reviewed,us,us
+2023-02-07T00:44:14.350Z,4.3409,-74.2762,8.529,3.8,mb,8,153,0.503,0.85,us,us6000jm8v,2023-04-15T21:39:31.040Z,"4 km NE of Pasca, Colombia",earthquake,6.07,4.805,0.506,1,reviewed,us,us
+2022-12-14T17:39:03.979Z,3.3517,-74.1224,8.071,4.5,mb,31,78,1.496,0.86,us,us6000jac8,2023-02-18T22:04:19.040Z,"9 km WSW of Mesetas, Colombia",earthquake,4.85,4.702,0.121,20,reviewed,us,us
+2022-12-12T14:49:13.270Z,3.9986,-76.7154,101.355,4.5,mb,23,146,2.478,0.27,us,us6000j9qp,2023-02-18T22:04:16.040Z,"26 km WNW of Darien, Colombia",earthquake,5.04,7.475,0.192,9,reviewed,us,us
+2022-05-12T21:23:29.680Z,4.014,-76.4472,69.18,5,mww,220,52,2.274,0.94,us,us6000hkph,2022-07-22T18:30:52.040Z,"10 km NNE of Darien, Colombia",earthquake,5.6,4.3,0.086,13,reviewed,us,us
+2022-04-19T19:32:27.438Z,1.8566,-75.8536,28.88,4.6,mb,,76,2.24,0.78,us,us7000h3ef,2022-06-26T01:19:49.040Z,"7 km NE of Acevedo, Colombia",earthquake,7.4,4.8,0.077,52,reviewed,us,us
+2022-02-07T00:31:23.897Z,3.448,-74.7357,62.48,4.4,mb,,91,1.447,0.89,us,us7000gipv,2022-05-12T21:34:52.783Z,"10 km NE of Colombia, Colombia",earthquake,6.7,7.5,0.067,64,reviewed,us,us
+2021-11-29T20:33:32.090Z,4.2503,-76.3426,123.06,4.9,mb,,72,2.091,0.9,us,us6000g7q7,2022-02-23T12:58:18.253Z,"4 km NNW of Trujillo, Colombia",earthquake,6.8,5.1,0.072,60,reviewed,us,us
+2021-11-29T07:53:37.665Z,3.6391,-74.0114,10,4.4,mb,,67,1.237,0.62,us,us7000fxxc,2022-02-05T23:04:32.040Z,"12 km N of Lejanías, Colombia",earthquake,4.1,1.9,0.084,44,reviewed,us,us
+2021-10-29T21:43:50.050Z,2.1847,-76.6147,24.01,4.3,mwr,,90,2.666,0.77,us,us7000fpxh,2022-01-14T17:58:43.040Z,"7 km S of Paispamba, Colombia",earthquake,7.4,5.6,0.093,11,reviewed,us,us
+2021-02-19T15:55:40.380Z,3.4642,-74.3272,10,4.4,mb,,138,1.371,1.16,us,us6000dkrn,2021-05-04T14:15:00.040Z,"32 km WNW of Mesetas, Colombia",earthquake,9.3,1.9,0.071,58,reviewed,us,us
+2021-01-27T07:57:33.358Z,4.4075,-75.856,159.4,4.9,mb,,86,1.59,0.88,us,us7000d3m3,2025-12-22T18:48:59.829Z,"8 km NNW of Caicedonia, Colombia",earthquake,6.9,6.7,0.026,452,reviewed,us,us
+2021-01-23T21:12:18.130Z,3.1222,-74.8254,25.07,4.9,mww,,66,1.783,0.88,us,us7000d2ra,2021-04-13T17:05:14.040Z,"25 km E of Baraya, Colombia",earthquake,8.1,4.3,0.086,13,reviewed,us,us
+2020-05-24T12:22:03.507Z,2.7483,-76.5659,10,4.5,mb,,83,3.125,1.15,us,us70009pgm,2020-08-08T18:17:55.040Z,"6 km E of Morales, Colombia",earthquake,9.4,1.9,0.061,79,reviewed,us,us
+2020-04-13T20:44:19.546Z,4.0085,-76.2402,156.54,4.6,mb,,115,2.086,0.93,us,us700090hk,2020-06-30T14:03:17.040Z,"2 km NW of San Pedro, Colombia",earthquake,8.1,4.9,0.122,20,reviewed,us,us
+2020-02-13T15:29:11.058Z,3.5396,-74.0313,9.29,4.4,mb,,102,1.328,0.69,us,us70007tmz,2020-05-02T22:10:27.040Z,"1 km NNW of Lejanías, Colombia",earthquake,8.1,7.4,0.22,6,reviewed,us,us
+2020-01-05T13:47:51.979Z,4.3433,-76.1039,154.34,4.3,mb,,66,1.845,0.62,us,us600079ay,2020-03-21T17:13:27.040Z,"6 km SSW of Zarzal, Colombia",earthquake,10.5,6.5,0.07,58,reviewed,us,us
+2019-12-27T03:20:39.716Z,3.4594,-73.9925,10,4.6,mb,,78,1.414,1.08,us,us70006rer,2020-03-14T22:24:18.040Z,"8 km SSE of Lejanías, Colombia",earthquake,7.5,1.8,0.056,95,reviewed,us,us
+2019-12-26T10:52:21.267Z,3.3922,-74.0302,10,4.4,mb,,79,1.472,1.04,us,us70006r6t,2022-08-08T17:42:11.537Z,"1 km ENE of Mesetas, Colombia",earthquake,7.7,1.8,0.077,49,reviewed,us,us
+2019-12-26T05:03:56.849Z,3.4785,-73.9698,10,4.3,mb,,103,1.401,0.91,us,us70006xq1,2020-03-14T22:24:36.040Z,"8 km SE of Lejanías, Colombia",earthquake,6.7,2,0.201,7,reviewed,us,us
+2019-12-26T03:48:29.883Z,3.3722,-74.0915,10,4.8,mb,,62,1.48,0.89,us,us70006r41,2020-03-14T22:24:37.040Z,"5 km WSW of Mesetas, Colombia",earthquake,5.1,1.7,0.031,333,reviewed,us,us
+2019-12-25T10:39:56.729Z,3.4938,-74.0286,10,4.4,mb,,78,1.373,1.11,us,us70006qx0,2020-03-14T22:24:55.040Z,"3 km S of Lejanías, Colombia",earthquake,7.1,1.8,0.062,74,reviewed,us,us
+2019-12-25T10:25:55.027Z,3.5986,-74.0042,10,4.5,mb,,70,1.277,0.75,us,us70006qwx,2020-03-14T22:24:56.040Z,"8 km NNE of Lejanías, Colombia",earthquake,7.3,1.8,0.074,54,reviewed,us,us
+2019-12-25T02:11:23.210Z,3.419,-73.9867,10,5,mb,,65,1.455,0.78,us,us70006qsp,2020-03-14T22:25:05.040Z,"7 km ENE of Mesetas, Colombia",earthquake,6.4,1.8,0.048,142,reviewed,us,us
+2019-12-25T00:25:01.178Z,3.4416,-74.098,10,4.6,mb,,77,1.411,0.91,us,us70006qs6,2020-03-14T22:25:06.040Z,"8 km NW of Mesetas, Colombia",earthquake,6,1.6,0.046,141,reviewed,us,us
+2019-12-24T20:11:15.897Z,3.6387,-74.0515,10,4.5,mb,,78,1.228,0.84,us,us70006qq5,2020-03-14T22:25:09.040Z,"12 km NNW of Lejanías, Colombia",earthquake,7,1.8,0.069,61,reviewed,us,us
+2019-12-24T19:19:03.273Z,3.4502,-74.1034,10,5.7,mww,,51,1.402,0.7,us,us70006qp1,2025-12-22T18:24:36.318Z,"9 km NW of Mesetas, Colombia",earthquake,7.1,1.7,0.046,46,reviewed,us,us
+2019-12-24T19:15:43.628Z,3.4917,-74.1248,10,5,mb,,77,1.358,0.86,us,us70006x58,2025-12-22T18:26:28.262Z,"11 km WSW of Lejanías, Colombia",earthquake,7.1,1.8,0.082,58,reviewed,us,us
+2019-12-24T19:11:01.700Z,3.542,-73.9247,10,5.1,mb,,54,1.353,0.94,us,us70006x57,2025-12-22T19:05:21.825Z,"11 km E of Lejanías, Colombia",earthquake,8.1,1.8,0.082,55,reviewed,us,us
+2019-12-24T19:03:52.492Z,3.5359,-74.0176,11,6,mww,,36,1.335,0.68,us,us70006qnn,2025-12-22T18:24:35.093Z,"1 km NE of Lejanías, Colombia",earthquake,6.5,1.7,0.041,58,reviewed,us,us
+2019-05-12T07:28:08.579Z,3.9341,-73.9292,10,4.5,mb,,65,0.985,1.14,us,us70003jzm,2019-08-01T17:15:13.040Z,"18 km NNW of Cubarral, Colombia",earthquake,5.7,1.9,0.087,39,reviewed,us,us
+2019-01-29T06:10:56.080Z,2.8793,-75.5748,27.74,4.3,mb,,94,1.29,0.95,us,us2000j9z4,2019-04-18T19:09:24.040Z,"11 km SE of Santa María, Colombia",earthquake,7.6,7.6,0.137,15,reviewed,us,us
+2019-01-28T21:07:09.960Z,3.0835,-75.6461,13.06,5.5,mww,,73,1.49,1.13,us,us2000j9um,2025-12-22T17:53:42.138Z,"12 km S of Planadas, Colombia",earthquake,5.3,3.4,0.05,39,reviewed,us,us
+2019-01-26T12:32:26.830Z,3.0345,-75.7383,10,5.6,mww,,67,1.444,0.82,us,us2000j967,2025-12-22T17:53:40.482Z,"13 km NW of Santa María, Colombia",earthquake,6.4,1.8,0.046,46,reviewed,us,us
+2019-01-19T22:03:36.720Z,2.5739,-74.8939,10,4.4,mb,,87,1.242,0.68,us,us2000j6gh,2019-04-05T21:41:01.040Z,"46 km ESE of Rivera, Colombia",earthquake,5.9,1.8,0.162,11,reviewed,us,us
+2018-07-19T05:39:34.580Z,3.4257,-74.5982,47.77,5.1,mb,,40,1.436,0.83,us,us2000g8gz,2018-10-04T14:15:30.040Z,"23 km ENE of Colombia, Colombia",earthquake,5.4,6,0.023,609,reviewed,us,us
+2018-07-07T00:19:52.490Z,2.9425,-75.621,65.81,4.5,mb,,85,2.292,0.6,us,us2000fyt3,2022-08-08T05:42:41.904Z,"3 km ESE of Santa María, Colombia",earthquake,5.9,10.7,0.127,18,reviewed,us,us
+2018-06-22T20:08:53.150Z,3.8892,-76.2331,81.78,4.4,mb,,93,2.129,0.98,us,us1000ez04,2022-08-08T05:09:00.355Z,"7 km E of Guadalajara de Buga, Colombia",earthquake,7.4,7.9,0.074,52,reviewed,us,us
+2018-05-01T19:19:51.510Z,3.3148,-74.1082,46.79,4.4,mb,,81,1.534,0.91,us,us1000dvhz,2018-07-27T20:20:32.040Z,"10 km SW of Mesetas, Colombia",earthquake,6.5,11.4,0.087,38,reviewed,us,us
+2018-05-01T01:58:31.460Z,1.859,-75.7791,35.86,4.5,mb,,72,2.306,0.86,us,us1000dv4s,2018-07-27T20:20:33.040Z,"13 km S of Suaza, Colombia",earthquake,6.2,6.3,0.118,21,reviewed,us,us
+2018-04-01T15:16:58.700Z,4.2525,-76.3511,98.22,4.3,mb,,53,3.794,1.35,us,us1000dc4l,2022-08-08T01:45:47.278Z,"5 km NW of Trujillo, Colombia",earthquake,8.8,5.4,0.125,22,reviewed,us,us
+2018-02-19T01:50:36.640Z,4.0967,-76.6247,103.17,4.8,mb,,52,2.413,1,us,us2000d4he,2018-05-22T02:00:16.040Z,"Colombia",earthquake,7.3,3.5,0.033,280,reviewed,us,us
+2017-12-21T19:26:40.150Z,4.1427,-76.2035,156.27,4.6,mb,,91,2.002,0.76,us,us1000bung,2018-03-14T00:58:26.040Z,"5 km SW of Andalucía, Colombia",earthquake,7.8,6.3,0.051,114,reviewed,us,us
+2017-11-15T02:12:17.850Z,3.7278,-76.1191,162.11,4.4,mb,,78,1.215,0.98,us,us2000bnnm,2018-02-06T02:45:34.040Z,"10 km W of La Cumbre, Colombia",earthquake,6.7,5.2,0.086,39,reviewed,us,us
+2017-11-11T14:45:22.240Z,2.7641,-74.9148,46.1,4.7,mb,,100,0.925,1.15,us,us2000bm1j,2022-08-07T21:10:20.662Z,"38 km E of Rivera, Colombia",earthquake,6.7,7.3,0.063,77,reviewed,us,us
+2017-11-04T00:16:35.270Z,2.4828,-76.0318,157.28,5.1,mww,,24,1.65,0.82,us,us2000bi7p,2025-12-22T17:27:51.038Z,"8 km SSE of Inzá, Colombia",earthquake,6.2,4,0.052,35,reviewed,us,us
+2017-07-02T19:26:28.710Z,3.5937,-73.9848,27.64,5.1,mb,,64,1.287,0.98,us,us1000969j,2022-05-03T18:32:38.292Z,"8 km NNE of Lejanías, Colombia",earthquake,6.5,4.2,0.028,429,reviewed,us,us
+2017-05-06T02:52:40.680Z,3.7583,-76.7291,74.95,4.4,mb,,84,2.632,0.85,us,us10008pzu,2017-07-29T03:16:24.040Z,"12 km NNW of Dagua, Colombia",earthquake,7.8,11.8,0.09,36,reviewed,us,us
+2017-04-29T10:06:33.260Z,3.816,-75.9283,58.65,4.8,mww,,64,1.9,1.22,us,us10008lzv,2017-07-21T02:32:11.040Z,"14 km NE of La Cumbre, Colombia",earthquake,5,4.9,0.098,10,reviewed,us,us
+2017-02-06T13:02:45.140Z,3.4493,-74.6715,37.95,5.5,mww,,47,1.429,1.04,us,us20008hx7,2022-05-03T18:10:51.164Z,"16 km ENE of Colombia, Colombia",earthquake,6.3,3.3,0.044,49,reviewed,us,us
+2017-01-24T19:35:38.100Z,4.0115,-76.7031,101.4,4.3,mb,,57,2.515,1.04,us,us10007v8x,2017-04-19T18:30:58.040Z,"25 km WNW of Darien, Colombia",earthquake,1.9,7.6,0.068,61,reviewed,us,us
+2016-12-23T03:43:51.310Z,2.6595,-75.5794,10,4.4,mb,,100,2.507,1.05,us,us10007m63,2017-03-23T22:51:59.040Z,"6 km E of Íquira, Colombia",earthquake,7.7,1.9,0.112,23,reviewed,us,us
+2016-12-16T19:45:20.340Z,3.3938,-74.2744,61.75,4.5,mb,,65,1.442,0.99,us,us200081nl,2017-03-16T02:31:23.040Z,"25 km W of Mesetas, Colombia",earthquake,5.5,9.7,0.132,19,reviewed,us,us
+2016-10-31T02:05:58.040Z,3.4027,-74.5019,36.16,5,mww,,73,1.444,0.97,us,us1000735x,2022-05-03T18:03:06.469Z,"33 km E of Colombia, Colombia",earthquake,6.1,3.5,,,reviewed,us,us
+2016-10-31T00:20:11.640Z,3.4466,-74.4951,33,5.6,mww,,35,1.399,0.98,us,us1000735j,2022-05-03T18:56:14.765Z,"34 km ENE of Colombia, Colombia",earthquake,1.3,1.7,,,reviewed,us,us
+2016-07-11T00:50:38.580Z,3.7039,-76.7513,101.6,4.3,mb,,56,2.708,0.9,us,us20006fq2,2016-09-08T01:50:27.040Z,"8 km NW of Dagua, Colombia",earthquake,4.1,11,0.096,32,reviewed,us,us
+2016-03-13T13:17:49.310Z,3.5663,-74.4325,52.64,4.5,mb,,82,1.275,1.14,us,us10004x75,2016-05-21T00:05:28.040Z,"44 km SSE of Villarrica, Colombia",earthquake,8.1,6.8,0.089,37,reviewed,us,us
+2016-01-06T01:28:21.830Z,2.8738,-75.7731,40.45,4.5,mb,,78,2.435,1.12,us,us10004bnl,2022-08-02T03:13:13.308Z,"16 km WSW of Santa María, Colombia",earthquake,8.8,6.7,0.078,48,reviewed,us,us
+2015-09-18T04:35:09.680Z,4.1776,-75.7522,15.52,4.7,mb,,64,0.974,1.08,us,us20003l3i,2022-08-01T06:13:33.586Z,"15 km S of Génova, Colombia",earthquake,5,3.8,0.038,210,reviewed,us,us
+2015-09-05T23:14:53.500Z,3.9474,-76.358,134.76,4.6,mb,,33,1.474,1.07,us,us20003guc,2022-08-01T03:41:48.041Z,"8 km NW of Guadalajara de Buga, Colombia",earthquake,6.3,4.7,0.046,138,reviewed,us,us
+2015-08-21T14:16:22.200Z,4.4812,-75.666,42.37,4.3,mb,,105,1.388,1.37,us,us100034d6,2022-07-31T23:14:43.983Z,"6 km SSW of Calarcá, Colombia",earthquake,7.2,9.2,0.119,20,reviewed,us,us
+2015-02-22T12:56:24.400Z,2.7299,-76.5012,149,5.5,mww,,29,3.024,0.96,us,usc000tsa5,2022-07-27T22:36:01.079Z,"7 km SSW of Caldono, Colombia",earthquake,7.5,1.9,,,reviewed,us,us
+2014-06-21T12:31:28.890Z,4.461,-75.3232,192.26,4.4,mb,,95,0.869,1.1,us,usc000rpwl,2014-09-19T17:24:18.000Z,"7 km NNW of Coello, Colombia",earthquake,,6,0.12,21,reviewed,us,us
+2014-06-04T18:53:49.200Z,3.2111,-76.2763,163.69,4.5,mb,,137,1.454,0.75,us,usc000razu,2014-08-30T17:02:53.000Z,"4 km ESE of Padilla, Colombia",earthquake,,8.4,0.059,85,reviewed,us,us
+2014-06-02T12:52:21.910Z,2.5704,-76.7868,145.21,4.4,mb,,81,2.189,0.97,us,usc000ra3c,2014-08-26T01:21:10.000Z,"9 km NE of Villa Rica, Colombia",earthquake,,1.7,0.101,28,reviewed,us,us
+2014-01-09T14:03:30.060Z,2.9792,-75.8777,59.45,4.6,mb,,110,1.408,0.65,us,usb000m7dk,2022-07-26T07:13:27.587Z,"20 km SSW of Gaitania, Colombia",earthquake,,11,0.385,3,reviewed,us,us
+2014-01-09T12:50:18.420Z,2.9737,-75.8432,26.17,5,mb,,61,1.397,0.92,us,usc000lzbq,2022-07-26T04:59:17.097Z,"19 km S of Gaitania, Colombia",earthquake,,4.3,0.033,347,reviewed,us,us
+2014-01-09T11:07:35.690Z,2.9858,-75.9346,43.66,4.7,mb,,57,1.425,1.1,us,usc000lzax,2014-03-15T03:38:46.000Z,"22 km SW of Gaitania, Colombia",earthquake,,7.1,0.073,64,reviewed,us,us
+2013-11-17T15:18:01.590Z,4.4999,-75.806,177.5,4.5,mb,,83,1.513,1.39,us,usb000l4eg,2014-01-31T21:22:26.000Z,"5 km NNW of La Tebaida, Colombia",earthquake,,3.4,0.191,,reviewed,us,us
+2013-10-08T02:20:08.240Z,4.181,-76.5791,81.66,4,mb,,121,2.34,0.67,us,usb000kcj2,2013-12-24T01:42:56.000Z,"29 km W of Trujillo, Colombia",earthquake,,10,0.149,,reviewed,us,us
+2013-08-27T23:22:06.450Z,3.806,-76.6281,81.12,4.8,mb,,69,2.517,0.82,us,usb000jcf8,2022-07-25T21:16:52.349Z,"11 km W of Restrepo, Colombia",earthquake,,3.5,0.046,,reviewed,us,us
+2013-06-01T06:44:26.790Z,3.963,-76.251,111.2,4,mb,28,57,,0.84,us,usb000hb94,2014-11-07T01:50:58.086Z,"4 km SW of San Pedro, Colombia",earthquake,,12.9,,24,reviewed,us,us
+2013-05-23T16:32:09.090Z,4.206,-76.21,77,4.4,mb,21,112.6,,0.8,us,usb000h5xz,2014-11-07T01:50:53.366Z,"6 km W of Bugalagrande, Colombia",earthquake,,8.1,,16,reviewed,us,us
+2013-01-02T16:50:39.480Z,4.101,-76.274,145.4,4.6,mb,105,66.4,,0.86,us,usp000jxrc,2015-03-24T02:14:28.183Z,"6 km SSE of Riofrío, Colombia",earthquake,,,,60,reviewed,us,us
+2012-12-10T10:50:52.380Z,2.167,-76.04,53.6,4.3,mb,22,80.9,,0.99,us,usp000jwsr,2014-11-07T01:49:35.080Z,"7 km WSW of La Argentina, Colombia",earthquake,,8.5,,4,reviewed,us,us
+2012-09-30T16:31:35.970Z,1.929,-76.362,170,7.3,mww,934,15.5,,0.87,us,usp000jta1,2022-05-03T15:51:10.914Z,"11 km WNW of San Agustín, Colombia",earthquake,,,,,reviewed,us,us
+2012-07-31T01:26:39.810Z,4.555,-75.918,63.1,4.5,mb,130,86.8,,0.71,us,usp000jpny,2015-03-24T02:01:32.649Z,"6 km ESE of Obando, Colombia",earthquake,,4,,104,reviewed,us,us
+2012-06-27T03:47:52.000Z,3.755,-76.343,142.8,4.5,mb,106,64.6,,,us,usp000jn9m,2015-03-24T02:01:29.410Z,"1 km SW of Guacarí, Colombia",earthquake,,,,67,reviewed,rsnc,us
+2012-06-20T12:31:29.400Z,2.248,-76.354,158.4,4.7,mb,282,72.8,,0.92,us,usp000jn07,2014-11-07T01:48:07.311Z,"28 km E of Paispamba, Colombia",earthquake,,4,,180,reviewed,us,us
+2012-03-01T01:41:11.220Z,4.214,-76.539,117.1,4.7,mb,87,55.5,,0.96,us,usp000jfmm,2015-03-24T01:46:56.025Z,"24 km W of Trujillo, Colombia",earthquake,,3.7,,39,reviewed,us,us
+2011-10-07T16:42:13.830Z,3.754,-76.105,180.1,4.6,mb,15,91.6,,1.15,us,usp000j91t,2015-03-24T01:21:37.596Z,"9 km WNW of La Cumbre, Colombia",earthquake,,8,,5,reviewed,us,us
+2011-07-09T10:57:35.030Z,3.329,-75.882,182.8,4.3,mb,36,97.5,,0.94,us,usp000j4eh,2014-11-07T01:45:18.986Z,"21 km NNW of Gaitania, Colombia",earthquake,,5.7,,26,reviewed,us,us
+2011-01-31T07:13:42.600Z,3.941,-76.395,97.5,4.9,mb,253,53.3,,0.92,us,usp000htwj,2022-07-19T03:18:25.227Z,"8 km N of Yotoco, Colombia",earthquake,,3.6,,153,reviewed,us,us
+2010-10-01T00:20:12.070Z,3.382,-75.574,32.1,4.5,mb,37,93.1,,1.27,us,usp000hme2,2014-11-07T01:42:33.591Z,"3 km ESE of Santiago Pérez, Colombia",earthquake,,22.2,,26,reviewed,us,us
+2010-08-30T19:28:00.900Z,3.798,-76.143,32.1,3.8,ml,10,140.8,,,us,usp000hjym,2014-11-07T01:42:18.880Z,"15 km WNW of La Cumbre, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+2010-07-29T19:34:46.490Z,3.924,-74.999,51.4,5.1,mwc,165,64.7,,1.07,us,usp000hh42,2022-07-18T17:18:13.500Z,"1 km ESE of Saldaña, Colombia",earthquake,,4.2,,,reviewed,us,gcmt
+2010-07-26T03:48:17.010Z,4.483,-75.368,10,4.1,ml,11,76.3,,1.1,us,usp000hgu4,2014-11-07T01:42:01.908Z,"8 km ENE of Cajamarca, Colombia",earthquake,,,,,reviewed,us,rsnc
+2010-03-18T13:47:01.000Z,3.18,-74.68,24,4.3,ml,8,101.3,,,us,usp000h9mt,2014-11-07T01:41:03.167Z,"25 km SSE of Colombia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+2010-01-11T18:48:35.960Z,4.229,-75.756,180.1,4.8,mb,105,54.1,,0.89,us,usp000h5yy,2014-11-07T01:40:26.488Z,"9 km S of Génova, Colombia",earthquake,,,,56,reviewed,us,us
+2009-12-18T14:30:03.390Z,3.047,-76.234,165.4,5.1,mwc,328,67.2,,0.93,us,usp000h55e,2025-12-22T15:42:31.990Z,"10 km NNE of Toribío, Colombia",earthquake,,,,,reviewed,us,gcmt
+2009-10-22T15:56:48.100Z,3.711,-76.517,134.4,4.6,mb,50,69.1,,0.88,us,usp000h393,2014-11-07T01:39:57.760Z,"8 km W of Vijes, Colombia",earthquake,,5.6,,21,reviewed,us,us
+2009-07-03T10:04:57.640Z,3.737,-75.642,51.9,5.2,mb,213,41.6,,0.84,us,usp000gywm,2022-07-15T13:03:23.214Z,"17 km W of Chaparral, Colombia",earthquake,,3.9,,116,reviewed,us,us
+2008-11-19T22:56:23.890Z,3.522,-76.943,72.5,3.4,mb,13,76.4,,0.97,us,usp000gp2j,2014-11-07T01:37:46.204Z,"9 km SE of Buenaventura, Colombia",earthquake,,9.8,,1,reviewed,us,us
+2008-11-09T08:00:56.710Z,4.503,-75.312,2.7,4.5,mb,86,83.6,,1.08,us,usp000gn9r,2014-11-07T01:37:42.585Z,"11 km N of Coello, Colombia",earthquake,,7.1,,46,reviewed,us,us
+2008-10-31T20:07:45.860Z,3.994,-76.293,53.5,4.6,mb,90,65.3,,1.05,us,usp000gmhx,2014-11-07T01:37:34.820Z,"7 km W of San Pedro, Colombia",earthquake,,7.6,,42,reviewed,us,us
+2008-10-15T06:35:21.970Z,3.709,-73.88,61.2,0,,12,153.5,,0.65,us,usp000gk9v,2014-11-07T01:37:29.329Z,"10 km SSW of Cubarral, Colombia",earthquake,,8.5,,,reviewed,us,us
+2008-09-14T18:29:28.970Z,2.883,-76,31.1,4.1,mb,21,80,,1.34,us,usp000gh1v,2014-11-07T01:37:12.034Z,"26 km N of Belalcázar, Colombia",earthquake,,26.5,,6,reviewed,us,us
+2008-09-05T15:30:34.310Z,2.915,-75.903,25.5,4.4,mb,47,85.8,,1.04,us,usp000ggfr,2014-11-07T01:37:08.013Z,"27 km SSW of Gaitania, Colombia",earthquake,,15.9,,23,reviewed,us,us
+2008-09-03T01:34:55.640Z,4.158,-76.392,145.8,0,,9,85.9,,1.12,us,usp000gg9n,2014-11-07T01:37:07.003Z,"10 km SW of Trujillo, Colombia",earthquake,,10.2,,,reviewed,us,us
+2008-09-02T17:21:00.270Z,2.953,-75.983,23.1,4.9,mb,170,70.4,,1.16,us,usp000gg8c,2022-05-02T19:45:04.964Z,"28 km SW of Gaitania, Colombia",earthquake,,11.9,,128,reviewed,us,us
+2008-07-13T13:45:55.930Z,4.493,-74.87,47.5,4.5,mb,22,86.1,,1.17,us,usp000gc24,2014-11-07T01:36:37.411Z,"5 km S of Piedras, Colombia",earthquake,,9.7,,1,reviewed,us,us
+2008-03-31T23:15:24.930Z,4.515,-75.787,85.1,4.4,mb,59,62.9,,0.96,us,usp000g2uq,2014-11-07T01:35:22.711Z,"6 km N of La Tebaida, Colombia",earthquake,,6.1,,12,reviewed,us,us
+2008-03-04T11:23:08.020Z,2.719,-76.166,68.9,4.8,mb,62,138.9,,1.28,us,usp000g0pd,2022-07-13T20:58:13.465Z,"18 km ESE of Jambaló, Colombia",earthquake,,11.8,,48,reviewed,us,us
+2008-01-23T00:24:37.260Z,4.043,-76.698,62.6,3.9,mb,15,78,,1.07,us,usp000fx8s,2014-11-07T01:34:45.171Z,"26 km WNW of Darien, Colombia",earthquake,,12.7,,3,reviewed,us,us
+2007-08-24T17:45:50.110Z,4.178,-76.333,140.8,4.8,mb,9,130.9,,1.43,us,usp000fkm3,2014-11-07T01:33:22.553Z,"4 km SSW of Trujillo, Colombia",earthquake,,10.8,,1,reviewed,us,us
+2007-07-15T19:30:00.080Z,3.8,-75.589,35,4.8,mb,143,38.2,,0.94,us,usp000fg95,2014-11-07T01:32:58.096Z,"14 km NW of Chaparral, Colombia",earthquake,,,,61,reviewed,us,us
+2007-07-10T05:25:37.000Z,3.84,-75.64,3,4.4,mb,64,38.1,,,us,usp000ffwy,2014-11-07T01:32:56.214Z,"19 km SSW of Roncesvalles, Colombia",earthquake,,,,25,reviewed,rsnc,us
+2007-06-27T15:44:59.630Z,3.359,-74.195,48.7,0,,10,92.3,,1.11,us,usp000fez7,2014-11-07T01:32:46.450Z,"16 km W of Mesetas, Colombia",earthquake,,12.7,,,reviewed,us,us
+2007-05-27T07:55:58.690Z,3.714,-75.62,15.4,4.7,mb,158,46.6,,1.08,us,usp000fcv4,2014-11-07T01:32:32.265Z,"15 km W of Chaparral, Colombia",earthquake,,,,51,reviewed,us,us
+2007-03-12T09:17:19.410Z,3.889,-74.726,54,4.6,mb,44,61.7,,1.17,us,usp000f6jc,2014-11-07T01:31:51.709Z,"3 km NW of Tres Esquinas, Colombia",earthquake,,,,11,reviewed,us,us
+2007-03-06T13:05:12.110Z,2.082,-76.495,43.1,5.2,mwc,132,73.4,,1,us,usp000f66x,2022-05-02T20:02:02.976Z,"23 km SE of Paispamba, Colombia",earthquake,,7.6,,,reviewed,us,gcmt
+2007-02-16T22:39:55.950Z,2.662,-76.876,146.7,4.3,mb,25,80.4,,1.12,us,usp000f4zt,2014-11-07T01:31:38.650Z,"16 km N of Villa Rica, Colombia",earthquake,,8.2,,2,reviewed,us,us
+2007-01-19T03:16:33.500Z,4.504,-75.154,55.6,3.8,mb,15,85.9,,0.94,us,usp000f2yt,2014-11-07T01:31:24.483Z,"11 km NE of Ibagué, Colombia",earthquake,,20,,5,reviewed,us,us
+2006-12-09T10:40:39.100Z,3.5,-76.87,68,0,,10,128.6,,,us,usp000ezvt,2014-11-07T01:31:06.479Z,"17 km ESE of Buenaventura, Colombia",earthquake,,,,,reviewed,rsnc,us
+2006-12-03T17:32:11.250Z,4.185,-76.239,76.2,3,mb,8,101.7,,0.55,us,usp000ezeu,2014-11-07T01:31:04.594Z,"6 km ENE of Riofrío, Colombia",earthquake,,11.1,,1,reviewed,us,us
+2006-07-19T03:53:13.810Z,3.322,-74.371,65.7,3.3,mb,7,103.9,,1.1,us,usp000ep25,2014-11-07T01:29:43.053Z,"36 km W of Mesetas, Colombia",earthquake,,14.8,,3,reviewed,us,us
+2006-06-25T11:13:05.650Z,3.994,-76.488,111.9,3.5,mb,11,84.3,,1.22,us,usp000em8g,2014-11-07T01:29:27.787Z,"6 km N of Darien, Colombia",earthquake,,20.9,,1,reviewed,us,us
+2006-04-30T11:41:54.200Z,4.024,-76.512,96.9,4.3,mb,64,67.4,,0.8,us,usp000efub,2014-11-07T01:28:56.464Z,"10 km NNW of Darien, Colombia",earthquake,,6.6,,36,reviewed,us,us
+2006-01-21T21:10:39.980Z,3.712,-73.981,14.1,4.7,mb,25,114.5,,1.43,us,usp000e8mh,2014-11-07T01:28:08.145Z,"18 km WSW of Cubarral, Colombia",earthquake,,,,4,reviewed,us,us
+2005-06-22T08:07:56.870Z,4.039,-75.291,10.1,3.4,mb,8,111.2,,0.95,us,usp000dtnu,2014-11-07T01:26:16.269Z,"13 km E of Playarrica, Colombia",earthquake,,15.7,,1,reviewed,us,us
+2005-06-06T00:52:07.820Z,3.937,-76.396,135.2,3.6,mb,16,82.2,,0.72,us,usp000dsaw,2014-11-07T01:26:07.938Z,"8 km N of Yotoco, Colombia",earthquake,,7.7,,4,reviewed,us,us
+2005-05-21T08:37:18.740Z,4.484,-75.613,158.3,4.4,mb,15,140.1,,1.1,us,usp000dr98,2014-11-07T01:25:56.617Z,"5 km SSE of Calarcá, Colombia",earthquake,,11.4,,1,reviewed,us,us
+2005-05-18T21:37:26.150Z,1.67,-76.221,23.3,4.6,mb,24,81.6,,0.74,us,usp000dr49,2014-11-07T01:25:55.780Z,"11 km WSW of Palestina, Colombia",earthquake,,,,8,reviewed,us,us
+2005-03-08T15:59:43.870Z,4.42,-75.946,65.9,5,mwc,149,52.4,,1.02,us,usp000dhtn,2025-12-19T23:21:03.021Z,"14 km ENE of Zarzal, Colombia",earthquake,,,,,reviewed,us,hrv
+2004-08-22T23:35:52.750Z,4.501,-76.019,113.2,4.3,mb,36,63.5,,1.08,us,usp000d2pd,2014-11-07T01:23:15.200Z,"3 km SE of La Victoria, Colombia",earthquake,,8,,15,reviewed,us,us
+2004-08-18T07:06:52.430Z,2.265,-76.595,26.5,5.1,mwc,208,77.6,,1.11,us,usp000d2cd,2022-05-02T17:22:48.563Z,"2 km ENE of Paispamba, Colombia",earthquake,,13,,,reviewed,us,hrv
+2004-08-11T13:59:06.380Z,3.562,-76.487,44.2,3.5,mb,5,180,,1.31,us,usp000d1yc,2014-11-07T01:23:11.167Z,"2 km SSE of Yumbo, Colombia",earthquake,,16.7,,1,reviewed,us,us
+2004-04-09T03:39:25.910Z,4.601,-74.729,53.2,0,,13,160.3,,0.65,us,usp000cs1q,2014-11-07T01:21:56.158Z,"5 km NW of Jerusalén, Colombia",earthquake,,10,,,reviewed,us,us
+2004-03-29T06:27:21.670Z,3.935,-75.7,67.5,4.6,mb,93,75.6,,0.76,us,usp000cr6g,2014-11-07T01:21:48.578Z,"13 km SW of Roncesvalles, Colombia",earthquake,,6.2,,33,reviewed,us,us
+2004-02-12T15:23:06.650Z,4.446,-76.244,142.5,4.5,mb,11,155.9,,0.86,us,usp000cm1w,2014-11-07T01:21:20.730Z,"6 km S of El Dovio, Colombia",earthquake,,23.8,,2,reviewed,us,us
+2004-01-15T00:25:05.010Z,4.14,-76.113,154.5,4.7,mb,138,75.2,,0.75,us,usp000chwz,2014-11-07T01:21:04.393Z,"6 km ESE of Andalucía, Colombia",earthquake,,,,68,reviewed,us,us
+2003-12-27T02:24:22.310Z,1.212,-75.234,33,0,,7,108.3,,1.18,us,usp000cg68,2014-11-07T01:20:49.958Z,"Colombia",earthquake,,,,,reviewed,us,us
+2003-10-29T15:14:25.120Z,3.628,-76.396,159.4,0,,19,78.4,,0.69,us,usp000cbja,2014-11-07T01:20:17.110Z,"9 km SSE of Vijes, Colombia",earthquake,,10.4,,,reviewed,us,us
+2003-08-12T05:37:06.630Z,2.855,-75.011,60.2,4.4,mb,43,130.6,,0.92,us,usp000c4p4,2014-11-07T01:19:30.223Z,"27 km SSE of Tello, Colombia",earthquake,,7.9,,19,reviewed,us,us
+2003-07-14T00:59:57.290Z,4.091,-76.604,67.2,4.5,mb,87,69.6,,0.94,us,usp000c2ej,2014-11-07T01:19:12.279Z,"22 km NW of Darien, Colombia",earthquake,,,,32,reviewed,us,us
+2003-05-19T18:35:45.910Z,4.179,-75.665,207.6,0,,15,96.2,,1.09,us,usp000bxht,2014-11-07T01:18:38.307Z,"17 km SSE of Pijao, Colombia",earthquake,,8.5,,,reviewed,us,us
+2003-05-11T13:50:33.310Z,4.492,-76.023,118.4,0,,10,132.1,,0.91,us,usp000bx1c,2014-11-07T01:18:36.210Z,"4 km SSE of La Victoria, Colombia",earthquake,,14.6,,,reviewed,us,us
+2003-03-30T01:47:20.880Z,4.666,-75.724,33,4.1,mb,11,193.3,,1.09,us,usp000btuu,2014-11-07T01:18:10.000Z,"4 km SSE of Ulloa, Colombia",earthquake,,,,4,reviewed,us,us
+2003-01-22T15:55:33.930Z,3.642,-74.369,33,4.5,mb,51,,,1.15,us,usp000bnzz,2014-11-07T01:17:37.228Z,"40 km SSE of Cabrera, Colombia",earthquake,,,,27,reviewed,us,us
+2002-11-23T23:56:43.020Z,3.288,-74.476,63.7,5.1,mwc,110,,,0.93,us,usp000bj8z,2022-05-02T16:17:55.924Z,"37 km ESE of Colombia, Colombia",earthquake,,7.5,,,reviewed,us,hrv
+2002-09-28T17:40:16.770Z,3.957,-75.549,104,4.1,mb,18,,,1.42,us,usp000bdbq,2014-11-07T01:16:35.505Z,"8 km SE of Roncesvalles, Colombia",earthquake,,58.6,,5,reviewed,us,us
+2002-04-06T22:03:38.710Z,4.427,-75.592,172.8,4,mb,17,,,1.14,us,usp000b1w7,2014-11-07T01:15:22.030Z,"11 km ENE of Córdoba, Colombia",earthquake,,14.8,,7,reviewed,us,us
+2001-09-22T03:23:38.220Z,3.873,-75.968,178.6,5.9,mwc,471,,,0.84,us,usp000apk7,2022-04-29T19:35:01.179Z,"17 km NNE of La Cumbre, Colombia",earthquake,,,,,reviewed,us,hrv
+2001-04-21T23:28:45.260Z,3.971,-76.451,68.1,4.5,mb,39,,,0.75,us,usp000ads3,2014-11-07T01:12:37.382Z,"5 km NE of Darien, Colombia",earthquake,,,,10,reviewed,us,us
+2001-04-15T15:22:46.620Z,3.754,-76.556,108.5,3.9,mb,18,,,1.04,us,usp000ada6,2014-11-07T01:12:35.060Z,"8 km SSW of Restrepo, Colombia",earthquake,,11.2,,4,reviewed,us,us
+2001-03-16T14:49:05.580Z,3.924,-75.802,199.4,3.2,mb,14,,,1.11,us,usp000abhd,2014-11-07T01:12:21.628Z,"23 km WSW of Roncesvalles, Colombia",earthquake,,6.3,,1,reviewed,us,us
+2001-01-31T17:14:58.570Z,3.956,-76.061,161.5,4.3,mb,61,,,1.05,us,usp000a8sh,2014-11-07T01:12:00.450Z,"19 km ESE of San Pedro, Colombia",earthquake,,,,27,reviewed,us,us
+2000-12-31T02:10:43.270Z,3.456,-74.953,33,4.5,ml,5,,,0.67,us,usp000a6yy,2014-11-07T01:11:47.742Z,"12 km NNE of Santa Isabel, Colombia",earthquake,,,,,reviewed,us,rsnc
+2000-12-04T02:11:24.390Z,3.726,-76.009,193.7,4.4,mb,97,,,0.89,us,usp000a5fn,2014-11-07T01:11:39.807Z,"1 km ENE of La Cumbre, Colombia",earthquake,,7.4,,47,reviewed,us,us
+2000-11-19T13:30:50.290Z,3.989,-75.013,10,4.4,ml,6,,,1.17,us,usp000a4de,2014-11-07T01:11:31.842Z,"6 km N of Saldaña, Colombia",earthquake,,,,,reviewed,us,rsnc
+2000-11-02T19:35:00.320Z,3.579,-74.403,33,4.1,ml,5,,,1.25,us,usp000a2vx,2014-11-07T01:11:24.746Z,"42 km W of Lejanías, Colombia",earthquake,,,,,reviewed,us,rsnc
+2000-08-31T01:13:18.490Z,3.966,-76.564,31.6,2.8,ml,6,,,0.43,us,usp0009zec,2014-11-07T01:10:56.595Z,"9 km WNW of Darien, Colombia",earthquake,,14.8,,,reviewed,us,rsnc
+2000-08-28T16:48:17.350Z,4.589,-74.873,10,4.3,ml,7,,,0.92,us,usp0009za8,2014-11-07T01:10:55.909Z,"5 km N of Piedras, Colombia",earthquake,,,,,reviewed,us,rsnc
+2000-08-27T14:23:16.700Z,2.611,-76.072,10,3.9,ml,7,,,1.28,us,usp0009z8h,2014-11-07T01:10:55.317Z,"6 km N of Inzá, Colombia",earthquake,,,,,reviewed,us,rsnc
+2000-04-03T09:52:45.440Z,3.615,-75.885,184.9,4.9,mb,,,,0.85,us,usp0009qrj,2014-11-07T01:09:50.921Z,"19 km SE of La Cumbre, Colombia",earthquake,,,,83,reviewed,us,us
+2000-02-02T23:40:20.020Z,2.082,-76.519,62,4.5,mb,,,,0.88,us,usp0009mz9,2014-11-07T01:09:25.882Z,"Colombia",earthquake,,9.9,,16,reviewed,us,us
+2000-01-24T18:20:48.580Z,3.882,-74.819,33,3.1,ml,,,,0.94,us,usp0009mmb,2014-11-07T01:09:21.837Z,"12 km W of Tres Esquinas, Colombia",earthquake,,,,,reviewed,us,rsnc
+2000-01-24T00:14:03.800Z,4.103,-75.7,33,2.7,ml,,,,1.44,us,usp0009mkk,2014-11-07T01:09:21.729Z,"15 km NW of Roncesvalles, Colombia",earthquake,,,,,reviewed,us,rsnc
+2000-01-20T07:56:52.970Z,3.292,-74.417,33,3.5,ml,,,,1.36,us,usp0009mdc,2014-11-07T01:09:20.944Z,"42 km WSW of Mesetas, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-12-13T16:07:04.110Z,4.519,-75.693,10,2.6,ml,,,,1.17,us,usp0009ju5,2014-11-07T01:09:09.367Z,"2 km SW of Armenia, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-11-09T15:31:21.860Z,4.348,-75.728,10,3.7,ml,,,,1.14,us,usp0009han,2014-11-07T01:08:56.315Z,"1 km SE of Buenavista, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-10-29T14:05:48.060Z,3.56,-75.805,200,4.2,mb,,,,0.84,us,usp0009gs8,2014-11-07T01:08:47.090Z,"18 km W of Rioblanco, Colombia",earthquake,,5.1,,20,reviewed,us,us
+1999-10-22T00:46:19.000Z,4.46,-75.71,30,3.7,ml,,,,,us,usp0009gcw,2014-11-07T01:08:45.399Z,"7 km NNW of Córdoba, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-10-21T15:50:43.000Z,4.49,-75.7,30,3.7,ml,,,,,us,usp0009gce,2014-11-07T01:08:45.341Z,"5 km SSW of Armenia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-10-21T00:46:19.000Z,4.46,-75.71,30,3.7,ml,,,,,us,usp0009gb1,2014-11-07T01:08:45.172Z,"7 km NNW of Córdoba, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-10-13T13:10:56.000Z,4.31,-75.71,30,3.8,mb,,,,,us,usp0009fsx,2014-11-07T01:08:41.672Z,"2 km SSW of Pijao, Colombia",earthquake,,,,1,reviewed,rsnc,us
+1999-07-28T20:05:04.120Z,2.036,-75.794,12,4.3,ml,,,,,us,usp0009c81,2014-11-07T01:08:08.742Z,"3 km SSW of Altamira, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-07-22T19:59:52.070Z,3.827,-75.732,65.4,4.3,mb,,,,1.48,us,usp0009bzf,2014-11-07T01:08:07.678Z,"24 km SW of Roncesvalles, Colombia",earthquake,,10.8,,2,reviewed,us,us
+1999-07-19T16:13:16.090Z,4.197,-76.385,139.5,4.5,mb,,,,0.97,us,usp0009bv1,2014-11-07T01:08:07.126Z,"7 km WSW of Trujillo, Colombia",earthquake,,,,38,reviewed,us,us
+1999-06-14T00:24:41.730Z,4.486,-75.652,7,2.3,ml,,,,,us,usp00099u7,2014-11-07T01:07:53.747Z,"4 km SSW of Calarcá, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-05-20T04:49:37.850Z,4.521,-75.665,4,2.4,ml,,,,,us,usp00098bw,2014-11-07T01:07:41.814Z,"2 km SE of Armenia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-05-15T14:08:20.580Z,4.507,-75.642,5,2.5,ml,,,,,us,usp000980w,2014-11-07T01:07:40.702Z,"2 km S of Calarcá, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-05-15T02:01:55.380Z,3.384,-76.606,10,3.2,ml,,,,0.93,us,usp00097zd,2014-11-07T01:07:40.573Z,"10 km WSW of Cali, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-05-13T14:31:15.390Z,4.476,-75.77,4,2.7,ml,,,,,us,usp00097w6,2014-11-07T01:07:40.252Z,"3 km NE of La Tebaida, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-05-07T22:47:50.580Z,4.495,-75.646,4,2.5,ml,,,,,us,usp00097j0,2014-11-07T01:07:38.617Z,"3 km S of Calarcá, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-05-05T22:05:14.150Z,4.557,-75.618,2,2.5,ml,,,,,us,usp00097dp,2014-11-07T01:07:37.728Z,"3 km NE of Calarcá, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-04-26T23:10:09.980Z,4.395,-75.158,2,2.6,ml,,,,,us,usp00096xg,2014-11-07T01:07:30.899Z,"9 km ESE of Ibagué, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-04-20T18:08:52.860Z,4.484,-75.559,21,2.5,ml,,,,,us,usp00096mh,2014-11-07T01:07:29.424Z,"10 km ESE of Calarcá, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-04-01T09:54:50.910Z,4.611,-75.678,10,2.6,ml,,,,0.49,us,usp00095kk,2014-11-07T01:07:19.833Z,"4 km W of Circasia, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-03-30T18:43:10.800Z,4.482,-75.749,10,3.4,ml,,,,1.26,us,usp00095gh,2014-11-07T01:07:17.757Z,"5 km NE of La Tebaida, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-03-29T15:46:02.670Z,4.617,-75.634,4,2.7,ml,,,,,us,usp00095ee,2014-11-07T01:07:17.551Z,"0 km SE of Circasia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-03-25T07:12:21.040Z,4.39,-75.7,10,2.8,ml,,,,0.96,us,usp000954r,2014-11-07T01:07:16.159Z,"1 km W of Córdoba, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-03-23T03:56:58.810Z,4.486,-75.64,9,3.4,ml,,,,,us,usp000950n,2014-11-07T01:07:15.778Z,"4 km S of Calarcá, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-03-22T22:43:40.120Z,4.503,-75.679,4,2.3,ml,,,,,us,usp0009508,2014-11-07T01:07:15.740Z,"3 km S of Armenia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-03-21T22:14:40.100Z,4.502,-75.658,4,2.8,ml,,,,,us,usp00094xq,2014-11-07T01:07:15.523Z,"3 km SSW of Calarcá, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-03-17T01:04:37.050Z,4.475,-75.779,10,3.4,ml,,,,1.21,us,usp00094n0,2014-11-07T01:07:14.144Z,"2 km NNE of La Tebaida, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-03-11T13:07:23.760Z,4.502,-75.664,3,3.5,ml,,,,,us,usp00094a9,2014-11-07T01:07:13.011Z,"3 km SW of Calarcá, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-03-06T03:24:32.380Z,4.503,-75.68,4,3.3,ml,,,,,us,usp00093yf,2014-11-07T01:07:10.897Z,"Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-03-02T07:42:13.830Z,4.399,-75.701,4,3.3,ml,,,,,us,usp00093qf,2014-11-07T01:07:08.731Z,"1 km WNW of Córdoba, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-03-01T05:13:01.460Z,4.469,-75.66,3,2.3,ml,,,,,us,usp00093nn,2014-11-07T01:07:07.501Z,"7 km SSW of Calarcá, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-25T15:38:39.930Z,4.442,-75.666,8,4.4,ml,,,,,us,usp00093dr,2014-11-07T01:07:04.910Z,"6 km NNE of Córdoba, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-25T00:27:28.270Z,4.552,-74.814,16,2.2,ml,,,,,us,usp00093cf,2014-11-07T01:07:04.741Z,"4 km NW of Guataquí, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-24T12:06:54.250Z,4.517,-75.69,6,2.6,ml,,,,,us,usp00093bp,2014-11-07T01:07:04.653Z,"2 km SSW of Armenia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-24T03:33:11.050Z,4.389,-75.765,10,2.6,ml,,,,0.61,us,usp00093az,2014-11-07T01:07:04.481Z,"4 km NW of Buenavista, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-02-21T10:09:03.050Z,4.457,-75.729,4,2.6,ml,,,,,us,usp000935m,2014-11-07T01:07:03.192Z,"6 km E of La Tebaida, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-21T05:57:42.790Z,4.458,-75.672,5,2.7,ml,,,,,us,usp000935e,2014-11-07T01:07:03.182Z,"7 km NNE of Córdoba, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-21T05:32:09.910Z,4.471,-75.744,3,3.6,ml,,,,,us,usp000935d,2014-11-07T01:07:03.181Z,"5 km ENE of La Tebaida, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-19T09:54:15.320Z,4.497,-75.686,6,2.9,ml,,,,,us,usp0009327,2014-11-07T01:07:02.769Z,"4 km S of Armenia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-17T05:48:37.010Z,4.589,-75.733,10,2.2,ml,,,,0.55,us,usp00092ys,2014-11-07T01:07:02.195Z,"3 km NE of Montenegro, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-02-17T04:57:59.020Z,4.455,-75.748,10,2.9,ml,,,,1.05,us,usp00092yk,2014-11-07T01:07:02.183Z,"4 km E of La Tebaida, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-02-17T04:12:09.000Z,4.51,-75.681,3,2,ml,,,,,us,usp00092yf,2014-11-07T01:07:02.176Z,"2 km S of Armenia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-16T13:27:47.400Z,4.384,-75.705,1,2.9,ml,,,,,us,usp00092x9,2014-11-07T01:07:02.042Z,"2 km WSW of Córdoba, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-16T12:18:37.460Z,4.489,-75.735,10,2.6,ml,,,,0.98,us,usp00092x7,2014-11-07T01:07:02.038Z,"7 km NE of La Tebaida, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-02-14T07:26:43.420Z,4.539,-75.66,2,2.7,ml,,,,,us,usp00092su,2014-11-07T01:07:01.517Z,"2 km WNW of Calarcá, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-12T14:38:43.150Z,4.387,-75.64,1,2.1,ml,,,,,us,usp00092px,2014-11-07T01:07:01.199Z,"5 km E of Córdoba, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-12T14:36:51.820Z,4.478,-75.678,5,1.9,ml,,,,,us,usp00092pw,2014-11-07T01:07:01.198Z,"6 km S of Armenia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-11T10:10:10.050Z,4.515,-75.706,2,3.2,ml,,,,,us,usp00092mt,2014-11-07T01:07:00.985Z,"Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-07T08:23:49.900Z,4.477,-75.692,10,3.4,ml,,,,,us,usp00092dq,2014-11-07T01:07:00.069Z,"6 km S of Armenia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-06T22:28:39.610Z,4.343,-75.678,7,2.7,ml,,,,,us,usp00092cu,2014-11-07T01:06:59.358Z,"3 km ENE of Pijao, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-06T21:54:32.440Z,4.47,-75.678,10,3,ml,,,,1.12,us,usp00092cs,2014-11-07T01:06:59.351Z,"7 km S of Armenia, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-02-06T13:48:41.280Z,4.452,-75.695,4,2.9,ml,,,,,us,usp00092cd,2014-11-07T01:06:59.148Z,"6 km N of Córdoba, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-06T06:06:30.190Z,4.542,-75.674,10,2.3,ml,,,,0.49,us,usp00092bx,2014-11-07T01:06:59.084Z,"1 km NE of Armenia, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-02-05T23:45:16.760Z,4.49,-75.693,3,3.4,ml,,,,,us,usp00092bc,2014-11-07T01:06:59.042Z,"5 km SSW of Armenia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-05T00:10:04.030Z,4.519,-75.754,10,3,ml,,,,1.29,us,usp000929c,2014-11-07T01:06:58.742Z,"5 km S of Montenegro, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-02-04T15:38:18.400Z,4.402,-75.85,3,2.8,ml,,,,,us,usp000928v,2014-11-07T01:06:58.398Z,"8 km NNW of Caicedonia, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-02-04T10:32:30.900Z,4.52,-75.743,10,2.7,ml,,,,0.52,us,usp000928e,2014-11-07T01:06:58.286Z,"5 km S of Montenegro, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-01-31T07:26:42.360Z,4.443,-75.679,10,2.2,ml,,,,0.44,us,usp0009207,2014-11-07T01:06:52.738Z,"5 km N of Córdoba, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-01-31T06:17:25.470Z,4.425,-75.706,2,2.9,ml,,,,,us,usp0009206,2014-11-07T01:06:52.737Z,"4 km NNW of Córdoba, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-01-31T05:42:34.030Z,4.492,-75.771,10,2.7,ml,,,,1.18,us,usp0009204,2014-11-07T01:06:52.734Z,"4 km NNE of La Tebaida, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-01-30T12:24:25.050Z,4.511,-75.89,10,4,mb,,,,1.37,us,usp00091yu,2021-10-20T17:30:57.579Z,"11 km SE of Obando, Colombia",earthquake,,,,1,reviewed,us,us
+1999-01-30T04:21:54.910Z,4.344,-75.692,10,2.4,ml,,,,1.11,us,usp00091y5,2014-11-07T01:06:52.515Z,"1 km NE of Pijao, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-01-30T03:41:01.640Z,4.443,-75.699,8,2.1,ml,,,,,us,usp00091y0,2014-11-07T01:06:52.468Z,"5 km NNW of Córdoba, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-01-30T02:17:19.360Z,4.382,-75.663,5,2.4,ml,,,,,us,usp00091xw,2014-11-07T01:06:52.459Z,"2 km ESE of Córdoba, Colombia",earthquake,,,,,reviewed,rsnc,rsnc
+1999-01-29T06:06:56.650Z,4.503,-75.741,10,3.9,ml,,,,1.29,us,usp00091w8,2014-11-07T01:06:52.302Z,"7 km S of Montenegro, Colombia",earthquake,,,,,reviewed,us,rsnc
+1999-01-25T22:40:16.460Z,4.37,-75.682,10,5.5,mwc,,,,0.94,us,usp00091qf,2022-04-29T17:59:59.833Z,"2 km SSE of Córdoba, Colombia",earthquake,,,,,reviewed,us,hrv
+1999-01-25T18:19:16.870Z,4.461,-75.724,17,6.1,mwc,,,,1.01,us,usp00091q3,2026-08-11T20:48:51.662Z,"Near Armenia, Colombia",earthquake,,,,,reviewed,us,hrv
+1998-07-18T10:53:03.660Z,4.333,-75.94,167.9,3.7,mb,,,,1.22,us,usp0008rt1,2014-11-07T01:05:36.901Z,"7 km N of Sevilla, Colombia",earthquake,,6.7,,1,reviewed,us,us
+1998-06-22T07:03:13.270Z,2.722,-76.81,142.4,4.5,mb,,,,0.76,us,usp0008q9d,2014-11-07T01:05:26.133Z,"20 km W of Morales, Colombia",earthquake,,,,37,reviewed,us,us
+1998-04-22T00:57:33.090Z,3.256,-74.369,68.9,4,mb,,,,1.24,us,usp0008kqy,2014-11-07T01:05:02.926Z,"38 km WSW of Mesetas, Colombia",earthquake,,11.5,,5,reviewed,us,us
+1997-12-11T07:56:28.850Z,3.929,-75.787,177.5,6.4,mwb,,,,0.88,us,usp0008cf7,2022-04-29T17:12:09.334Z,"22 km WSW of Roncesvalles, Colombia",earthquake,,,,,reviewed,us,us
+1997-11-19T10:34:17.010Z,3.23,-76.467,85.5,4.5,mb,,,,0.94,us,usp0008ayv,2014-11-07T01:03:56.003Z,"5 km W of Puerto Tejada, Colombia",earthquake,,3.4,,10,reviewed,us,us
+1997-09-02T12:13:22.920Z,3.849,-75.749,198.7,6.8,mwb,,,,0.85,us,usp000871m,2022-04-29T16:59:22.550Z,"24 km SW of Roncesvalles, Colombia",earthquake,,1.8,,,reviewed,us,us
+1997-08-07T13:12:38.720Z,3.591,-76.791,104.5,4.1,mb,,,,1.03,us,usp00085x0,2014-11-07T01:03:16.762Z,"13 km WSW of Dagua, Colombia",earthquake,,14.3,,2,reviewed,us,us
+1997-07-17T12:45:36.380Z,3.774,-74.027,42.4,4.9,mb,,,,1.03,us,usp00084z8,2014-11-07T01:03:09.020Z,"Colombia",earthquake,,5.4,,27,reviewed,us,us
+1997-06-18T22:35:14.900Z,4.511,-76.114,33,4,mb,,,,1.24,us,usp00083q2,2014-11-07T01:02:58.196Z,"2 km SSW of La Unión, Colombia",earthquake,,,,2,reviewed,us,us
+1996-11-17T18:44:14.170Z,4.438,-76.201,112.6,4.7,mb,,,,0.84,us,usp0007t5d,2014-11-07T01:01:36.205Z,"5 km WNW of Roldanillo, Colombia",earthquake,,,,51,reviewed,us,us
+1996-03-26T05:54:49.970Z,2.181,-74.595,61.5,3.9,mb,,,,1.1,us,usp0007fa5,2014-11-07T01:00:08.589Z,"69 km ENE of Puerto Rico, Colombia",earthquake,,24.2,,2,reviewed,us,us
+1995-10-02T00:10:14.020Z,4.069,-75.576,191.3,3.9,mb,,,,1,us,usp00074ae,2014-11-07T00:58:51.932Z,"7 km NNE of Roncesvalles, Colombia",earthquake,,20.8,,9,reviewed,us,us
+1995-05-04T06:18:36.380Z,3.845,-76.817,100,3.7,mb,,,,1.5,us,usp0006wu8,2014-11-07T00:57:52.359Z,"24 km E of Buenaventura, Colombia",earthquake,,,,1,reviewed,us,us
+1995-03-01T23:47:24.330Z,4.034,-76.587,121.2,4.1,mb,,,,1.5,us,usp0006tq1,2014-11-07T00:57:26.504Z,"16 km NW of Darien, Colombia",earthquake,,15.4,,2,reviewed,us,us
+1995-02-08T18:40:25.380Z,4.104,-76.622,73.5,6.4,mwb,,,,0.9,us,usp0006skc,2022-04-29T17:39:24.724Z,"24 km NW of Darien, Colombia",earthquake,,,,,reviewed,us,us
+1994-08-29T07:43:57.740Z,2.825,-75.954,41.9,4.4,mb,,,,1.1,us,usp0006hn5,2014-11-07T00:56:08.190Z,"19 km N of Belalcázar, Colombia",earthquake,,11.7,,8,reviewed,us,us
+1994-08-04T02:50:49.090Z,2.835,-76.168,10,4.4,mb,,,,1,us,usp0006gh3,2014-11-07T00:55:59.793Z,"17 km SE of Toribío, Colombia",earthquake,,,,4,reviewed,us,us
+1994-06-10T05:47:10.440Z,2.762,-76.048,55.3,3.8,mb,,,,0.9,us,usp0006e19,2014-11-07T00:55:40.654Z,"15 km NNW of Belalcázar, Colombia",earthquake,,15.8,,1,reviewed,us,us
+1994-06-08T08:55:00.700Z,2.717,-75.921,42.9,4.4,mb,,,,1.3,us,usp0006dyb,2014-11-07T00:55:40.176Z,"9 km NE of Belalcázar, Colombia",earthquake,,11.9,,2,reviewed,us,us
+1994-06-08T06:41:24.430Z,2.627,-75.939,33,3.9,mb,,,,0.6,us,usp0006dy4,2014-11-07T00:55:40.162Z,"4 km ESE of Belalcázar, Colombia",earthquake,,,,1,reviewed,us,us
+1994-06-06T20:47:40.530Z,2.917,-76.057,12.1,6.8,mw,,,,1.1,us,usp0006dv8,2022-04-28T17:38:43.031Z,"23 km E of Toribío, Colombia",earthquake,,,,,reviewed,us,hrv
+1994-04-23T21:32:51.280Z,3.93,-74.357,33,4.6,mb,,,,1.2,us,usp0006bhs,2014-11-07T00:55:20.581Z,"15 km ESE of Cabrera, Colombia",earthquake,,,,1,reviewed,us,us
+1994-01-06T21:19:03.600Z,2.831,-73.994,103.1,3.9,mb,,,,0.8,us,usp000663y,2014-11-07T00:54:44.332Z,"42 km SW of Vistahermosa, Colombia",earthquake,,14.1,,2,reviewed,us,us
+1993-12-27T07:43:47.770Z,3.914,-74.062,67.7,3.5,mb,,,,1.3,us,usp00065pz,2014-11-07T00:54:38.466Z,"27 km WNW of Cubarral, Colombia",earthquake,,15.3,,1,reviewed,us,us
+1993-01-25T12:58:51.520Z,4.502,-74.996,85.9,3.9,mb,,,,1.4,us,usp0005m7u,2014-11-07T00:52:16.598Z,"8 km NNW of Doima, Colombia",earthquake,,15.7,,1,reviewed,us,us
+1992-12-06T00:40:34.480Z,1.808,-75.39,18.1,4.9,mb,,,,1,us,usp0005hvr,2020-08-29T01:58:50.247Z,"18 km NW of El Doncello, Colombia",earthquake,,,,25,reviewed,us,us
+1992-07-18T01:40:56.650Z,4.603,-75.634,152.8,4.7,mb,,,,1.2,us,usp0005b0n,2014-11-07T00:51:04.951Z,"1 km S of Circasia, Colombia",earthquake,,,,28,reviewed,us,us
+1992-04-08T05:30:03.920Z,3.225,-76.419,59.7,4.1,mb,,,,1.2,us,usp00055gd,2014-11-07T00:50:25.755Z,"0 km SSW of Puerto Tejada, Colombia",earthquake,,5,,3,reviewed,us,us
+1991-11-13T13:21:47.590Z,2.914,-76.434,148.9,5,mb,,,,1,us,usp0004z3r,2014-11-07T00:49:34.548Z,"11 km SSE of Santander de Quilichao, Colombia",earthquake,,2.6,,57,reviewed,us,us
+1991-10-31T09:54:44.890Z,4.448,-76.153,90,2.7,md,,,,0.5,us,usp0004ynm,2014-11-07T00:49:28.581Z,"3 km N of Roldanillo, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-30T04:57:38.980Z,3.432,-75.978,140,2.7,md,,,,0.2,us,usp0004ykz,2014-11-07T00:49:28.358Z,"29 km E of Pradera, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-29T13:39:20.990Z,2.742,-76.065,20,3.2,md,,,,0.2,us,usp0004yjz,2014-11-07T00:49:28.224Z,"14 km NW of Belalcázar, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-28T12:30:39.720Z,3.446,-76.245,120,2.6,md,,,,0.5,us,usp0004yh9,2014-11-07T00:49:28.116Z,"2 km N of Pradera, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-27T13:55:12.960Z,2.814,-75.255,60,3.7,md,,,,1.1,us,usp0004yfu,2014-11-07T00:49:27.964Z,"4 km N of Rivera, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-26T23:36:03.060Z,3.939,-76.314,110,2.7,md,,,,0.5,us,usp0004yet,2014-11-07T00:49:27.785Z,"Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-26T14:24:54.090Z,3.855,-76.121,33,2.7,md,,,,1.4,us,usp0004ydr,2014-11-07T00:49:27.727Z,"18 km NW of La Cumbre, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-26T13:37:02.320Z,3.395,-76.83,90,2.9,md,,,,0.4,us,usp0004ydp,2014-11-07T00:49:27.724Z,"28 km SE of Buenaventura, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-25T07:33:58.550Z,3.895,-76.078,33,2.8,md,,,,1,us,usp0004yb7,2014-11-07T00:49:27.392Z,"20 km ESE of San Pedro, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-24T11:18:21.550Z,1.914,-75.513,33,3,md,,,,0.7,us,usp0004y9t,2014-11-07T00:49:27.122Z,"29 km ESE of Guadalupe, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-23T01:13:08.020Z,3.996,-76.735,70,2.6,md,,,,0.4,us,usp0004y6v,2014-11-07T00:49:26.850Z,"28 km WNW of Darien, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-21T16:48:22.910Z,2.494,-75.425,33,3.8,md,,,,0.4,us,usp0004y4r,2014-11-07T00:49:26.318Z,"10 km SSE of Hobo, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-21T07:24:34.040Z,3.049,-76.285,110,3,md,,,,0.1,us,usp0004y40,2014-11-07T00:49:25.960Z,"10 km N of Toribío, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-21T05:50:28.020Z,3.792,-76.001,100,3,md,,,,0.3,us,usp0004y3t,2014-11-07T00:49:25.944Z,"7 km NNE of La Cumbre, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-18T08:13:03.580Z,3.812,-76.089,110,2.7,md,,,,0.5,us,usp0004xz3,2014-11-07T00:49:25.107Z,"12 km NW of La Cumbre, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-18T04:06:39.230Z,3.752,-76.304,100,2.7,md,,,,0.2,us,usp0004xyw,2014-11-07T00:49:25.096Z,"3 km ESE of Guacarí, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-17T05:42:48.970Z,2.114,-76.086,33,4.5,md,,,,1,us,usp0004xxm,2014-11-07T00:49:24.658Z,"14 km NW of Oporapa, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-16T16:40:11.370Z,4.263,-76.332,110,3.3,md,,,,0.8,us,usp0004xws,2014-11-07T00:49:24.574Z,"5 km NNW of Trujillo, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-14T15:07:18.770Z,4.199,-76.225,110,3.6,md,,,,0.6,us,usp0004xtm,2014-11-07T00:49:23.887Z,"7 km WNW of Andalucía, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-14T09:18:02.280Z,2.299,-74.857,33,3.2,md,,,,0.2,us,usp0004xtb,2014-11-07T00:49:23.861Z,"54 km NE of Puerto Rico, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-14T02:49:37.590Z,3.867,-76.773,33,3.1,md,,,,1.1,us,usp0004xsw,2014-11-07T00:49:23.792Z,"25 km NNW of Dagua, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-14T00:37:14.790Z,2.608,-75.757,33,3.5,md,,,,0.2,us,usp0004xst,2014-11-07T00:49:23.787Z,"9 km NE of Nátaga, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-13T11:39:02.080Z,2.48,-76.991,90,4.1,md,,,,0.4,us,usp0004xs3,2014-11-07T00:49:23.725Z,"16 km WSW of Villa Rica, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-10T20:46:32.940Z,3.841,-76.093,33,2.7,md,,,,1.5,us,usp0004xn2,2014-11-07T00:49:23.235Z,"15 km NNW of La Cumbre, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-10T11:05:11.840Z,3.424,-76.459,33,3.1,md,,,,0.2,us,usp0004xmk,2014-11-07T00:49:23.189Z,"7 km ESE of Cali, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-10T08:29:08.250Z,2.73,-75.031,10,3.9,md,,,,0.6,us,usp0004xmd,2014-11-07T00:49:23.176Z,"25 km ESE of Rivera, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-10T07:49:10.570Z,2.599,-75.677,10,3.1,md,,,,0.5,us,usp0004xma,2014-11-07T00:49:23.171Z,"7 km SW of Íquira, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-09T17:19:15.870Z,2.907,-74.785,33,4.1,md,,,,0.6,us,usp0004xkh,2014-11-07T00:49:23.051Z,"40 km SE of Baraya, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-08T01:20:14.730Z,2.672,-75.725,10,3.2,md,,,,0.5,us,usp0004xhp,2014-11-07T00:49:22.710Z,"10 km WNW of Íquira, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-07T08:39:37.440Z,3.556,-76.659,33,3.4,md,,,,0.8,us,usp0004xgz,2014-11-07T00:49:22.627Z,"11 km SSE of Dagua, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-06T09:19:51.040Z,3.835,-76.005,110,3,md,,,,0.3,us,usp0004xfd,2014-11-07T00:49:22.265Z,"12 km N of La Cumbre, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-04T20:45:50.090Z,3.055,-76.456,151.5,4.7,mb,,,,0.9,us,usp0004xd4,2014-11-07T00:49:21.649Z,"5 km WNW of Caloto, Colombia",earthquake,,3,,7,reviewed,us,us
+1991-10-04T08:52:59.400Z,3.377,-76.771,33,3.3,md,,,,1.2,us,usp0004xcn,2014-11-07T00:49:21.575Z,"28 km WSW of Cali, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-10-04T04:02:45.730Z,3.685,-74.847,10,3.5,md,,,,1.1,us,usp0004xcc,2014-11-07T00:49:21.537Z,"11 km SE of Prado, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-25T18:01:19.250Z,3.646,-76.452,10,2.2,md,,,,0.1,us,usp0004x1h,2014-11-07T00:49:17.429Z,"5 km S of Vijes, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-25T04:15:38.460Z,3.945,-76.327,97.5,3.2,md,,,,0.3,us,usp0004x0p,2014-11-07T00:49:17.316Z,"5 km NNW of Guadalajara de Buga, Colombia",earthquake,,47.9,,,reviewed,us,uvc
+1991-09-24T08:11:44.400Z,3.753,-76.195,54.5,3.2,md,,,,0.8,us,usp0004wzk,2014-11-07T00:49:17.076Z,"8 km ENE of Ginebra, Colombia",earthquake,,32.6,,,reviewed,us,uvc
+1991-09-23T15:40:49.830Z,3.419,-73.824,33,4,md,,,,0.6,us,usp0004wyw,2014-11-07T00:49:17.010Z,"7 km NE of San Juan de Arama, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-23T12:38:30.140Z,3.83,-76.22,93.6,3.2,md,,,,0.6,us,usp0004wyp,2014-11-07T00:49:16.997Z,"11 km SE of Guadalajara de Buga, Colombia",earthquake,,49,,,reviewed,us,uvc
+1991-09-23T08:28:21.360Z,3.43,-74.123,33,4,md,,,,0.9,us,usp0004wyk,2014-11-07T00:49:16.987Z,"10 km WNW of Mesetas, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-22T19:31:47.880Z,3.994,-76.129,33,2.8,md,,,,0.6,us,usp0004wxt,2014-11-07T00:49:16.900Z,"11 km E of San Pedro, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-22T00:11:21.610Z,3.593,-76.201,110,2.7,md,,,,0.3,us,usp0004wwp,2014-11-07T00:49:16.789Z,"12 km ENE of Palmira, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-21T17:16:54.830Z,4.219,-76.156,33,3.4,md,,,,1.2,us,usp0004ww8,2014-11-07T00:49:16.717Z,"0 km N of Bugalagrande, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-20T10:59:45.700Z,4.372,-76.161,33,3.6,md,,,,1.2,us,usp0004wu5,2014-11-07T00:49:15.977Z,"4 km NE of Bolívar, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-18T10:21:06.560Z,3.976,-76.436,110,3,md,,,,0.2,us,usp0004wry,2014-11-07T00:49:15.763Z,"7 km NE of Darien, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-16T17:03:37.750Z,3.974,-76.091,33,2.7,md,,,,0.4,us,usp0004wq2,2014-11-07T00:49:15.466Z,"15 km E of San Pedro, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-16T00:52:36.730Z,2.309,-76.175,10,3.6,md,,,,0.6,us,usp0004wpe,2014-11-07T00:49:15.386Z,"24 km WNW of La Argentina, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-15T07:18:50.490Z,3.919,-76.325,100,2.9,md,,,,0.3,us,usp0004wnn,2014-11-07T00:49:15.268Z,"3 km WNW of Guadalajara de Buga, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-06T08:11:38.180Z,2.265,-76.506,10,4.2,md,,,,0.5,us,usp0004waa,2014-11-07T00:49:13.832Z,"11 km E of Paispamba, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-04T07:57:21.720Z,4.47,-76.118,33,2.7,md,,,,0.5,us,usp0004w7z,2014-11-07T00:49:13.258Z,"7 km SSW of La Unión, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-04T04:32:29.860Z,4.354,-76.302,10,4.6,md,,,,0.8,us,usp0004w7u,2014-11-07T00:49:13.244Z,"13 km W of Bolívar, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-03T20:26:05.300Z,3.912,-76.414,33,2.4,md,,,,0.4,us,usp0004w7e,2014-11-07T00:49:13.182Z,"6 km NNW of Yotoco, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-03T01:56:10.030Z,4.441,-75.75,110,2.9,md,,,,0.3,us,usp0004w6b,2014-11-07T00:49:12.572Z,"4 km ESE of La Tebaida, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-09-02T04:16:45.100Z,4.043,-76.306,110,2.7,md,,,,0.4,us,usp0004w55,2014-11-07T00:49:11.907Z,"10 km WNW of San Pedro, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-08-31T22:39:52.310Z,3.616,-75.823,33,3.3,md,,,,0.5,us,usp0004w3h,2014-11-07T00:49:09.209Z,"21 km WNW of Rioblanco, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-08-31T12:45:37.090Z,4.145,-76.161,33,3,md,,,,0.8,us,usp0004w2w,2014-11-07T00:49:09.156Z,"2 km SSE of Andalucía, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-08-31T07:59:47.670Z,3.874,-76.219,114.4,3.8,md,,,,0.5,us,usp0004w2q,2014-11-07T00:49:09.147Z,"9 km ESE of Guadalajara de Buga, Colombia",earthquake,,59.8,,,reviewed,us,uvc
+1991-08-31T05:12:47.240Z,3.898,-76.261,98.7,3.9,md,,,,0.5,us,usp0004w2m,2014-11-07T00:49:09.142Z,"4 km E of Guadalajara de Buga, Colombia",earthquake,,48.3,,,reviewed,us,uvc
+1991-08-27T01:10:35.130Z,3.83,-76.19,96.5,2.6,md,,,,0.6,us,usp0004vx5,2014-11-07T00:49:08.004Z,"14 km ESE of Guadalajara de Buga, Colombia",earthquake,,57.2,,,reviewed,us,uvc
+1991-08-25T21:58:57.890Z,4.342,-76.195,33,2.8,md,,,,0.6,us,usp0004vvd,2014-11-07T00:49:07.738Z,"1 km WNW of Bolívar, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-08-24T17:08:07.990Z,4.4,-76.323,33,2.6,md,,,,0.2,us,usp0004vt9,2014-11-07T00:49:07.524Z,"15 km SW of El Dovio, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-08-24T04:51:01.600Z,3.558,-75.731,33,2.8,md,,,,0.9,us,usp0004vsp,2014-11-07T00:49:07.431Z,"10 km WNW of Rioblanco, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-08-23T17:59:05.080Z,3.631,-76.502,33,2.3,md,,,,1.6,us,usp0004vru,2014-11-07T00:49:07.353Z,"5 km NNW of Yumbo, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-08-23T16:26:18.720Z,4.099,-76.147,33,2.7,md,,,,0.5,us,usp0004vrq,2014-11-07T00:49:07.345Z,"5 km ENE of Tuluá, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-08-14T07:41:43.620Z,3.968,-75.67,31.7,3.4,md,,,,0.6,us,usp0004vb6,2014-11-07T00:49:05.092Z,"8 km WSW of Roncesvalles, Colombia",earthquake,,9.4,,,reviewed,us,uvc
+1991-08-10T00:49:55.630Z,2.525,-75.791,10,3.4,md,,,,0.2,us,usp0004v65,2014-11-07T00:49:04.573Z,"2 km SE of Nátaga, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-08-05T21:00:22.370Z,3.892,-76.184,88.3,3.3,md,,,,0.4,us,usp0004v15,2014-11-07T00:49:03.327Z,"12 km SSE of San Pedro, Colombia",earthquake,,30.2,,,reviewed,us,uvc
+1991-08-02T19:53:04.660Z,3.665,-76.501,20.9,2.5,md,,,,0.7,us,usp0004ux8,2014-11-07T00:49:02.182Z,"7 km WSW of Vijes, Colombia",earthquake,,11.6,,,reviewed,us,uvc
+1991-08-02T11:06:16.700Z,2.434,-76.201,10,2.8,md,,,,0.1,us,usp0004uwx,2014-11-07T00:49:02.097Z,"19 km SW of Inzá, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-08-01T14:51:58.020Z,4.033,-76.283,10,2.6,md,,,,0.8,us,usp0004uvy,2014-11-07T00:49:01.583Z,"7 km NW of San Pedro, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-03-19T10:56:17.180Z,4.643,-75.759,151.6,4.8,mb,,,,1,us,usp0004p88,2014-11-07T00:48:13.044Z,"2 km N of Quimbaya, Colombia",earthquake,,,,48,reviewed,us,us
+1991-01-29T22:03:37.030Z,3.524,-76.533,10,2.4,md,,,,0.4,us,usp0004mb0,2014-11-07T00:47:53.627Z,"7 km SW of Yumbo, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-28T21:56:42.470Z,3.953,-76.321,110,2.5,md,,,,0.5,us,usp0004m9t,2014-11-07T00:47:53.492Z,"6 km NNW of Guadalajara de Buga, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-28T15:59:52.960Z,2.37,-76.396,10,2.7,md,,,,0.1,us,usp0004m9c,2014-11-07T00:47:53.434Z,"15 km S of Totoró, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-27T14:25:11.180Z,3.077,-75.365,33,3.6,md,,,,0.8,us,usp0004m76,2014-11-07T00:47:53.219Z,"18 km NNW of Neiva, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-26T17:34:54.810Z,2.969,-76.607,110,3.1,md,,,,0.6,us,usp0004m69,2014-11-07T00:47:53.044Z,"6 km SE of Buenos Aires, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-25T17:39:14.140Z,4.033,-76.021,55.8,2.8,md,,,,0.4,us,usp0004m4t,2014-11-07T00:47:52.799Z,"20 km ESE of Tuluá, Colombia",earthquake,,37.7,,,reviewed,us,uvc
+1991-01-24T07:54:09.750Z,3.23,-76.57,48.3,3,md,,,,0.4,us,usp0004m3b,2014-11-07T00:47:52.329Z,"Colombia",earthquake,,23,,,reviewed,us,uvc
+1991-01-23T17:58:59.620Z,3.785,-76.722,38.7,3,md,,,,0.4,us,usp0004m2s,2014-11-07T00:47:52.296Z,"14 km NNW of Dagua, Colombia",earthquake,,18.1,,,reviewed,us,uvc
+1991-01-22T06:24:19.860Z,3.593,-76.326,28.7,2.4,md,,,,0.2,us,usp0004m11,2014-11-07T00:47:51.938Z,"6 km NNW of Palmira, Colombia",earthquake,,12.4,,,reviewed,us,uvc
+1991-01-22T01:02:03.280Z,3.761,-76.875,33,2.4,md,,,,0.3,us,usp0004m0r,2014-11-07T00:47:51.888Z,"21 km SE of Buenaventura, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-21T14:56:14.640Z,2.891,-74.797,33,3.7,md,,,,0.7,us,usp0004kzx,2014-11-07T00:47:51.799Z,"40 km SE of Baraya, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-21T06:29:40.390Z,3.267,-76.799,18.8,2.8,md,,,,0.5,us,usp0004kzj,2014-11-07T00:47:51.758Z,"29 km W of Jamundí, Colombia",earthquake,,14.9,,,reviewed,us,uvc
+1991-01-18T08:47:33.380Z,2.551,-74.246,33,3.7,md,,,,0.3,us,usp0004ku7,2014-11-07T00:47:50.733Z,"Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-17T01:25:59.560Z,4.017,-76.226,30,2.7,md,,,,0.6,us,usp0004ksn,2014-11-07T00:47:50.571Z,"2 km N of San Pedro, Colombia",earthquake,,9,,,reviewed,us,uvc
+1991-01-15T15:38:30.030Z,2.387,-76.36,10,3.4,md,,,,0.5,us,usp0004kr3,2014-11-07T00:47:50.430Z,"14 km SSE of Totoró, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-15T01:19:00.860Z,2.853,-76.311,10,2.6,md,,,,0.7,us,usp0004kqb,2014-11-07T00:47:50.239Z,"8 km N of Jambaló, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-14T15:53:14.900Z,3.546,-75.802,33,3.1,md,,,,1,us,usp0004kpt,2014-11-07T00:47:50.179Z,"17 km W of Rioblanco, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-13T11:31:15.510Z,4.346,-75.795,120,4.5,md,,,,1,us,usp0004kmg,2014-11-07T00:47:49.954Z,"3 km ENE of Caicedonia, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-12T14:14:13.270Z,3.75,-76.619,33,3.1,md,,,,0.9,us,usp0004kk4,2014-11-07T00:47:49.552Z,"12 km NE of Dagua, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-11T22:36:14.070Z,2.342,-75.76,33,3.5,md,,,,0.8,us,usp0004kjf,2014-11-07T00:47:49.389Z,"9 km N of Agrado, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-11T22:16:02.340Z,3.51,-76.478,5,2.3,md,,,,0.1,us,usp0004kjd,2014-11-07T00:47:49.369Z,"8 km S of Yumbo, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-11T09:08:48.650Z,4.106,-76.329,33,2.2,md,,,,0.4,us,usp0004khf,2014-11-07T00:47:49.109Z,"7 km SW of Riofrío, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-10T22:59:39.140Z,3.765,-76.579,33,2.9,md,,,,1.3,us,usp0004kgk,2014-11-07T00:47:49.038Z,"8 km SW of Restrepo, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-10T10:20:51.040Z,3.847,-76.235,94.4,3.1,md,,,,0.4,us,usp0004kfs,2014-11-07T00:47:48.959Z,"9 km SE of Guadalajara de Buga, Colombia",earthquake,,40.3,,,reviewed,us,uvc
+1991-01-09T18:23:06.130Z,3.976,-76.26,94.6,3.5,md,,,,0.4,us,usp0004ket,2014-11-07T00:47:48.803Z,"4 km WSW of San Pedro, Colombia",earthquake,,34.8,,,reviewed,us,uvc
+1991-01-09T16:59:43.440Z,2.469,-75.268,33,3.7,md,,,,0.6,us,usp0004ker,2014-11-07T00:47:48.798Z,"8 km SE of Algeciras, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-09T11:23:11.640Z,2.942,-74.803,33,4,md,,,,0.6,us,usp0004kee,2014-11-07T00:47:48.407Z,"36 km SE of Baraya, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-09T00:07:10.980Z,2.13,-76.221,10,3.4,md,,,,1,us,usp0004ke0,2014-11-07T00:47:48.065Z,"21 km N of Isnos, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-08T20:16:35.810Z,3.102,-76.725,10,2.7,md,,,,0.9,us,usp0004kdr,2014-11-07T00:47:47.947Z,"13 km NW of Buenos Aires, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-08T15:41:52.150Z,2.804,-75.044,33,3.4,md,,,,0.6,us,usp0004kde,2014-11-07T00:47:47.923Z,"23 km E of Rivera, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-06T17:40:28.870Z,4.234,-76.38,89.5,3.3,md,,,,0.5,us,usp0004kah,2014-11-07T00:47:47.246Z,"7 km WNW of Trujillo, Colombia",earthquake,,38,,,reviewed,us,uvc
+1991-01-06T16:10:11.770Z,3.593,-76.351,10,2.1,md,,,,0.5,us,usp0004kab,2014-11-07T00:47:47.186Z,"7 km NW of Palmira, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-05T20:59:32.120Z,2.61,-76.857,10,3.7,md,,,,0.6,us,usp0004k91,2014-11-07T00:47:46.817Z,"10 km N of Villa Rica, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-05T16:53:18.990Z,2.328,-76.309,10,3.1,md,,,,0.7,us,usp0004k8q,2014-11-07T00:47:46.775Z,"22 km SSE of Totoró, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-04T22:47:58.740Z,3.674,-75.233,33,3.8,md,,,,0.5,us,usp0004k7g,2014-11-07T00:47:46.049Z,"14 km SSW of Coyaima, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-04T12:29:34.850Z,4.171,-76.13,33,3.4,md,,,,0.7,us,usp0004k75,2014-11-07T00:47:45.835Z,"4 km E of Andalucía, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-03T02:39:10.840Z,3.915,-76.056,33,2.6,md,,,,0.7,us,usp0004k4t,2014-11-07T00:47:44.720Z,"21 km ESE of San Pedro, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-02T21:17:39.030Z,3.84,-75.951,10,2.7,md,,,,0.4,us,usp0004k48,2014-11-07T00:47:44.476Z,"15 km NNE of La Cumbre, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-02T19:49:13.190Z,4.039,-76.336,110,2.8,md,,,,0.2,us,usp0004k45,2014-11-07T00:47:44.463Z,"12 km WNW of San Pedro, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-02T17:21:07.220Z,4.233,-75.808,10,4.2,md,,,,0.8,us,usp0004k42,2014-11-07T00:47:44.443Z,"10 km SSW of Génova, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-02T01:42:30.790Z,2.889,-74.863,33,3.7,md,,,,0.6,us,usp0004k36,2014-11-07T00:47:44.149Z,"36 km SE of Baraya, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-02T01:27:05.340Z,4.278,-76.205,33,3.1,md,,,,0.3,us,usp0004k34,2014-11-07T00:47:44.141Z,"7 km SSW of Bolívar, Colombia",earthquake,,,,,reviewed,us,uvc
+1991-01-01T23:21:03.570Z,3.588,-76.354,10,2.6,md,,,,0.3,us,usp0004k30,2014-11-07T00:47:44.119Z,"7 km NW of Palmira, Colombia",earthquake,,,,,reviewed,us,uvc
+1990-10-23T09:13:04.240Z,3.12,-75.282,33,4.2,mb,,,,1.5,us,usp0004g2g,2014-11-07T00:47:17.971Z,"12 km SSW of Aipe, Colombia",earthquake,,,,2,reviewed,us,us
+1990-09-10T05:25:21.420Z,3.853,-73.945,31.3,4.4,mb,,,,1.1,us,usp0004ehj,2014-11-07T00:47:06.310Z,"13 km WNW of Cubarral, Colombia",earthquake,,7.9,,7,reviewed,us,us
+1990-07-04T13:21:54.280Z,1.91,-75.613,33,3.7,mb,,,,1.3,us,usp0004bcb,2014-11-07T00:46:38.154Z,"20 km SE of Guadalupe, Colombia",earthquake,,,,1,reviewed,us,us
+1990-04-13T15:25:04.170Z,3.858,-76.298,164.1,4.6,mb,,,,1.3,us,usp00047vz,2014-11-07T00:46:09.392Z,"4 km S of Guadalajara de Buga, Colombia",earthquake,,6.4,,7,reviewed,us,us
+1989-10-11T14:42:09.370Z,2.94,-73.635,32.9,5,mb,,,,0.9,us,usp00040jq,2020-04-16T19:26:49.646Z,"24 km SSE of Vistahermosa, Colombia",earthquake,,5.1,,11,reviewed,us,us
+1989-08-31T16:02:10.250Z,3.879,-76.059,130.7,4.6,mb,,,,0.6,us,usp0003z3e,2014-11-07T00:44:45.697Z,"17 km NNW of La Cumbre, Colombia",earthquake,,4.1,,2,reviewed,us,us
+1989-06-28T15:16:18.410Z,4.535,-76.066,129.4,4.7,mb,,,,0.9,us,usp0003wrk,2014-11-07T00:44:24.605Z,"3 km WNW of La Victoria, Colombia",earthquake,,5.6,,7,reviewed,us,us
+1989-05-05T08:11:38.900Z,3.189,-76.331,10.4,3.2,mb,,,,1,us,usp0003ux8,2014-11-07T00:44:09.058Z,"3 km SSW of Padilla, Colombia",earthquake,,5.4,,1,reviewed,us,us
+1988-11-10T15:42:20.520Z,3.807,-75.375,33,4.2,mb,,,,1.4,us,usp0003nrp,2014-11-07T00:43:05.756Z,"15 km NE of Chaparral, Colombia",earthquake,,,,1,reviewed,us,us
+1988-01-30T17:29:56.160Z,3.691,-76.841,33,2.5,md,,,,0,us,usp0003cjx,2014-11-07T00:41:33.611Z,"17 km WNW of Dagua, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-30T10:13:20.740Z,3.365,-76.443,33,2.4,md,,,,0.4,us,usp0003cjm,2014-11-07T00:41:33.590Z,"11 km WSW of Candelaria, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-29T23:54:54.800Z,4.096,-76.248,33,3,md,,,,0.4,us,usp0003cj8,2014-11-07T00:41:33.567Z,"5 km WNW of Tuluá, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-28T18:32:47.110Z,3.593,-76.508,33,2.3,md,,,,1.2,us,usp0003ch8,2014-11-07T00:41:33.316Z,"2 km WNW of Yumbo, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-26T14:42:14.140Z,3.844,-75.96,33,2.6,md,,,,0.4,us,usp0003cej,2014-11-07T00:41:32.782Z,"15 km NNE of La Cumbre, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-25T02:08:33.600Z,3.567,-75.786,10,3.2,md,,,,0.1,us,usp0003ccd,2014-11-07T00:41:32.403Z,"16 km WNW of Rioblanco, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-23T15:10:47.130Z,2.983,-75.671,10,3.5,md,,,,0.2,us,usp0003cay,2014-11-07T00:41:32.196Z,"4 km NNW of Santa María, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-22T23:32:56.980Z,3.108,-76.365,103,2.8,md,,,,0.1,us,usp0003ca5,2014-11-07T00:41:32.086Z,"9 km NNE of Caloto, Colombia",earthquake,,42.3,,,reviewed,us,uvc
+1988-01-20T05:22:30.800Z,3.307,-76.917,33,2.5,md,,,,0.4,us,usp0003c7e,2014-11-07T00:41:31.701Z,"31 km SSE of Buenaventura, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-20T01:48:14.210Z,2.754,-76.667,33,3.1,ml,,,,2,us,usp0003c74,2014-11-07T00:41:31.683Z,"4 km W of Morales, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-19T19:49:31.730Z,3.869,-75.683,33,3.2,md,,,,1.4,us,usp0003c6n,2014-11-07T00:41:31.635Z,"17 km SSW of Roncesvalles, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-19T11:38:06.940Z,3.84,-76.167,33,3.2,md,,,,1.5,us,usp0003c67,2014-11-07T00:41:31.591Z,"16 km ESE of Guadalajara de Buga, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-17T04:22:48.200Z,4.114,-76.623,33,3.9,md,,,,0.2,us,usp0003c4a,2014-11-07T00:41:31.260Z,"25 km NW of Darien, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-14T04:48:42.580Z,2.747,-75.084,33,3.7,md,,,,0.7,us,usp0003c1q,2014-11-07T00:41:30.898Z,"19 km E of Rivera, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-04T09:55:19.660Z,3.27,-76.414,33,3.3,md,,,,0.4,us,usp0003bt8,2014-11-07T00:41:28.939Z,"4 km N of Puerto Tejada, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-03T14:33:10.350Z,3.365,-76.441,33,2.6,md,,,,0.3,us,usp0003bsb,2014-11-07T00:41:28.651Z,"11 km WSW of Candelaria, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-03T14:13:37.720Z,2.917,-76.833,10,2.7,md,,,,0.4,us,usp0003bsa,2014-11-07T00:41:28.648Z,"15 km WSW of Suárez, Colombia",earthquake,,,,,reviewed,us,uvc
+1988-01-03T08:06:26.050Z,4.042,-76.639,33,2.2,md,,,,0.2,us,usp0003bs3,2014-11-07T00:41:28.601Z,"21 km NW of Darien, Colombia",earthquake,,,,,reviewed,us,uvc
+1987-03-20T09:15:30.330Z,3.964,-76.243,126.2,4,mb,,,,1.2,us,usp00033fj,2014-11-07T00:40:05.533Z,"3 km SSW of San Pedro, Colombia",earthquake,,12.4,,2,reviewed,us,us
+1986-07-22T19:53:52.540Z,4.365,-75.919,169.8,4.7,mb,,,,1,us,usp0002wd0,2014-11-07T00:38:43.461Z,"10 km WNW of Caicedonia, Colombia",earthquake,,10,,1,reviewed,us,us
+1986-03-29T09:48:55.000Z,4.59,-75.626,158.1,5,mb,,,,1,us,usp0002sdj,2014-11-07T00:38:06.340Z,"3 km SSE of Circasia, Colombia",earthquake,,5.3,,31,reviewed,us,us
+1986-03-27T06:05:33.210Z,3.521,-76.454,145.9,4.6,mb,,,,1.2,us,usp0002sax,2014-11-07T00:38:06.016Z,"7 km SSE of Yumbo, Colombia",earthquake,,6.8,,10,reviewed,us,us
+1986-03-27T04:04:55.020Z,3.934,-76.138,137.8,4.3,mb,,,,1.4,us,usp0002sav,2014-11-07T00:38:06.011Z,"12 km ESE of San Pedro, Colombia",earthquake,,8.7,,4,reviewed,us,us
+1985-11-20T07:11:57.050Z,3.65,-74.925,33,4.7,mb,,,,1.8,us,usp0002mz3,2014-11-07T00:37:29.514Z,"11 km S of Prado, Colombia",earthquake,,,,1,reviewed,us,us
+1984-11-13T14:03:15.850Z,1.978,-76.011,16.5,5.1,mb,,,,1,us,usp000291a,2022-04-27T23:07:13.878Z,"3 km ESE of Saladoblanco, Colombia",earthquake,,5.8,,46,reviewed,us,us
+1984-10-26T16:12:47.180Z,2.922,-76.304,162.6,4.5,mb,,,,1.2,us,usp00028hq,2014-11-07T00:35:36.629Z,"5 km SW of Toribío, Colombia",earthquake,,9.5,,6,reviewed,us,us
+1984-09-17T07:36:34.810Z,1.17,-75.253,33,4.3,mb,,,,1.2,us,usp00027fb,2014-11-07T00:35:27.138Z,"31 km ESE of Milán, Colombia",earthquake,,,,3,reviewed,us,us
+1984-01-25T18:46:25.440Z,3.417,-76.53,65.9,5,mb,,,,1.2,us,usp00021ja,2014-11-07T00:34:24.216Z,"2 km SSW of Cali, Colombia",earthquake,,7.3,,5,reviewed,us,us
+1983-03-31T13:12:52.640Z,2.461,-76.686,22.2,5.5,mb,,,,1.2,us,usp0001u34,2022-04-28T00:11:32.999Z,"8 km WNW of Popayán, Colombia",earthquake,,4.1,,62,reviewed,us,us
+1982-05-14T01:18:47.960Z,2.373,-75.311,62.7,4.7,mb,,,,1.3,us,usp0001m9y,2014-11-07T00:31:18.146Z,"16 km S of Algeciras, Colombia",earthquake,,5.8,,9,reviewed,us,us
+1982-03-08T04:16:32.730Z,3.408,-74.074,33,4.3,mb,,,,1.7,us,usp0001k0p,2014-11-07T00:30:58.367Z,"4 km NW of Mesetas, Colombia",earthquake,,,,3,reviewed,us,us
+1982-02-13T01:09:22.160Z,3.905,-76.365,150.5,4.4,mb,,,,1,us,usp0001jm9,2014-11-07T00:30:51.154Z,"5 km NNE of Yotoco, Colombia",earthquake,,17.9,,2,reviewed,us,us
+1981-08-05T12:58:27.460Z,3.895,-76.409,58.4,5,mb,,,,0.9,us,usp0001f4b,2022-04-28T00:56:27.991Z,"4 km NW of Yotoco, Colombia",earthquake,,3.5,,56,reviewed,us,us
+1981-05-22T08:26:14.440Z,1.548,-75.893,42.5,4.2,mb,,,,0.7,us,usp0001dtc,2014-11-07T00:29:30.531Z,"14 km N of Belén de los Andaquíes, Colombia",earthquake,,6.1,,2,reviewed,us,us
+1980-11-17T01:24:56.000Z,3.994,-76.122,122,4,mb,,,,,us,usp0001auw,2014-11-06T23:24:27.382Z,"11 km E of San Pedro, Colombia",earthquake,,,,,reviewed,us,us
+1980-07-07T16:48:44.500Z,4.274,-76.238,144,4.9,mb,,,,,us,usp00018qf,2014-11-06T23:24:24.114Z,"9 km SW of Bolívar, Colombia",earthquake,,,,,reviewed,us,us
+1980-06-25T12:04:56.900Z,4.437,-75.779,162,5.7,mb,,,,,us,usp00018fj,2022-04-28T01:35:33.352Z,"1 km SSE of La Tebaida, Colombia",earthquake,,,,,reviewed,us,us
+1980-06-20T01:05:15.800Z,3.633,-73.702,65,4.4,mb,,,,,us,usp00018c5,2014-11-06T23:24:23.534Z,"7 km S of San Martín, Colombia",earthquake,,,,,reviewed,us,us
+1980-06-19T23:05:34.900Z,3.626,-73.657,55,4.3,mb,,,,,us,usp00018c2,2014-11-06T23:24:23.531Z,"9 km SSE of San Martín, Colombia",earthquake,,,,,reviewed,us,us
+1980-02-12T08:18:50.100Z,3.781,-74.146,45,4.6,mb,,,,,us,usp00015dh,2014-11-06T23:24:17.695Z,"31 km NNW of Lejanías, Colombia",earthquake,,,,,reviewed,us,us
+1979-11-21T18:49:54.700Z,4.558,-74.743,33,4.6,mb,,,,,us,usp000144b,2014-11-06T23:22:07.645Z,"5 km W of Jerusalén, Colombia",earthquake,,,,,reviewed,us,us
+1979-09-11T14:02:57.800Z,4.235,-75.559,38,4.8,mb,,,,,us,usp00012wc,2022-04-27T14:54:38.992Z,"19 km SE of Pijao, Colombia",earthquake,,,,,reviewed,us,us
+1979-09-06T03:57:53.600Z,4.509,-75.881,165,5,mb,,,,,us,usp00012th,2014-11-06T23:22:05.246Z,"Colombia",earthquake,,,,,reviewed,us,us
+1979-09-02T02:00:11.800Z,4.27,-76.412,95,4.7,mb,,,,,us,usp00012rz,2014-11-06T23:22:05.185Z,"12 km WNW of Trujillo, Colombia",earthquake,,,,,reviewed,us,us
+1979-08-24T17:55:39.600Z,2.078,-75.459,36,4.3,mb,,,,,us,usp00012kx,2014-11-06T23:22:04.991Z,"22 km SE of Garzón, Colombia",earthquake,,,,,reviewed,us,us
+1979-03-27T09:09:16.900Z,3.934,-76.026,127,4.4,mb,,,,,us,usp0000zpu,2014-11-06T23:21:59.173Z,"23 km N of La Cumbre, Colombia",earthquake,,,,,reviewed,us,us
+1979-01-06T12:50:51.100Z,2.236,-75.942,36,4.9,mb,,,,,us,usp0000yan,2014-11-06T23:21:55.678Z,"5 km NE of La Argentina, Colombia",earthquake,,,,,reviewed,us,us
+1977-04-09T13:41:13.400Z,2.88,-76.457,127,4.3,mb,,,,,us,usp0000nam,2014-11-06T23:21:40.750Z,"9 km NNE of Caldono, Colombia",earthquake,,,,,reviewed,us,us
+1977-03-16T16:29:00.700Z,3.62,-74.493,135,4.3,mb,,,,,us,usp0000my2,2014-11-06T23:21:40.186Z,"36 km SE of Tres Esquinas, Colombia",earthquake,,,,,reviewed,us,us
+1977-02-12T11:44:25.400Z,1.947,-75.863,47,4.5,mb,,,,,us,usp0000mhs,2014-11-06T23:21:39.834Z,"8 km ESE of Timaná, Colombia",earthquake,,,,,reviewed,us,us
+1976-11-25T14:59:35.700Z,4.249,-75.528,197,4.8,mb,,,,,us,usp0000kfr,2014-11-06T23:21:38.363Z,"18 km SSW of Anaime, Colombia",earthquake,,,,,reviewed,us,us
+1976-10-12T23:49:34.800Z,3.254,-76.972,90,4.8,mb,,,,,us,usp0000jux,2014-11-06T23:21:37.700Z,"36 km S of Buenaventura, Colombia",earthquake,,,,,reviewed,us,us
+1976-08-26T18:26:49.300Z,3.106,-77.005,181,3.8,mb,,,,,us,usp0000j29,2014-11-06T23:21:36.911Z,"38 km WNW of Suárez, Colombia",earthquake,,,,,reviewed,us,us
+1976-07-06T06:48:54.600Z,3.498,-76.388,132,4.5,mb,,,,,us,usp0000h72,2014-11-06T23:21:36.094Z,"10 km WSW of Palmira, Colombia",earthquake,,,,,reviewed,us,us
+1976-05-19T04:07:15.800Z,4.464,-75.783,157,5.9,mb,,,,,us,usp0000gdv,2022-04-27T17:08:03.154Z,"1 km NNE of La Tebaida, Colombia",earthquake,,,,,reviewed,us,us
+1976-04-27T04:57:49.900Z,4.11,-75.511,52,3.9,mb,,,,,us,usp0000g2c,2014-11-06T23:21:34.951Z,"12 km WNW of Playarrica, Colombia",earthquake,,,,,reviewed,us,us
+1975-03-31T01:42:32.300Z,2.852,-75.367,83,4,mb,,,,,us,usp0000aeb,2014-11-06T23:21:29.567Z,"8 km ESE of Palermo, Colombia",earthquake,,,,,reviewed,us,us
+1974-12-08T14:54:34.600Z,2.774,-75.283,86,4.6,mb,,,,,us,usp000091y,2014-11-06T23:21:27.739Z,"2 km W of Rivera, Colombia",earthquake,,,,,reviewed,us,us
+1974-10-19T07:54:53.500Z,4.138,-75.758,75,4.4,mb,,,,,us,usp00008fq,2014-11-06T23:21:26.914Z,"19 km S of Génova, Colombia",earthquake,,,,,reviewed,us,us
+1974-07-27T01:31:58.000Z,2.542,-75.718,240,4.5,mb,,,,,us,usp00007az,2014-11-06T23:21:25.433Z,"6 km NNE of Tesalia, Colombia",earthquake,,,,,reviewed,us,us
+1974-02-21T12:43:48.700Z,3.977,-74.302,66,4.9,mb,,,,,us,usp00005c5,2014-11-06T23:21:22.917Z,"20 km E of Cabrera, Colombia",earthquake,,,,,reviewed,us,us
+1974-02-03T20:16:25.500Z,3.103,-76.142,176,4.3,mb,,,,,us,usp000055n,2014-11-06T23:21:22.692Z,"15 km ESE of Corinto, Colombia",earthquake,,,,,reviewed,us,us
+1973-12-11T00:41:53.600Z,3.326,-74.12,157,3.9,mb,,,,,us,usp00004gv,2014-11-06T23:21:21.811Z,"10 km SW of Mesetas, Colombia",earthquake,,,,,reviewed,us,us
+1973-10-18T09:18:32.600Z,2.968,-74.86,42,5.2,mb,,,,,us,usp00003v4,2022-04-27T18:38:58.493Z,"29 km SE of Baraya, Colombia",earthquake,,,,,reviewed,us,us
+1973-04-03T13:54:01.800Z,4.691,-75.628,158,6.2,mb,,,,,us,usp0000176,2022-04-27T18:53:36.919Z,"3 km ENE of Filandia, Colombia",earthquake,,,,,reviewed,us,us
+1972-11-22T10:44:57.440Z,2.44,-75.362,15,5.31,mw,,,,,iscgem,iscgem767590,2022-04-26T20:36:31.524Z,"Colombia",earthquake,,25,0.43,,reviewed,iscgem,iscgem
+1968-01-28T01:50:47.330Z,2.916,-74.943,51.5,5.19,mw,,,,,iscgem,iscgem827722,2022-04-26T22:40:26.103Z,"27 km SE of Tello, Colombia",earthquake,,5.2,0.2,,reviewed,iscgem,iscgem
+1967-11-05T14:23:53.890Z,3.075,-74.895,23.9,5.2,mw,,,,,iscgem,iscgem829110,2022-04-26T22:42:58.520Z,"19 km ESE of Baraya, Colombia",earthquake,,17.6,0.2,,reviewed,iscgem,iscgem
+1967-02-27T02:06:41.280Z,2.946,-74.77,36.1,5.25,mw,,,,,iscgem,iscgem839156,2022-04-26T23:01:04.920Z,"38 km SE of Baraya, Colombia",earthquake,,4.7,0.2,,reviewed,iscgem,iscgem
+1967-02-09T15:24:46.750Z,2.906,-74.772,35,7,mw,,,,,iscgem,iscgem838623,2025-12-19T18:22:12.144Z,"41 km SE of Baraya, Colombia",earthquake,,4.5,0.3,,reviewed,iscgem,iscgem
+1966-10-18T18:43:36.110Z,3.596,-74.274,35,5.14,mw,,,,,iscgem,iscgem842616,2022-04-26T23:08:52.377Z,"28 km WNW of Lejanías, Colombia",earthquake,,5,0.2,,reviewed,iscgem,iscgem
+1957-05-24T02:37:50.370Z,3.7,-76.752,52.3,6.12,mw,,,,,iscgem,iscgem886586,2022-04-26T17:12:09.047Z,"8 km NW of Dagua, Colombia",earthquake,,5.2,0.26,,reviewed,iscgem,iscgem
+1942-05-22T10:30:43.540Z,4.437,-74.636,15,5.98,mw,,,,,iscgem,iscgem900292,2022-04-26T19:17:52.188Z,"2 km S of Tocaima, Colombia",earthquake,,25,0.25,,reviewed,iscgem,iscgem
+1917-08-30T03:24:19.570Z,3.725,-73.866,15,6.43,mw,,,,,iscgem,iscgem913645,2022-04-26T00:00:24.349Z,"8 km SSW of Cubarral, Colombia",earthquake,,25,0.47,,reviewed,iscgem,iscgem
