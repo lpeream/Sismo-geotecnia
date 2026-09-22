@@ -64,6 +64,17 @@ def descargar_sgc(radio):
         url, pagina = datos["next"], pagina + 1
     assert len(eventos) == total, "El SGC devolvio menos eventos de los esperados"
 
+    # La paginacion puede repetir una fila exacta si llega un sismo nuevo
+    # mientras se descarga; solo se omite si es identica a la ya guardada.
+    vistos, unicos = {}, []
+    for e in eventos:
+        if e["id"] in vistos and vistos[e["id"]] == e:
+            print(f"  fila duplicada exacta omitida: {e['id']}")
+            continue
+        vistos[e["id"]] = e
+        unicos.append(e)
+    eventos = unicos
+
     archivo = f"{SALIDA}/SISMO NEIVA-SGC-{radio}KM-FULL.csv"
     with open(archivo, "w", encoding="utf-8-sig", newline="") as f:
         w = csv.DictWriter(f, fieldnames=COLUMNAS_SGC, quoting=csv.QUOTE_MINIMAL)
