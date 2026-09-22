@@ -1,70 +1,215 @@
-\documentclass[11pt]{article}
+\documentclass[12pt]{article}
+\raggedbottom
+% ==================================================
+% CONFIGURACIÓN DE PÁGINA
+% ==================================================
+\usepackage[
+a4paper,
+top=3cm,
+bottom=3cm,
+left=2cm,
+right=2cm
+]{geometry}
 
-\usepackage[spanish,es-tabla]{babel}
-\usepackage[utf8]{inputenc}
+% ==================================================
+% IDIOMA Y CODIFICACIÓN
+% ==================================================
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
-\usepackage[margin=2.5cm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish, es-tabla]{babel}
+
+% ==================================================
+% MATEMÁTICAS
+% ==================================================
+\usepackage{amsmath,amssymb,amsfonts}
+
+% ==================================================
+% IMÁGENES Y TABLAS
+% ==================================================
 \usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{array}
 \usepackage{booktabs}
-\usepackage{url}
-\usepackage{hyperref}
-\usepackage{amsmath}
-\usepackage{amssymb}
+\usepackage{float}
 \usepackage{caption}
 
-\hypersetup{
-    colorlinks=true,
-    linkcolor=black,
-    urlcolor=blue,
-    citecolor=black
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% ==================================================
+% FORMATO DE TEXTO
+% ==================================================
+\usepackage{titlesec}
+
+\setlength{\parskip}{0.5em}
+\setlength{\textfloatsep}{5pt}
+\setlength{\intextsep}{10pt}
+
+\parindent=0cm
+
+% Numeración y profundidad
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{5}
+
+% Formato de párrafos
+\titleformat{\paragraph}[block]
+{\normalfont\normalsize\bfseries}
+{\theparagraph}
+{1em}
+{}
+
+\titlespacing*{\paragraph}
+{0pt}
+{1ex plus 0.5ex minus .2ex}
+{1ex}
+
+% ==================================================
+% ENCABEZADOS Y PIE DE PÁGINA
+% ==================================================
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+% Logo izquierdo
+\fancyhead[L]{
+	\includegraphics[height=1.5cm]{../figuras/Imagenes/Logo_1.png}
 }
 
-\title{ }
-\author{ }
-\date{ }
+% Texto derecho
+\fancyhead[R]{
+	\parbox{4cm}{
+		\centering
+		\textbf{Instrumentación\\Geotécnica}
+	}
+}
 
+% Pie de página
+\fancyfoot[C]{Página \thepage}
+
+% Líneas
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Ajustes encabezado
+\setlength{\headheight}{45pt}
+\setlength{\headsep}{12pt}
+
+% ==================================================
+% HIPERVÍNCULOS
+% ==================================================
+\usepackage[
+unicode,
+colorlinks=true,
+linkcolor=black,
+urlcolor=blue,
+citecolor=black
+]{hyperref}
+
+% ==================================================
+% BIBLIOGRAFÍA
+% ==================================================
+\usepackage{csquotes}
+
+\usepackage[
+backend=biber,
+style=apa,
+sortcites,
+url=true
+]{biblatex}
+
+\addbibresource{biblio.bib}
+
+% ==================================================
+% NOMBRES EN ESPAÑOL
+% ==================================================
+\addto\captionsspanish{
+	\renewcommand{\contentsname}{Tabla de contenido}
+	\renewcommand{\listfigurename}{Lista de figuras}
+	\renewcommand{\listtablename}{Lista de tablas}
+}
+
+% ==================================================
+% DOCUMENTO
+% ==================================================
+
+% ===== DOCUMENTO =====
 \begin{document}
+	
+	
+	\begin{titlepage}
+		\centering
+		% Logo de la universidad (ajusta el nombre del archivo)
+		\includegraphics[width=0.2\textwidth]{../figuras/Logo_1.png}\par\vspace{1cm}
+		
+		
+		% Título del trabajo
+            {\Large \textbf{ESTUDIO DE AMENAZA SÍSMICA PARA LA CIUDAD DE NEIVA}}\par
+		\vspace{2.5cm}
+		
+		% Autores
+		{\Large \textbf{ELABORADO POR:}\\
+			ANDRÉS STIVEN JARAMILLO CATAÑO\\
+			EMMEL ESCOVITHCH RIAÑO\\
+                  LAURY YOCELY PEREA MENA\par}
+		\vspace{2.5cm}
+		
+		% Autores
+		{\Large \textbf{DOCENTE:}\\
+			ANDRES FELIPE SERNA VAZQUEZ\par}
+		\vspace{2.5cm}
+		
+		% Facultad y departamento
+		{\large \textbf{
+				Universidad Nacional de Colombia\\
+				Facultad de Ingeniería\\
+				Departamento de Ingeniería Civil}}
+		
+		\vfill
+		% Fecha
+		\textbf{{\large OCTUBRE 2026}}
+	\end{titlepage}
 
-% ============================================================
-% PORTADA
-% ============================================================
-\begin{titlepage}
-    \centering
-    \vspace*{1cm}
 
-    {\scshape\Large Universidad Nacional de Colombia \par}
-    {\scshape\large Facultad de Minas \par}
 
-    \vspace{1.2cm}
-    \rule{\linewidth}{0.4pt}
+	
+	\pagestyle{fancy}
+	
+	% Limpiar encabezado y pie
+	\fancyhf{}
+	
+	% ===== ENCABEZADO =====
+	\fancyhf{} % limpia todo
+	
+	\fancyhead[L]{\raisebox{5pt}{\includegraphics[height=2cm]{../figuras/Logo_encabezado.png}}}
+	
+	\fancyhead[R]{%
+		\raisebox{10pt}{
+			\parbox{4cm}{\centering
+				\large\textbf{Instrumentación Geotécnica}}
+		}
+	}
+	
+	
+	
+	% ===== PIE DE PÁGINA =====
+	\fancyfoot[C]{Página \thepage}
+	
+	% Líneas superior e inferior
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0.4pt}
+	
+	% Ajusta la altura del encabezado
+	\setlength{\headheight}{45pt}
+	
+	\setlength{\headsep}{30pt}      
+	
+	
+	
+\tableofcontents
+\listoffigures
+	
 
-    \vspace{0.6cm}
-    {\Large Estudio de amenaza sísmica para Neiva \par}
-    \vspace{0.3cm}
-    {\large Construcción del catálogo sísmico y avance metodológico \par}
-
-    \vspace{0.3cm}
-    {\large Ingeniería Sismo - Geotécnica \par}
-    \rule{\linewidth}{0.4pt}
-
-    \vspace{1.5cm}
-    {\bfseries Integrantes \par}
-    \vspace{0.4cm}
-    {\large
-        Laury Yocely Perea Mena \\
-        Andrés Stiven Jaramillo Cataño \\
-        Emmel Escovitch Riaño \\ % TODO: confirmar ortografía exacta del apellido
-    }
-
-    \vspace{1.5cm}
-    \begin{tabular}{r l}
-        \textbf{Profesor:}       & Andrés Felipe Serna Vásquez \\
-        \textbf{Fecha de entrega:} & [POR DEFINIR] \\
-    \end{tabular}
-
-    \vfill
-\end{titlepage}
+\newpage
 
 % ============================================================
 \section{Introducción y objetivo}
