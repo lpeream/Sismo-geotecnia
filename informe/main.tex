@@ -72,7 +72,7 @@
 Este informe documenta el avance del trabajo de amenaza sísmica para la ciudad de
 Neiva (Huila). El objetivo del trabajo es construir un catálogo sísmico depurado
 para Neiva, a partir de las fuentes del Servicio Geológico Colombiano (SGC) y del
-United States Geological Survey (USGS), dentro de radios de 50~km y 200~km medidos
+United States Geological Survey (USGS), dentro de radios de 50~km y 260~km medidos
 desde un punto de referencia en el centro de la ciudad. Este catálogo es el insumo
 principal para el posterior análisis de amenaza sísmica, la construcción del
 espectro en roca según la NSR-10 y la selección de acelerogramas compatibles.
@@ -99,30 +99,34 @@ A partir de este punto se definieron dos radios de búsqueda:
 \begin{itemize}
     \item \textbf{50 km}: catálogo cercano, relevante para la amenaza sísmica
           local y la sismicidad asociada a fuentes próximas a la ciudad.
-    \item \textbf{200 km}: catálogo regional, que permite capturar fuentes
+    \item \textbf{260 km}: catálogo regional, que permite capturar fuentes
           sismogénicas distantes (por ejemplo, la subducción del Pacífico y
           sistemas de falla regionales) que también pueden contribuir a la
-          amenaza sísmica de Neiva.
+          amenaza sísmica de Neiva. Este radio se adoptó, en lugar de uno de
+          200~km, para garantizar que la sismicidad asociada al municipio de
+          San José del Palmar (Chocó) quede dentro de la zona de estudio: sus
+          epicentros se encuentran entre 232 y 260~km del punto de referencia.
     \end{itemize}
 
 La Figura~\ref{fig:mapa_zona} muestra el punto de referencia y ambos radios
 de búsqueda sobre una imagen satelital de la región. Neiva se encuentra en
 el valle interandino del Alto Magdalena, entre las cordilleras Central y
-Oriental; el radio de 200~km alcanza ciudades como Cali, Ibagué, Bogotá y
-Popayán, y se extiende hasta la zona de subducción del Pacífico.
+Oriental; el radio de 260~km alcanza ciudades como Cali, Ibagué, Popayán y
+Bogotá, y se extiende hasta la zona de subducción del Pacífico.
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\textwidth]{../figuras/zonadeestudio.jpg}
     \caption{Zona de estudio: punto de referencia en Neiva (Parque Central
-    Santander) y radios de búsqueda de 50 y 200~km. Imagen satelital: Google
-    Earth.}
+    Santander) y radios de búsqueda de 50 y 260~km. Imagen satelital: Google
+    Earth. (Captura pendiente de actualizar: el círculo azul aún corresponde
+    a 200~km.)}
     \label{fig:mapa_zona}
 \end{figure}
 
 Como primer acercamiento a la sismicidad de la zona, la Figura~\ref{fig:mapa_epicentros}
 muestra los epicentros del catálogo consolidado (SGC y USGS) dentro de
-200~km, coloreados por magnitud y diferenciados por fuente (círculos para
+260~km, coloreados por magnitud y diferenciados por fuente (círculos para
 el SGC, triángulos para el USGS). Se aprecia una alineación de sismicidad
 de suroeste a noreste, consistente con el sistema de fallas regional de la
 zona (Algeciras--Suaza), además de un cúmulo de sismicidad más profunda
@@ -134,7 +138,7 @@ discutido en la Sección~\ref{sec:estado}.
     \centering
     \includegraphics[width=0.85\textwidth]{../figuras/mapa_zona_estudio.png}
     \caption{Epicentros del catálogo consolidado SGC + USGS dentro de
-    200~km alrededor de Neiva, coloreados por magnitud y diferenciados por
+    260~km alrededor de Neiva, coloreados por magnitud y diferenciados por
     fuente.}
     \label{fig:mapa_epicentros}
 \end{figure}
@@ -177,7 +181,7 @@ parámetros específicos se resumen en el Cuadro~\ref{tab:parametros}.
         \midrule
         Servicio / endpoint & \texttt{apicatalogador.sgc.gov.co} & \texttt{earthquake.usgs.gov} (FDSN) \\
         Centro de búsqueda & lat/lon del punto de referencia & lat/lon del punto de referencia \\
-        Radios & 50 km y 200 km & 50 km y 200 km \\
+        Radios & 50 km y 260 km & 50 km y 260 km \\
         Magnitud mínima & sin filtro (0) & 0 \\
         Rango de fechas & histórico completo & 1900-01-01 -- fecha de descarga \\
         Formato de salida & JSON $\rightarrow$ CSV & CSV \\
@@ -245,10 +249,10 @@ del proyecto.
         \toprule
         Fuente & Radio & N.\ de eventos & Magnitud mín. & Magnitud máx. \\
         \midrule
-        SGC  & 50 km  & 2\,374  & 0.7 & 5.0 \\
-        SGC  & 200 km & 45\,201 & 0.1 & 7.1 \\
-        USGS & 50 km  & 20      & 3.4 & 5.5 \\
-        USGS & 200 km & 470     & 0.0 & 7.3 \\
+        SGC  & 50 km  & 2\,380  & 0.7    & 5.0 \\
+        SGC  & 260 km & 67\,782 & $-0.1$ & 7.4 \\
+        USGS & 50 km  & 20      & 3.4    & 5.5 \\
+        USGS & 260 km & 823     & 0.0    & 7.4 \\
         \bottomrule
     \end{tabular}
 \end{table}
@@ -259,8 +263,14 @@ y no un error: el SGC opera una red local densa que detecta sismicidad de
 magnitud muy baja cerca del territorio colombiano, mientras que el catálogo
 global del USGS solo es razonablemente completo para magnitudes mayores a,
 aproximadamente, 3.5--4.0 en esta región. En el rango de sismos grandes
-($M \geq 4$), ambos catálogos reportan cantidades de eventos comparables entre
-sí, lo que es consistente con esta explicación.
+($M \geq 4$) ambos catálogos reportan cantidades del mismo orden a 260~km (400
+eventos en el SGC y 454 en el USGS), lo que es consistente con esta
+explicación. Que el USGS reporte algo más se debe, en buena parte, a su
+cobertura temporal: su catálogo inicia en 1917, mientras que el del SGC inicia
+en 1993 (desde 1993, el USGS reporta 319 eventos con $M \geq 4$).
+
+Los catálogos se descargaron el 21 de septiembre de 2026. Las magnitudes de
+cada fuente se presentan en su escala original; aún no se han homogenizado.
 
 % ============================================================
 \section{Próximos pasos}

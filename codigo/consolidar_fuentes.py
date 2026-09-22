@@ -75,7 +75,7 @@ def cargar_usgs(radio):
     return out
 
 
-for radio in ["50KM", "200KM"]:
+for radio in ["50KM", "260KM"]:
     sgc = cargar_sgc(radio)
     usgs = cargar_usgs(radio)
     consolidado = pd.concat([sgc, usgs], ignore_index=True, sort=False)

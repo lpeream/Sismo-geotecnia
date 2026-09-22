@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Genera el mapa de la zona de estudio (Neiva, Huila) con el punto de
-referencia, los radios de busqueda de 50 y 200 km, y los epicentros
-del catalogo consolidado (SGC + USGS, 200 km) coloreados por magnitud
+referencia, los radios de busqueda de 50 y 260 km, y los epicentros
+del catalogo consolidado (SGC + USGS, 260 km) coloreados por magnitud
 y diferenciados por fuente.
 """
 
@@ -14,7 +14,7 @@ REF_LAT = 2.9262767
 REF_LON = -75.2892111
 KM_POR_GRADO_LAT = 111.32
 
-DATOS = "../datos/datos depurados/SISMO NEIVA-CONSOLIDADO-200KM-SIN-FILTRAR.csv"
+DATOS = "../datos/datos depurados/SISMO NEIVA-CONSOLIDADO-260KM-SIN-FILTRAR.csv"
 SALIDA = "../figuras/mapa_zona_estudio.png"
 
 
@@ -53,7 +53,7 @@ ax.scatter(
     label=f"USGS (n={len(usgs)})",
 )
 
-for radio, estilo in [(50, "-"), (200, "--")]:
+for radio, estilo in [(50, "-"), (260, "--")]:
     lon_c, lat_c = circulo(REF_LAT, REF_LON, radio)
     ax.plot(lon_c, lat_c, estilo, color="black", linewidth=1.2, zorder=4)
     ax.annotate(
@@ -72,7 +72,7 @@ ax.set_xlabel("Longitud (°)")
 ax.set_ylabel("Latitud (°)")
 ax.set_title(
     "Zona de estudio: Neiva, Huila\n"
-    "Catálogo consolidado SGC + USGS (200 km), por magnitud y fuente",
+    "Catálogo consolidado SGC + USGS (260 km), por magnitud y fuente",
     fontsize=12,
 )
 ax.set_aspect(1 / np.cos(np.radians(REF_LAT)))
