@@ -72,6 +72,21 @@ Consolidar las fuentes en archivos CSV:
 python consolidar_fuentes.py
 ```
 
+Depurar replicas y precursores con ventanas espacio-tiempo de
+Gardner--Knopoff:
+
+```powershell
+python depurar_replicas.py
+```
+
+El script genera los catalogos `*-DEPURADO-GK.csv` y conserva la trazabilidad
+de los eventos excluidos en archivos `*-REPLICAS-GK.csv`. Las graficas de
+frecuencia--magnitud se construyen despues con:
+
+```powershell
+python analisis_frecuencia_magnitud.py
+```
+
 Generar el mapa de la zona de estudio:
 
 ```powershell

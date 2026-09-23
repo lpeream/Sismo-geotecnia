@@ -23,7 +23,7 @@ ANCHO_BIN = 0.1
 
 
 def cargar_magnitudes(radio):
-    archivo = DATOS / f"SISMO NEIVA-CONSOLIDADO-{radio}-HOMOGENEIZADO-MW.csv"
+    archivo = DATOS / f"SISMO NEIVA-CONSOLIDADO-{radio}-HOMOGENEIZADO-MW-DEPURADO-GK.csv"
     df = pd.read_csv(archivo, encoding="utf-8-sig")
     magnitudes = pd.to_numeric(df["magnitude_mw"], errors="coerce").dropna()
     return df, magnitudes.to_numpy()
@@ -70,6 +70,8 @@ def ajustar_gr(magnitudes):
 
 def graficar(radio):
     df, magnitudes = cargar_magnitudes(radio)
+    archivo_replicas = DATOS / f"SISMO NEIVA-CONSOLIDADO-{radio}-REPLICAS-GK.csv"
+    n_replicas = len(pd.read_csv(archivo_replicas, encoding="utf-8-sig"))
     ajuste = ajustar_gr(magnitudes)
     figura, ejes = plt.subplots(1, 2, figsize=(13, 5.5))
     color = "#1f5d75"
@@ -124,7 +126,8 @@ def graficar(radio):
         f"N valido = {ajuste['n_total']:,}\n"
         f"N ajuste = {ajuste['n_ajuste']:,}\n"
         f"b = {ajuste['b']:.3f}; R2 = {ajuste['r2']:.3f}\n"
-        f"Extrapoladas = {estado.get('extrapolada', 0):,}"
+        f"Extrapoladas = {estado.get('extrapolada', 0):,}\n"
+        f"Replicas/ precursores excluidos = {n_replicas:,}"
     )
     figura.text(0.5, 0.01, texto, ha="center", va="bottom", fontsize=9)
     figura.tight_layout(rect=(0, 0.05, 1, 1))

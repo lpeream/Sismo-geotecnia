@@ -222,11 +222,9 @@ desde un punto de referencia en el centro de la ciudad. Este catálogo es el ins
 principal para el posterior análisis de amenaza sísmica, la construcción del
 espectro en roca según la NSR-10 y la selección de acelerogramas compatibles.
 
-Por el momento, este documento recoge únicamente la etapa de recopilación y
-organización de la información sísmica: el punto de referencia adoptado, las
-fuentes y parámetros de búsqueda utilizados, y las decisiones metodológicas
-tomadas hasta la fecha. Las etapas de homogenización de magnitudes, depuración
-y análisis de amenaza se incorporarán en versiones posteriores de este informe.
+Este documento recoge las etapas de recopilación, homogenización de magnitudes,
+depuración espacio-temporal y análisis frecuencia--magnitud, además de dejar
+señalados los pasos pendientes para el análisis de amenaza sísmica.
 
 % ============================================================
 \section{Zona de estudio y punto de referencia}
@@ -361,8 +359,8 @@ que se documentan aquí por su relevancia para la trazabilidad del trabajo:
           trabajo acordada de no descartar información sin autorización
           explícita, se dejó la magnitud mínima en 0 en ambas fuentes, de
           modo que el catálogo conserve incluso los sismos de magnitud muy
-          baja. La depuración y homogenización de magnitudes se hará en una
-          etapa posterior, sin eliminar registros.
+          baja. La depuración de réplicas se realiza después, sin aplicar un
+          umbral artificial de magnitud.
 
     \item \textbf{Corrección de codificación de caracteres.} En la descarga
           automatizada del catálogo del SGC se detectó y corrigió un problema
@@ -656,6 +654,28 @@ original, $M_w$ directo o estimado, relación aplicada, rango de validez,
 desviación estándar publicada y una bandera de extrapolación. Esta estructura
 permite que el análisis de amenaza separe la incertidumbre aleatoria de la
 incertidumbre epistemológica asociada a escoger una relación entre varias.
+
+\subsection{Depuración de réplicas y precursores}
+\label{sec:depuracion_replicas}
+
+Antes de construir la distribución frecuencia--magnitud se eliminaron las
+réplicas y los precursores mediante el método de ventanas espacio--tiempo de
+Gardner y Knopoff \parencite{gardner1974isoseismal}. Los eventos se ordenaron
+de mayor a menor $M_w$; para cada evento principal se asignó una ventana
+temporal $T(M_w)$ y una distancia máxima $R(M_w)$ mediante interpolación de la
+tabla de ventanas implementada en
+\texttt{codigo/depurar\_replicas.py}. Un evento se marcó como réplica si
+ocurrió después del principal, o como precursor si ocurrió antes, siempre que
+la diferencia temporal y la distancia epicentral cumplieran ambas condiciones
+de la ventana. Los eventos principales se conservaron y cada exclusión quedó
+registrada con el identificador y la magnitud del evento que la originó.
+
+El catálogo de 50~km pasó de 2\,400 a 2\,399 registros, con una réplica
+excluida. El de 260~km pasó de 68\,604 a 68\,454 registros, con 118 réplicas
+y 32 precursores excluidos. Las salidas depuradas son los archivos
+\texttt{*-HOMOGENEIZADO-MW-DEPURADO-GK.csv}; la trazabilidad se conserva en
+\texttt{*-REPLICAS-GK.csv}.
+
 \subsection{Distribución frecuencia--magnitud}
 \label{sec:frecuencia_magnitud}
 
@@ -682,14 +702,14 @@ guardan en \texttt{datos/datos depurados/ajuste\_gutenberg\_richter.csv}.
 
 \begin{table}[htbp]
       \centering
-      \caption{Ajuste exploratorio de Gutenberg--Richter para los catálogos homogenizados.}
+      \caption{Ajuste exploratorio de Gutenberg--Richter para los catálogos depurados.}
       \label{tab:ajuste_gr}
       \begin{tabular}{lrrrrr}
             \toprule
             Radio & $N$ válido & $M_c$ & $N$ ajuste & $b$ & $R^2$ \\
             \midrule
-            50 km  & 2\,397  & 2.55 & 1\,451  & 0.971 & 0.997 \\
-            260 km & 68\,497 & 2.55 & 35\,098 & 0.883 & 0.996 \\
+            50 km  & 2\,396  & 2.55 & 1\,450  & 0.974 & 0.998 \\
+            260 km & 68\,347 & 2.55 & 34\,948 & 0.886 & 0.996 \\
             \bottomrule
       \end{tabular}
 \end{table}
@@ -697,7 +717,7 @@ guardan en \texttt{datos/datos depurados/ajuste\_gutenberg\_richter.csv}.
 \begin{figure}[htbp]
       \centering
       \includegraphics[width=0.98\textwidth]{../figuras/frecuencia_magnitud_50km.png}
-      \caption{Frecuencia y ajuste Gutenberg--Richter del catálogo homogenizado
+      \caption{Frecuencia y ajuste Gutenberg--Richter del catálogo depurado
       dentro de 50 km. La línea vertical indica la magnitud de completitud
       exploratoria $M_c=2.55$.}
       \label{fig:frecuencia_50km}
@@ -706,7 +726,7 @@ guardan en \texttt{datos/datos depurados/ajuste\_gutenberg\_richter.csv}.
 \begin{figure}[htbp]
       \centering
       \includegraphics[width=0.98\textwidth]{../figuras/frecuencia_magnitud_260km.png}
-      \caption{Frecuencia y ajuste Gutenberg--Richter del catálogo homogenizado
+      \caption{Frecuencia y ajuste Gutenberg--Richter del catálogo depurado
       dentro de 260 km. La línea vertical indica la magnitud de completitud
       exploratoria $M_c=2.55$.}
       \label{fig:frecuencia_260km}
@@ -731,8 +751,9 @@ estimación probabilista de amenaza.
           la ley Gutenberg--Richter en amenaza sísmica.
     \item Revisar formatos de fecha, separadores decimales y profundidades
           reportadas.
-    \item Identificar sismos duplicados entre fuentes (sin eliminarlos, solo
-          señalarlos para revisión).
+    \item Revisar manualmente la sensibilidad de la depuración Gardner--Knopoff
+          frente a otras tablas de ventanas y a posibles duplicados entre
+          fuentes.
     \item Construcción del espectro en roca para Neiva según la NSR-10 y
           selección o generación de acelerogramas compatibles
           \parencite{nsr10}.
