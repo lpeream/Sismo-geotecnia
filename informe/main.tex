@@ -143,8 +143,8 @@ url=true
 		
 		
 		% Título del trabajo
-            {\Large \textbf{ESTUDIO DE AMENAZA SÍSMICA PARA LA CIUDAD DE NEIVA}}\par
-		\vspace{2.5cm}
+            {\Huge \textbf{ESTUDIO DE AMENAZA SÍSMICA PARA LA CIUDAD DE NEIVA}}\par
+      	\vspace{2.5cm}
 		
 		% Autores
 		{\Large \textbf{ELABORADO POR:}\\
@@ -183,9 +183,9 @@ url=true
 	\fancyhead[L]{\raisebox{5pt}{\includegraphics[height=2cm]{../figuras/Logo_encabezado.png}}}
 	
 	\fancyhead[R]{%
-		\raisebox{10pt}{
+		\raisebox{5pt}{
 			\parbox{4cm}{\centering
-				\large\textbf{Instrumentación Geotécnica}}
+				\small\textbf{Ingeniería Sismo-Geotécnia}}
 		}
 	}
 	
@@ -299,12 +299,13 @@ Se utilizaron dos fuentes de información sismológica:
           oficial de sismicidad de Colombia, operado por el Servicio Geológico
           Colombiano. Por ser una red local densa, este catálogo captura
           microsismicidad (magnitudes menores a 2) que las redes globales no
-          alcanzan a detectar cerca del territorio colombiano.
+          alcanzan a detectar cerca del territorio colombiano
+          \parencite{sgcCatalogoSismicidad}.
     \item \textbf{USGS -- ANSS Comprehensive Earthquake Catalog (ComCat)}:
           catálogo global del United States Geological Survey, construido a
           partir de redes sismológicas mundiales. Es comparativamente completo
           para sismos grandes (magnitud $\gtrsim 4$), pero no detecta de forma
-          confiable la microsismicidad local.
+          confiable la microsismicidad local \parencite{usgsComCat}.
 \end{itemize}
 
 \subsection{Parámetros de búsqueda}
@@ -353,7 +354,8 @@ que se documentan aquí por su relevancia para la trazabilidad del trabajo:
           (\texttt{https://apicatalogador.sgc.gov.co/api/events/search/}), y se
           consultó de forma paginada (1000 registros por página) hasta reunir
           la totalidad de los eventos reportados dentro de cada radio, en
-          lugar de conformarse con un subconjunto parcial.
+          lugar de conformarse con un subconjunto parcial
+          \parencite{sgcApiEventos}.
 
     \item \textbf{Sin filtro de magnitud mínima.} Siguiendo la regla de
           trabajo acordada de no descartar información sin autorización
@@ -434,20 +436,12 @@ cada fuente se presentan en su escala original; aún no se han homogenizado.
     \item Identificar sismos duplicados entre fuentes (sin eliminarlos, solo
           señalarlos para revisión).
     \item Construcción del espectro en roca para Neiva según la NSR-10 y
-          selección o generación de acelerogramas compatibles.
+          selección o generación de acelerogramas compatibles
+          \parencite{nsr10}.
 \end{itemize}
 
 % ============================================================
 \section*{Fuentes consultadas}
-
-\begin{itemize}
-    \item Servicio Geológico Colombiano, Catálogo de Sismicidad -- Red
-          Sismológica Nacional de Colombia.
-          \url{https://sismo.sgc.gov.co}
-    \item United States Geological Survey, ANSS Comprehensive Earthquake
-          Catalog (ComCat) -- FDSN Event Web Service.
-          \url{https://earthquake.usgs.gov/fdsnws/event/1/}
-    \item NSR-10, Título A y Título H. Sociedad Colombiana de Geotecnia.
-\end{itemize}
+\printbibliography[heading=none]
 
 \end{document}

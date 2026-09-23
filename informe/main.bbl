@@ -1,0 +1,299 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global/global}
+    \entry{nsr10}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b52e9001505083d74bfc79b47e785d25}{%
+           family={{Asociacion Colombiana de Ingenieria Sismica}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bogota, Colombia}%
+      }
+      \strng{namehash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{fullhash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{fullhashraw}{b52e9001505083d74bfc79b47e785d25}
+      \strng{bibnamehash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{authorbibnamehash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{authornamehash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{authorfullhash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{authorfullhashraw}{b52e9001505083d74bfc79b47e785d25}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Reglamento Colombiano de Construccion Sismo Resistente: NSR-10}
+      \field{year}{2010}
+    \endentry
+    \entry{sgcApiEventos}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f87b0b90ba38e78504317d46c4a93c72}{%
+           family={{Servicio Geologico Colombiano}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Servicio Geologico Colombiano}%
+      }
+      \strng{namehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{fullhash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{fullhashraw}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{bibnamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorbibnamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authornamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorfullhash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorfullhashraw}{f87b0b90ba38e78504317d46c4a93c72}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Catalogador de eventos sismicos: servicio de consulta}
+      \field{urlday}{21}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://apicatalogador.sgc.gov.co/api/events/search/
+      \endverb
+      \verb{url}
+      \verb https://apicatalogador.sgc.gov.co/api/events/search/
+      \endverb
+    \endentry
+    \entry{sgcCatalogoSismicidad}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f87b0b90ba38e78504317d46c4a93c72}{%
+           family={{Servicio Geologico Colombiano}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Red Sismologica Nacional de Colombia}%
+      }
+      \strng{namehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{fullhash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{fullhashraw}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{bibnamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorbibnamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authornamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorfullhash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorfullhashraw}{f87b0b90ba38e78504317d46c4a93c72}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Catalogo de sismicidad}
+      \field{urlday}{21}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sismo.sgc.gov.co
+      \endverb
+      \verb{url}
+      \verb https://sismo.sgc.gov.co
+      \endverb
+    \endentry
+    \entry{usgsComCat}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=443478d363b15c65a1ee517d1122e79b}{%
+           family={{U.S. Geological Survey}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {U.S. Geological Survey}%
+      }
+      \strng{namehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \strng{bibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorbibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authornamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ANSS Comprehensive Earthquake Catalog (ComCat): FDSN Event Web Service}
+      \field{urlday}{21}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://earthquake.usgs.gov/fdsnws/event/1/
+      \endverb
+      \verb{url}
+      \verb https://earthquake.usgs.gov/fdsnws/event/1/
+      \endverb
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global/global}
+    \entry{nsr10}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b52e9001505083d74bfc79b47e785d25}{%
+           family={{Asociacion Colombiana de Ingenieria Sismica}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Bogota, Colombia}%
+      }
+      \strng{namehash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{fullhash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{fullhashraw}{b52e9001505083d74bfc79b47e785d25}
+      \strng{bibnamehash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{authorbibnamehash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{authornamehash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{authorfullhash}{b52e9001505083d74bfc79b47e785d25}
+      \strng{authorfullhashraw}{b52e9001505083d74bfc79b47e785d25}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Reglamento Colombiano de Construccion Sismo Resistente: NSR-10}
+      \field{year}{2010}
+    \endentry
+    \entry{sgcApiEventos}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f87b0b90ba38e78504317d46c4a93c72}{%
+           family={{Servicio Geologico Colombiano}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Servicio Geologico Colombiano}%
+      }
+      \strng{namehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{fullhash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{fullhashraw}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{bibnamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorbibnamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authornamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorfullhash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorfullhashraw}{f87b0b90ba38e78504317d46c4a93c72}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{1}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Catalogador de eventos sismicos: servicio de consulta}
+      \field{urlday}{21}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://apicatalogador.sgc.gov.co/api/events/search/
+      \endverb
+      \verb{url}
+      \verb https://apicatalogador.sgc.gov.co/api/events/search/
+      \endverb
+    \endentry
+    \entry{sgcCatalogoSismicidad}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f87b0b90ba38e78504317d46c4a93c72}{%
+           family={{Servicio Geologico Colombiano}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Red Sismologica Nacional de Colombia}%
+      }
+      \strng{namehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{fullhash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{fullhashraw}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{bibnamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorbibnamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authornamehash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorfullhash}{f87b0b90ba38e78504317d46c4a93c72}
+      \strng{authorfullhashraw}{f87b0b90ba38e78504317d46c4a93c72}
+      \field{extraname}{2}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradate}{2}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Catalogo de sismicidad}
+      \field{urlday}{21}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://sismo.sgc.gov.co
+      \endverb
+      \verb{url}
+      \verb https://sismo.sgc.gov.co
+      \endverb
+    \endentry
+    \entry{usgsComCat}{online}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=443478d363b15c65a1ee517d1122e79b}{%
+           family={{U.S. Geological Survey}},
+           familyi={U\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {U.S. Geological Survey}%
+      }
+      \strng{namehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{fullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \strng{bibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorbibnamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authornamehash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhash}{443478d363b15c65a1ee517d1122e79b}
+      \strng{authorfullhashraw}{443478d363b15c65a1ee517d1122e79b}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labeldatesource}{nodate}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ANSS Comprehensive Earthquake Catalog (ComCat): FDSN Event Web Service}
+      \field{urlday}{21}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://earthquake.usgs.gov/fdsnws/event/1/
+      \endverb
+      \verb{url}
+      \verb https://earthquake.usgs.gov/fdsnws/event/1/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
