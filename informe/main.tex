@@ -424,13 +424,311 @@ Los catálogos se descargaron el 21 de septiembre de 2026. Las magnitudes de
 cada fuente se presentan en su escala original; aún no se han homogenizado.
 
 % ============================================================
+\section{Marco teórico para la homogenización de magnitudes}
+\label{sec:conversion_magnitudes}
+
+La homogenización consiste en expresar, en una escala común, magnitudes que
+fueron calculadas a partir de amplitudes, períodos o duraciones diferentes.
+Para este trabajo se adopta la magnitud de momento sísmico $M_w$ como escala
+de referencia. Esta elección es apropiada porque $M_w$ está relacionada con el
+momento sísmico de la fuente y, a diferencia de las magnitudes basadas en
+amplitud, conserva una relación más estable con el tamaño de los terremotos
+grandes. Sin embargo, una magnitud convertida no es una observación directa de
+$M_w$: es un estimador empírico, por lo que debe conservarse su ecuación,
+rango de validez y dispersión.
+
+\subsection{Definición de las escalas}
+
+El momento sísmico escalar se define como
+\begin{equation}
+      M_0 = \mu A D,
+      \label{eq:momento_sismico}
+\end{equation}
+donde $\mu$ es el módulo de rigidez, $A$ es el área de ruptura y $D$ es el
+deslizamiento medio. La relación convencional entre $M_0$, expresado en
+N\,m, y la magnitud de momento es
+\begin{equation}
+      M_w = \frac{2}{3}\left(\log_{10} M_0 - 9.1\right).
+      \label{eq:mw_momento}
+\end{equation}
+Las constantes de la ecuación dependen del sistema de unidades; por ello no se
+debe combinar esta expresión con un $M_0$ expresado en dyn\,cm sin modificar la
+constante.
+
+Las escalas que pueden aparecer en los catálogos consultados tienen distinto
+significado: $M_L$ es magnitud local, $M_d$ o $M_c$ es magnitud de duración o
+coda, $m_b$ es magnitud de ondas de cuerpo de período corto, $M_s$ es magnitud
+de ondas superficiales, $M_{SK}$ es una variante regional de ondas
+superficiales y $M_{JMA}$ es la escala de la Agencia Meteorológica de Japón.
+También pueden aparecer $m_B$ y magnitudes locales regionales como $M_{Lr}$.
+Los símbolos parecidos no deben tratarse como equivalentes: por ejemplo,
+$m_b$ y $m_B$ utilizan bandas de período diferentes y requieren calibraciones
+distintas.
+
+\subsection{Forma general de las relaciones empíricas}
+
+La forma más común es una regresión lineal
+\begin{equation}
+      \widehat{M_w}=a+bX,
+      \label{eq:lineal_conversion}
+\end{equation}
+donde $X$ es la magnitud observada. Cuando la relación cambia por saturación o
+por transición entre regímenes, se utiliza una función bilineal o por tramos,
+\begin{equation}
+      \widehat{M_w}=\begin{cases}
+      a_1+b_1X, & X\leq X_c,\\
+      a_2+b_2X, & X>X_c.
+      \end{cases}
+      \label{eq:bilineal_conversion}
+\end{equation}
+La continuidad en $X_c$ no debe suponerse si los autores no la impusieron en el
+ajuste. Lolli, Gasperini y Vannucci también evaluaron modelos curvilíneos; su
+forma exponencial recomendada, con $\exp$ la exponencial natural, es
+\begin{equation}
+      \widehat{M_w}=\exp(a+bX)+c.
+      \label{eq:exponencial_conversion}
+\end{equation}
+Estos modelos son preferibles cuando la pendiente cambia progresivamente y no
+en un único punto de quiebre \parencite{lolli2014empirical}.
+
+\subsection{Relaciones globales verificadas}
+
+\subsubsection{Relaciones de Scordilis y Bormann--Saul}
+
+Las relaciones globales de Scordilis, reproducidas por Bormann y Saul, fueron
+ajustadas con grandes catálogos internacionales. Para $M_s$ se obtienen dos
+tramos:
+\begin{align}
+      M_w &= 0.65M_s+2.20, &&3.0\leq M_s\leq6.1, &&\sigma=0.17,\\
+      M_w &= 1.00M_s-0.02, &&6.2\leq M_s\leq8.0, &&\sigma=0.21.
+      \label{eq:scordilis_ms}
+\end{align}
+Para $M_{SK}$, considerado equivalente a $M_s$ en el ámbito regional de esa
+fuente, se reportan tres tramos:
+\begin{align}
+      M_w &= 0.78M_{SK}+1.45, &&4.0\leq M_{SK}\leq5.3, &&\sigma=0.42,\\
+      M_w &= 0.68M_{SK}+1.99, &&5.4\leq M_{SK}\leq6.1, &&\sigma=0.32,\\
+      M_w &= 1.04M_{SK}-0.30, &&M_{SK}\geq6.2, &&\sigma=0.34.
+      \label{eq:scordilis_msk}
+\end{align}
+Para la magnitud de ondas de cuerpo y la escala JMA se obtienen:
+\begin{align}
+      M_w &= 0.85m_b+1.02, &&3.5\leq m_b\leq6.2, &&\sigma=0.29,\\
+      M_w &= 0.58M_{JMA}+2.25, &&3.0\leq M_{JMA}\leq5.5, &&\sigma=0.28,\\
+      M_w &= 0.97M_{JMA}+0.04, &&5.6\leq M_{JMA}\leq8.2, &&\sigma=0.22.
+      \label{eq:scordilis_mb_jma}
+\end{align}
+Estas ecuaciones son globales y no sustituyen una calibración local. Además,
+$m_b$ presenta saturación aproximada para valores superiores a 6.2--6.3, razón
+por la cual no debe extrapolarse la primera expresión a terremotos grandes
+\parencite{bormann2005globally}.
+
+\subsubsection{Relaciones de Lolli, Gasperini y Vannucci}
+
+Lolli et al. compararon regresión ortogonal generalizada y regresión no lineal
+para magnitudes teleseísmicas. Sus recomendaciones finales para un uso global
+son, para $M_s$:
+\begin{equation}
+ \widehat{M_w}=\begin{cases}
+ \exp(2.133+0.063M_s)-6.205, & M_s\leq5.5,\\
+ \exp(-0.109+0.229M_s)+2.586, & M_s>5.5,
+ \end{cases}
+ \label{eq:lolli_ms_global}
+\end{equation}
+y para $m_b$:
+\begin{equation}
+      \widehat{M_w}=\exp(0.741+0.210m_b)-0.785.
+      \label{eq:lolli_mb_global}
+\end{equation}
+Para comparación, el estudio reporta las siguientes expresiones alternativas:
+\begin{align}
+      \widehat{M_w}&=\exp(2.133+0.063M_s)-6.205 &&\text{(Euro-Mediterráneo)},\\
+      \widehat{M_w}&=\exp(0.719+0.212m_b)-0.737 &&\text{(Euro-Mediterráneo)},\\
+      \widehat{M_w}&=\exp(1.421+0.108M_s)-1.863 &&\text{(Italia)},\\
+      \widehat{M_w}&=\exp(0.058+0.284m_b)-0.770 &&\text{(Italia)}.
+      \label{eq:lolli_regionales}
+\end{align}
+Para valores globales de $M_s\leq5.5$, los autores recomiendan la relación
+Euro-Mediterránea debido a la subrepresentación de terremotos pequeños en los
+catálogos globales de tensor de momento. Esta observación es relevante para el
+catálogo de Neiva: una fórmula ajustada con eventos grandes no debe aplicarse
+automáticamente a la abundante microsismicidad del SGC
+\parencite{lolli2014empirical}.
+
+\subsection{Relaciones para magnitudes locales y de duración}
+
+Senel et al. ajustaron relaciones para Turquía usando regresión ortogonal para
+$M_s$ y mínimos cuadrados ordinarios para $m_b$, $M_L$ y $M_d$. Las ecuaciones
+propuestas son:
+\begin{align}
+      M_w &= 0.5716M_s+2.4980, &&3.4\leq M_s\leq5.4,\\
+      M_w &= 0.8126M_s+1.1723, &&M_s\geq5.5,\\
+      M_w &= 1.0319m_b+0.0223, &&3.9\leq m_b\leq6.8,\\
+      M_w &= 0.8095M_L+1.3003, &&3.3\leq M_L\leq6.6,\\
+      M_w &= 0.7947M_d+1.3420, &&3.5\leq M_d\leq7.4.
+      \label{eq:senel}
+\end{align}
+La cuarta expresión se escribe con $M_L$ porque así se reporta en el artículo;
+la quinta usa $M_d$. El rango original, el método de ajuste y la región de
+calibración deben acompañar siempre a cada valor convertido
+\parencite{senel2016new}.
+
+\subsection{Relaciones regionales y límites de transferencia}
+
+Tang, Zhu y Huang encontraron calibraciones específicas para China occidental
+entre $M_w$ y $M_L$, $m_b$ y $M_s$, usando regresión ortogonal generalizada.
+El artículo muestra que las pendientes y dispersión cambian entre las tres
+zonas tectónicas estudiadas y que las relaciones globales de Lolli presentan
+dispersión mayor para ese conjunto. Por tanto, sus ecuaciones regionales no se
+transfieren numéricamente a Colombia; sí son evidencia de que el entorno
+tectónico debe considerarse al escoger una relación
+\parencite{tang2016empirical}.
+
+Para Cuba, Jamaica y La Española, Villalón-Semanat y Palau-Clares ajustaron
+relaciones entre $m_b$, $M_s$, $M_w$ y $M_c$. El estudio confirma una buena
+correlación $M_s$--$M_w$ en el rango aproximado $3.8$--$7.0$, pero advierte
+que la relación $m_b$--$M_c$ tiene gran dispersión y no debe utilizarse para
+homogenizar catálogos. Esto es especialmente importante para nuestro caso:
+una magnitud de coda o duración del SGC no se convertirá mediante una cadena
+de fórmulas sucesivas sin una calibración colombiana independiente
+\parencite{villalon2018relaciones}.
+
+\subsection{Criterio de selección para el catálogo de Neiva}
+
+El procedimiento propuesto para cada registro es el siguiente:
+\begin{enumerate}
+      \item Conservar la magnitud original, su tipo, agencia y fecha de cálculo;
+      \item usar el $M_w$ observado por USGS o por otra solución de tensor de
+      momento cuando exista, sin reemplazarlo por una conversión;
+      \item para $m_b$ o $M_s$, usar inicialmente una relación global dentro de
+      su rango publicado y registrar la ecuación elegida;
+            \item para $M_L$, $M_{Lr}$ y $M_{MLr}$, aplicar como estimador
+            provisional la relación de Senel et al. y marcar como extrapolados los
+            valores fuera de $3.3\leq M_L\leq6.6$; para $M_d$ usar su relación
+            específica, dentro de $3.5\leq M_d\leq7.4$;
+      \item si un evento tiene varias magnitudes convertibles, calcular cada
+      estimador por separado y conservar la dispersión entre estimadores, en vez
+      de promediarlos sin ponderación;
+      \item marcar como extrapolación cualquier valor fuera del rango de ajuste,
+      y no convertir magnitudes desconocidas, negativas o con banderas de baja
+      calidad sin una revisión adicional.
+\end{enumerate}
+
+No debe encadenarse, por ejemplo, $M_L\rightarrow m_b\rightarrow M_w$:
+cada conversión añade error y puede propagar el sesgo de saturación. En la
+implementación del catálogo, los tipos $M$ y $M_{Pac}$, así como los registros
+sin tipo, quedan como \texttt{no\_convertida} porque su definición no es suficiente
+para seleccionar una correlación verificable. Las escalas $M_w$, $M_{ww}$,
+$M_{wc}$, $M_{wb}$, $M_{wr}$ y $M_{wp}$ se conservan como magnitudes directas.
+
+Cada archivo homogenizado conserva las columnas \texttt{magnitude} y
+\texttt{mag\_type} de origen y agrega \texttt{magnitude\_mw},
+\texttt{conversion\_relation}, \texttt{conversion\_sigma} y
+\texttt{conversion\_status}. Esta última toma los valores
+\texttt{directa}, \texttt{dentro\_de\_rango}, \texttt{extrapolada} o
+\texttt{no\_convertida}. Así se evita
+confundir un valor convertido fuera del rango publicado con una observación
+directa de $M_w$.
+
+\subsection{Incertidumbre de las magnitudes convertidas}
+
+Para una relación lineal $\widehat{M_w}=a+bX$, una aproximación mínima de la
+incertidumbre es
+\begin{equation}
+      \sigma_{\widehat{M_w}}^2 \simeq
+      \sigma_{\mathrm{reg}}^2+b^2\sigma_X^2,
+      \label{eq:incertidumbre_lineal}
+\end{equation}
+donde $\sigma_{\mathrm{reg}}$ es la desviación estándar de los residuos y
+$\sigma_X$ la incertidumbre de la magnitud de entrada. Si se conocen las
+covarianzas de los coeficientes, la forma general es
+\begin{equation}
+ \sigma_{\widehat{M_w}}^2=\sigma_{\mathrm{reg}}^2+
+ \begin{bmatrix}1&X\end{bmatrix}
+ \operatorname{Cov}(a,b)
+ \begin{bmatrix}1\\X\end{bmatrix}+b^2\sigma_X^2.
+ \label{eq:incertidumbre_covarianza}
+\end{equation}
+Para una relación no lineal $f(X)$, se usa la aproximación de primer orden
+$\sigma_{\widehat{M_w}}^2\simeq\sigma_{\mathrm{reg}}^2+[f'(X)]^2\sigma_X^2$.
+En consecuencia, el archivo depurado debe incluir, como mínimo, la magnitud
+original, $M_w$ directo o estimado, relación aplicada, rango de validez,
+desviación estándar publicada y una bandera de extrapolación. Esta estructura
+permite que el análisis de amenaza separe la incertidumbre aleatoria de la
+incertidumbre epistemológica asociada a escoger una relación entre varias.
+\subsection{Distribución frecuencia--magnitud}
+\label{sec:frecuencia_magnitud}
+
+La distribución de las magnitudes homogenizadas no se modela mediante una
+distribución normal. Para la sismicidad, el modelo de referencia es la ley de
+Gutenberg--Richter:
+\begin{equation}
+      \log_{10}N(M_w\geq M)=a-bM,
+      \label{eq:gutenberg_richter}
+\end{equation}
+donde $N(M_w\geq M)$ es el número acumulado de eventos con magnitud igual o
+mayor que $M$, $a$ representa la productividad del catálogo y $b$ controla la
+proporción entre eventos pequeños y grandes. El parámetro $b$ se estima solo
+por encima de la magnitud de completitud $M_c$, porque por debajo de ella la
+red no necesariamente registra todos los eventos.
+
+Para cada radio se construyó un histograma con intervalos de $0.1$ unidades de
+magnitud. Se tomó como estimación exploratoria de $M_c$ el centro del intervalo
+con mayor frecuencia y se ajustó una regresión lineal de
+$\log_{10}N(M_w\geq M)$ contra $M_w$ para $M_w\geq M_c$. El ajuste y sus
+resultados se reproducen con el script
+\texttt{codigo/analisis\_frecuencia\_magnitud.py}; los parámetros también se
+guardan en \texttt{datos/datos depurados/ajuste\_gutenberg\_richter.csv}.
+
+\begin{table}[htbp]
+      \centering
+      \caption{Ajuste exploratorio de Gutenberg--Richter para los catálogos homogenizados.}
+      \label{tab:ajuste_gr}
+      \begin{tabular}{lrrrrr}
+            \toprule
+            Radio & $N$ válido & $M_c$ & $N$ ajuste & $b$ & $R^2$ \\
+            \midrule
+            50 km  & 2\,397  & 2.55 & 1\,451  & 0.971 & 0.997 \\
+            260 km & 68\,497 & 2.55 & 35\,098 & 0.883 & 0.996 \\
+            \bottomrule
+      \end{tabular}
+\end{table}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth]{../figuras/frecuencia_magnitud_50km.png}
+      \caption{Frecuencia y ajuste Gutenberg--Richter del catálogo homogenizado
+      dentro de 50 km. La línea vertical indica la magnitud de completitud
+      exploratoria $M_c=2.55$.}
+      \label{fig:frecuencia_50km}
+\end{figure}
+
+\begin{figure}[htbp]
+      \centering
+      \includegraphics[width=0.98\textwidth]{../figuras/frecuencia_magnitud_260km.png}
+      \caption{Frecuencia y ajuste Gutenberg--Richter del catálogo homogenizado
+      dentro de 260 km. La línea vertical indica la magnitud de completitud
+      exploratoria $M_c=2.55$.}
+      \label{fig:frecuencia_260km}
+\end{figure}
+
+El ajuste es muy bueno en términos de $R^2$, pero no debe interpretarse como
+prueba de que el catálogo sea físicamente homogéneo. El catálogo de 260 km
+combina una red local densa del SGC, la cobertura global del USGS y un número
+importante de conversiones extrapoladas; además, se observan acumulaciones en
+ciertos valores de magnitud producidas por el redondeo y por las propias
+correlaciones. Por ello, $b$ y $M_c$ deben recalcularse cuando se establezca la
+completitud por fuente, período y tipo de magnitud, y antes de usarlos en la
+estimación probabilista de amenaza.
+
+% ============================================================
 \section{Próximos pasos}
 
 \begin{itemize}
-    \item Unificar los cuatro catálogos en una sola tabla, dentro de
-          \texttt{datos/datos depurados/}.
-    \item Homogenizar los distintos tipos de magnitud reportados (ML, MLr,
-          Mw, mb, entre otros) a magnitud de momento $M_w$.
+    \item Revisar manualmente los registros \texttt{no\_convertida} y las
+          magnitudes marcadas como \texttt{extrapolada}.
+    \item Estimar la completitud por fuente, período y escala antes de usar
+          la ley Gutenberg--Richter en amenaza sísmica.
     \item Revisar formatos de fecha, separadores decimales y profundidades
           reportadas.
     \item Identificar sismos duplicados entre fuentes (sin eliminarlos, solo
