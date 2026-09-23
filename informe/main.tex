@@ -138,7 +138,6 @@ url=true
 	
 	\begin{titlepage}
 		\centering
-		% Logo de la universidad (ajusta el nombre del archivo)
 		\includegraphics[width=0.2\textwidth]{../figuras/Logo_1.png}\par\vspace{1cm}
 		
 		
@@ -386,9 +385,8 @@ que se documentan aquí por su relevancia para la trazabilidad del trabajo:
 \section{Estado actual del catálogo}
 \label{sec:estado}
 
-El Cuadro~\ref{tab:estado} resume el estado actual de los cuatro catálogos
-descargados, disponibles en \texttt{datos/datos originales/} del repositorio
-del proyecto.
+El Cuadro~\ref{tab:estado} resume el estado inicial de los cuatro catálogos
+considerados en el análisis.
 
 \begin{table}[htbp]
     \centering
@@ -619,12 +617,11 @@ sin tipo, quedan como \texttt{no\_convertida} porque su definición no es sufici
 para seleccionar una correlación verificable. Las escalas $M_w$, $M_{ww}$,
 $M_{wc}$, $M_{wb}$, $M_{wr}$ y $M_{wp}$ se conservan como magnitudes directas.
 
-Cada archivo homogenizado conserva las columnas \texttt{magnitude} y
-\texttt{mag\_type} de origen y agrega \texttt{magnitude\_mw},
-\texttt{conversion\_relation}, \texttt{conversion\_sigma} y
-\texttt{conversion\_status}. Esta última toma los valores
-\texttt{directa}, \texttt{dentro\_de\_rango}, \texttt{extrapolada} o
-\texttt{no\_convertida}. Así se evita
+El catálogo homogenizado conserva la magnitud original y su escala de
+determinación, y asocia a cada evento una magnitud $M_w$ directa o estimada,
+la relación de conversión utilizada, su incertidumbre y su condición de
+validez. Esta última distingue entre magnitudes directas, conversiones dentro
+del rango empírico, extrapolaciones y magnitudes no convertidas. Así se evita
 confundir un valor convertido fuera del rango publicado con una observación
 directa de $M_w$.
 
@@ -649,11 +646,12 @@ covarianzas de los coeficientes, la forma general es
 \end{equation}
 Para una relación no lineal $f(X)$, se usa la aproximación de primer orden
 $\sigma_{\widehat{M_w}}^2\simeq\sigma_{\mathrm{reg}}^2+[f'(X)]^2\sigma_X^2$.
-En consecuencia, el archivo depurado debe incluir, como mínimo, la magnitud
-original, $M_w$ directo o estimado, relación aplicada, rango de validez,
-desviación estándar publicada y una bandera de extrapolación. Esta estructura
-permite que el análisis de amenaza separe la incertidumbre aleatoria de la
-incertidumbre epistemológica asociada a escoger una relación entre varias.
+En consecuencia, el catálogo depurado debe conservar, como mínimo, la
+magnitud original, $M_w$ directo o estimado, la relación aplicada, el rango de
+validez, la desviación estándar publicada y una bandera de extrapolación. Esta
+estructura permite que el análisis de amenaza separe la incertidumbre
+aleatoria de la incertidumbre epistemológica asociada a escoger una relación
+entre varias.
 
 \subsection{Depuración de réplicas y precursores}
 \label{sec:depuracion_replicas}
@@ -663,8 +661,7 @@ réplicas y los precursores mediante el método de ventanas espacio--tiempo de
 Gardner y Knopoff \parencite{gardner1974isoseismal}. Los eventos se ordenaron
 de mayor a menor $M_w$; para cada evento principal se asignó una ventana
 temporal $T(M_w)$ y una distancia máxima $R(M_w)$ mediante interpolación de la
-tabla de ventanas implementada en
-\texttt{codigo/depurar\_replicas.py}. Un evento se marcó como réplica si
+tabla de ventanas. Un evento se marcó como réplica si
 ocurrió después del principal, o como precursor si ocurrió antes, siempre que
 la diferencia temporal y la distancia epicentral cumplieran ambas condiciones
 de la ventana. Los eventos principales se conservaron y cada exclusión quedó
@@ -719,11 +716,10 @@ aproximación conservadora del método de ventanas: cuando varios eventos podía
 explicar la exclusión, el evento de mayor magnitud procesado primero tuvo
 prioridad.
 
-El catálogo de 50~km pasó de 2\,400 a 2\,399 registros, con una réplica
-excluida. El de 260~km pasó de 68\,604 a 68\,454 registros, con 118 réplicas
-y 32 precursores excluidos. Las salidas depuradas son los archivos
-\texttt{*-HOMOGENEIZADO-MW-DEPURADO-GK.csv}; la trazabilidad se conserva en
-\texttt{*-REPLICAS-GK.csv}.
+El catálogo de 50~km pasó de 2\,400 a 2\,399 eventos, con una réplica
+excluida. El de 260~km pasó de 68\,604 a 68\,454 eventos, con 118 réplicas
+y 32 precursores excluidos. Para cada exclusión se conserva la identificación
+del evento principal y la magnitud que determinó la ventana aplicada.
 
 \subsection{Distribución frecuencia--magnitud}
 \label{sec:frecuencia_magnitud}
@@ -744,10 +740,8 @@ red no necesariamente registra todos los eventos.
 Para cada radio se construyó un histograma con intervalos de $0.1$ unidades de
 magnitud. Se tomó como estimación exploratoria de $M_c$ el centro del intervalo
 con mayor frecuencia y se ajustó una regresión lineal de
-$\log_{10}N(M_w\geq M)$ contra $M_w$ para $M_w\geq M_c$. El ajuste y sus
-resultados se reproducen con el script
-\texttt{codigo/analisis\_frecuencia\_magnitud.py}; los parámetros también se
-guardan en \texttt{datos/datos depurados/ajuste\_gutenberg\_richter.csv}.
+$\log_{10}N(M_w\geq M)$ contra $M_w$ para $M_w\geq M_c$. Los parámetros
+obtenidos se presentan en la Tabla~\ref{tab:ajuste_gr}.
 
 \begin{table}[htbp]
       \centering
