@@ -670,6 +670,55 @@ la diferencia temporal y la distancia epicentral cumplieran ambas condiciones
 de la ventana. Los eventos principales se conservaron y cada exclusión quedó
 registrada con el identificador y la magnitud del evento que la originó.
 
+La tabla utilizada fue la siguiente. $T$ representa la escala temporal en días
+y $R$ la escala espacial en kilómetros:
+
+\begin{table}[htbp]
+      \centering
+      \caption{Ventanas espacio--tiempo adoptadas para la depuración Gardner--Knopoff.}
+      \label{tab:ventanas_gk}
+      \small
+      \begin{tabular}{ccc}
+            \toprule
+            $M_w$ & $T(M_w)$ (días) & $R(M_w)$ (km) \\
+            \midrule
+            2.0 & 1   & 5   \\
+            2.5 & 1   & 5   \\
+            3.0 & 2   & 5   \\
+            3.5 & 3   & 5   \\
+            4.0 & 4   & 10  \\
+            4.5 & 6   & 15  \\
+            5.0 & 10  & 20  \\
+            5.5 & 15  & 30  \\
+            6.0 & 22  & 50  \\
+            6.5 & 32  & 70  \\
+            7.0 & 42  & 90  \\
+            7.5 & 83  & 120 \\
+            8.0 & 155 & 150 \\
+            8.5 & 290 & 180 \\
+            9.0 & 510 & 210 \\
+            \bottomrule
+      \end{tabular}
+\end{table}
+
+Para magnitudes entre los valores tabulados se aplicó interpolación lineal.
+Para magnitudes menores que $2.0$ o mayores que $9.0$ se utilizaron,
+respectivamente, los valores de los extremos de la tabla. La condición de
+exclusión fue
+\begin{equation}
+      |t_i-t_j|\leq T(M_{w,j})
+      \quad\text{y}\quad
+      d_{ij}\leq R(M_{w,j}),
+      \label{eq:criterio_gk}
+\end{equation}
+donde $j$ es el evento principal, $i$ es el evento candidato y $d_{ij}$ es la
+distancia epicentral calculada mediante la fórmula de Haversine. La ventana
+temporal se aplicó de forma simétrica, por lo que se identificaron tanto
+réplicas posteriores como precursores anteriores. Esta decisión es una
+aproximación conservadora del método de ventanas: cuando varios eventos podían
+explicar la exclusión, el evento de mayor magnitud procesado primero tuvo
+prioridad.
+
 El catálogo de 50~km pasó de 2\,400 a 2\,399 registros, con una réplica
 excluida. El de 260~km pasó de 68\,604 a 68\,454 registros, con 118 réplicas
 y 32 precursores excluidos. Las salidas depuradas son los archivos
