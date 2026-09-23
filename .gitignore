@@ -1,0 +1,25 @@
+# Auxiliares de LaTeX
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Registros de compilacion
+compilacion.txt
+bibliografia-compilacion.txt
+texput.log
+
+# Entornos locales
+.venv/
+venv/
+__pycache__/
+*.py[cod]
