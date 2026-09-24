@@ -6,6 +6,9 @@ El ajuste sigue la relacion Gutenberg-Richter:
 La magnitud de completitud Mc se estima por maxima curvatura del histograma
 con bins de 0.1 unidades. Los resultados son exploratorios porque los
 catalogos combinan fuentes, escalas y conversiones con distinta incertidumbre.
+
+Se repite el analisis para los catalogos depurados con Gardner-Knopoff,
+ventanas enlazadas, vecino mas cercano y el Criterio propio.
 """
 
 from pathlib import Path
@@ -20,10 +23,17 @@ DATOS = ROOT / "datos" / "datos depurados"
 FIGURAS = ROOT / "figuras"
 FIGURAS.mkdir(exist_ok=True)
 ANCHO_BIN = 0.1
+METODOS = ("GK", "GKL", "NN", "PROPIO")
+NOMBRES_METODOS = {
+    "GK": "Gardner-Knopoff",
+    "GKL": "Ventanas enlazadas (GKL)",
+    "NN": "Vecino más cercano",
+    "PROPIO": "Criterio propio",
+}
 
 
-def cargar_magnitudes(radio):
-    archivo = DATOS / f"SISMO NEIVA-CONSOLIDADO-{radio}-HOMOGENEIZADO-MW-DEPURADO-GK.csv"
+def cargar_magnitudes(radio, metodo):
+    archivo = DATOS / f"SISMO NEIVA-CONSOLIDADO-{radio}-HOMOGENEIZADO-MW-DEPURADO-{metodo}.csv"
     df = pd.read_csv(archivo, encoding="utf-8-sig")
     magnitudes = pd.to_numeric(df["magnitude_mw"], errors="coerce").dropna()
     return df, magnitudes.to_numpy()
@@ -68,11 +78,12 @@ def ajustar_gr(magnitudes):
     }
 
 
-def graficar(radio):
-    df, magnitudes = cargar_magnitudes(radio)
-    archivo_replicas = DATOS / f"SISMO NEIVA-CONSOLIDADO-{radio}-REPLICAS-GK.csv"
+def graficar(radio, metodo):
+    df, magnitudes = cargar_magnitudes(radio, metodo)
+    archivo_replicas = DATOS / f"SISMO NEIVA-CONSOLIDADO-{radio}-REPLICAS-{metodo}.csv"
     n_replicas = len(pd.read_csv(archivo_replicas, encoding="utf-8-sig"))
     ajuste = ajustar_gr(magnitudes)
+    nombre_metodo = NOMBRES_METODOS.get(metodo, metodo)
     figura, ejes = plt.subplots(1, 2, figsize=(13, 5.5))
     color = "#1f5d75"
     color_ajuste = "#b24732"
@@ -92,9 +103,9 @@ def graficar(radio):
         linewidth=1.5,
         label=fr"$M_c={ajuste['mc']:.1f}$",
     )
-    ejes[0].set_title(f"Frecuencia por magnitud - {radio.replace('KM', ' km')}")
+    ejes[0].set_title(f"Frecuencia por magnitud - {radio.replace('KM', ' km')} ({nombre_metodo})")
     ejes[0].set_xlabel(r"Magnitud homogenizada $M_w$")
-    ejes[0].set_ylabel("Numero de eventos")
+    ejes[0].set_ylabel("Número de eventos")
     ejes[0].legend(frameon=False)
     ejes[0].grid(axis="y", alpha=0.25)
 
@@ -115,7 +126,7 @@ def graficar(radio):
         label=fr"$\log_{{10}}N={ajuste['a']:.2f}-{ajuste['b']:.2f}M_w$",
     )
     ejes[1].axvline(ajuste["mc"], color=color_ajuste, linestyle="--", linewidth=1)
-    ejes[1].set_title("Ajuste Gutenberg-Richter")
+    ejes[1].set_title(f"Ajuste Gutenberg-Richter ({nombre_metodo})")
     ejes[1].set_xlabel(r"Magnitud $M_w$")
     ejes[1].set_ylabel(r"$\log_{10} N(M_w \geq M)$")
     ejes[1].legend(frameon=False, loc="upper right")
@@ -131,26 +142,28 @@ def graficar(radio):
     )
     figura.text(0.5, 0.01, texto, ha="center", va="bottom", fontsize=9)
     figura.tight_layout(rect=(0, 0.05, 1, 1))
-    salida = FIGURAS / f"frecuencia_magnitud_{radio.lower()}.png"
+    salida = FIGURAS / f"frecuencia_magnitud_{radio.lower()}_{metodo.lower()}.png"
     figura.savefig(salida, dpi=220, bbox_inches="tight")
     plt.close(figura)
     return ajuste
 
 
 resultados = []
-for radio in ("50KM", "260KM"):
-    ajuste = graficar(radio)
-    resultados.append(
-        {
-            "radio": radio,
-            "Mc": ajuste["mc"],
-            "a": ajuste["a"],
-            "b": ajuste["b"],
-            "R2": ajuste["r2"],
-            "N_total": ajuste["n_total"],
-            "N_ajuste": ajuste["n_ajuste"],
-        }
-    )
+for metodo in METODOS:
+    for radio in ("50KM", "260KM"):
+        ajuste = graficar(radio, metodo)
+        resultados.append(
+            {
+                "metodo": metodo,
+                "radio": radio,
+                "Mc": ajuste["mc"],
+                "a": ajuste["a"],
+                "b": ajuste["b"],
+                "R2": ajuste["r2"],
+                "N_total": ajuste["n_total"],
+                "N_ajuste": ajuste["n_ajuste"],
+            }
+        )
 
 pd.DataFrame(resultados).to_csv(
     DATOS / "ajuste_gutenberg_richter.csv", index=False, encoding="utf-8-sig"

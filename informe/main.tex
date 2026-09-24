@@ -8,7 +8,9 @@ a4paper,
 top=3cm,
 bottom=3cm,
 left=2cm,
-right=2cm
+right=2cm,
+includefoot,
+footskip=50pt
 ]{geometry}
 
 % ==================================================
@@ -32,6 +34,7 @@ right=2cm
 \usepackage{booktabs}
 \usepackage{float}
 \usepackage{caption}
+\usepackage{subcaption}
 
 \newcolumntype{Y}{>{\centering\arraybackslash}X}
 
@@ -66,33 +69,6 @@ right=2cm
 % ENCABEZADOS Y PIE DE PÁGINA
 % ==================================================
 \usepackage{fancyhdr}
-
-\pagestyle{fancy}
-\fancyhf{}
-
-% Logo izquierdo
-\fancyhead[L]{
-      \includegraphics[height=1.5cm]{../figuras/Logo_1.png}
-}
-
-% Texto derecho
-\fancyhead[R]{
-	\parbox{4cm}{
-		\centering
-		\textbf{Instrumentación\\Geotécnica}
-	}
-}
-
-% Pie de página
-\fancyfoot[C]{Página \thepage}
-
-% Líneas
-\renewcommand{\headrulewidth}{0.4pt}
-\renewcommand{\footrulewidth}{0.4pt}
-
-% Ajustes encabezado
-\setlength{\headheight}{45pt}
-\setlength{\headsep}{12pt}
 
 % ==================================================
 % HIPERVÍNCULOS
@@ -195,10 +171,17 @@ url=true
 	
 	% Líneas superior e inferior
 	\renewcommand{\headrulewidth}{0.4pt}
-	\renewcommand{\footrulewidth}{0.4pt}
+      \renewcommand{\footrulewidth}{0pt}
+
+      \fancypagestyle{plain}{%
+            \fancyhf{}
+            \fancyfoot[C]{\small Página \thepage}
+            \renewcommand{\headrulewidth}{0pt}
+            \renewcommand{\footrulewidth}{0pt}
+      }
 	
 	% Ajusta la altura del encabezado
-	\setlength{\headheight}{45pt}
+      \setlength{\headheight}{66.3pt}
 	
 	\setlength{\headsep}{30pt}      
 	
@@ -211,7 +194,7 @@ url=true
 \newpage
 
 % ============================================================
-\section{Introducción y objetivo}
+\section{Introducción}
 
 Este informe documenta el avance del trabajo de amenaza sísmica para la ciudad de
 Neiva (Huila). El objetivo del trabajo es construir un catálogo sísmico depurado
@@ -226,7 +209,21 @@ depuración espacio-temporal y análisis frecuencia--magnitud, además de dejar
 señalados los pasos pendientes para el análisis de amenaza sísmica.
 
 % ============================================================
-\section{Zona de estudio y punto de referencia}
+\section{Objetivos}
+
+\begin{itemize}
+    \item Construir un catálogo sísmico homogenizado en magnitud de momento
+          $M_w$ para la ciudad de Neiva y sus radios de estudio.
+    \item Aplicar y comparar cuatro criterios de depuración de réplicas y
+          precursores sobre una población común con $M_w>3.0$.
+    \item Estimar la distribución frecuencia--magnitud y los parámetros
+          exploratorios de Gutenberg--Richter para cada método.
+    \item Dejar preparada la base para asociar los eventos depurados con las
+          sismofuentes regionales en una etapa posterior.
+\end{itemize}
+
+% ============================================================
+\section{Descripción del proyecto}
 
 Como punto de referencia para la búsqueda del catálogo sísmico se adoptó el
 \textbf{Parque Central Santander}, en el centro cívico e institucional de Neiva,
@@ -256,7 +253,7 @@ el valle interandino del Alto Magdalena, entre las cordilleras Central y
 Oriental; el radio de 260~km alcanza ciudades como Cali, Ibagué, Popayán y
 Bogotá, y se extiende hasta la zona de subducción del Pacífico.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.8\textwidth]{../figuras/zonadeestudioradio260.jpg}
     \caption{Zona de estudio: punto de referencia en Neiva (Parque Central
@@ -275,7 +272,7 @@ hacia el occidente, asociado a la zona de subducción. Los eventos del USGS
 se concentran en las magnitudes más altas de cada zona, consistente con lo
 discutido en la Sección~\ref{sec:estado}.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.85\textwidth]{../figuras/mapa_zona_estudio.png}
     \caption{Epicentros del catálogo consolidado SGC + USGS dentro de
@@ -285,8 +282,6 @@ discutido en la Sección~\ref{sec:estado}.
 \end{figure}
 
 % ============================================================
-\section{Catálogo sísmico: fuentes y metodología}
-
 \subsection{Fuentes de datos utilizadas}
 
 Se utilizaron dos fuentes de información sismológica:
@@ -313,7 +308,7 @@ sin filtrar) y considerando el rango histórico completo disponible en cada
 fuente, con el fin de conservar el catálogo lo más completo posible. Los
 parámetros específicos se resumen en el Cuadro~\ref{tab:parametros}.
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \caption{Parámetros de búsqueda utilizados por fuente.}
     \label{tab:parametros}
@@ -382,13 +377,13 @@ que se documentan aquí por su relevancia para la trazabilidad del trabajo:
 \end{itemize}
 
 % ============================================================
-\section{Estado actual del catálogo}
+\subsection{Estado actual del catálogo}
 \label{sec:estado}
 
 El Cuadro~\ref{tab:estado} resume el estado inicial de los cuatro catálogos
 considerados en el análisis.
 
-\begin{table}[htbp]
+\begin{table}[H]
     \centering
     \caption{Estado actual de los catálogos descargados.}
     \label{tab:estado}
@@ -420,7 +415,9 @@ Los catálogos se descargaron el 21 de septiembre de 2026. Las magnitudes de
 cada fuente se presentan en su escala original; aún no se han homogenizado.
 
 % ============================================================
-\section{Marco teórico para la homogenización de magnitudes}
+\section{Marco teórico}
+
+\subsection{Homogenización de magnitudes}
 \label{sec:conversion_magnitudes}
 
 La homogenización consiste en expresar, en una escala común, magnitudes que
@@ -653,6 +650,41 @@ estructura permite que el análisis de amenaza separe la incertidumbre
 aleatoria de la incertidumbre epistemológica asociada a escoger una relación
 entre varias.
 
+\section{Desarrollo y análisis}
+
+\subsection{Criterio común de magnitud}
+\label{sec:filtro_magnitud_comun}
+
+Antes de aplicar cualquiera de los métodos de depuración se estableció un
+catálogo común con eventos que cumplen $M_w>3.0$. Este umbral permite comparar
+Gardner--Knopoff, GKL, vecino más cercano y el Criterio propio sobre la misma
+población. Los
+registros con $M_w\leq3.0$ se conservan en los archivos de exclusiones,
+identificados como \texttt{magnitud\_baja}, pero no participan en los
+algoritmos de réplicas.
+
+El catálogo elegible contiene 692 eventos para 50 km y 16\,160 eventos para
+260 km. Sobre esta misma base se aplican los cuatro criterios descritos a
+continuación.
+
+\subsection{Completitud del catálogo}
+\label{sec:completitud}
+
+La completitud representa el rango de magnitudes para el cual la red y el
+proceso de integración de fuentes registran de manera suficientemente
+uniforme los eventos. No debe confundirse con el filtro operativo $M_w>3.0$:
+este último define la población de entrada, mientras que $M_c$ se estima a
+partir de la distribución de magnitudes del catálogo ya depurado. En este
+trabajo se construyó un histograma con intervalos de $0.1$ unidades y se tomó
+como estimación exploratoria el centro del intervalo con mayor frecuencia. Por
+eso, con bins de $3.0$--$3.1$, el resultado aparece como $M_c=3.05$.
+
+Este valor es una aproximación dependiente del ancho y del origen de los
+intervalos; no constituye por sí solo una demostración de completitud física.
+La completitud definitiva debe evaluarse por fuente, período, cobertura de la
+red y escala de magnitud, además de comprobarse con métodos alternativos. Los
+parámetros $b$ y $R^2$ se estiman únicamente para $M_w\geq M_c$.
+
 \subsection{Depuración de réplicas y precursores}
 \label{sec:depuracion_replicas}
 
@@ -670,7 +702,7 @@ registrada con el identificador y la magnitud del evento que la originó.
 La tabla utilizada fue la siguiente. $T$ representa la escala temporal en días
 y $R$ la escala espacial en kilómetros:
 
-\begin{table}[htbp]
+\begin{table}[H]
       \centering
       \caption{Ventanas espacio--tiempo adoptadas para la depuración Gardner--Knopoff.}
       \label{tab:ventanas_gk}
@@ -716,10 +748,161 @@ aproximación conservadora del método de ventanas: cuando varios eventos podía
 explicar la exclusión, el evento de mayor magnitud procesado primero tuvo
 prioridad.
 
-El catálogo de 50~km pasó de 2\,400 a 2\,399 eventos, con una réplica
-excluida. El de 260~km pasó de 68\,604 a 68\,454 eventos, con 118 réplicas
+El catálogo elegible de 50~km pasó de 692 a 691 eventos, con una réplica
+excluida. El de 260~km pasó de 16\,160 a 16\,012 eventos, con 116 réplicas
 y 32 precursores excluidos. Para cada exclusión se conserva la identificación
 del evento principal y la magnitud que determinó la ventana aplicada.
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=0.92\textwidth]{../figuras/frecuencia_magnitud_50km_gk.png}
+      \caption{Frecuencia y ajuste Gutenberg--Richter para el catálogo depurado a 50 km con el método Gardner--Knopoff. La línea vertical indica la magnitud de completitud exploratoria $M_c=3.05$.}
+      \label{fig:frecuencia_50km}
+\end{figure}
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=0.92\textwidth]{../figuras/frecuencia_magnitud_260km_gk.png}
+      \caption{Frecuencia y ajuste Gutenberg--Richter para el catálogo depurado a 260 km con el método Gardner--Knopoff. La línea vertical indica la magnitud de completitud exploratoria $M_c=3.05$.}
+      \label{fig:frecuencia_260km}
+\end{figure}
+
+\subsection{Método de ventanas enlazadas (GKL/GKL-b)}
+\label{sec:ventanas_enlazadas}
+
+Como una alternativa intermedia entre las ventanas fijas por magnitud y la
+representación basada en vecinos más cercanos, se implementó la variante de
+ventanas enlazadas GKL/GKL-b. En este enfoque el evento candidato se compara
+con el evento principal más fuerte que lo precede en tiempo y que cae dentro
+de la ventana espacio--tiempo asociada a la magnitud más grande. Cuando la
+secuencia cumple ambas condiciones simultáneamente, el miembro más débil se
+marca como evento ligado a la secuencia principal y se excluye del catálogo de
+mainshocks. Esta lógica conserva el esquema de depuración basado en ventanas,
+pero permite enlazar la secuencia en cadena cuando varios eventos se
+encuentran dentro del mismo dominio espacio--tiempo.
+
+La comparación con los resultados de Gardner--Knopoff se presenta en el
+Cuadro~\ref{tab:comparacion_decluster}, y la salida de frecuencia--magnitud
+para cada radio se muestra en las Figuras~\ref{fig:frecuencia_50km_gkl} y
+\ref{fig:frecuencia_260km_gkl}.
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=0.92\textwidth]{../figuras/frecuencia_magnitud_50km_gkl.png}
+      \caption{Frecuencia y ajuste Gutenberg--Richter para el catálogo depurado a 50 km con el método de ventanas enlazadas GKL. La línea vertical indica la magnitud de completitud exploratoria $M_c=3.05$.}
+      \label{fig:frecuencia_50km_gkl}
+\end{figure}
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=0.92\textwidth]{../figuras/frecuencia_magnitud_260km_gkl.png}
+      \caption{Frecuencia y ajuste Gutenberg--Richter para el catálogo depurado a 260 km con el método de ventanas enlazadas GKL. La línea vertical indica la magnitud de completitud exploratoria $M_c=3.05$.}
+      \label{fig:frecuencia_260km_gkl}
+\end{figure}
+
+\subsection{Método de vecino más cercano (nearest-neighbor)}
+\label{sec:vecino_mas_cercano}
+
+Como comprobación de sensibilidad frente a la parametrización de la
+depuración, se aplicó además el método de vecino más cercano de
+Zaliapin et al. \parencite{zaliapin2008clustering} y Zaliapin y Ben-Zion
+\parencite{zaliapin2013global}. En este enfoque se define una métrica basada
+en la relación entre el tiempo de recurrencia y la distancia espacial con el
+vecino previo más cercano, reescalados por la magnitud y por la distancia
+espacial. Los eventos con valores baja de esa métrica se interpretan como
+miembros de la misma secuencia, y el criterio de corte se fija sobre la
+columna de la distribución empírica de la métrica.
+
+En la práctica, se calculó la métrica de vecino más cercano para cada evento
+con respecto a su predecesor temporal más cercano y se marcó como una
+réplica la observación cuya métrica quedaba por debajo de un umbral de corte
+asociado al percentil bajo de la distribución. Este proceso es análogo a la
+lógica de declustering basada en clusters, pero utiliza una representación
+rescalada en espacio--tiempo en vez de ventanas fijas por magnitud. Los
+resultados obtenidos se comparan con los del método de Gardner--Knopoff en el
+Cuadro~\ref{tab:comparacion_decluster}.
+
+\begin{table}[H]
+      \centering
+      \caption{Comparación de depuración sobre el catálogo común $M_w>3.0$.}
+      \label{tab:comparacion_decluster}
+      \small
+      \begin{tabular}{llrrr}
+            \toprule
+            Radio & Método & N. entrada & N. conservado & Eventos excluidos \\
+            \midrule
+            50 km  & Gardner--Knopoff & 692 & 691 & 1 \\
+            50 km  & Ventanas enlazadas (GKL) & 692 & 691 & 1 \\
+            50 km  & Vecino más cercano & 692 & 690 & 2 \\
+            50 km  & Criterio propio & 692 & 692 & 0 \\
+            260 km & Gardner--Knopoff & 16\,160 & 16\,012 & 148 \\
+            260 km & Ventanas enlazadas (GKL) & 16\,160 & 16\,039 & 121 \\
+            260 km & Vecino más cercano & 16\,160 & 16\,079 & 81 \\
+            260 km & Criterio propio & 16\,160 & 16\,132 & 28 \\
+            \bottomrule
+      \end{tabular}
+\end{table}
+
+La diferencia entre ambos enfoques refleja la naturaleza distinta de los
+criterios: Gardner--Knopoff usa ventanas fijas por magnitud y es más
+conservador en secuencias activas del catálogo regional, mientras que el
+método de vecino más cercano identifica el clúster en el espacio
+rescalado tiempo--distancia, con una estrategia más dependiente de la
+estructura local de cercanía en el catálogo. Para la etapa de análisis
+frecuencia--magnitud, ambos métodos se aplicaron sobre el mismo catálogo
+homogeneizado y se compararon con el ajuste Gutenberg--Richter.
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=0.92\textwidth]{../figuras/frecuencia_magnitud_50km_nn.png}
+      \caption{Frecuencia y ajuste Gutenberg--Richter para el catálogo depurado a 50 km con el método de vecino más cercano. La línea vertical indica la magnitud de completitud exploratoria $M_c=3.05$.}
+      \label{fig:frecuencia_50km_nn}
+\end{figure}
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=0.92\textwidth]{../figuras/frecuencia_magnitud_260km_nn.png}
+      \caption{Frecuencia y ajuste Gutenberg--Richter para el catálogo depurado a 260 km con el método de vecino más cercano. La línea vertical indica la magnitud de completitud exploratoria $M_c=3.05$.}
+      \label{fig:frecuencia_260km_nn}
+\end{figure}
+
+\subsection{Criterio propio de depuración}
+\label{sec:depuracion_propio}
+
+Para establecer una alternativa independiente y comparable con los demás
+métodos, este criterio se aplica únicamente
+sobre el catálogo común $M_w>3.0$. Un evento se clasifica como réplica si
+ocurre el mismo día, está a no más de 24 horas del principal, se encuentra a
+una distancia de hasta 10 km y tiene menor magnitud que el evento principal.
+En cada grupo diario se procesa primero el evento de mayor $M_w$.
+
+El radio de 10 km es una decisión operativa del presente estudio, porque el
+documento no cuantifica la expresión ``cercanos entre sí''. Este criterio no
+debe confundirse con la ventana dependiente de magnitud de Gardner--Knopoff ni
+con la métrica continua de vecino más cercano. La distancia se calculó
+mediante la fórmula de Haversine y el archivo de salida conserva la
+clasificación, el motivo de exclusión, el evento principal asociado y la
+distancia calculada.
+
+Con este criterio se conservaron 692 registros en 50 km y 16\,132 en 260 km;
+los registros sin valor utilizable de $M_w$ se mantienen para trazabilidad. En
+260 km se identificaron 28 réplicas por la regla espacio--temporal. Las
+exclusiones por $M_w\leq3.0$ se reportan por separado en el criterio común y
+no se vuelven a atribuir a este método.
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=0.92\textwidth]{../figuras/frecuencia_magnitud_50km_propio.png}
+      \caption{Frecuencia y ajuste Gutenberg--Richter para el catálogo depurado a 50 km con el Criterio propio.}
+      \label{fig:frecuencia_50km_propio}
+\end{figure}
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=0.92\textwidth]{../figuras/frecuencia_magnitud_260km_propio.png}
+      \caption{Frecuencia y ajuste Gutenberg--Richter para el catálogo depurado a 260 km con el Criterio propio.}
+      \label{fig:frecuencia_260km_propio}
+\end{figure}
 
 \subsection{Distribución frecuencia--magnitud}
 \label{sec:frecuencia_magnitud}
@@ -743,37 +926,25 @@ con mayor frecuencia y se ajustó una regresión lineal de
 $\log_{10}N(M_w\geq M)$ contra $M_w$ para $M_w\geq M_c$. Los parámetros
 obtenidos se presentan en la Tabla~\ref{tab:ajuste_gr}.
 
-\begin{table}[htbp]
+\begin{table}[H]
       \centering
-      \caption{Ajuste exploratorio de Gutenberg--Richter para los catálogos depurados.}
+      \caption{Ajuste exploratorio de Gutenberg--Richter para los catálogos depurados con los cuatro métodos.}
       \label{tab:ajuste_gr}
-      \begin{tabular}{lrrrrr}
+      \begin{tabular}{llrrrrr}
             \toprule
-            Radio & $N$ válido & $M_c$ & $N$ ajuste & $b$ & $R^2$ \\
+            Radio & Método & $N$ válido & $M_c$ & $N$ ajuste & $b$ & $R^2$ \\
             \midrule
-            50 km  & 2\,396  & 2.55 & 1\,450  & 0.974 & 0.998 \\
-            260 km & 68\,347 & 2.55 & 34\,948 & 0.886 & 0.996 \\
+            50 km  & Gardner--Knopoff & 691 & 3.05 & 585 & 0.984 & 0.996 \\
+            50 km  & Ventanas enlazadas (GKL) & 691 & 3.05 & 585 & 0.984 & 0.996 \\
+            50 km  & Vecino más cercano & 690 & 3.05 & 584 & 0.983 & 0.996 \\
+            260 km & Gardner--Knopoff & 16\,012 & 3.05 & 13\,630 & 0.879 & 0.995 \\
+            260 km & Ventanas enlazadas (GKL) & 16\,039 & 3.05 & 13\,657 & 0.876 & 0.996 \\
+            260 km & Vecino más cercano & 16\,079 & 3.05 & 13\,697 & 0.877 & 0.995 \\
+            50 km  & Criterio propio & 692 & 3.05 & 586 & 0.982 & 0.996 \\
+            260 km & Criterio propio & 16\,132 & 3.05 & 13\,749 & 0.877 & 0.996 \\
             \bottomrule
       \end{tabular}
 \end{table}
-
-\begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.98\textwidth]{../figuras/frecuencia_magnitud_50km.png}
-      \caption{Frecuencia y ajuste Gutenberg--Richter del catálogo depurado
-      dentro de 50 km. La línea vertical indica la magnitud de completitud
-      exploratoria $M_c=2.55$.}
-      \label{fig:frecuencia_50km}
-\end{figure}
-
-\begin{figure}[htbp]
-      \centering
-      \includegraphics[width=0.98\textwidth]{../figuras/frecuencia_magnitud_260km.png}
-      \caption{Frecuencia y ajuste Gutenberg--Richter del catálogo depurado
-      dentro de 260 km. La línea vertical indica la magnitud de completitud
-      exploratoria $M_c=2.55$.}
-      \label{fig:frecuencia_260km}
-\end{figure}
 
 El ajuste es muy bueno en términos de $R^2$, pero no debe interpretarse como
 prueba de que el catálogo sea físicamente homogéneo. El catálogo de 260 km
@@ -785,7 +956,42 @@ completitud por fuente, período y tipo de magnitud, y antes de usarlos en la
 estimación probabilista de amenaza.
 
 % ============================================================
-\section{Próximos pasos}
+\section{Asociación de los sismos a sismofuentes}
+
+Esta etapa queda establecida como el siguiente desarrollo del proyecto. Los
+eventos depurados se asociarán espacialmente con las sismofuentes regionales,
+considerando la ubicación de los epicentros, la profundidad, la geometría de
+las fallas y los ambientes tectónicos relevantes para Neiva. El resultado
+permitirá separar la contribución de fuentes corticales, el nido sísmico de
+Bucaramanga y la subducción del Pacífico antes de construir escenarios de
+amenaza.
+
+La asociación deberá aplicar una regla geométrica reproducible, documentar los
+eventos que queden sin fuente asignada y conservar la posibilidad de asignación
+múltiple cuando la incertidumbre de localización o la proximidad a los límites
+de una fuente lo justifique.
+
+% ============================================================
+\section{Conclusiones}
+
+Se construyó un catálogo homogenizado a $M_w$ para radios de 50 y 260 km
+alrededor de Neiva. Después del filtro común $M_w>3.0$, se aplicaron cuatro
+criterios de depuración: Gardner--Knopoff, ventanas enlazadas GKL, vecino más
+cercano y Criterio propio.
+
+El Criterio propio utiliza una ventana de 24 horas, una distancia máxima de
+10 km y la condición de menor magnitud frente al evento principal. Su
+definición es independiente de las ventanas dependientes de magnitud y de la
+métrica de vecino más cercano, por lo que sirve como comprobación adicional de
+la sensibilidad del catálogo.
+
+La magnitud de completitud $M_c=3.05$ debe interpretarse como una estimación
+exploratoria derivada del centro del bin más frecuente, no como un límite físico
+definitivo de la red. La siguiente fase será asociar los eventos con
+sismofuentes y evaluar la completitud por fuente, período y escala de magnitud.
+
+% ============================================================
+\subsection{Trabajo futuro}
 
 \begin{itemize}
     \item Revisar manualmente los registros \texttt{no\_convertida} y las
@@ -803,7 +1009,7 @@ estimación probabilista de amenaza.
 \end{itemize}
 
 % ============================================================
-\section*{Fuentes consultadas}
+\section*{Referencias}
 \printbibliography[heading=none]
 
 \end{document}
