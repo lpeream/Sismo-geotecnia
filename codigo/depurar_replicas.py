@@ -60,7 +60,7 @@ def declusterizar(df):
         raise ValueError(f"Faltan columnas requeridas: {sorted(faltantes)}")
 
     resultado = df.copy()
-    resultado["fecha_utc"] = pd.to_datetime(resultado["fecha_utc"], utc=True, errors="coerce")
+    resultado["fecha_utc"] = pd.to_datetime(resultado["fecha_utc"], utc=True, errors="coerce", format="ISO8601")
     for columna in ("latitude", "longitude", "magnitude_mw"):
         resultado[columna] = pd.to_numeric(resultado[columna], errors="coerce")
 
@@ -123,6 +123,7 @@ def declusterizar(df):
             ]
             resultado.at[indice_candidato, "gk_mainshock_mw"] = magnitud
 
+
     resultado["fecha_utc"] = resultado["fecha_utc"].dt.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
     return resultado.drop(index=sorted(excluidos)).reset_index(drop=True), resultado
 
@@ -137,6 +138,7 @@ def procesar_radio(radio):
     depurado.to_csv(salida, index=False, encoding="utf-8-sig")
     excluidos = clasificado[clasificado["gk_clasificacion"] != "principal"]
     excluidos.to_csv(trazabilidad, index=False, encoding="utf-8-sig")
+
 
     print(
         f"{radio}: entrada={len(catalogo)}  conservados={len(depurado)}  "
