@@ -956,6 +956,227 @@ completitud por fuente, período y tipo de magnitud, y antes de usarlos en la
 estimación probabilista de amenaza.
 
 % ============================================================
+
+\subsection{Revisión de registros no convertidos y extrapolados}
+\label{sec:revision_no_convertidos}
+
+Se revisaron manualmente los registros marcados como \texttt{no\_convertida} y
+\texttt{extrapolada} en el catálogo homogenizado a 260 km. La gran mayoría de
+las conversiones extrapoladas corresponde a magnitudes locales ($M_L$, $M_{Lr}$)
+por debajo del límite inferior de la relación de Senel et al.,
+$3.3\leq M_L\leq6.6$. Se identificaron 66\,173 registros extrapolados de
+68\,604, equivalentes al 96\%. Esto es consistente con la abundante
+microsismicidad local del SGC, para la cual no se dispone de una relación
+calibrada a $M_w$ dentro de ese rango. Estos valores deben tratarse con
+precaución y no emplearse directamente en el ajuste de Gutenberg--Richter sin
+evaluar antes la sensibilidad del parámetro $b$ a su exclusión.
+
+Los 107 registros \texttt{no\_convertida} corresponden a tres casos:
+
+\begin{itemize}
+      \item 94 eventos del SGC con \texttt{mag\_type = M}, código genérico que no
+      corresponde a una escala reconocida ($M_L$, $m_b$, $M_s$, $M_d$). Son
+      sismos reales distribuidos en municipios como Villamaría, La Dorada,
+      Acacías y San Vicente del Caguán; no se consideran errores de captura sino
+      una limitación del reporte de la fuente.
+      \item 12 eventos del USGS (2003--2008) sin tipo de magnitud reportado.
+      \item 1 evento aislado con \texttt{mag\_type = M\_Pac}, correspondiente a
+      Villamaría (Caldas), cuyo código no estándar requiere verificación
+      adicional con la fuente original.
+\end{itemize}
+
+Se recomienda mantener estos 107 eventos como \texttt{no\_convertida} en el
+catálogo, sin descartarlos, y excluirlos únicamente del ajuste de
+Gutenberg--Richter hasta contar con una relación verificable para el tipo M.
+
+\subsection{Revisión de formatos: fechas, decimales y profundidades}
+\label{sec:revision_formatos}
+
+Se revisaron los formatos del catálogo consolidado antes de la depuración
+Gardner--Knopoff. Se encontraron los siguientes hallazgos:
+
+\begin{itemize}
+      \item \textbf{Formato de fechas.} Las fechas del SGC y del USGS se
+      reportan en variantes distintas del formato ISO 8601: por ejemplo,
+      \texttt{2018-07-07T00:19:48+00:00} frente a
+      \texttt{2003-05-11T13:50:33.310Z}. El procesamiento debe especificar
+      explícitamente el formato ISO 8601 para evitar que se descarten fechas
+      válidas por inferir un único formato desde la primera fila. Tras la
+      corrección, el catálogo de 260 km pasa de 68\,454 a 52\,843 eventos
+      conservados y el de 50 km de 2\,399 a 2\,241; las exclusiones adicionales
+      corresponden a réplicas y precursores identificados correctamente.
+      \item \textbf{Separadores decimales.} No se encontraron inconsistencias:
+      SGC y USGS usan punto decimal de forma uniforme en magnitud, profundidad,
+      latitud y longitud.
+      \item \textbf{Profundidades reportadas.} En el catálogo SGC a 260 km, 906
+      eventos (1.3\%) tienen profundidad negativa, con mínimo de $-5$ km, y
+      4\,902 eventos (7.2\%) tienen profundidad exactamente igual a cero, sobre
+      67\,781 registros. Los valores negativos son plausibles si la referencia
+      es el nivel del mar; la frecuencia de ceros exactos podría indicar un valor
+      por defecto, pero no se corrige automáticamente por falta de evidencia.
+      El máximo reportado, 595 km, es consistente con sismicidad profunda
+      asociada a la subducción del Pacífico.
+\end{itemize}
+
+\subsection{Completitud del catálogo: fuente, período y radio}
+\label{sec:completitud_fuente_periodo_radio}
+
+El ajuste exploratorio de Gutenberg--Richter combina en un único valor de
+$M_c$ la totalidad del catálogo homogenizado. Para evaluar la dependencia de
+la completitud, se estimó $M_c$ de forma independiente para cada fuente y,
+dentro del SGC, para tres períodos de duración aproximadamente igual,
+utilizando el mismo método de máxima curvatura.
+
+\begin{table}[H]
+      \centering
+      \caption{Completitud $M_c$ por fuente, período y radio.}
+      \label{tab:completitud_fuente_periodo}
+      \small
+      \begin{tabular}{lrrrr}
+            \toprule
+            Grupo & $M_c$ & $b$ & $R^2$ & $N$ \\
+            \midrule
+            50 km -- SGC (completo) & 2.55 & 1.168 & 0.993 & 2223 \\
+            50 km -- USGS (completo) & 4.25 & 0.724 & 0.961 & 18 \\
+            50 km -- SGC 1993--2003 & 3.05 & 1.215 & 0.981 & 270 \\
+            50 km -- SGC 2004--2014 & 2.55 & 1.108 & 0.988 & 503 \\
+            50 km -- SGC 2015--2026 & 2.55 & 1.250 & 0.988 & 1450 \\
+            260 km -- SGC (completo) & 2.55 & 1.094 & 0.997 & 52252 \\
+            260 km -- USGS (completo) & 3.45 & 0.694 & 0.951 & 568 \\
+            260 km -- SGC 1993--2003 & 3.05 & 1.025 & 0.995 & 4295 \\
+            260 km -- SGC 2004--2014 & 2.55 & 1.158 & 0.994 & 10299 \\
+            260 km -- SGC 2015--2026 & 2.55 & 1.137 & 0.991 & 37658 \\
+            \bottomrule
+      \end{tabular}
+\end{table}
+
+Los resultados muestran que el SGC alcanza una completitud menor que el USGS,
+consistente con la mayor capacidad de la red local para detectar sismicidad de
+baja magnitud. Además, $M_c$ no es constante en el tiempo: el período
+1993--2003 presenta $M_c=3.05$, mientras que los dos períodos más recientes
+bajan a $M_c=2.55$. El parámetro $b$ del SGC es sistemáticamente mayor a 50 km
+que a 260 km, lo que es consistente con un mayor peso relativo de la
+microsismicidad local en el radio menor.
+
+Para el análisis de amenaza sísmica de Neiva se recomienda adoptar
+$M_c=3.05$ como valor de completitud del SGC cuando se requiera un ajuste único
+para todo el período histórico, y emplear el parámetro $b$ estimado sobre el
+catálogo de 50 km como insumo del modelo de recurrencia para la amenaza local.
+El catálogo de 260 km debe reservarse para caracterizar fuentes regionales que
+puedan contribuir adicionalmente a la amenaza del sitio.
+
+\subsection{Sensibilidad de la depuración: tabla de ventanas y duplicados entre fuentes}
+\label{sec:sensibilidad_depuracion}
+
+Se evaluó la sensibilidad del catálogo depurado frente a dos decisiones
+metodológicas: la tabla de ventanas espacio--tiempo usada para identificar
+réplicas y precursores, y la posible duplicación de un mismo evento reportado
+por separado por el SGC y el USGS.
+
+\subsubsection{Tabla de ventanas alternativa}
+
+Se repitió la depuración usando las ventanas continuas de Uhrhammer (1986),
+
+\begin{equation}
+      T(M)=e^{-2.87+0.235M}\ \text{días},
+      \qquad
+      R(M)=e^{-1.024+0.804M}\ \text{km}.
+      \label{eq:ventanas_uhrhammer}
+\end{equation}
+
+Aunque Uhrhammer excluye considerablemente menos eventos que Gardner--Knopoff,
+el parámetro $b$ cambia poco: la diferencia es de 0.003 a 50 km y 0.012 a
+260 km.
+
+\begin{table}[H]
+      \centering
+      \caption{Comparación de exclusiones y ajuste $b$ entre Gardner--Knopoff y Uhrhammer.}
+      \label{tab:comparacion_uhrhammer}
+      \small
+      \begin{tabular}{lrrr}
+            \toprule
+            Caso & Excluidos & $b$ & $N$ \\
+            \midrule
+            50 km -- Gardner--Knopoff & 159 (98 réplicas, 61 precursores) & 0.980 & 2241 \\
+            50 km -- Uhrhammer & 36 (29 réplicas, 7 precursores) & 0.977 & 2363 \\
+            260 km -- Gardner--Knopoff & 15761 (11778 réplicas, 3983 precursores) & 0.900 & 52820 \\
+            260 km -- Uhrhammer & 6202 (4001 réplicas, 2201 precursores) & 0.912 & 62357 \\
+            \bottomrule
+      \end{tabular}
+\end{table}
+
+Esto indica que la elección de tabla afecta sustancialmente cuántos eventos se
+clasifican como réplicas o precursores, pero tiene un efecto marginal sobre el
+ajuste final de Gutenberg--Richter.
+
+\subsubsection{Duplicados entre SGC y USGS}
+
+Se buscaron eventos reportados por ambas fuentes que pudieran corresponder al
+mismo sismo real con identificadores distintos, usando como criterio una
+diferencia temporal menor a 5 minutos, una distancia epicentral menor a 15 km
+y una diferencia de magnitud $M_w$ menor a 0.5. Se encontró 1 caso en el
+catálogo de 50 km (2\,397 eventos) y 219 casos en el de 260 km (68\,497
+eventos), equivalentes al 0.3\% en este último.
+
+De los 219 eventos USGS marcados como posible duplicado, solo 75 seguían
+presentes después de la depuración Gardner--Knopoff; los 144 restantes ya
+habían sido excluidos como réplicas de eventos SGC coincidentes. Al retirar
+los 75 registros adicionales, el parámetro $b$ no cambia (0.900 antes y
+después, con cuatro cifras decimales) y $M_c$ tampoco se modifica.
+
+\subsubsection{Conclusión de sensibilidad}
+
+Ninguna de las dos fuentes de sensibilidad introduce un efecto relevante sobre
+el parámetro $b$ del catálogo de 260 km. Se recomienda mantener los 75
+posibles duplicados identificados y marcarlos explícitamente, sin eliminarlos
+del catálogo maestro, para permitir la auditoría posterior del criterio de
+coincidencia.
+
+% ============================================================
+
+\section{Espectro de diseño según la NSR-10}
+\label{sec:espectro_nsr10}
+
+\subsection{Espectro elástico de diseño}
+\label{sec:espectro_elastico_diseno}
+
+Como paso preliminar para la construcción del espectro en roca de Neiva, se
+adoptaron los parámetros de amenaza y de sitio mostrados en el material de
+referencia. Los valores utilizados son $A_a=0.25$, $A_v=0.25$, $F_a=1.0$,
+$F_v=1.0$ e $I=1.0$. La velocidad de onda de corte considerada corresponde al
+rango $760\leq v_s<1500$ m/s.
+
+Con estos parámetros, los períodos característicos del espectro son
+
+\begin{align}
+      T_0 &= 0.1\frac{A_vF_v}{A_aF_a}=0.100\ \text{s},\\
+      T_C &= 0.48\frac{A_vF_v}{A_aF_a}=0.480\ \text{s},\\
+      T_L &= 2.4F_v=2.400\ \text{s}.
+      \label{eq:periodos_nsr10}
+\end{align}
+
+La ordenada espectral de diseño se expresa, para estos valores, mediante la
+forma por tramos de la NSR-10:
+
+\begin{equation}
+S_a(T)=
+\begin{cases}
+2.5A_aF_aI\,T/T_0, & 0\leq T<T_0,\\
+2.5A_aF_aI, & T_0\leq T\leq T_C,\\
+1.2A_vF_vI/T, & T_C<T\leq T_L,\\
+1.2A_vF_vI T_L/T^2, & T>T_L.
+\end{cases}
+\label{eq:espectro_nsr10}
+\end{equation}
+
+El valor máximo de la meseta es $2.5A_aF_aI=0.625g$. Este espectro es una
+definición preliminar para el análisis; antes de emplearlo en el diseño final
+deben verificarse la zona de amenaza, el perfil de suelo, el grupo de uso y
+los factores de modificación que correspondan al proyecto, así como su
+consistencia con la versión vigente de la NSR-10
+\parencite{nsr10}.
+
+% ============================================================
 \section{Asociación de los sismos a sismofuentes}
 
 Esta etapa queda establecida como el siguiente desarrollo del proyecto. Los
