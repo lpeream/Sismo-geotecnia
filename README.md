@@ -1,6 +1,6 @@
 # Sismo-geotecnia
 
-Proyecto de recopilación, homogenización y análisis de catálogos sísmicos para Neiva, Huila. Se integran registros del Servicio Geológico Colombiano (SGC) y catálogos globales, con radios de búsqueda de 50 km y 260 km desde el Parque Central Santander.
+Proyecto de recopilación, homogenización y análisis de catálogos sísmicos para Neiva, Huila. Se integran registros del Servicio Geológico Colombiano (SGC) y del catálogo ComCat del USGS, con radios de búsqueda de 50 km y 260 km desde el Parque Central Santander. El flujo produce mapas, estadísticas descriptivas y ajustes de recurrencia Gutenberg--Richter. El informe final es `informe/entrega_01.pdf`.
 
 ## Estructura
 
@@ -8,7 +8,7 @@ Proyecto de recopilación, homogenización y análisis de catálogos sísmicos p
 codigo/       Notebook de análisis y scripts auxiliares
 datos/        Catálogos originales e intermedios
 figuras/      Mapas y gráficos utilizados en el informe
-informe/      Informe LaTeX, bibliografía y PDF
+informe/      Fuente LaTeX, bibliografía y PDF de entrega
 recursos/     Material de referencia
 requirements.txt
 ```
@@ -44,9 +44,9 @@ El criterio propio de declustering usa una separación máxima de 10 km y 24 hor
 
 ### Umbral de magnitud
 
-La última ejecución guardada del notebook aplica `Mw >= 3`. Por eso, el archivo regional `Sismos_260KM_Depurados_onlymw.csv` incluye 33 eventos con `Mw = 3`. El informe y los gráficos `catalogo_mw_mayor_3_50km.png` y `catalogo_mw_mayor_3_260km.png` usan el subconjunto estricto `Mw > 3`: 110 eventos para 50 km y 2.594 para 260 km. Tener en cuenta esta diferencia al comparar las salidas.
+La última ejecución guardada del notebook aplica `Mw >= 3`: 110 eventos finales para 50 km y 2.627 para 260 km. El catálogo regional incluye 33 eventos con `Mw = 3`. El ajuste Gutenberg--Richter usa `Mc = 3.05`; por eso, su muestra es de 110 eventos para 50 km y 2.594 para 260 km. Los parámetros calculados fueron `b = 0.666`, `a = 4.117`, `R2 = 0.958` para 50 km y `b = 0.728`, `a = 5.813`, `R2 = 0.982` para 260 km. Los eventos regionales de `Mw = 3` se conservan en el catálogo final, pero quedan bajo `Mc` y no entran en ese ajuste.
 
-Los resultados reflejan solo los registros que obtuvieron una magnitud de momento utilizable con las conversiones aplicadas. No equivalen al catálogo completo descargado ni estiman por sí solos la completitud sísmica o los parámetros Gutenberg--Richter.
+Los resultados reflejan solo los registros que obtuvieron una magnitud de momento utilizable con las conversiones aplicadas. No equivalen al catálogo completo descargado. Los ajustes de recurrencia son preliminares y deben evaluarse junto con la completitud, la independencia de los eventos y la sensibilidad a los parámetros empleados.
 
 ## Scripts auxiliares
 
@@ -54,19 +54,31 @@ Los scripts de `codigo/` incluyen utilidades para descargar catálogos, consolid
 
 ## Compilar el informe
 
-Se requiere MiKTeX u otra distribución LaTeX, con `pdflatex` y `biber` en el `PATH`. Desde PowerShell:
+Para compilar el informe no se necesita ejecutar Python ni el notebook. Se requiere una distribución LaTeX, como MiKTeX o TeX Live, con `pdflatex` y `biber` disponibles en el `PATH`. El proyecto usa la clase `report` y los paquetes LaTeX `geometry`, `babel` (español), `amsmath`, `amssymb`, `graphicx`, `booktabs`, `float`, `caption`, `subcaption`, `fancyhdr`, `csquotes`, `hyperref` y `biblatex` con estilo APA. MiKTeX puede instalar automáticamente los paquetes faltantes; en TeX Live deben estar incluidos en la instalación.
+
+El fuente y los recursos requeridos son:
+
+- `informe/entrega_01.tex`: documento LaTeX.
+- `informe/biblio.bib`: referencias procesadas por `biber`.
+- `figuras/Logo_1.png` y `figuras/Logo_encabezado.png`: logotipos de portada y encabezado.
+- `figuras/Mapa_Sismos_No_Depurados.png` y `figuras/Mapa_Sismos_Depurados.png`: mapas comparativos incluidos horizontalmente.
+- `figuras/gutenberg_richter_50km_onlymw.png` y `figuras/gutenberg_richter_260km_onlymw.png`: gráficos de recurrencia.
+
+Las rutas de figuras dentro del `.tex` son relativas a `informe/`; conserva esta estructura de carpetas. Desde PowerShell, en la raíz del repositorio, ejecuta:
 
 ```powershell
 Push-Location informe
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-biber main
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
-pdflatex -interaction=nonstopmode -halt-on-error main.tex
+pdflatex -interaction=nonstopmode -halt-on-error entrega_01.tex
+biber entrega_01
+pdflatex -interaction=nonstopmode -halt-on-error entrega_01.tex
+pdflatex -interaction=nonstopmode -halt-on-error entrega_01.tex
 Pop-Location
 ```
 
-El PDF se genera en `informe/main.pdf`. La bibliografía está en `informe/biblio.bib`.
+La secuencia ejecuta LaTeX antes y después de `biber` para actualizar las citas, referencias cruzadas, tabla de contenido e índice de figuras. El PDF se genera en `informe/entrega_01.pdf`.
+
+Para volver a generar los mapas o gráficos a partir de los catálogos sí se necesita Python, las dependencias de `requirements.txt` y ejecutar las celdas correspondientes de `codigo/Codigo_madre.ipynb`. La compilación LaTeX usa las imágenes existentes y no descarga mapas base.
 
 ## Archivos generados
 
-Los archivos auxiliares de LaTeX y los registros de compilación se excluyen mediante `.gitignore`. Los catálogos, gráficos y el PDF son productos derivados de los datos y del análisis.
+Los archivos auxiliares de LaTeX (`.aux`, `.bbl`, `.bcf`, `.blg`, `.lof`, `.log`, `.out`, `.run.xml` y `.toc`) se generan durante la compilación y se excluyen mediante `.gitignore`. Los catálogos, gráficos y el PDF son productos derivados de los datos y del análisis.
