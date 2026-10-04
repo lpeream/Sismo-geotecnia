@@ -2379,23 +2379,23 @@ SGC,"Rivera - Huila, Colombia",1993-07-05T03:23:24+00:00,2.708,-75.063,2.0,ML,4.
 SGC,"Íquira - Huila, Colombia",1993-06-30T07:01:46+00:00,2.643,-75.605,3.0,ML,4.0
 SGC,"Rivera - Huila, Colombia",1993-06-25T02:13:34+00:00,2.721,-74.937,2.0,ML,3.0
 SGC,"Tello - Huila, Colombia",1993-06-07T10:44:35+00:00,2.821,-74.858,2.2,ML,0.0
-us,"3 km E of Tello, Colombia",2025-12-21T14:05:26.416Z,3.0699,-75.1055,4.4,mb,10.0
-us,"11 km SE of Santa María, Colombia",2019-01-29T06:10:56.080Z,2.8793,-75.5748,4.3,mb,27.74
-us,"12 km S of Planadas, Colombia",2019-01-28T21:07:09.960Z,3.0835,-75.6461,5.5,mww,13.06
-us,"3 km ESE of Santa María, Colombia",2018-07-07T00:19:52.490Z,2.9425,-75.621,4.5,mb,65.81
-us,"38 km E of Rivera, Colombia",2017-11-11T14:45:22.240Z,2.7641,-74.9148,4.7,mb,46.1
-us,"6 km E of Íquira, Colombia",2016-12-23T03:43:51.310Z,2.6595,-75.5794,4.4,mb,10.0
-us,"27 km SSE of Tello, Colombia",2003-08-12T05:37:06.630Z,2.855,-75.011,4.4,mb,60.2
-us,"4 km N of Rivera, Colombia",1991-10-27T13:55:12.960Z,2.814,-75.255,3.7,md,60.0
-us,"25 km ESE of Rivera, Colombia",1991-10-10T08:29:08.250Z,2.73,-75.031,3.9,md,10.0
-us,"18 km NNW of Neiva, Colombia",1991-01-27T14:25:11.180Z,3.077,-75.365,3.6,md,33.0
-us,"23 km E of Rivera, Colombia",1991-01-08T15:41:52.150Z,2.804,-75.044,3.4,md,33.0
-us,"36 km SE of Baraya, Colombia",1991-01-02T01:42:30.790Z,2.889,-74.863,3.7,md,33.0
-us,"12 km SSW of Aipe, Colombia",1990-10-23T09:13:04.240Z,3.12,-75.282,4.2,mb,33.0
-us,"4 km NNW of Santa María, Colombia",1988-01-23T15:10:47.130Z,2.983,-75.671,3.5,md,10.0
-us,"19 km E of Rivera, Colombia",1988-01-14T04:48:42.580Z,2.747,-75.084,3.7,md,33.0
-us,"8 km ESE of Palermo, Colombia",1975-03-31T01:42:32.300Z,2.852,-75.367,4.0,mb,83.0
-us,"2 km W of Rivera, Colombia",1974-12-08T14:54:34.600Z,2.774,-75.283,4.6,mb,86.0
-us,"29 km SE of Baraya, Colombia",1973-10-18T09:18:32.600Z,2.968,-74.86,5.2,mb,42.0
-iscgem,"27 km SE of Tello, Colombia",1968-01-28T01:50:47.330Z,2.916,-74.943,5.19,mw,51.5
-iscgem,"19 km ESE of Baraya, Colombia",1967-11-05T14:23:53.890Z,3.075,-74.895,5.2,mw,23.9
+us,"3 km E of Tello, Colombia",2025-12-21 14:05:26.416000+00:00,3.0699,-75.1055,4.4,mb,10.0
+us,"11 km SE of Santa María, Colombia",2019-01-29 06:10:56.080000+00:00,2.8793,-75.5748,4.3,mb,27.74
+us,"12 km S of Planadas, Colombia",2019-01-28 21:07:09.960000+00:00,3.0835,-75.6461,5.5,mww,13.06
+us,"3 km ESE of Santa María, Colombia",2018-07-07 00:19:52.490000+00:00,2.9425,-75.621,4.5,mb,65.81
+us,"38 km E of Rivera, Colombia",2017-11-11 14:45:22.240000+00:00,2.7641,-74.9148,4.7,mb,46.1
+us,"6 km E of Íquira, Colombia",2016-12-23 03:43:51.310000+00:00,2.6595,-75.5794,4.4,mb,10.0
+us,"27 km SSE of Tello, Colombia",2003-08-12 05:37:06.630000+00:00,2.855,-75.011,4.4,mb,60.2
+us,"4 km N of Rivera, Colombia",1991-10-27 13:55:12.960000+00:00,2.814,-75.255,3.7,md,60.0
+us,"25 km ESE of Rivera, Colombia",1991-10-10 08:29:08.250000+00:00,2.73,-75.031,3.9,md,10.0
+us,"18 km NNW of Neiva, Colombia",1991-01-27 14:25:11.180000+00:00,3.077,-75.365,3.6,md,33.0
+us,"23 km E of Rivera, Colombia",1991-01-08 15:41:52.150000+00:00,2.804,-75.044,3.4,md,33.0
+us,"36 km SE of Baraya, Colombia",1991-01-02 01:42:30.790000+00:00,2.889,-74.863,3.7,md,33.0
+us,"12 km SSW of Aipe, Colombia",1990-10-23 09:13:04.240000+00:00,3.12,-75.282,4.2,mb,33.0
+us,"4 km NNW of Santa María, Colombia",1988-01-23 15:10:47.130000+00:00,2.983,-75.671,3.5,md,10.0
+us,"19 km E of Rivera, Colombia",1988-01-14 04:48:42.580000+00:00,2.747,-75.084,3.7,md,33.0
+us,"8 km ESE of Palermo, Colombia",1975-03-31 01:42:32.300000+00:00,2.852,-75.367,4.0,mb,83.0
+us,"2 km W of Rivera, Colombia",1974-12-08 14:54:34.600000+00:00,2.774,-75.283,4.6,mb,86.0
+us,"29 km SE of Baraya, Colombia",1973-10-18 09:18:32.600000+00:00,2.968,-74.86,5.2,mb,42.0
+iscgem,"27 km SE of Tello, Colombia",1968-01-28 01:50:47.330000+00:00,2.916,-74.943,5.19,mw,51.5
+iscgem,"19 km ESE of Baraya, Colombia",1967-11-05 14:23:53.890000+00:00,3.075,-74.895,5.2,mw,23.9

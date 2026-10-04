@@ -1,95 +1,106 @@
 ﻿agencia,lugar,hora,latitud,longitud,magnitud,tipo_magnitud,profundidad,escala_mw,relacion_conversion,sigma_conversion,estado_conversion
-SGC,"Algeciras - Huila, Colombia",1993-09-12 13:32:08+00:00,2.488,-75.296,3.1,ML,8.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",1994-04-22 05:00:53+00:00,2.666,-75.029,3.6,ML,2.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Baraya - Huila, Colombia",1994-07-11 19:03:42+00:00,2.864,-74.845,3.2,ML,12.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Tello - Huila, Colombia",1994-08-24 06:58:09+00:00,2.868,-74.859,3.2,ML,16.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Tello - Huila, Colombia",1994-09-28 02:29:45+00:00,2.861,-74.849,3.1,ML,18.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Algeciras - Huila, Colombia",1995-03-05 06:15:10+00:00,2.506,-75.357,3.2,ML,4.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Tello - Huila, Colombia",1995-07-24 00:53:01+00:00,2.9,-75.051,3.3,ML,100.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Algeciras - Huila, Colombia",1995-09-25 19:21:06+00:00,2.489,-75.213,3.1,ML,9.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Baraya - Huila, Colombia",1995-12-22 09:28:03+00:00,3.172,-74.929,3.1,ML,0.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",1995-12-31 12:32:48+00:00,2.752,-75.072,3.2,ML,8.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Aipe - Huila, Colombia",1996-06-25 01:40:23+00:00,3.206,-75.24,3.4,ML,4.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Baraya - Huila, Colombia",1996-07-31 10:31:43+00:00,2.96,-74.842,3.3,ML,7.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",1996-08-19 22:29:31+00:00,2.683,-75.14,3.8,ML,0.0,3.7404,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Tello - Huila, Colombia",1996-12-23 14:00:55+00:00,2.871,-74.894,3.2,ML,20.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Tello - Huila, Colombia",1997-05-03 03:34:15+00:00,2.852,-74.876,3.2,ML,18.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Algeciras - Huila, Colombia",1997-07-10 13:04:38+00:00,2.582,-75.081,3.3,ML,4.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",1997-10-19 07:58:06+00:00,2.652,-75.02,3.7,ML,5.0,3.6446,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Neiva - Huila, Colombia",1998-01-05 23:29:22+00:00,2.913,-75.259,3.6,ML,4.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",1998-04-25 16:45:02+00:00,2.731,-74.902,3.3,ML,0.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Tello - Huila, Colombia",1998-05-07 21:06:28+00:00,3.131,-75.159,3.5,ML,0.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",1999-03-28 13:54:57+00:00,2.692,-75.05,3.1,ML,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",1999-07-01 22:07:07+00:00,2.745,-75.004,3.3,ML,3.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",1999-10-29 23:53:08+00:00,2.668,-74.99,3.6,ML,1.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2000-04-06 20:20:06+00:00,2.824,-75.003,3.7,ML,0.0,3.6446,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Tello - Huila, Colombia",2000-12-30 21:10:35+00:00,2.888,-74.977,4.5,ML,0.0,4.411,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Tello - Huila, Colombia",2001-02-01 11:18:45+00:00,3.0,-75.072,3.1,ML,120.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2001-03-06 14:37:41+00:00,2.781,-75.09,3.9,ML,84.0,3.8362,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Villavieja - Huila, Colombia",2001-09-10 08:19:11+00:00,3.244,-75.156,3.1,ML,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Baraya - Huila, Colombia",2002-01-02 12:26:38+00:00,2.951,-74.893,3.4,ML,4.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Campoalegre - Huila, Colombia",2002-03-26 22:47:00+00:00,2.671,-75.366,3.1,ML,2.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Tello - Huila, Colombia",2002-04-15 06:16:03+00:00,2.875,-75.052,4.0,ML,20.0,3.932,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Neiva - Huila, Colombia",2002-11-18 18:52:08+00:00,2.897,-75.202,3.6,ML,0.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2003-04-13 00:04:52+00:00,2.847,-75.164,3.3,ML,0.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2003-08-12 00:37:05+00:00,2.683,-75.032,4.7,ML,4.0,4.6026,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Hobo - Huila, Colombia",2003-11-22 18:47:16+00:00,2.54,-75.497,3.2,ML,4.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2003-12-12 19:57:54+00:00,2.626,-75.048,3.1,ML,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Baraya - Huila, Colombia",2004-02-19 18:05:28+00:00,2.892,-74.876,3.1,ML,0.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Baraya - Huila, Colombia",2004-03-14 12:57:49+00:00,3.05,-74.925,3.1,ML,16.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2004-09-18 09:29:08+00:00,2.618,-75.093,4.6,ML,102.0,4.506799999999999,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2005-07-13 15:06:18+00:00,2.665,-75.114,3.8,ML,4.0,3.7404,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Baraya - Huila, Colombia",2006-02-13 13:27:26+00:00,3.124,-75.025,3.2,ML,2.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2006-02-23 04:02:22+00:00,2.653,-75.002,3.7,ML,4.0,3.6446,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Tello - Huila, Colombia",2006-02-23 20:24:12+00:00,2.868,-74.871,4.0,ML,0.0,3.932,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Campoalegre - Huila, Colombia",2006-03-19 13:03:39+00:00,2.63,-75.161,3.5,ML,4.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2006-05-21 14:47:38+00:00,2.672,-75.03,3.5,ML,4.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2006-09-20 06:10:35+00:00,2.689,-75.016,3.1,ML,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2007-04-11 12:46:01+00:00,2.637,-75.007,4.0,ML,4.0,3.932,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Teruel - Huila, Colombia",2007-04-18 03:07:50+00:00,2.802,-75.697,3.4,ML,168.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Campoalegre - Huila, Colombia",2007-07-18 08:16:27+00:00,2.622,-75.162,3.7,ML,4.0,3.6446,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2008-03-13 07:58:45+00:00,2.712,-75.033,3.4,ML,2.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Tello - Huila, Colombia",2008-05-16 01:39:51+00:00,2.899,-74.928,3.6,ML,24.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Baraya - Huila, Colombia",2008-12-19 02:27:14+00:00,3.015,-74.923,3.6,ML,5.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2009-05-08 01:01:24+00:00,2.739,-75.074,3.1,ML,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Baraya - Huila, Colombia",2009-10-25 06:25:27+00:00,3.022,-74.917,3.1,ML,0.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2011-01-14 13:39:53+00:00,2.781,-74.937,3.5,ML,13.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2011-02-08 05:02:51+00:00,2.753,-75.147,4.2,ML,0.0,4.1236,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Hobo - Huila, Colombia",2011-11-28 05:24:41+00:00,2.533,-75.423,3.5,ML,0.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2012-11-27 23:35:08+00:00,2.79,-75.073,4.1,MW,0.0,4.1,directa: MW,0.0,directa
-SGC,"Algeciras - Huila, Colombia",2013-06-09 23:01:37+00:00,2.505,-75.395,3.6,MW,4.0,3.6,directa: MW,0.0,directa
-SGC,"Rivera - Huila, Colombia",2014-07-24 05:59:25+00:00,2.67,-75.054,3.3,MW,4.0,3.3,directa: MW,0.0,directa
-SGC,"Baraya - Huila, Colombia",2014-09-16 18:48:06+00:00,2.892,-74.873,3.2,MW,2.0,3.2,directa: MW,0.0,directa
-SGC,"Rivera - Huila, Colombia",2015-07-20 15:47:19+00:00,2.641,-75.06,3.9,MW,5.0,3.9,directa: MW,0.0,directa
-SGC,"Rivera - Huila, Colombia",2016-01-05 08:21:07+00:00,2.653,-75.064,3.6,MW,0.0,3.6,directa: MW,0.0,directa
-SGC,"Íquira - Huila, Colombia",2016-12-22 22:43:49+00:00,2.718,-75.673,4.4,MW,4.0,4.4,directa: MW,0.0,directa
-SGC,"Planadas - Tolima, Colombia",2017-08-05 06:13:15+00:00,3.211,-75.462,3.4,MW,3.0,3.4,directa: MW,0.0,directa
-SGC,"Rivera - Huila, Colombia",2017-11-11 09:45:20+00:00,2.73,-75.056,4.8,MW,2.0,4.8,directa: MW,0.0,directa
-RSN,"Rivera - Huila, Colombia",2017-11-11 14:45:20+00:00,2.73,-75.056,4.8,MW,2.0,4.8,directa: MW,0.0,directa
-SGC,"San Vicente del Caguán - Caquetá, Colombia",2019-01-19 17:03:36+00:00,2.7406,-75.0183,3.9,Mw,3.0,3.9,directa: Mw,0.0,directa
-SGC,"San Vicente del Caguán - Caquetá, Colombia",2020-08-27 00:44:29+00:00,2.6768,-75.048,3.9,MLr_2,7.0,3.8362,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"San Vicente del Caguán - Caquetá, Colombia",2020-11-10 18:03:24+00:00,2.7075,-75.0724,3.4,MLr_2,29.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"San Vicente del Caguán - Caquetá, Colombia",2020-12-31 14:09:03+00:00,2.7139,-74.9788,3.3,MLr_2,32.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Baraya - Huila, Colombia",2021-01-23 16:12:17+00:00,3.087,-74.8873,5.0,MLr_2,30.0,4.89,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2021-07-25 22:11:25+00:00,2.7033,-75.2002,3.6,MLr_2,32.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"San Vicente del Caguán - Caquetá, Colombia",2021-11-03 21:48:09+00:00,2.652,-75.0931,3.1,MLr_2,28.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"San Vicente del Caguán - Caquetá, Colombia",2021-12-21 17:26:15+00:00,2.8478,-74.9036,3.6,MLr_2,4.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"San Vicente del Caguán - Caquetá, Colombia",2022-01-10 22:19:33+00:00,2.87,-74.8508,3.2,MLr_2,34.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Villavieja - Huila, Colombia",2022-12-25 10:55:54+00:00,3.2181,-75.2096,3.1,MLr_2,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Hobo - Huila, Colombia",2023-06-16 11:14:36+00:00,2.5483,-75.458,3.1,MLr_2,32.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2023-06-22 04:16:49+00:00,2.7504,-75.0677,3.4,MLr_2,33.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2023-10-09 21:54:07+00:00,2.7483,-75.1667,3.1,MLr_2,41.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Uribe - Meta, Colombia",2024-01-04 14:25:35+00:00,2.9441,-74.8413,4.1,MLr_2,38.0,4.027799999999999,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Algeciras - Huila, Colombia",2024-01-16 13:03:06+00:00,2.6462,-75.166,3.3,MLr_2,29.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Yaguará - Huila, Colombia",2024-08-08 13:22:03+00:00,2.598,-75.4868,3.1,MLr_2,36.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"San Vicente del Caguán - Caquetá, Colombia",2024-10-19 14:50:15+00:00,2.8552,-74.9359,3.1,MLr_2,29.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Neiva - Huila, Colombia",2024-12-24 21:15:46+00:00,2.797,-75.1115,3.5,MLr_2,27.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2025-02-18 08:57:31+00:00,2.7917,-75.0678,3.2,MLr_2,23.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Rivera - Huila, Colombia",2025-05-15 20:46:05+00:00,2.7774,-75.0726,3.3,MLr_2,30.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"San Vicente del Caguán - Caquetá, Colombia",2025-12-02 03:35:14+00:00,2.7271,-75.0762,3.5,MLr_2,30.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Neiva - Huila, Colombia",2025-12-21 09:05:29+00:00,3.0118,-75.2982,4.4,Mw,51.0,4.4,directa: Mw,0.0,directa
-SGC,"San Vicente del Caguán - Caquetá, Colombia",2026-04-08 16:31:45+00:00,2.7373,-75.0491,3.1,MLr_2,29.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
-SGC,"Baraya - Huila, Colombia",2026-07-31 06:05:40+00:00,3.0694,-74.9721,3.7,MLr_2,26.0,3.6446,Mw = 0.958 ML + 0.1,0.5,convertida
-us,"12 km S of Planadas, Colombia",,3.0835,-75.6461,5.5,mww,13.06,5.5,directa: mww,0.0,directa
-us,"36 km SE of Baraya, Colombia",,2.889,-74.863,3.7,md,33.0,4.28239,Mw = 0.7947 Md + 1.3420,,convertida
-us,"29 km SE of Baraya, Colombia",,2.968,-74.86,5.2,mb,42.0,5.3808,Mw = 0.954 mb + 0.42,0.28,convertida
+iscgem,"19 km ESE of Baraya, Colombia",1967-11-05 14:23:53.890000+00:00,3.075,-74.895,5.2,mw,23.9,5.2,directa: mw,0.0,directa
+iscgem,"27 km SE of Tello, Colombia",1968-01-28 01:50:47.330000+00:00,2.916,-74.943,5.19,mw,51.5,5.19,directa: mw,0.0,directa
+us,"29 km SE of Baraya, Colombia",1973-10-18 09:18:32.600000+00:00,2.968,-74.86,5.2,mb,42.0,5.3808,Mw = 0.954 mb + 0.42,0.28,convertida
+us,"2 km W of Rivera, Colombia",1974-12-08 14:54:34.600000+00:00,2.774,-75.283,4.6,mb,86.0,4.8084,Mw = 0.954 mb + 0.42,0.28,convertida
+us,"8 km ESE of Palermo, Colombia",1975-03-31 01:42:32.300000+00:00,2.852,-75.367,4.0,mb,83.0,4.236,Mw = 0.954 mb + 0.42,0.28,convertida
+us,"19 km E of Rivera, Colombia",1988-01-14 04:48:42.580000+00:00,2.747,-75.084,3.7,md,33.0,4.28239,Mw = 0.7947 Md + 1.3420,,convertida
+us,"4 km NNW of Santa María, Colombia",1988-01-23 15:10:47.130000+00:00,2.983,-75.671,3.5,md,10.0,4.12345,Mw = 0.7947 Md + 1.3420,,convertida
+us,"12 km SSW of Aipe, Colombia",1990-10-23 09:13:04.240000+00:00,3.12,-75.282,4.2,mb,33.0,4.4268,Mw = 0.954 mb + 0.42,0.28,convertida
+us,"36 km SE of Baraya, Colombia",1991-01-02 01:42:30.790000+00:00,2.889,-74.863,3.7,md,33.0,4.28239,Mw = 0.7947 Md + 1.3420,,convertida
+us,"18 km NNW of Neiva, Colombia",1991-01-27 14:25:11.180000+00:00,3.077,-75.365,3.6,md,33.0,4.202920000000001,Mw = 0.7947 Md + 1.3420,,convertida
+us,"25 km ESE of Rivera, Colombia",1991-10-10 08:29:08.250000+00:00,2.73,-75.031,3.9,md,10.0,4.44133,Mw = 0.7947 Md + 1.3420,,convertida
+us,"4 km N of Rivera, Colombia",1991-10-27 13:55:12.960000+00:00,2.814,-75.255,3.7,md,60.0,4.28239,Mw = 0.7947 Md + 1.3420,,convertida
+us,"27 km SSE of Tello, Colombia",2003-08-12 05:37:06.630000+00:00,2.855,-75.011,4.4,mb,60.2,4.6176,Mw = 0.954 mb + 0.42,0.28,convertida
+us,"6 km E of Íquira, Colombia",2016-12-23 03:43:51.310000+00:00,2.6595,-75.5794,4.4,mb,10.0,4.6176,Mw = 0.954 mb + 0.42,0.28,convertida
+us,"38 km E of Rivera, Colombia",2017-11-11 14:45:22.240000+00:00,2.7641,-74.9148,4.7,mb,46.1,4.9038,Mw = 0.954 mb + 0.42,0.28,convertida
+us,"3 km ESE of Santa María, Colombia",2018-07-07 00:19:52.490000+00:00,2.9425,-75.621,4.5,mb,65.81,4.713,Mw = 0.954 mb + 0.42,0.28,convertida
+us,"12 km S of Planadas, Colombia",2019-01-28 21:07:09.960000+00:00,3.0835,-75.6461,5.5,mww,13.06,5.5,directa: mww,0.0,directa
+us,"11 km SE of Santa María, Colombia",2019-01-29 06:10:56.080000+00:00,2.8793,-75.5748,4.3,mb,27.74,4.5222,Mw = 0.954 mb + 0.42,0.28,convertida
+SGC,"Algeciras - Huila, Colombia",1993-09-12T13:32:08+00:00,2.488,-75.296,3.1,ML,8.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",1994-04-22T05:00:53+00:00,2.666,-75.029,3.6,ML,2.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Baraya - Huila, Colombia",1994-07-11T19:03:42+00:00,2.864,-74.845,3.2,ML,12.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Tello - Huila, Colombia",1994-08-24T06:58:09+00:00,2.868,-74.859,3.2,ML,16.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Tello - Huila, Colombia",1994-09-28T02:29:45+00:00,2.861,-74.849,3.1,ML,18.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Algeciras - Huila, Colombia",1995-03-05T06:15:10+00:00,2.506,-75.357,3.2,ML,4.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Tello - Huila, Colombia",1995-07-24T00:53:01+00:00,2.9,-75.051,3.3,ML,100.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Algeciras - Huila, Colombia",1995-09-25T19:21:06+00:00,2.489,-75.213,3.1,ML,9.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Baraya - Huila, Colombia",1995-12-22T09:28:03+00:00,3.172,-74.929,3.1,ML,0.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",1995-12-31T12:32:48+00:00,2.752,-75.072,3.2,ML,8.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Aipe - Huila, Colombia",1996-06-25T01:40:23+00:00,3.206,-75.24,3.4,ML,4.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Baraya - Huila, Colombia",1996-07-31T10:31:43+00:00,2.96,-74.842,3.3,ML,7.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",1996-08-19T22:29:31+00:00,2.683,-75.14,3.8,ML,0.0,3.7404,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Tello - Huila, Colombia",1996-12-23T14:00:55+00:00,2.871,-74.894,3.2,ML,20.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Tello - Huila, Colombia",1997-05-03T03:34:15+00:00,2.852,-74.876,3.2,ML,18.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Algeciras - Huila, Colombia",1997-07-10T13:04:38+00:00,2.582,-75.081,3.3,ML,4.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",1997-10-19T07:58:06+00:00,2.652,-75.02,3.7,ML,5.0,3.6446,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Neiva - Huila, Colombia",1998-01-05T23:29:22+00:00,2.913,-75.259,3.6,ML,4.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",1998-04-25T16:45:02+00:00,2.731,-74.902,3.3,ML,0.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Tello - Huila, Colombia",1998-05-07T21:06:28+00:00,3.131,-75.159,3.5,ML,0.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",1999-03-28T13:54:57+00:00,2.692,-75.05,3.1,ML,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",1999-07-01T22:07:07+00:00,2.745,-75.004,3.3,ML,3.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",1999-10-29T23:53:08+00:00,2.668,-74.99,3.6,ML,1.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2000-04-06T20:20:06+00:00,2.824,-75.003,3.7,ML,0.0,3.6446,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Tello - Huila, Colombia",2001-02-01T11:18:45+00:00,3.0,-75.072,3.1,ML,120.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2001-03-06T14:37:41+00:00,2.781,-75.09,3.9,ML,84.0,3.8362,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Villavieja - Huila, Colombia",2001-09-10T08:19:11+00:00,3.244,-75.156,3.1,ML,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Baraya - Huila, Colombia",2002-01-02T12:26:38+00:00,2.951,-74.893,3.4,ML,4.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Campoalegre - Huila, Colombia",2002-03-26T22:47:00+00:00,2.671,-75.366,3.1,ML,2.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Tello - Huila, Colombia",2002-04-15T06:16:03+00:00,2.875,-75.052,4.0,ML,20.0,3.932,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Neiva - Huila, Colombia",2002-11-18T18:52:08+00:00,2.897,-75.202,3.6,ML,0.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2003-04-13T00:04:52+00:00,2.847,-75.164,3.3,ML,0.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Hobo - Huila, Colombia",2003-11-22T18:47:16+00:00,2.54,-75.497,3.2,ML,4.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2003-12-12T19:57:54+00:00,2.626,-75.048,3.1,ML,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Baraya - Huila, Colombia",2004-02-19T18:05:28+00:00,2.892,-74.876,3.1,ML,0.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Baraya - Huila, Colombia",2004-03-14T12:57:49+00:00,3.05,-74.925,3.1,ML,16.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2004-09-18T09:29:08+00:00,2.618,-75.093,4.6,ML,102.0,4.506799999999999,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2005-07-13T15:06:18+00:00,2.665,-75.114,3.8,ML,4.0,3.7404,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Baraya - Huila, Colombia",2006-02-13T13:27:26+00:00,3.124,-75.025,3.2,ML,2.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2006-02-23T04:02:22+00:00,2.653,-75.002,3.7,ML,4.0,3.6446,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Tello - Huila, Colombia",2006-02-23T20:24:12+00:00,2.868,-74.871,4.0,ML,0.0,3.932,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Campoalegre - Huila, Colombia",2006-03-19T13:03:39+00:00,2.63,-75.161,3.5,ML,4.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2006-05-21T14:47:38+00:00,2.672,-75.03,3.5,ML,4.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2006-09-20T06:10:35+00:00,2.689,-75.016,3.1,ML,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2007-04-11T12:46:01+00:00,2.637,-75.007,4.0,ML,4.0,3.932,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Teruel - Huila, Colombia",2007-04-18T03:07:50+00:00,2.802,-75.697,3.4,ML,168.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Campoalegre - Huila, Colombia",2007-07-18T08:16:27+00:00,2.622,-75.162,3.7,ML,4.0,3.6446,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2008-03-13T07:58:45+00:00,2.712,-75.033,3.4,ML,2.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Tello - Huila, Colombia",2008-05-16T01:39:51+00:00,2.899,-74.928,3.6,ML,24.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Baraya - Huila, Colombia",2008-12-19T02:27:14+00:00,3.015,-74.923,3.6,ML,5.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2009-05-08T01:01:24+00:00,2.739,-75.074,3.1,ML,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Baraya - Huila, Colombia",2009-10-25T06:25:27+00:00,3.022,-74.917,3.1,ML,0.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2011-01-14T13:39:53+00:00,2.781,-74.937,3.5,ML,13.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Hobo - Huila, Colombia",2011-11-28T05:24:41+00:00,2.533,-75.423,3.5,ML,0.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2012-11-27T23:35:08+00:00,2.79,-75.073,4.1,MW,0.0,4.1,directa: MW,0.0,directa
+SGC,"Algeciras - Huila, Colombia",2013-06-09T23:01:37+00:00,2.505,-75.395,3.6,MW,4.0,3.6,directa: MW,0.0,directa
+SGC,"Rivera - Huila, Colombia",2014-07-24T05:59:25+00:00,2.67,-75.054,3.3,MW,4.0,3.3,directa: MW,0.0,directa
+SGC,"Baraya - Huila, Colombia",2014-09-16T18:48:06+00:00,2.892,-74.873,3.2,MW,2.0,3.2,directa: MW,0.0,directa
+SGC,"Rivera - Huila, Colombia",2015-07-20T15:47:19+00:00,2.641,-75.06,3.9,MW,5.0,3.9,directa: MW,0.0,directa
+SGC,"Rivera - Huila, Colombia",2016-01-05T08:21:07+00:00,2.653,-75.064,3.6,MW,0.0,3.6,directa: MW,0.0,directa
+SGC,"Íquira - Huila, Colombia",2016-12-22T22:43:49+00:00,2.718,-75.673,4.4,MW,4.0,4.4,directa: MW,0.0,directa
+SGC,"Planadas - Tolima, Colombia",2017-08-05T06:13:15+00:00,3.211,-75.462,3.4,MW,3.0,3.4,directa: MW,0.0,directa
+SGC,"Rivera - Huila, Colombia",2017-11-11T09:45:20+00:00,2.73,-75.056,4.8,MW,2.0,4.8,directa: MW,0.0,directa
+SGC,"San Vicente del Caguán - Caquetá, Colombia",2019-01-19T17:03:36+00:00,2.7406,-75.0183,3.9,Mw,3.0,3.9,directa: Mw,0.0,directa
+SGC,"San Vicente del Caguán - Caquetá, Colombia",2020-08-27T00:44:29+00:00,2.6768,-75.048,3.9,MLr_2,7.0,3.8362,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"San Vicente del Caguán - Caquetá, Colombia",2020-11-10T18:03:24+00:00,2.7075,-75.0724,3.4,MLr_2,29.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"San Vicente del Caguán - Caquetá, Colombia",2020-12-31T14:09:03+00:00,2.7139,-74.9788,3.3,MLr_2,32.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Baraya - Huila, Colombia",2021-01-23T16:12:17+00:00,3.087,-74.8873,5.0,MLr_2,30.0,4.89,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2021-07-25T22:11:25+00:00,2.7033,-75.2002,3.6,MLr_2,32.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"San Vicente del Caguán - Caquetá, Colombia",2021-11-03T21:48:09+00:00,2.652,-75.0931,3.1,MLr_2,28.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"San Vicente del Caguán - Caquetá, Colombia",2021-12-21T17:26:15+00:00,2.8478,-74.9036,3.6,MLr_2,4.0,3.5488,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"San Vicente del Caguán - Caquetá, Colombia",2022-01-10T22:19:33+00:00,2.87,-74.8508,3.2,MLr_2,34.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Villavieja - Huila, Colombia",2022-12-25T10:55:54+00:00,3.2181,-75.2096,3.1,MLr_2,4.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Hobo - Huila, Colombia",2023-06-16T11:14:36+00:00,2.5483,-75.458,3.1,MLr_2,32.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2023-06-22T04:16:49+00:00,2.7504,-75.0677,3.4,MLr_2,33.0,3.3572,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2023-10-09T21:54:07+00:00,2.7483,-75.1667,3.1,MLr_2,41.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Uribe - Meta, Colombia",2024-01-04T14:25:35+00:00,2.9441,-74.8413,4.1,MLr_2,38.0,4.027799999999999,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Algeciras - Huila, Colombia",2024-01-16T13:03:06+00:00,2.6462,-75.166,3.3,MLr_2,29.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Yaguará - Huila, Colombia",2024-08-08T13:22:03+00:00,2.598,-75.4868,3.1,MLr_2,36.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"San Vicente del Caguán - Caquetá, Colombia",2024-10-19T14:50:15+00:00,2.8552,-74.9359,3.1,MLr_2,29.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Neiva - Huila, Colombia",2024-12-24T21:15:46+00:00,2.797,-75.1115,3.5,MLr_2,27.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2025-02-18T08:57:31+00:00,2.7917,-75.0678,3.2,MLr_2,23.0,3.1656,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Rivera - Huila, Colombia",2025-05-15T20:46:05+00:00,2.7774,-75.0726,3.3,MLr_2,30.0,3.2614,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"San Vicente del Caguán - Caquetá, Colombia",2025-12-02T03:35:14+00:00,2.7271,-75.0762,3.5,MLr_2,30.0,3.453,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Neiva - Huila, Colombia",2025-12-21T09:05:29+00:00,3.0118,-75.2982,4.4,Mw,51.0,4.4,directa: Mw,0.0,directa
+SGC,"San Vicente del Caguán - Caquetá, Colombia",2026-04-08T16:31:45+00:00,2.7373,-75.0491,3.1,MLr_2,29.0,3.0698,Mw = 0.958 ML + 0.1,0.5,convertida
+SGC,"Baraya - Huila, Colombia",2026-07-31T06:05:40+00:00,3.0694,-74.9721,3.7,MLr_2,26.0,3.6446,Mw = 0.958 ML + 0.1,0.5,convertida
