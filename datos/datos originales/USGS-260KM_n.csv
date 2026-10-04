@@ -1,0 +1,824 @@
+agencia,lugar,hora,latitud,longitud,magnitud,tipo_magnitud,profundidad
+us,"24 km S of Sipí, Colombia",2026-09-19T23:20:15.368Z,4.436,-76.628,4.2,mb,80.206
+us,"29 km WSW of Sipí, Colombia",2026-09-19T13:44:35.732Z,4.5179,-76.8729,4.8,mb,58.204
+us,"29 km SSW of Sipí, Colombia",2026-09-19T05:01:48.911Z,4.415,-76.7636,4.3,mb,74.036
+us,"23 km SW of Sipí, Colombia",2026-09-18T18:41:22.677Z,4.5042,-76.7978,4.5,mb,72.587
+us,"40 km SSW of Sipí, Colombia",2026-09-18T06:17:03.598Z,4.3224,-76.7931,4.7,mb,68.374
+us,"24 km SW of Sipí, Colombia",2026-09-17T21:10:25.572Z,4.5211,-76.8219,4.7,mb,57.808
+us,"18 km SW of Sipí, Colombia",2026-09-17T01:12:49.502Z,4.5449,-76.7654,4.4,mb,58.798
+us,"27 km SW of Sipí, Colombia",2026-09-16T20:55:00.902Z,4.46,-76.8006,4.7,mb,51.459
+us,"24 km WSW of Sipí, Colombia",2026-09-16T20:12:52.374Z,4.5496,-76.8399,4.9,mww,66.069
+us,"23 km SW of Sipí, Colombia",2026-09-16T06:18:06.190Z,4.495,-76.7822,4.6,mb,71.01
+us,"24 km SW of Sipí, Colombia",2026-09-14T22:39:04.026Z,4.474,-76.7671,4.6,mb,69.61
+us,"28 km WSW of Sipí, Colombia",2026-09-14T21:13:16.278Z,4.5502,-76.8767,4.9,mww,50.363
+us,"26 km SSW of Sipí, Colombia",2026-09-14T20:08:07.031Z,4.4474,-76.7695,4.6,mb,74.903
+us,"20 km SSW of Sipí, Colombia",2026-09-14T20:02:04.355Z,4.4944,-76.7446,4.9,mb,59.835
+us,"11 km SSW of Sipí, Colombia",2026-09-14T14:57:11.569Z,4.5649,-76.7002,4.5,mb,76.094
+us,"32 km SW of Sipí, Colombia",2026-09-12T11:16:12.244Z,4.4114,-76.809,4.7,mb,77.309
+us,"27 km SW of Sipí, Colombia",2026-09-11T16:42:31.376Z,4.4626,-76.8003,4.7,mb,68.328
+us,"21 km SW of Sipí, Colombia",2026-09-08T02:01:34.461Z,4.5226,-76.7929,4.4,mb,67.08
+us,"20 km SW of Sipí, Colombia",2026-09-06T22:15:38.764Z,4.5418,-76.795,4.4,mb,61.61
+us,"29 km SSW of Sipí, Colombia",2026-09-03T05:17:15.307Z,4.3985,-76.7157,4.5,mb,71.437
+us,"19 km SSW of Inzá, Colombia",2026-08-30T04:37:56.698Z,2.4078,-76.1637,4.5,mb,10.0
+us,"18 km SW of Sipí, Colombia",2026-08-29T10:50:23.751Z,4.5132,-76.7395,4.5,mb,60.635
+us,"11 km SSW of Sipí, Colombia",2026-08-27T16:21:22.850Z,4.5588,-76.6859,4.5,mb,63.685
+us,"19 km SW of Sipí, Colombia",2026-08-27T15:25:29.013Z,4.5126,-76.7491,4.7,mb,61.381
+us,"35 km SSW of Sipí, Colombia",2026-08-24T18:55:28.009Z,4.3503,-76.7599,4.4,mb,73.956
+us,"27 km SW of Sipí, Colombia",2026-08-24T02:41:00.522Z,4.4825,-76.8266,4.4,mb,78.299
+us,"20 km W of San José del Palmar, Colombia",2026-08-14T03:21:46.170Z,4.9268,-76.414,4.3,mb,96.66
+us,"1 km E of San José del Palmar, Colombia",2026-08-13T14:42:32.286Z,4.8948,-76.2213,4.3,mb,103.362
+us,"10 km W of San José del Palmar, Colombia",2026-08-11T15:43:41.168Z,4.9121,-76.33,4.1,mb,101.646
+us,"18 km NW of San José del Palmar, Colombia",2026-08-10T15:01:31.472Z,4.9924,-76.3671,4.3,mb,97.87
+us,"10 km WSW of San José del Palmar, Colombia",2026-08-10T13:18:09.581Z,4.877,-76.3246,5.0,mb,91.129
+us,"2 km SE of San José del Palmar, Colombia",2026-08-10T12:34:28.009Z,4.8836,-76.2182,7.4,mww,108.174
+us,"11 km NW of Darien, Colombia",2026-06-26T08:31:45.349Z,4.0074,-76.5596,4.2,mb,10.0
+us,"30 km NW of Darien, Colombia",2026-05-14T12:48:21.593Z,4.1341,-76.6659,5.3,mww,112.725
+us,"5 km SE of Argelia, Colombia",2026-03-09T22:11:22.450Z,4.6844,-76.0839,4.6,mb,114.525
+us,"20 km ESE of Nóvita, Colombia",2026-02-13T11:40:53.798Z,4.8655,-76.4465,4.9,mb,103.958
+us,"10 km WSW of El Dovio, Colombia",2026-02-07T20:46:52.880Z,4.4858,-76.331,4.1,mb,129.689
+us,"3 km E of Tello, Colombia",2025-12-21T14:05:26.416Z,3.0699,-75.1055,4.4,mb,10.0
+us,"6 km WNW of Restrepo, Colombia",2025-11-01T19:52:42.346Z,3.8376,-76.5812,4.3,mb,136.419
+us,"12 km WSW of Morales, Colombia",2025-08-27T09:31:35.740Z,2.7226,-76.7369,4.4,mb,10.0
+us,"2 km NNW of Bolívar, Colombia",2025-08-11T00:16:32.147Z,4.3578,-76.1928,4.7,mww,150.107
+us,"18 km WSW of Inzá, Colombia",2025-06-20T19:58:33.019Z,2.4911,-76.2254,4.4,mb,35.053
+us,"62 km NNE of Timbiquí, Colombia",2025-05-23T04:56:45.663Z,3.3141,-77.507,4.8,mwr,35.0
+us,"7 km W of Playarrica, Colombia",2025-05-18T06:17:26.554Z,4.0695,-75.4801,4.3,mb,10.0
+us,"8 km SSE of Calarcá, Colombia",2025-04-09T12:41:00.584Z,4.4562,-75.6179,4.2,mb,164.813
+us,"3 km SE of Argelia, Colombia",2025-04-01T02:04:04.952Z,4.7022,-76.0962,4.5,mb,99.649
+us,"11 km SSE of Sipí, Colombia",2025-03-10T07:57:09.421Z,4.5564,-76.6012,4.5,mb,122.305
+us,"9 km WNW of El Dovio, Colombia",2025-01-04T08:17:24.376Z,4.5472,-76.3159,4.7,mb,51.986
+us,"29 km W of Mesetas, Colombia",2024-07-30T05:32:17.757Z,3.3996,-74.3109,4.2,mb,10.0
+us,"6 km NNE of Sevilla, Colombia",2024-06-07T07:55:57.321Z,4.3193,-75.9119,4.5,mb,11.719
+us,"3 km SW of Cumaral, Colombia",2024-06-03T11:52:40.059Z,4.2454,-73.5039,4.4,mb,9.966
+us,"3 km NNE of Saladoblanco, Colombia",2024-05-05T06:11:07.336Z,2.0194,-76.027,4.4,mb,12.009
+us,"6 km W of La Celia, Colombia",2024-04-30T15:44:52.095Z,4.9949,-76.0626,4.6,mb,126.48
+us,"5 km ESE of Ansermanuevo, Colombia",2024-02-10T13:57:06.911Z,4.786,-75.9499,4.2,mb,89.291
+us,"5 km N of Ansermanuevo, Colombia",2024-01-19T11:47:28.023Z,4.8447,-75.9969,4.3,mb,76.307
+us,"7 km E of Cartago, Colombia",2024-01-19T11:26:03.598Z,4.7429,-75.8481,5.6,mww,65.067
+us,"11 km S of Zarzal, Colombia",2023-11-26T14:30:56.609Z,4.2967,-76.0903,4.2,mb,145.003
+us,"8 km N of Cumaral, Colombia",2023-11-10T07:48:04.471Z,4.3431,-73.4809,4.5,mb,10.0
+us,"17 km NW of Trujillo, Colombia",2023-11-06T20:58:32.027Z,4.3276,-76.4337,4.3,mb,85.061
+us,"7 km SSW of El Dovio, Colombia",2023-10-31T09:52:02.489Z,4.4451,-76.2619,4.2,mb,141.956
+us,"10 km N of Cumaral, Colombia",2023-08-18T01:15:26.559Z,4.3633,-73.485,5.0,mb,10.0
+us,"11 km NW of Villavicencio, Colombia",2023-08-17T17:40:16.241Z,4.2285,-73.6849,4.9,mb,10.0
+us,"3 km E of Restrepo, Colombia",2023-08-17T17:17:17.698Z,4.258,-73.5289,5.6,mww,10.0
+us,"10 km E of El Calvario, Colombia",2023-08-17T17:04:48.770Z,4.3463,-73.6199,6.1,mww,10.0
+us,Colombia,2023-08-03T22:09:36.236Z,3.5131,-76.2356,5.1,mww,161.146
+us,"21 km SE of Vistahermosa, Colombia",2023-06-30T01:52:28.221Z,2.9948,-73.6029,4.7,mb,10.0
+us,"3 km E of Restrepo, Colombia",2023-06-10T06:53:57.656Z,3.8178,-76.489,4.3,mb,146.602
+us,"10 km WNW of Bolívar, Colombia",2023-05-22T17:14:14.864Z,4.3829,-76.2681,4.5,mb,120.179
+us,Colombia,2023-05-14T06:04:17.791Z,4.0397,-73.7077,4.8,mb,10.0
+us,"41 km SSE of Colombia, Colombia",2023-05-07T08:05:32.757Z,3.0134,-74.7041,4.3,mb,182.956
+us,"19 km W of Mesetas, Colombia",2023-04-15T20:52:53.218Z,3.3662,-74.2162,4.5,mb,10.0
+us,"18 km ESE of San Pedro, Colombia",2023-03-15T21:50:42.459Z,3.9045,-76.0855,4.5,mb,177.822
+us,"4 km NE of Pasca, Colombia",2023-02-07T00:44:14.350Z,4.3409,-74.2762,3.8,mb,8.529
+us,"15 km NNE of San José del Palmar, Colombia",2023-01-27T04:34:39.050Z,5.0309,-76.2007,4.5,mb,106.371
+us,"9 km WSW of Mesetas, Colombia",2022-12-14T17:39:03.979Z,3.3517,-74.1224,4.5,mb,8.071
+us,"26 km WNW of Darien, Colombia",2022-12-12T14:49:13.270Z,3.9986,-76.7154,4.5,mb,101.355
+us,"9 km NE of El Rosario, Colombia",2022-10-04T05:13:54.668Z,1.808,-77.2764,4.8,mb,128.35
+us,"7 km S of El Águila, Colombia",2022-08-17T15:46:51.547Z,4.8445,-76.0511,4.6,mb,128.811
+us,"7 km NW of El Águila, Colombia",2022-06-30T23:37:46.794Z,4.9528,-76.0895,4.5,mb,114.035
+us,"9 km N of Restrepo, Colombia",2022-06-12T09:00:17.716Z,4.3462,-73.5652,4.4,mb,50.96
+us,"10 km NNE of Darien, Colombia",2022-05-12T21:23:29.680Z,4.014,-76.4472,5.0,mww,69.18
+us,"7 km NE of Acevedo, Colombia",2022-04-19T19:32:27.438Z,1.8566,-75.8536,4.6,mb,28.88
+us,"12 km NW of San José del Palmar, Colombia",2022-03-24T01:34:04.202Z,4.9824,-76.3122,4.7,mb,93.71
+us,"10 km NE of Colombia, Colombia",2022-02-07T00:31:23.897Z,3.448,-74.7357,4.4,mb,62.48
+us,"9 km NE of El Calvario, Colombia",2021-12-09T00:07:17.507Z,4.4212,-73.6567,4.6,mb,35.97
+us,"4 km NNW of Trujillo, Colombia",2021-11-29T20:33:32.090Z,4.2503,-76.3426,4.9,mb,123.06
+us,"12 km N of Lejanías, Colombia",2021-11-29T07:53:37.665Z,3.6391,-74.0114,4.4,mb,10.0
+us,"7 km S of Paispamba, Colombia",2021-10-29T21:43:50.050Z,2.1847,-76.6147,4.3,mwr,24.01
+us,"6 km WNW of La Celia, Colombia",2021-02-24T07:55:08.057Z,5.022,-76.0609,4.5,mb,93.13
+us,"32 km WNW of Mesetas, Colombia",2021-02-19T15:55:40.380Z,3.4642,-74.3272,4.4,mb,10.0
+us,"8 km NNW of Caicedonia, Colombia",2021-01-27T07:57:33.358Z,4.4075,-75.856,4.9,mb,159.4
+us,"25 km E of Baraya, Colombia",2021-01-23T21:12:18.130Z,3.1222,-74.8254,4.9,mww,25.07
+us,"31 km WSW of Buenaventura, Colombia",2020-12-28T21:47:36.989Z,3.4478,-77.253,4.4,mb,88.49
+us,"15 km ENE of Sipí, Colombia",2020-11-16T13:59:21.031Z,4.7244,-76.5228,4.8,mb,72.99
+us,"7 km WSW of Restrepo, Colombia",2020-08-14T02:34:37.500Z,4.2369,-73.6232,4.4,mb,10.0
+us,"6 km E of Morales, Colombia",2020-05-24T12:22:03.507Z,2.7483,-76.5659,4.5,mb,10.0
+us,"19 km NNW of Argelia, Colombia",2020-05-10T23:10:00.210Z,2.4112,-77.3265,4.5,mb,92.49
+us,"2 km NW of San Pedro, Colombia",2020-04-13T20:44:19.546Z,4.0085,-76.2402,4.6,mb,156.54
+us,"16 km NW of San José del Palmar, Colombia",2020-04-03T18:52:47.964Z,5.0023,-76.3416,4.0,mb,134.53
+us,"1 km NNW of Lejanías, Colombia",2020-02-13T15:29:11.058Z,3.5396,-74.0313,4.4,mb,9.29
+us,"6 km SSW of Zarzal, Colombia",2020-01-05T13:47:51.979Z,4.3433,-76.1039,4.3,mb,154.34
+us,"8 km SSE of Lejanías, Colombia",2019-12-27T03:20:39.716Z,3.4594,-73.9925,4.6,mb,10.0
+us,"1 km ENE of Mesetas, Colombia",2019-12-26T10:52:21.267Z,3.3922,-74.0302,4.4,mb,10.0
+us,"8 km SE of Lejanías, Colombia",2019-12-26T05:03:56.849Z,3.4785,-73.9698,4.3,mb,10.0
+us,"5 km WSW of Mesetas, Colombia",2019-12-26T03:48:29.883Z,3.3722,-74.0915,4.8,mb,10.0
+us,"3 km S of Lejanías, Colombia",2019-12-25T10:39:56.729Z,3.4938,-74.0286,4.4,mb,10.0
+us,"8 km NNE of Lejanías, Colombia",2019-12-25T10:25:55.027Z,3.5986,-74.0042,4.5,mb,10.0
+us,"7 km ENE of Mesetas, Colombia",2019-12-25T02:11:23.210Z,3.419,-73.9867,5.0,mb,10.0
+us,"8 km NW of Mesetas, Colombia",2019-12-25T00:25:01.178Z,3.4416,-74.098,4.6,mb,10.0
+us,"12 km NNW of Lejanías, Colombia",2019-12-24T20:11:15.897Z,3.6387,-74.0515,4.5,mb,10.0
+us,"9 km NW of Mesetas, Colombia",2019-12-24T19:19:03.273Z,3.4502,-74.1034,5.7,mww,10.0
+us,"11 km WSW of Lejanías, Colombia",2019-12-24T19:15:43.628Z,3.4917,-74.1248,5.0,mb,10.0
+us,"11 km E of Lejanías, Colombia",2019-12-24T19:11:01.700Z,3.542,-73.9247,5.1,mb,10.0
+us,"1 km NE of Lejanías, Colombia",2019-12-24T19:03:52.492Z,3.5359,-74.0176,6.0,mww,11.0
+us,"18 km NNW of Cubarral, Colombia",2019-05-12T07:28:08.579Z,3.9341,-73.9292,4.5,mb,10.0
+us,"3 km WSW of Versalles, Colombia",2019-03-23T19:21:17.998Z,4.5595,-76.223,6.1,mww,122.0
+us,"44 km NW of Darien, Colombia",2019-02-19T11:06:30.290Z,4.1984,-76.781,4.6,mb,69.32
+us,"20 km ESE of Santa Rosa de Cabal, Colombia",2019-02-10T02:21:48.270Z,4.7911,-75.4567,4.6,mb,151.94
+us,"11 km SE of Santa María, Colombia",2019-01-29T06:10:56.080Z,2.8793,-75.5748,4.3,mb,27.74
+us,"12 km S of Planadas, Colombia",2019-01-28T21:07:09.960Z,3.0835,-75.6461,5.5,mww,13.06
+us,"13 km NW of Santa María, Colombia",2019-01-26T12:32:26.830Z,3.0345,-75.7383,5.6,mww,10.0
+us,"46 km ESE of Rivera, Colombia",2019-01-19T22:03:36.720Z,2.5739,-74.8939,4.4,mb,10.0
+us,"10 km ESE of Villamaría, Colombia",2018-11-05T22:45:00.680Z,5.0188,-75.4271,4.4,mb,133.68
+us,"4 km WNW of El Cairo, Colombia",2018-10-24T20:02:45.100Z,4.7859,-76.2596,4.7,mb,96.71
+us,"11 km W of Restrepo, Colombia",2018-07-24T20:15:58.570Z,4.2587,-73.662,4.3,mb,49.03
+us,"2 km SE of El Águila, Colombia",2018-07-24T01:59:14.240Z,4.8949,-76.0266,4.4,mb,128.08
+us,"23 km ENE of Colombia, Colombia",2018-07-19T05:39:34.580Z,3.4257,-74.5982,5.1,mb,47.77
+us,"3 km ESE of Santa María, Colombia",2018-07-07T00:19:52.490Z,2.9425,-75.621,4.5,mb,65.81
+us,"7 km E of Guadalajara de Buga, Colombia",2018-06-22T20:08:53.150Z,3.8892,-76.2331,4.4,mb,81.78
+us,"10 km SW of Mesetas, Colombia",2018-05-01T19:19:51.510Z,3.3148,-74.1082,4.4,mb,46.79
+us,"13 km S of Suaza, Colombia",2018-05-01T01:58:31.460Z,1.859,-75.7791,4.5,mb,35.86
+us,"3 km NW of Neira, Colombia",2018-04-23T15:42:09.790Z,5.1865,-75.5438,5.3,mww,110.03
+us,"5 km NW of Trujillo, Colombia",2018-04-01T15:16:58.700Z,4.2525,-76.3511,4.3,mb,98.22
+us,Colombia,2018-02-19T01:50:36.640Z,4.0967,-76.6247,4.8,mb,103.17
+us,"5 km SW of Andalucía, Colombia",2017-12-21T19:26:40.150Z,4.1427,-76.2035,4.6,mb,156.27
+us,"4 km SSW of El Dovio, Colombia",2017-11-26T13:45:51.140Z,4.4736,-76.2508,4.3,mb,131.99
+us,"1 km N of Argelia, Colombia",2017-11-16T00:56:07.710Z,4.7377,-76.1183,4.5,mb,105.19
+us,"10 km W of La Cumbre, Colombia",2017-11-15T02:12:17.850Z,3.7278,-76.1191,4.4,mb,162.11
+us,"38 km E of Rivera, Colombia",2017-11-11T14:45:22.240Z,2.7641,-74.9148,4.7,mb,46.1
+us,"8 km SSE of Inzá, Colombia",2017-11-04T00:16:35.270Z,2.4828,-76.0318,5.1,mww,157.28
+us,"21 km ENE of Castilla La Nueva, Colombia",2017-08-24T22:22:20.640Z,3.9163,-73.5145,4.0,mb,34.41
+us,"11 km SSE of Murillo, Colombia",2017-07-30T05:57:05.060Z,4.7693,-75.1486,4.5,mb,10.0
+us,"8 km NNE of Junín, Colombia",2017-07-30T05:40:41.090Z,4.8565,-74.9998,4.7,mb,10.0
+us,"8 km NNE of Lejanías, Colombia",2017-07-02T19:26:28.710Z,3.5937,-73.9848,5.1,mb,27.64
+us,"12 km NNW of Dagua, Colombia",2017-05-06T02:52:40.680Z,3.7583,-76.7291,4.4,mb,74.95
+us,"14 km NE of La Cumbre, Colombia",2017-04-29T10:06:33.260Z,3.816,-75.9283,4.8,mww,58.65
+us,"16 km ENE of Colombia, Colombia",2017-02-06T13:02:45.140Z,3.4493,-74.6715,5.5,mww,37.95
+us,"25 km WNW of Darien, Colombia",2017-01-24T19:35:38.100Z,4.0115,-76.7031,4.3,mb,101.4
+us,"10 km NW of Chipaque, Colombia",2017-01-21T06:34:05.780Z,4.509,-74.1107,4.0,mb,31.99
+us,"10 km E of San Pablo, Colombia",2016-12-28T05:05:04.970Z,1.6873,-76.9221,4.7,mb,138.08
+us,"6 km E of Íquira, Colombia",2016-12-23T03:43:51.310Z,2.6595,-75.5794,4.4,mb,10.0
+us,"25 km W of Mesetas, Colombia",2016-12-16T19:45:20.340Z,3.3938,-74.2744,4.5,mb,61.75
+us,"33 km E of Colombia, Colombia",2016-10-31T02:05:58.040Z,3.4027,-74.5019,5.0,mww,36.16
+us,"34 km ENE of Colombia, Colombia",2016-10-31T00:20:11.640Z,3.4466,-74.4951,5.6,mww,33.0
+us,"39 km W of Buenaventura, Colombia",2016-08-21T21:17:57.370Z,3.873,-77.3886,3.7,mwr,75.82
+us,"8 km NW of Dagua, Colombia",2016-07-11T00:50:38.580Z,3.7039,-76.7513,4.3,mb,101.6
+us,"44 km SSE of Villarrica, Colombia",2016-03-13T13:17:49.310Z,3.5663,-74.4325,4.5,mb,52.64
+us,"16 km WSW of Santa María, Colombia",2016-01-06T01:28:21.830Z,2.8738,-75.7731,4.5,mb,40.45
+us,"15 km S of Génova, Colombia",2015-09-18T04:35:09.680Z,4.1776,-75.7522,4.7,mb,15.52
+us,"8 km NW of Guadalajara de Buga, Colombia",2015-09-05T23:14:53.500Z,3.9474,-76.358,4.6,mb,134.76
+us,"6 km SSW of Calarcá, Colombia",2015-08-21T14:16:22.200Z,4.4812,-75.666,4.3,mb,42.37
+us,"7 km SSW of Caldono, Colombia",2015-02-22T12:56:24.400Z,2.7299,-76.5012,5.5,mww,149.0
+us,"8 km SW of Argelia, Colombia",2015-02-21T22:26:45.600Z,4.67,-76.18,5.1,mb,95.0
+us,"5 km WSW of San José del Palmar, Colombia",2014-10-31T21:24:30.200Z,4.8804,-76.2802,4.5,mb,120.79
+us,"0 km ENE of La Virginia, Colombia",2014-10-19T02:20:34.390Z,4.9021,-75.8767,4.4,mb,131.28
+us,"12 km N of Buenaventura, Colombia",2014-09-20T03:59:50.660Z,3.6983,-77.0039,4.0,mb,98.37
+us,"7 km NNW of Coello, Colombia",2014-06-21T12:31:28.890Z,4.461,-75.3232,4.4,mb,192.26
+us,"8 km W of Guayabetal, Colombia",2014-06-12T06:30:42.470Z,4.2284,-73.8904,4.2,mb,42.39
+us,"4 km ESE of Padilla, Colombia",2014-06-04T18:53:49.200Z,3.2111,-76.2763,4.5,mb,163.69
+us,"9 km NE of Villa Rica, Colombia",2014-06-02T12:52:21.910Z,2.5704,-76.7868,4.4,mb,145.21
+us,"39 km W of Buenaventura, Colombia",2014-01-18T03:04:02.730Z,3.8636,-77.3899,4.3,mb,9.63
+us,"20 km SSW of Gaitania, Colombia",2014-01-09T14:03:30.060Z,2.9792,-75.8777,4.6,mb,59.45
+us,"19 km S of Gaitania, Colombia",2014-01-09T12:50:18.420Z,2.9737,-75.8432,5.0,mb,26.17
+us,"22 km SW of Gaitania, Colombia",2014-01-09T11:07:35.690Z,2.9858,-75.9346,4.7,mb,43.66
+us,"10 km S of Sipí, Colombia",2014-01-05T03:36:40.590Z,4.557,-76.644,5.5,mwb,53.91
+us,"5 km NNW of La Tebaida, Colombia",2013-11-17T15:18:01.590Z,4.4999,-75.806,4.5,mb,177.5
+us,"29 km W of Trujillo, Colombia",2013-10-08T02:20:08.240Z,4.181,-76.5791,4.0,mb,81.66
+us,"11 km W of Restrepo, Colombia",2013-08-27T23:22:06.450Z,3.806,-76.6281,4.8,mb,81.12
+us,"4 km SW of San Pedro, Colombia",2013-06-01T06:44:26.790Z,3.963,-76.251,4.0,mb,111.2
+us,"6 km W of Bugalagrande, Colombia",2013-05-23T16:32:09.090Z,4.206,-76.21,4.4,mb,77.0
+us,"6 km SSE of Riofrío, Colombia",2013-01-02T16:50:39.480Z,4.101,-76.274,4.6,mb,145.4
+us,"7 km WSW of La Argentina, Colombia",2012-12-10T10:50:52.380Z,2.167,-76.04,4.3,mb,53.6
+us,"11 km WNW of San Agustín, Colombia",2012-09-30T16:31:35.970Z,1.929,-76.362,7.3,mww,170.0
+us,"6 km ESE of Obando, Colombia",2012-07-31T01:26:39.810Z,4.555,-75.918,4.5,mb,63.1
+us,"1 km SW of Guacarí, Colombia",2012-06-27T03:47:52.000Z,3.755,-76.343,4.5,mb,142.8
+us,"28 km E of Paispamba, Colombia",2012-06-20T12:31:29.400Z,2.248,-76.354,4.7,mb,158.4
+us,"24 km W of Trujillo, Colombia",2012-03-01T01:41:11.220Z,4.214,-76.539,4.7,mb,117.1
+us,"4 km ESE of El Rosario, Colombia",2011-12-31T00:53:55.220Z,1.734,-77.294,4.7,mb,95.7
+us,"9 km WNW of La Cumbre, Colombia",2011-10-07T16:42:13.830Z,3.754,-76.105,4.6,mb,180.1
+us,"21 km NNW of Gaitania, Colombia",2011-07-09T10:57:35.030Z,3.329,-75.882,4.3,mb,182.8
+us,"8 km WSW of Pereira, Colombia",2011-06-01T22:58:01.050Z,4.79,-75.767,5.0,mb,79.5
+us,"3 km S of El Águila, Colombia",2011-03-20T13:39:59.620Z,4.883,-76.046,4.6,mb,132.5
+us,"14 km WSW of Sipí, Colombia",2011-02-21T11:31:24.330Z,4.605,-76.762,4.6,mb,90.8
+us,"8 km N of Yotoco, Colombia",2011-01-31T07:13:42.600Z,3.941,-76.395,4.9,mb,97.5
+us,"0 km SW of Ansermanuevo, Colombia",2011-01-29T00:05:16.760Z,4.791,-76.001,4.5,mb,121.6
+us,"5 km NE of El Calvario, Colombia",2011-01-27T14:06:47.000Z,4.39,-73.68,3.9,ml,4.0
+us,"3 km ESE of Santiago Pérez, Colombia",2010-10-01T00:20:12.070Z,3.382,-75.574,4.5,mb,32.1
+us,"15 km WNW of La Cumbre, Colombia",2010-08-30T19:28:00.900Z,3.798,-76.143,3.8,ml,32.1
+us,"12 km NNW of Argelia, Colombia",2010-08-18T07:38:46.560Z,2.363,-77.275,4.4,mb,85.0
+us,"1 km ESE of Saldaña, Colombia",2010-07-29T19:34:46.490Z,3.924,-74.999,5.1,mwc,51.4
+us,"8 km ENE of Cajamarca, Colombia",2010-07-26T03:48:17.010Z,4.483,-75.368,4.1,ml,10.0
+us,"22 km E of Sipí, Colombia",2010-04-13T16:51:35.400Z,4.627,-76.445,4.5,mb,102.7
+us,"25 km SSE of Colombia, Colombia",2010-03-18T13:47:01.000Z,3.18,-74.68,4.3,ml,24.0
+us,"14 km E of Santa Rosa de Cabal, Colombia",2010-03-04T22:09:13.100Z,4.89,-75.49,4.9,mb,130.9
+us,"6 km WSW of Cartago, Colombia",2010-01-29T17:52:23.040Z,4.726,-75.971,4.9,mwc,131.5
+us,"9 km S of Génova, Colombia",2010-01-11T18:48:35.960Z,4.229,-75.756,4.8,mb,180.1
+us,"10 km NNE of Toribío, Colombia",2009-12-18T14:30:03.390Z,3.047,-76.234,5.1,mwc,165.4
+us,"5 km ESE of Toro, Colombia",2009-11-02T12:18:50.540Z,4.589,-76.04,5.0,mb,101.9
+us,"8 km W of Vijes, Colombia",2009-10-22T15:56:48.100Z,3.711,-76.517,4.6,mb,134.4
+us,"2 km E of Sipí, Colombia",2009-09-08T08:26:01.800Z,4.655,-76.624,4.8,mwc,90.6
+us,"18 km W of Sipí, Colombia",2009-07-23T20:18:35.400Z,4.65,-76.81,4.5,mb,26.0
+us,"17 km W of Chaparral, Colombia",2009-07-03T10:04:57.640Z,3.737,-75.642,5.2,mb,51.9
+us,"9 km SE of Buenaventura, Colombia",2008-11-19T22:56:23.890Z,3.522,-76.943,3.4,mb,72.5
+us,"11 km N of Coello, Colombia",2008-11-09T08:00:56.710Z,4.503,-75.312,4.5,mb,2.7
+us,"7 km W of San Pedro, Colombia",2008-10-31T20:07:45.860Z,3.994,-76.293,4.6,mb,53.5
+us,"10 km SSW of Cubarral, Colombia",2008-10-15T06:35:21.970Z,3.709,-73.88,0.0,,61.2
+us,"26 km N of Belalcázar, Colombia",2008-09-14T18:29:28.970Z,2.883,-76.0,4.1,mb,31.1
+us,"14 km SE of Santa Rosa de Cabal, Colombia",2008-09-13T09:32:01.490Z,4.79,-75.517,5.7,mwb,132.9
+us,"27 km SSW of Gaitania, Colombia",2008-09-05T15:30:34.310Z,2.915,-75.903,4.4,mb,25.5
+us,"10 km SW of Trujillo, Colombia",2008-09-03T01:34:55.640Z,4.158,-76.392,0.0,,145.8
+us,"28 km SW of Gaitania, Colombia",2008-09-02T17:21:00.270Z,2.953,-75.983,4.9,mb,23.1
+us,"5 km S of Piedras, Colombia",2008-07-13T13:45:55.930Z,4.493,-74.87,4.5,mb,47.5
+us,"8 km S of Bogotá, Colombia",2008-07-08T14:06:38.080Z,4.532,-74.087,0.0,,32.8
+us,"6 km NE of Quetame, Colombia",2008-06-07T13:34:13.100Z,4.37,-73.82,3.6,ml,0.0
+us,"2 km NNW of Fosca, Colombia",2008-06-07T03:50:09.810Z,4.36,-73.943,4.0,mb,26.6
+us,"12 km NNW of El Calvario, Colombia",2008-06-03T02:48:35.200Z,4.46,-73.76,3.4,ml,3.4
+us,"7 km N of El Calvario, Colombia",2008-06-02T23:50:25.000Z,4.42,-73.72,4.2,mb,0.0
+us,"6 km NNE of Quetame, Colombia",2008-05-28T03:12:07.000Z,4.38,-73.83,4.0,ml,4.0
+us,"13 km E of Fómeque, Colombia",2008-05-25T09:39:54.780Z,4.509,-73.779,3.8,mb,25.1
+us,"3 km NNW of Quetame, Colombia",2008-05-24T21:04:07.660Z,4.363,-73.88,3.5,mb,10.0
+us,"6 km ESE of Quetame, Colombia",2008-05-24T20:36:05.820Z,4.317,-73.802,4.3,mb,10.0
+us,"6 km SSW of Quetame, Colombia",2008-05-24T20:21:30.610Z,4.271,-73.875,4.3,mb,16.8
+us,"6 km ESE of Quetame, Colombia",2008-05-24T20:08:02.100Z,4.319,-73.807,4.3,mb,22.6
+us,"6 km WSW of El Calvario, Colombia",2008-05-24T19:20:42.490Z,4.33,-73.764,5.9,mwc,8.9
+us,"5 km NW of El Calvario, Colombia",2008-05-24T17:08:15.530Z,4.39,-73.74,4.1,mb,10.0
+us,"6 km N of La Tebaida, Colombia",2008-03-31T23:15:24.930Z,4.515,-75.787,4.4,mb,85.1
+us,"18 km ESE of Jambaló, Colombia",2008-03-04T11:23:08.020Z,2.719,-76.166,4.8,mb,68.9
+us,"26 km WNW of Darien, Colombia",2008-01-23T00:24:37.260Z,4.043,-76.698,3.9,mb,62.6
+us,"20 km ESE of Buenaventura, Colombia",2007-10-22T22:43:04.000Z,3.83,-76.85,4.3,mb,65.3
+us,"4 km SSW of Trujillo, Colombia",2007-08-24T17:45:50.110Z,4.178,-76.333,4.8,mb,140.8
+us,"13 km WNW of Versalles, Colombia",2007-08-07T22:08:18.600Z,4.63,-76.31,3.3,mb,120.0
+us,"14 km NW of Chaparral, Colombia",2007-07-15T19:30:00.080Z,3.8,-75.589,4.8,mb,35.0
+us,"19 km SSW of Roncesvalles, Colombia",2007-07-10T05:25:37.000Z,3.84,-75.64,4.4,mb,3.0
+us,"16 km W of Mesetas, Colombia",2007-06-27T15:44:59.630Z,3.359,-74.195,0.0,,48.7
+us,"15 km W of Chaparral, Colombia",2007-05-27T07:55:58.690Z,3.714,-75.62,4.7,mb,15.4
+us,"5 km NNW of Cartago, Colombia",2007-05-17T00:56:59.310Z,4.796,-75.931,4.1,mb,153.3
+us,"6 km NE of Versalles, Colombia",2007-05-08T22:03:08.150Z,4.609,-76.155,4.0,mb,134.5
+us,"17 km NNE of Buenaventura, Colombia",2007-04-10T00:33:38.440Z,4.03,-76.974,3.9,mb,120.4
+us,"3 km NW of Tres Esquinas, Colombia",2007-03-12T09:17:19.410Z,3.889,-74.726,4.6,mb,54.0
+us,"23 km SE of Paispamba, Colombia",2007-03-06T13:05:12.110Z,2.082,-76.495,5.2,mwc,43.1
+us,"16 km N of Villa Rica, Colombia",2007-02-16T22:39:55.950Z,2.662,-76.876,4.3,mb,146.7
+us,"11 km NE of Ibagué, Colombia",2007-01-19T03:16:33.500Z,4.504,-75.154,3.8,mb,55.6
+us,"17 km ESE of Buenaventura, Colombia",2006-12-09T10:40:39.100Z,3.5,-76.87,0.0,,68.0
+us,"6 km ENE of Riofrío, Colombia",2006-12-03T17:32:11.250Z,4.185,-76.239,3.0,mb,76.2
+us,"36 km W of Mesetas, Colombia",2006-07-19T03:53:13.810Z,3.322,-74.371,3.3,mb,65.7
+us,"6 km N of Darien, Colombia",2006-06-25T11:13:05.650Z,3.994,-76.488,3.5,mb,111.9
+us,"19 km SSE of Sipí, Colombia",2006-05-28T15:47:11.710Z,4.508,-76.551,4.4,mb,118.8
+us,"10 km NNW of Darien, Colombia",2006-04-30T11:41:54.200Z,4.024,-76.512,4.3,mb,96.9
+us,"1 km NNE of El Águila, Colombia",2006-04-17T16:23:31.210Z,4.928,-76.035,3.9,mb,140.8
+us,"18 km WSW of Murillo, Colombia",2006-03-15T01:17:35.230Z,4.797,-75.319,3.8,mb,35.9
+us,"35 km SSE of San Sebastián, Colombia",2006-03-09T15:59:36.260Z,1.544,-76.644,3.7,mb,48.7
+us,"18 km WSW of Cubarral, Colombia",2006-01-21T21:10:39.980Z,3.712,-73.981,4.7,mb,14.1
+us,"2 km NNE of Viterbo, Colombia",2005-12-26T23:37:30.060Z,5.083,-75.867,4.6,mb,123.8
+us,"2 km SE of Argelia, Colombia",2005-12-22T11:17:53.820Z,4.704,-76.105,3.9,mb,117.3
+us,"29 km SSE of Sipí, Colombia",2005-10-02T22:07:22.930Z,4.417,-76.532,4.7,mb,98.9
+us,"13 km E of Playarrica, Colombia",2005-06-22T08:07:56.870Z,4.039,-75.291,3.4,mb,10.1
+us,"8 km N of Yotoco, Colombia",2005-06-06T00:52:07.820Z,3.937,-76.396,3.6,mb,135.2
+us,"5 km SSE of Calarcá, Colombia",2005-05-21T08:37:18.740Z,4.484,-75.613,4.4,mb,158.3
+us,"11 km WSW of Palestina, Colombia",2005-05-18T21:37:26.150Z,1.67,-76.221,4.6,mb,23.3
+us,"13 km NNW of San José del Palmar, Colombia",2005-04-21T03:39:24.120Z,5.014,-76.269,5.2,mwc,102.6
+us,"14 km ENE of Zarzal, Colombia",2005-03-08T15:59:43.870Z,4.42,-75.946,5.0,mwc,65.9
+us,"14 km NNW of San José del Palmar, Colombia",2005-02-18T12:56:05.680Z,5.007,-76.298,4.5,mb,113.8
+us,"16 km ENE of Buenaventura, Colombia",2004-09-16T06:53:19.540Z,3.944,-76.894,4.2,mb,103.3
+us,"3 km SE of La Victoria, Colombia",2004-08-22T23:35:52.750Z,4.501,-76.019,4.3,mb,113.2
+us,"2 km ENE of Paispamba, Colombia",2004-08-18T07:06:52.430Z,2.265,-76.595,5.1,mwc,26.5
+us,"2 km SSE of Yumbo, Colombia",2004-08-11T13:59:06.380Z,3.562,-76.487,3.5,mb,44.2
+us,"5 km NW of Jerusalén, Colombia",2004-04-09T03:39:25.910Z,4.601,-74.729,0.0,,53.2
+us,"13 km SW of Roncesvalles, Colombia",2004-03-29T06:27:21.670Z,3.935,-75.7,4.6,mb,67.5
+us,"6 km S of El Dovio, Colombia",2004-02-12T15:23:06.650Z,4.446,-76.244,4.5,mb,142.5
+us,"6 km ESE of Andalucía, Colombia",2004-01-15T00:25:05.010Z,4.14,-76.113,4.7,mb,154.5
+us,Colombia,2003-12-27T02:24:22.310Z,1.212,-75.234,0.0,,33.0
+us,"20 km SSE of Sipí, Colombia",2003-11-02T16:04:07.090Z,4.489,-76.552,4.5,mb,99.3
+us,"7 km WNW of El Cairo, Colombia",2003-10-30T13:09:05.350Z,4.79,-76.284,4.7,mb,124.1
+us,"9 km SSE of Vijes, Colombia",2003-10-29T15:14:25.120Z,3.628,-76.396,0.0,,159.4
+us,"25 km WNW of Trujillo, Colombia",2003-09-17T21:40:13.900Z,4.313,-76.523,0.0,,110.9
+us,"27 km SSE of Tello, Colombia",2003-08-12T05:37:06.630Z,2.855,-75.011,4.4,mb,60.2
+us,"22 km NW of Darien, Colombia",2003-07-14T00:59:57.290Z,4.091,-76.604,4.5,mb,67.2
+us,"17 km SSE of Pijao, Colombia",2003-05-19T18:35:45.910Z,4.179,-75.665,0.0,,207.6
+us,"17 km W of El Cairo, Colombia",2003-05-18T11:13:43.090Z,4.735,-76.376,0.0,,60.0
+us,"4 km SSE of La Victoria, Colombia",2003-05-11T13:50:33.310Z,4.492,-76.023,0.0,,118.4
+us,"4 km SSE of Ulloa, Colombia",2003-03-30T01:47:20.880Z,4.666,-75.724,4.1,mb,33.0
+us,"40 km SSE of Cabrera, Colombia",2003-01-22T15:55:33.930Z,3.642,-74.369,4.5,mb,33.0
+us,"8 km W of San José del Palmar, Colombia",2003-01-14T05:52:11.670Z,4.894,-76.309,4.3,mb,104.7
+us,"37 km ESE of Colombia, Colombia",2002-11-23T23:56:43.020Z,3.288,-74.476,5.1,mwc,63.7
+us,"8 km SE of Roncesvalles, Colombia",2002-09-28T17:40:16.770Z,3.957,-75.549,4.1,mb,104.0
+us,"4 km ESE of Soacha, Colombia",2002-07-24T19:38:06.790Z,4.57,-74.181,4.0,mb,33.0
+us,"11 km ENE of Córdoba, Colombia",2002-04-06T22:03:38.710Z,4.427,-75.592,4.0,mb,172.8
+us,"17 km NNE of La Cumbre, Colombia",2001-09-22T03:23:38.220Z,3.873,-75.968,5.9,mwc,178.6
+us,"5 km NE of Darien, Colombia",2001-04-21T23:28:45.260Z,3.971,-76.451,4.5,mb,68.1
+us,"8 km SSW of Restrepo, Colombia",2001-04-15T15:22:46.620Z,3.754,-76.556,3.9,mb,108.5
+us,"23 km WSW of Roncesvalles, Colombia",2001-03-16T14:49:05.580Z,3.924,-75.802,3.2,mb,199.4
+us,"19 km ESE of San Pedro, Colombia",2001-01-31T17:14:58.570Z,3.956,-76.061,4.3,mb,161.5
+us,"12 km NNE of Santa Isabel, Colombia",2000-12-31T02:10:43.270Z,3.456,-74.953,4.5,ml,33.0
+us,"26 km NW of Trujillo, Colombia",2000-12-29T14:58:26.750Z,4.368,-76.505,3.3,ml,33.0
+us,"8 km SSW of Filadelfia, Colombia",2000-12-18T20:03:25.300Z,5.221,-75.583,3.7,mb,128.7
+us,"1 km ENE of La Cumbre, Colombia",2000-12-04T02:11:24.390Z,3.726,-76.009,4.4,mb,193.7
+us,"6 km N of Saldaña, Colombia",2000-11-19T13:30:50.290Z,3.989,-75.013,4.4,ml,10.0
+us,"42 km W of Lejanías, Colombia",2000-11-02T19:35:00.320Z,3.579,-74.403,4.1,ml,33.0
+us,"8 km W of Vianí, Colombia",2000-09-07T12:34:58.140Z,4.867,-74.641,3.6,ml,10.0
+us,"9 km WNW of Darien, Colombia",2000-08-31T01:13:18.490Z,3.966,-76.564,2.8,ml,31.6
+us,"5 km N of Piedras, Colombia",2000-08-28T16:48:17.350Z,4.589,-74.873,4.3,ml,10.0
+us,"6 km N of Inzá, Colombia",2000-08-27T14:23:16.700Z,2.611,-76.072,3.9,ml,10.0
+us,"19 km SE of La Cumbre, Colombia",2000-04-03T09:52:45.440Z,3.615,-75.885,4.9,mb,184.9
+us,"1 km NW of Versalles, Colombia",2000-03-11T01:07:11.800Z,4.587,-76.208,3.8,mb,140.8
+us,Colombia,2000-02-02T23:40:20.020Z,2.082,-76.519,4.5,mb,62.0
+us,"12 km W of Tres Esquinas, Colombia",2000-01-24T18:20:48.580Z,3.882,-74.819,3.1,ml,33.0
+us,"15 km NW of Roncesvalles, Colombia",2000-01-24T00:14:03.800Z,4.103,-75.7,2.7,ml,33.0
+us,"42 km WSW of Mesetas, Colombia",2000-01-20T07:56:52.970Z,3.292,-74.417,3.5,ml,33.0
+us,"57 km WSW of Buenaventura, Colombia",1999-12-30T09:30:05.060Z,3.405,-77.486,3.8,mb,76.0
+us,"2 km SW of Armenia, Colombia",1999-12-13T16:07:04.110Z,4.519,-75.693,2.6,ml,10.0
+us,"14 km WNW of El Dorado, Colombia",1999-12-11T22:03:24.000Z,2.808,-72.993,4.1,ml,33.0
+us,"5 km ENE of Pulí, Colombia",1999-12-03T07:28:03.680Z,4.694,-74.663,3.9,ml,10.0
+us,"1 km SE of Buenavista, Colombia",1999-11-09T15:31:21.860Z,4.348,-75.728,3.7,ml,10.0
+us,"18 km W of Rioblanco, Colombia",1999-10-29T14:05:48.060Z,3.56,-75.805,4.2,mb,200.0
+us,"7 km NNW of Córdoba, Colombia",1999-10-22T00:46:19.000Z,4.46,-75.71,3.7,ml,30.0
+us,"5 km SSW of Armenia, Colombia",1999-10-21T15:50:43.000Z,4.49,-75.7,3.7,ml,30.0
+us,"7 km NNW of Córdoba, Colombia",1999-10-21T00:46:19.000Z,4.46,-75.71,3.7,ml,30.0
+us,"6 km SW of El Calvario, Colombia",1999-10-19T15:17:33.000Z,4.32,-73.76,3.1,ml,10.0
+us,"2 km SSW of Pijao, Colombia",1999-10-13T13:10:56.000Z,4.31,-75.71,3.8,mb,30.0
+us,"21 km W of El Dovio, Colombia",1999-09-26T21:15:23.300Z,4.473,-76.43,4.1,mb,104.3
+us,"6 km WNW of Chaguaní, Colombia",1999-08-25T17:03:52.000Z,4.96,-74.65,4.2,ml,30.0
+us,"3 km SSW of Altamira, Colombia",1999-07-28T20:05:04.120Z,2.036,-75.794,4.3,ml,12.0
+us,"24 km SW of Roncesvalles, Colombia",1999-07-22T19:59:52.070Z,3.827,-75.732,4.3,mb,65.4
+us,"7 km WSW of Trujillo, Colombia",1999-07-19T16:13:16.090Z,4.197,-76.385,4.5,mb,139.5
+us,"2 km N of Pulí, Colombia",1999-07-16T00:30:58.370Z,4.7,-74.715,2.7,ml,4.0
+us,"2 km NE of Pulí, Colombia",1999-07-16T00:15:25.740Z,4.697,-74.697,3.7,ml,1.0
+us,"8 km SW of Vianí, Colombia",1999-07-05T10:39:34.040Z,4.826,-74.618,3.4,ml,13.0
+us,"4 km SSW of Calarcá, Colombia",1999-06-14T00:24:41.730Z,4.486,-75.652,2.3,ml,7.0
+us,"13 km N of El Calvario, Colombia",1999-06-10T03:21:58.360Z,4.471,-73.697,4.2,mb,33.0
+us,"10 km E of El Calvario, Colombia",1999-06-01T21:42:14.040Z,4.343,-73.616,4.7,mb,33.0
+us,"2 km SE of Armenia, Colombia",1999-05-20T04:49:37.850Z,4.521,-75.665,2.4,ml,4.0
+us,"2 km S of Calarcá, Colombia",1999-05-15T14:08:20.580Z,4.507,-75.642,2.5,ml,5.0
+us,"4 km WSW of Pulí, Colombia",1999-05-15T10:20:37.840Z,4.668,-74.755,4.1,mb,18.0
+us,"10 km WSW of Cali, Colombia",1999-05-15T02:01:55.380Z,3.384,-76.606,3.2,ml,10.0
+us,"3 km NE of La Tebaida, Colombia",1999-05-13T14:31:15.390Z,4.476,-75.77,2.7,ml,4.0
+us,"3 km S of Calarcá, Colombia",1999-05-07T22:47:50.580Z,4.495,-75.646,2.5,ml,4.0
+us,"3 km NE of Calarcá, Colombia",1999-05-05T22:05:14.150Z,4.557,-75.618,2.5,ml,2.0
+us,"21 km W of El Cairo, Colombia",1999-05-02T17:48:14.240Z,4.775,-76.415,4.1,mb,123.2
+us,"9 km ESE of Ibagué, Colombia",1999-04-26T23:10:09.980Z,4.395,-75.158,2.6,ml,2.0
+us,"10 km ESE of Calarcá, Colombia",1999-04-20T18:08:52.860Z,4.484,-75.559,2.5,ml,21.0
+us,"4 km W of Circasia, Colombia",1999-04-01T09:54:50.910Z,4.611,-75.678,2.6,ml,10.0
+us,"5 km NE of La Tebaida, Colombia",1999-03-30T18:43:10.800Z,4.482,-75.749,3.4,ml,10.0
+us,"0 km SE of Circasia, Colombia",1999-03-29T15:46:02.670Z,4.617,-75.634,2.7,ml,4.0
+us,"1 km W of Córdoba, Colombia",1999-03-25T07:12:21.040Z,4.39,-75.7,2.8,ml,10.0
+us,"4 km S of Calarcá, Colombia",1999-03-23T03:56:58.810Z,4.486,-75.64,3.4,ml,9.0
+us,"3 km S of Armenia, Colombia",1999-03-22T22:43:40.120Z,4.503,-75.679,2.3,ml,4.0
+us,"3 km SSW of Calarcá, Colombia",1999-03-21T22:14:40.100Z,4.502,-75.658,2.8,ml,4.0
+us,"2 km NNE of La Tebaida, Colombia",1999-03-17T01:04:37.050Z,4.475,-75.779,3.4,ml,10.0
+us,"3 km SW of Calarcá, Colombia",1999-03-11T13:07:23.760Z,4.502,-75.664,3.5,ml,3.0
+us,"1 km NNE of Falan, Colombia",1999-03-08T15:18:47.080Z,5.137,-74.949,3.4,ml,33.0
+us,Colombia,1999-03-06T03:24:32.380Z,4.503,-75.68,3.3,ml,4.0
+us,"1 km WNW of Córdoba, Colombia",1999-03-02T07:42:13.830Z,4.399,-75.701,3.3,ml,4.0
+us,"7 km SSW of Calarcá, Colombia",1999-03-01T05:13:01.460Z,4.469,-75.66,2.3,ml,3.0
+us,"6 km NNE of Córdoba, Colombia",1999-02-25T15:38:39.930Z,4.442,-75.666,4.4,ml,8.0
+us,"4 km NW of Guataquí, Colombia",1999-02-25T00:27:28.270Z,4.552,-74.814,2.2,ml,16.0
+us,"2 km SSW of Armenia, Colombia",1999-02-24T12:06:54.250Z,4.517,-75.69,2.6,ml,6.0
+us,"4 km NW of Buenavista, Colombia",1999-02-24T03:33:11.050Z,4.389,-75.765,2.6,ml,10.0
+us,"6 km E of La Tebaida, Colombia",1999-02-21T10:09:03.050Z,4.457,-75.729,2.6,ml,4.0
+us,"7 km NNE of Córdoba, Colombia",1999-02-21T05:57:42.790Z,4.458,-75.672,2.7,ml,5.0
+us,"5 km ENE of La Tebaida, Colombia",1999-02-21T05:32:09.910Z,4.471,-75.744,3.6,ml,3.0
+us,"4 km S of Armenia, Colombia",1999-02-19T09:54:15.320Z,4.497,-75.686,2.9,ml,6.0
+us,"3 km NE of Montenegro, Colombia",1999-02-17T05:48:37.010Z,4.589,-75.733,2.2,ml,10.0
+us,"4 km E of La Tebaida, Colombia",1999-02-17T04:57:59.020Z,4.455,-75.748,2.9,ml,10.0
+us,"2 km S of Armenia, Colombia",1999-02-17T04:12:09.000Z,4.51,-75.681,2.0,ml,3.0
+us,"2 km WSW of Córdoba, Colombia",1999-02-16T13:27:47.400Z,4.384,-75.705,2.9,ml,1.0
+us,"7 km NE of La Tebaida, Colombia",1999-02-16T12:18:37.460Z,4.489,-75.735,2.6,ml,10.0
+us,"2 km WNW of Calarcá, Colombia",1999-02-14T07:26:43.420Z,4.539,-75.66,2.7,ml,2.0
+us,"5 km E of Córdoba, Colombia",1999-02-12T14:38:43.150Z,4.387,-75.64,2.1,ml,1.0
+us,"6 km S of Armenia, Colombia",1999-02-12T14:36:51.820Z,4.478,-75.678,1.9,ml,5.0
+us,"6 km SSW of Guayabetal, Colombia",1999-02-12T01:20:59.440Z,4.155,-73.837,3.7,ml,10.0
+us,Colombia,1999-02-11T10:10:10.050Z,4.515,-75.706,3.2,ml,2.0
+us,"6 km S of Armenia, Colombia",1999-02-07T08:23:49.900Z,4.477,-75.692,3.4,ml,10.0
+us,"3 km ENE of Pijao, Colombia",1999-02-06T22:28:39.610Z,4.343,-75.678,2.7,ml,7.0
+us,"7 km S of Armenia, Colombia",1999-02-06T21:54:32.440Z,4.47,-75.678,3.0,ml,10.0
+us,"6 km N of Córdoba, Colombia",1999-02-06T13:48:41.280Z,4.452,-75.695,2.9,ml,4.0
+us,"1 km NE of Armenia, Colombia",1999-02-06T06:06:30.190Z,4.542,-75.674,2.3,ml,10.0
+us,"5 km SSW of Armenia, Colombia",1999-02-05T23:45:16.760Z,4.49,-75.693,3.4,ml,3.0
+us,"5 km S of Montenegro, Colombia",1999-02-05T00:10:04.030Z,4.519,-75.754,3.0,ml,10.0
+us,"8 km NNW of Caicedonia, Colombia",1999-02-04T15:38:18.400Z,4.402,-75.85,2.8,ml,3.0
+us,"5 km S of Montenegro, Colombia",1999-02-04T10:32:30.900Z,4.52,-75.743,2.7,ml,10.0
+us,"5 km N of Córdoba, Colombia",1999-01-31T07:26:42.360Z,4.443,-75.679,2.2,ml,10.0
+us,"4 km NNW of Córdoba, Colombia",1999-01-31T06:17:25.470Z,4.425,-75.706,2.9,ml,2.0
+us,"4 km NNE of La Tebaida, Colombia",1999-01-31T05:42:34.030Z,4.492,-75.771,2.7,ml,10.0
+us,"11 km SE of Obando, Colombia",1999-01-30T12:24:25.050Z,4.511,-75.89,4.0,mb,10.0
+us,"1 km NE of Pijao, Colombia",1999-01-30T04:21:54.910Z,4.344,-75.692,2.4,ml,10.0
+us,"5 km NNW of Córdoba, Colombia",1999-01-30T03:41:01.640Z,4.443,-75.699,2.1,ml,8.0
+us,"2 km ESE of Córdoba, Colombia",1999-01-30T02:17:19.360Z,4.382,-75.663,2.4,ml,5.0
+us,"7 km S of Montenegro, Colombia",1999-01-29T06:06:56.650Z,4.503,-75.741,3.9,ml,10.0
+us,"2 km SSE of Córdoba, Colombia",1999-01-25T22:40:16.460Z,4.37,-75.682,5.5,mwc,10.0
+us,"Near Armenia, Colombia",1999-01-25T18:19:16.870Z,4.461,-75.724,6.1,mwc,17.0
+us,"7 km N of Sevilla, Colombia",1998-07-18T10:53:03.660Z,4.333,-75.94,3.7,mb,167.9
+us,"20 km W of Morales, Colombia",1998-06-22T07:03:13.270Z,2.722,-76.81,4.5,mb,142.4
+us,"28 km SW of Buenaventura, Colombia",1998-06-12T17:09:16.200Z,3.72,-77.229,3.3,ml,33.0
+us,"38 km WSW of Mesetas, Colombia",1998-04-22T00:57:33.090Z,3.256,-74.369,4.0,mb,68.9
+us,"6 km N of Apía, Colombia",1998-02-22T00:52:30.100Z,5.169,-75.933,4.1,md,33.2
+us,"3 km ENE of Chaguaní, Colombia",1998-02-02T14:21:27.790Z,4.961,-74.569,4.2,mb,45.4
+us,"22 km WSW of Roncesvalles, Colombia",1997-12-11T07:56:28.850Z,3.929,-75.787,6.4,mwb,177.5
+us,"7 km N of Toro, Colombia",1997-12-10T20:12:13.980Z,4.676,-76.07,4.5,mb,102.5
+us,"5 km W of Puerto Tejada, Colombia",1997-11-19T10:34:17.010Z,3.23,-76.467,4.5,mb,85.5
+us,"6 km SW of San José del Palmar, Colombia",1997-10-20T10:55:19.430Z,4.861,-76.284,4.8,md,117.9
+us,"24 km SW of Roncesvalles, Colombia",1997-09-02T12:13:22.920Z,3.849,-75.749,6.8,mwb,198.7
+us,"13 km WSW of Dagua, Colombia",1997-08-07T13:12:38.720Z,3.591,-76.791,4.1,mb,104.5
+us,Colombia,1997-07-17T12:45:36.380Z,3.774,-74.027,4.9,mb,42.4
+us,"17 km SSE of Sipí, Colombia",1997-07-15T03:24:00.790Z,4.505,-76.581,3.6,mb,92.9
+us,"2 km SSW of La Unión, Colombia",1997-06-18T22:35:14.900Z,4.511,-76.114,4.0,mb,33.0
+us,"19 km ESE of Sipí, Colombia",1997-02-19T18:25:12.570Z,4.564,-76.494,5.8,mwc,100.7
+us,"20 km SE of Sipí, Colombia",1997-02-18T00:54:40.240Z,4.543,-76.497,3.8,mb,117.6
+us,"37 km W of Trujillo, Colombia",1996-12-04T16:02:51.610Z,4.252,-76.656,4.5,mb,111.0
+us,"5 km WNW of Roldanillo, Colombia",1996-11-17T18:44:14.170Z,4.438,-76.201,4.7,mb,112.6
+us,"28 km W of Trujillo, Colombia",1996-09-11T06:28:45.640Z,4.255,-76.577,5.3,mwc,109.4
+us,"20 km SSE of Sipí, Colombia",1996-09-10T02:26:50.370Z,4.481,-76.576,4.4,mb,110.5
+us,"4 km S of Argelia, Colombia",1996-07-12T15:43:44.650Z,4.686,-76.126,3.8,mb,100.0
+us,"69 km ENE of Puerto Rico, Colombia",1996-03-26T05:54:49.970Z,2.181,-74.595,3.9,mb,61.5
+us,"22 km SE of Cumaral, Colombia",1996-02-08T08:39:14.460Z,4.109,-73.374,3.7,mb,33.0
+us,"7 km NNE of Roncesvalles, Colombia",1995-10-02T00:10:14.020Z,4.069,-75.576,3.9,mb,191.3
+us,"7 km WSW of Neira, Colombia",1995-08-19T21:43:31.920Z,5.139,-75.577,6.6,mw,119.6
+us,"44 km WSW of Buenaventura, Colombia",1995-07-17T14:09:55.980Z,3.466,-77.384,4.4,mb,33.0
+us,"4 km NW of Guayabal de Síquima, Colombia",1995-06-04T17:39:35.060Z,4.905,-74.493,4.9,mb,61.3
+us,"24 km E of Buenaventura, Colombia",1995-05-04T06:18:36.380Z,3.845,-76.817,3.7,mb,100.0
+us,"16 km NW of Darien, Colombia",1995-03-01T23:47:24.330Z,4.034,-76.587,4.1,mb,121.2
+us,"44 km SSW of Sipí, Colombia",1995-02-10T19:03:49.630Z,4.289,-76.819,3.8,mb,61.1
+us,"24 km NW of Darien, Colombia",1995-02-08T18:40:25.380Z,4.104,-76.622,6.4,mwb,73.5
+us,"11 km ESE of Villamaría, Colombia",1995-01-02T22:33:24.500Z,5.008,-75.421,4.2,mb,131.2
+us,"21 km WSW of San José del Palmar, Colombia",1994-10-29T23:05:45.980Z,4.842,-76.416,3.9,mb,117.8
+us,"19 km N of Belalcázar, Colombia",1994-08-29T07:43:57.740Z,2.825,-75.954,4.4,mb,41.9
+us,"17 km SE of Toribío, Colombia",1994-08-04T02:50:49.090Z,2.835,-76.168,4.4,mb,10.0
+us,"15 km NNW of Belalcázar, Colombia",1994-06-10T05:47:10.440Z,2.762,-76.048,3.8,mb,55.3
+us,"9 km NE of Belalcázar, Colombia",1994-06-08T08:55:00.700Z,2.717,-75.921,4.4,mb,42.9
+us,"4 km ESE of Belalcázar, Colombia",1994-06-08T06:41:24.430Z,2.627,-75.939,3.9,mb,33.0
+us,"23 km E of Toribío, Colombia",1994-06-06T20:47:40.530Z,2.917,-76.057,6.8,mw,12.1
+us,"15 km ESE of Cabrera, Colombia",1994-04-23T21:32:51.280Z,3.93,-74.357,4.6,mb,33.0
+us,"3 km NW of Santuario, Colombia",1994-02-28T13:40:08.330Z,5.095,-75.986,4.2,mb,112.1
+us,"4 km ENE of Viterbo, Colombia",1994-02-28T04:55:11.890Z,5.081,-75.837,3.6,mb,112.8
+us,"42 km SW of Vistahermosa, Colombia",1994-01-06T21:19:03.600Z,2.831,-73.994,3.9,mb,103.1
+us,"27 km WNW of Cubarral, Colombia",1993-12-27T07:43:47.770Z,3.914,-74.062,3.5,mb,67.7
+us,"5 km ESE of Chinchiná, Colombia",1993-12-03T13:16:15.640Z,4.967,-75.556,4.6,mb,155.2
+us,"33 km NNW of Darien, Colombia",1993-10-12T19:51:25.360Z,4.196,-76.638,5.2,mw,102.6
+us,"5 km ENE of Quipile, Colombia",1993-06-07T10:47:53.280Z,4.767,-74.487,4.0,mb,61.4
+us,"22 km WSW of El Dovio, Colombia",1993-04-22T06:21:07.640Z,4.452,-76.429,4.5,mb,126.1
+us,"8 km NNW of Doima, Colombia",1993-01-25T12:58:51.520Z,4.502,-74.996,3.9,mb,85.9
+us,"14 km NNE of Buenaventura, Colombia",1993-01-11T14:01:52.880Z,3.707,-76.951,4.0,mb,56.8
+us,"18 km NW of El Doncello, Colombia",1992-12-06T00:40:34.480Z,1.808,-75.39,4.9,mb,18.1
+us,"10 km NNE of Palestina, Colombia",1992-08-15T19:02:09.140Z,5.111,-75.607,5.9,mwb,119.0
+us,"1 km S of Circasia, Colombia",1992-07-18T01:40:56.650Z,4.603,-75.634,4.7,mb,152.8
+us,"0 km SSW of Puerto Tejada, Colombia",1992-04-08T05:30:03.920Z,3.225,-76.419,4.1,mb,59.7
+us,"11 km SSE of Santander de Quilichao, Colombia",1991-11-13T13:21:47.590Z,2.914,-76.434,5.0,mb,148.9
+us,"11 km SSW of El Cairo, Colombia",1991-10-31T14:47:27.370Z,4.664,-76.259,4.0,md,120.0
+us,"3 km N of Roldanillo, Colombia",1991-10-31T09:54:44.890Z,4.448,-76.153,2.7,md,90.0
+us,"29 km E of Pradera, Colombia",1991-10-30T04:57:38.980Z,3.432,-75.978,2.7,md,140.0
+us,"14 km NW of Belalcázar, Colombia",1991-10-29T13:39:20.990Z,2.742,-76.065,3.2,md,20.0
+us,"24 km NNW of Trujillo, Colombia",1991-10-28T22:36:06.210Z,4.403,-76.43,2.5,md,10.0
+us,"2 km SSE of Argelia, Colombia",1991-10-28T20:16:17.630Z,4.701,-76.112,3.0,md,100.0
+us,"5 km E of San José del Palmar, Colombia",1991-10-28T19:56:29.740Z,4.903,-76.182,2.9,md,100.0
+us,"2 km N of Pradera, Colombia",1991-10-28T12:30:39.720Z,3.446,-76.245,2.6,md,120.0
+us,"4 km N of Rivera, Colombia",1991-10-27T13:55:12.960Z,2.814,-75.255,3.7,md,60.0
+us,Colombia,1991-10-26T23:36:03.060Z,3.939,-76.314,2.7,md,110.0
+us,"4 km SSE of El Dovio, Colombia",1991-10-26T17:18:05.400Z,4.467,-76.222,3.1,md,120.0
+us,"18 km NW of La Cumbre, Colombia",1991-10-26T14:24:54.090Z,3.855,-76.121,2.7,md,33.0
+us,"28 km SE of Buenaventura, Colombia",1991-10-26T13:37:02.320Z,3.395,-76.83,2.9,md,90.0
+us,"46 km NW of Darien, Colombia",1991-10-25T18:40:31.670Z,4.23,-76.781,3.9,md,75.0
+us,"20 km ESE of San Pedro, Colombia",1991-10-25T07:33:58.550Z,3.895,-76.078,2.8,md,33.0
+us,"18 km NW of Trujillo, Colombia",1991-10-24T22:58:23.730Z,4.341,-76.43,2.9,md,50.0
+us,"29 km ESE of Guadalupe, Colombia",1991-10-24T11:18:21.550Z,1.914,-75.513,3.0,md,33.0
+us,"45 km SSW of Sipí, Colombia",1991-10-23T02:46:52.840Z,4.269,-76.786,2.6,md,75.0
+us,"28 km WNW of Darien, Colombia",1991-10-23T01:13:08.020Z,3.996,-76.735,2.6,md,70.0
+us,"10 km SSE of Hobo, Colombia",1991-10-21T16:48:22.910Z,2.494,-75.425,3.8,md,33.0
+us,Colombia,1991-10-21T15:02:14.940Z,4.831,-76.412,3.4,md,70.0
+us,"9 km SSE of Buenaventura, Colombia",1991-10-21T08:32:20.300Z,3.802,-77.0,2.5,md,33.0
+us,"10 km N of Toribío, Colombia",1991-10-21T07:24:34.040Z,3.049,-76.285,3.0,md,110.0
+us,"7 km NNE of La Cumbre, Colombia",1991-10-21T05:50:28.020Z,3.792,-76.001,3.0,md,100.0
+us,"37 km N of Buenaventura, Colombia",1991-10-20T19:20:58.230Z,4.216,-77.011,2.3,md,33.0
+us,"9 km SSE of Buenaventura, Colombia",1991-10-20T05:07:18.070Z,3.806,-76.993,2.6,md,33.0
+us,"11 km N of Mercaderes, Colombia",1991-10-19T23:38:15.790Z,1.901,-77.156,3.7,md,110.0
+us,"19 km ESE of Buenaventura, Colombia",1991-10-19T03:36:53.040Z,3.793,-76.875,2.8,md,100.0
+us,"10 km NNW of Buenaventura, Colombia",1991-10-18T15:46:10.150Z,3.673,-77.026,3.2,md,10.0
+us,"10 km WNW of La Celia, Colombia",1991-10-18T14:55:39.030Z,5.035,-76.096,3.9,md,90.0
+us,"12 km NW of La Cumbre, Colombia",1991-10-18T08:13:03.580Z,3.812,-76.089,2.7,md,110.0
+us,"3 km ESE of Guacarí, Colombia",1991-10-18T04:06:39.230Z,3.752,-76.304,2.7,md,100.0
+us,"14 km NW of Oporapa, Colombia",1991-10-17T05:42:48.970Z,2.114,-76.086,4.5,md,33.0
+us,"9 km NNW of Buenaventura, Colombia",1991-10-16T23:42:15.200Z,3.656,-77.045,2.4,md,33.0
+us,"9 km NE of Buenaventura, Colombia",1991-10-16T17:56:45.770Z,3.929,-76.959,2.7,md,33.0
+us,"5 km SSE of Buenaventura, Colombia",1991-10-16T17:18:57.250Z,3.84,-77.006,3.5,md,33.0
+us,"5 km NNW of Trujillo, Colombia",1991-10-16T16:40:11.370Z,4.263,-76.332,3.3,md,110.0
+us,"4 km NE of Buenaventura, Colombia",1991-10-15T15:51:52.520Z,3.909,-77.006,2.5,md,33.0
+us,"20 km N of Argelia, Colombia",1991-10-15T04:03:55.770Z,2.442,-77.273,4.0,md,90.0
+us,"39 km NNE of Buenaventura, Colombia",1991-10-14T21:59:34.620Z,4.221,-76.94,3.1,md,33.0
+us,"7 km WNW of Andalucía, Colombia",1991-10-14T15:07:18.770Z,4.199,-76.225,3.6,md,110.0
+us,"54 km NE of Puerto Rico, Colombia",1991-10-14T09:18:02.280Z,2.299,-74.857,3.2,md,33.0
+us,"25 km NNW of Dagua, Colombia",1991-10-14T02:49:37.590Z,3.867,-76.773,3.1,md,33.0
+us,"9 km NE of Nátaga, Colombia",1991-10-14T00:37:14.790Z,2.608,-75.757,3.5,md,33.0
+us,near the west coast of Colombia,1991-10-13T15:33:00.210Z,4.04,-77.04,3.3,md,33.0
+us,"16 km WSW of Villa Rica, Colombia",1991-10-13T11:39:02.080Z,2.48,-76.991,4.1,md,90.0
+us,"38 km SSW of Buenaventura, Colombia",1991-10-11T11:11:48.100Z,3.257,-77.118,3.2,md,80.0
+us,"15 km NNW of La Cumbre, Colombia",1991-10-10T20:46:32.940Z,3.841,-76.093,2.7,md,33.0
+us,"7 km ESE of Cali, Colombia",1991-10-10T11:05:11.840Z,3.424,-76.459,3.1,md,33.0
+us,"25 km ESE of Rivera, Colombia",1991-10-10T08:29:08.250Z,2.73,-75.031,3.9,md,10.0
+us,"7 km SW of Íquira, Colombia",1991-10-10T07:49:10.570Z,2.599,-75.677,3.1,md,10.0
+us,"40 km SE of Baraya, Colombia",1991-10-09T17:19:15.870Z,2.907,-74.785,4.1,md,33.0
+us,"12 km SE of Buenaventura, Colombia",1991-10-09T17:17:43.610Z,3.811,-76.943,2.7,md,33.0
+us,"10 km WNW of Íquira, Colombia",1991-10-08T01:20:14.730Z,2.672,-75.725,3.2,md,10.0
+us,"17 km SSE of Buenaventura, Colombia",1991-10-07T08:48:03.220Z,3.739,-76.951,2.4,md,33.0
+us,"11 km SSE of Dagua, Colombia",1991-10-07T08:39:37.440Z,3.556,-76.659,3.4,md,33.0
+us,"30 km WNW of Buenaventura, Colombia",1991-10-07T08:30:14.210Z,3.989,-77.288,3.9,md,33.0
+us,"15 km SSE of Buenaventura, Colombia",1991-10-07T06:27:00.060Z,3.754,-76.981,3.0,md,33.0
+us,"12 km N of La Cumbre, Colombia",1991-10-06T09:19:51.040Z,3.835,-76.005,3.0,md,110.0
+us,"33 km N of Buenaventura, Colombia",1991-10-06T09:15:22.010Z,4.187,-77.02,2.7,md,33.0
+us,"16 km ESE of Buenaventura, Colombia",1991-10-06T00:30:53.790Z,3.823,-76.898,2.4,md,108.8
+us,"6 km SSW of Buenaventura, Colombia",1991-10-05T23:03:03.120Z,3.826,-77.042,3.0,md,33.0
+us,"5 km WNW of Caloto, Colombia",1991-10-04T20:45:50.090Z,3.055,-76.456,4.7,mb,151.5
+us,"28 km WSW of Cali, Colombia",1991-10-04T08:52:59.400Z,3.377,-76.771,3.3,md,33.0
+us,"11 km SE of Prado, Colombia",1991-10-04T04:02:45.730Z,3.685,-74.847,3.5,md,10.0
+us,"16 km SW of El Cairo, Colombia",1991-10-02T09:02:37.560Z,4.66,-76.33,3.8,md,110.0
+us,"5 km NNW of El Cairo, Colombia",1991-09-30T13:16:03.750Z,4.813,-76.235,3.4,md,110.0
+us,"13 km SW of Sipí, Colombia",1991-09-30T05:09:47.190Z,4.557,-76.724,3.7,md,33.0
+us,"33 km E of Santa Genoveva de Docordó, Colombia",1991-09-29T21:53:24.150Z,4.308,-77.066,3.0,md,33.0
+us,"13 km ENE of Buenaventura, Colombia",1991-09-28T01:32:07.050Z,3.939,-76.923,3.2,md,33.0
+us,"9 km SE of Buenaventura, Colombia",1991-09-27T07:39:33.820Z,3.821,-76.967,2.5,md,33.0
+us,"31 km E of Santa Genoveva de Docordó, Colombia",1991-09-25T22:39:02.280Z,4.299,-77.081,2.5,md,33.0
+us,"5 km S of Vijes, Colombia",1991-09-25T18:01:19.250Z,3.646,-76.452,2.2,md,10.0
+us,"5 km NNW of Guadalajara de Buga, Colombia",1991-09-25T04:15:38.460Z,3.945,-76.327,3.2,md,97.5
+us,"4 km NW of Toro, Colombia",1991-09-24T10:45:05.130Z,4.635,-76.109,2.8,md,100.0
+us,"8 km ENE of Ginebra, Colombia",1991-09-24T08:11:44.400Z,3.753,-76.195,3.2,md,54.5
+us,"10 km NE of Buenaventura, Colombia",1991-09-24T04:33:07.170Z,3.946,-76.963,2.6,md,33.0
+us,"3 km W of Argelia, Colombia",1991-09-23T19:23:49.380Z,4.717,-76.153,3.0,md,100.0
+us,"7 km NE of San Juan de Arama, Colombia",1991-09-23T15:40:49.830Z,3.419,-73.824,4.0,md,33.0
+us,"11 km SE of Guadalajara de Buga, Colombia",1991-09-23T12:38:30.140Z,3.83,-76.22,3.2,md,93.6
+us,"10 km WNW of Mesetas, Colombia",1991-09-23T08:28:21.360Z,3.43,-74.123,4.0,md,33.0
+us,"36 km N of Buenaventura, Colombia",1991-09-23T08:09:33.660Z,4.208,-76.967,2.7,md,33.0
+us,"26 km SW of Sipí, Colombia",1991-09-23T06:54:26.940Z,4.504,-76.827,3.5,md,87.9
+us,"32 km NNE of Buenaventura, Colombia",1991-09-23T02:06:50.180Z,4.168,-76.96,2.4,md,33.0
+us,"11 km E of San Pedro, Colombia",1991-09-22T19:31:47.880Z,3.994,-76.129,2.8,md,33.0
+us,"12 km ENE of Palmira, Colombia",1991-09-22T00:11:21.610Z,3.593,-76.201,2.7,md,110.0
+us,"0 km N of Bugalagrande, Colombia",1991-09-21T17:16:54.830Z,4.219,-76.156,3.4,md,33.0
+us,"16 km NNE of Buenaventura, Colombia",1991-09-21T06:30:02.330Z,3.722,-76.938,3.0,md,33.0
+us,"10 km S of Buenaventura, Colombia",1991-09-20T22:34:03.850Z,3.79,-77.023,4.1,md,31.6
+us,"4 km NE of Bolívar, Colombia",1991-09-20T10:59:45.700Z,4.372,-76.161,3.6,md,33.0
+us,"48 km NNE of Buenaventura, Colombia",1991-09-19T10:50:37.170Z,4.308,-76.928,3.5,md,33.0
+us,"39 km N of Buenaventura, Colombia",1991-09-19T05:00:34.180Z,4.233,-76.963,2.8,md,33.0
+us,"13 km N of Buenaventura, Colombia",1991-09-19T04:20:09.240Z,3.704,-77.022,2.5,md,90.0
+us,"13 km SSE of Buenaventura, Colombia",1991-09-19T00:09:19.250Z,3.775,-76.978,3.1,md,33.0
+us,"9 km SE of Buenaventura, Colombia",1991-09-18T10:30:10.820Z,3.808,-76.977,2.8,md,33.0
+us,"7 km NE of Darien, Colombia",1991-09-18T10:21:06.560Z,3.976,-76.436,3.0,md,110.0
+us,"23 km WSW of El Dovio, Colombia",1991-09-16T21:28:58.010Z,4.426,-76.436,3.0,md,110.0
+us,"15 km E of San Pedro, Colombia",1991-09-16T17:03:37.750Z,3.974,-76.091,2.7,md,33.0
+us,"3 km ESE of San José del Palmar, Colombia",1991-09-16T07:57:24.280Z,4.886,-76.204,3.1,md,100.0
+us,"26 km N of Buenaventura, Colombia",1991-09-16T03:31:12.010Z,4.12,-77.043,3.2,md,33.0
+us,"24 km WNW of La Argentina, Colombia",1991-09-16T00:52:36.730Z,2.309,-76.175,3.6,md,10.0
+us,"3 km WNW of Guadalajara de Buga, Colombia",1991-09-15T07:18:50.490Z,3.919,-76.325,2.9,md,100.0
+us,"5 km ENE of San José del Palmar, Colombia",1991-09-13T17:33:58.190Z,4.913,-76.191,3.1,md,110.0
+us,"13 km NNE of Buenaventura, Colombia",1991-09-08T08:18:04.220Z,3.7,-76.967,2.7,md,33.0
+us,"14 km NNW of Buenaventura, Colombia",1991-09-07T17:45:04.420Z,3.701,-77.048,2.6,md,33.0
+us,"10 km SSW of Sipí, Colombia",1991-09-06T14:52:27.310Z,4.573,-76.685,2.8,md,33.0
+us,"11 km E of Paispamba, Colombia",1991-09-06T08:11:38.180Z,2.265,-76.506,4.2,md,10.0
+us,"7 km SSW of La Unión, Colombia",1991-09-04T07:57:21.720Z,4.47,-76.118,2.7,md,33.0
+us,"13 km W of Bolívar, Colombia",1991-09-04T04:32:29.860Z,4.354,-76.302,4.6,md,10.0
+us,"6 km NNW of Yotoco, Colombia",1991-09-03T20:26:05.300Z,3.912,-76.414,2.4,md,33.0
+us,"4 km ESE of La Tebaida, Colombia",1991-09-03T01:56:10.030Z,4.441,-75.75,2.9,md,110.0
+us,"23 km NNW of Buenaventura, Colombia",1991-09-02T23:55:39.460Z,4.058,-77.144,2.7,md,33.0
+us,"10 km WNW of San Pedro, Colombia",1991-09-02T04:16:45.100Z,4.043,-76.306,2.7,md,110.0
+us,"11 km SE of Buenaventura, Colombia",1991-09-01T00:07:27.620Z,3.802,-76.964,2.6,md,33.0
+us,"21 km WNW of Rioblanco, Colombia",1991-08-31T22:39:52.310Z,3.616,-75.823,3.3,md,33.0
+us,"2 km SSE of Andalucía, Colombia",1991-08-31T12:45:37.090Z,4.145,-76.161,3.0,md,33.0
+us,"7 km ESE of Buenaventura, Colombia",1991-08-31T10:57:43.550Z,3.846,-76.975,2.5,md,33.0
+us,"9 km ESE of Guadalajara de Buga, Colombia",1991-08-31T07:59:47.670Z,3.874,-76.219,3.8,md,114.4
+us,"30 km ESE of Santa Genoveva de Docordó, Colombia",1991-08-31T07:22:27.590Z,4.16,-77.105,3.7,md,33.0
+us,"4 km E of Guadalajara de Buga, Colombia",1991-08-31T05:12:47.240Z,3.898,-76.261,3.9,md,98.7
+us,"8 km NE of Buenaventura, Colombia",1991-08-30T22:47:29.010Z,3.941,-76.986,2.4,md,33.0
+us,"17 km SE of Buenaventura, Colombia",1991-08-27T22:05:48.250Z,3.755,-76.942,2.5,md,33.0
+us,"36 km WNW of Darien, Colombia",1991-08-27T13:07:45.220Z,4.098,-76.772,2.3,md,33.0
+us,"14 km ESE of Guadalajara de Buga, Colombia",1991-08-27T01:10:35.130Z,3.83,-76.19,2.6,md,96.5
+us,"45 km NNE of Buenaventura, Colombia",1991-08-26T12:41:09.420Z,4.272,-76.918,2.9,md,33.0
+us,"13 km SE of Buenaventura, Colombia",1991-08-26T10:44:28.380Z,3.794,-76.941,2.6,md,33.0
+us,"1 km WNW of Bolívar, Colombia",1991-08-25T21:58:57.890Z,4.342,-76.195,2.8,md,33.0
+us,"29 km SSE of Santa Genoveva de Docordó, Colombia",1991-08-25T16:33:54.460Z,4.007,-77.27,2.5,md,33.0
+us,"15 km SW of El Dovio, Colombia",1991-08-24T17:08:07.990Z,4.4,-76.323,2.6,md,33.0
+us,"10 km WNW of Rioblanco, Colombia",1991-08-24T04:51:01.600Z,3.558,-75.731,2.8,md,33.0
+us,"5 km NNW of Yumbo, Colombia",1991-08-23T17:59:05.080Z,3.631,-76.502,2.3,md,33.0
+us,"5 km ENE of Tuluá, Colombia",1991-08-23T16:26:18.720Z,4.099,-76.147,2.7,md,33.0
+us,"8 km S of Buenaventura, Colombia",1991-08-20T06:23:41.340Z,3.808,-77.023,3.2,md,32.2
+us,"32 km N of Buenaventura, Colombia",1991-08-17T07:18:14.670Z,4.17,-77.011,2.6,md,33.0
+us,"8 km WSW of Roncesvalles, Colombia",1991-08-14T07:41:43.620Z,3.968,-75.67,3.4,md,31.7
+us,"2 km SE of Nátaga, Colombia",1991-08-10T00:49:55.630Z,2.525,-75.791,3.4,md,10.0
+us,"12 km SSE of San Pedro, Colombia",1991-08-05T21:00:22.370Z,3.892,-76.184,3.3,md,88.3
+us,"7 km WSW of Vijes, Colombia",1991-08-02T19:53:04.660Z,3.665,-76.501,2.5,md,20.9
+us,"19 km SW of Inzá, Colombia",1991-08-02T11:06:16.700Z,2.434,-76.201,2.8,md,10.0
+us,"7 km NW of San Pedro, Colombia",1991-08-01T14:51:58.020Z,4.033,-76.283,2.6,md,10.0
+us,"4 km E of Guamal, Colombia",1991-03-25T18:36:18.460Z,3.882,-73.729,3.4,mb,102.6
+us,"2 km N of Quimbaya, Colombia",1991-03-19T10:56:17.180Z,4.643,-75.759,4.8,mb,151.6
+us,"6 km SW of Sipí, Colombia",1991-03-10T12:28:27.040Z,4.613,-76.685,5.0,mb,90.0
+us,"11 km SW of Cartago, Colombia",1991-02-14T07:56:41.430Z,4.683,-75.997,4.5,mb,111.5
+us,"13 km NNW of San José del Palmar, Colombia",1991-02-14T07:34:59.990Z,5.015,-76.266,4.8,mb,103.8
+us,"19 km SW of Sipí, Colombia",1991-01-31T04:53:42.080Z,4.543,-76.78,2.7,md,33.0
+us,"6 km N of San José del Palmar, Colombia",1991-01-31T00:05:09.190Z,4.951,-76.242,3.2,md,110.0
+us,"7 km SW of Yumbo, Colombia",1991-01-29T22:03:37.030Z,3.524,-76.533,2.4,md,10.0
+us,"1 km WSW of El Dovio, Colombia",1991-01-29T05:17:52.560Z,4.505,-76.248,2.7,md,110.0
+us,"6 km NNW of Guadalajara de Buga, Colombia",1991-01-28T21:56:42.470Z,3.953,-76.321,2.5,md,110.0
+us,"15 km S of Totoró, Colombia",1991-01-28T15:59:52.960Z,2.37,-76.396,2.7,md,10.0
+us,"26 km SW of Buenaventura, Colombia",1991-01-28T05:32:32.740Z,3.731,-77.213,2.5,md,33.0
+us,"18 km NNW of Neiva, Colombia",1991-01-27T14:25:11.180Z,3.077,-75.365,3.6,md,33.0
+us,"6 km SE of Buenos Aires, Colombia",1991-01-26T17:34:54.810Z,2.969,-76.607,3.1,md,110.0
+us,"9 km W of La Celia, Colombia",1991-01-26T07:15:13.280Z,5.01,-76.092,3.1,md,110.0
+us,"14 km W of Sipí, Colombia",1991-01-25T19:24:24.780Z,4.665,-76.778,2.6,md,33.0
+us,"20 km ESE of Tuluá, Colombia",1991-01-25T17:39:14.140Z,4.033,-76.021,2.8,md,55.8
+us,"8 km NE of Argelia, Colombia",1991-01-25T00:09:55.820Z,4.784,-76.077,2.9,md,90.0
+us,"5 km NNW of Toro, Colombia",1991-01-24T21:33:17.250Z,4.661,-76.099,2.8,md,110.0
+us,"23 km SSE of Santa Genoveva de Docordó, Colombia",1991-01-24T09:45:14.740Z,4.053,-77.314,2.9,md,33.0
+us,Colombia,1991-01-24T07:54:09.750Z,3.23,-76.57,3.0,md,48.3
+us,"33 km S of Sipí, Colombia",1991-01-24T03:52:02.240Z,4.351,-76.641,3.0,md,62.5
+us,"14 km NNW of Dagua, Colombia",1991-01-23T17:58:59.620Z,3.785,-76.722,3.0,md,38.7
+us,"4 km NE of El Cairo, Colombia",1991-01-23T16:35:34.850Z,4.785,-76.19,3.7,md,110.0
+us,"43 km E of Santa Genoveva de Docordó, Colombia",1991-01-23T02:27:31.730Z,4.315,-76.976,2.6,md,33.0
+us,"5 km S of El Cairo, Colombia",1991-01-23T01:05:06.730Z,4.712,-76.23,4.9,mb,117.3
+us,"6 km NNW of Palmira, Colombia",1991-01-22T06:24:19.860Z,3.593,-76.326,2.4,md,28.7
+us,"21 km SE of Buenaventura, Colombia",1991-01-22T01:02:03.280Z,3.761,-76.875,2.4,md,33.0
+us,"40 km SE of Baraya, Colombia",1991-01-21T14:56:14.640Z,2.891,-74.797,3.7,md,33.0
+us,"29 km W of Jamundí, Colombia",1991-01-21T06:29:40.390Z,3.267,-76.799,2.8,md,18.8
+us,"2 km SSE of Buenaventura, Colombia",1991-01-21T03:24:43.870Z,3.86,-77.021,2.9,md,33.0
+us,"9 km SW of El Águila, Colombia",1991-01-19T21:19:41.510Z,4.844,-76.094,2.9,md,90.0
+us,"5 km NNW of Argelia, Colombia",1991-01-19T03:08:07.230Z,4.764,-76.146,3.3,md,110.0
+us,"46 km ENE of Timbiquí, Colombia",1991-01-18T14:45:18.700Z,2.88,-77.261,2.9,md,33.0
+us,"8 km NNW of Buenaventura, Colombia",1991-01-18T13:20:22.880Z,3.655,-77.036,2.5,md,76.9
+us,Colombia,1991-01-18T08:47:33.380Z,2.551,-74.246,3.7,md,33.0
+us,"20 km WNW of San José del Palmar, Colombia",1991-01-18T06:43:34.300Z,4.985,-76.393,1.9,md,110.0
+us,"29 km WSW of Sipí, Colombia",1991-01-18T01:14:36.400Z,4.57,-76.899,2.4,md,33.0
+us,"9 km SW of El Dovio, Colombia",1991-01-17T13:55:52.350Z,4.443,-76.29,3.3,md,110.0
+us,"2 km N of San Pedro, Colombia",1991-01-17T01:25:59.560Z,4.017,-76.226,2.7,md,30.0
+us,"28 km W of Trujillo, Colombia",1991-01-17T01:17:31.000Z,4.2,-76.58,3.3,md,110.0
+us,"14 km SSE of Totoró, Colombia",1991-01-15T15:38:30.030Z,2.387,-76.36,3.4,md,10.0
+us,"8 km N of Jambaló, Colombia",1991-01-15T01:19:00.860Z,2.853,-76.311,2.6,md,10.0
+us,"34 km NNE of Buenaventura, Colombia",1991-01-14T23:44:37.690Z,4.166,-76.912,2.8,md,33.0
+us,"17 km W of Rioblanco, Colombia",1991-01-14T15:53:14.900Z,3.546,-75.802,3.1,md,33.0
+us,"5 km NNE of San José del Palmar, Colombia",1991-01-13T20:18:21.380Z,4.946,-76.216,3.5,md,110.0
+us,"41 km NNE of Buenaventura, Colombia",1991-01-13T17:36:19.170Z,4.214,-76.869,2.6,md,33.0
+us,"3 km ENE of Caicedonia, Colombia",1991-01-13T11:31:15.510Z,4.346,-75.795,4.5,md,120.0
+us,"31 km WNW of Darien, Colombia",1991-01-13T00:13:25.580Z,4.031,-76.753,2.8,md,80.6
+us,"12 km NE of Dagua, Colombia",1991-01-12T14:14:13.270Z,3.75,-76.619,3.1,md,33.0
+us,"9 km N of Agrado, Colombia",1991-01-11T22:36:14.070Z,2.342,-75.76,3.5,md,33.0
+us,"8 km S of Yumbo, Colombia",1991-01-11T22:16:02.340Z,3.51,-76.478,2.3,md,5.0
+us,"7 km SW of Riofrío, Colombia",1991-01-11T09:08:48.650Z,4.106,-76.329,2.2,md,33.0
+us,"10 km N of Argelia, Colombia",1991-01-11T08:26:47.740Z,4.818,-76.131,3.5,md,110.0
+us,"8 km SW of Restrepo, Colombia",1991-01-10T22:59:39.140Z,3.765,-76.579,2.9,md,33.0
+us,"26 km SE of Sipí, Colombia",1991-01-10T19:05:53.420Z,4.467,-76.489,2.9,md,33.0
+us,"9 km SE of Guadalajara de Buga, Colombia",1991-01-10T10:20:51.040Z,3.847,-76.235,3.1,md,94.4
+us,"11 km NW of El Dovio, Colombia",1991-01-10T02:18:52.860Z,4.575,-76.31,3.8,md,118.0
+us,"4 km WSW of San Pedro, Colombia",1991-01-09T18:23:06.130Z,3.976,-76.26,3.5,md,94.6
+us,"8 km SE of Algeciras, Colombia",1991-01-09T16:59:43.440Z,2.469,-75.268,3.7,md,33.0
+us,"36 km SE of Baraya, Colombia",1991-01-09T11:23:11.640Z,2.942,-74.803,4.0,md,33.0
+us,"21 km N of Isnos, Colombia",1991-01-09T00:07:10.980Z,2.13,-76.221,3.4,md,10.0
+us,"11 km NNE of Buenaventura, Colombia",1991-01-08T23:43:35.070Z,3.685,-76.969,3.4,md,33.0
+us,"13 km NW of Buenos Aires, Colombia",1991-01-08T20:16:35.810Z,3.102,-76.725,2.7,md,10.0
+us,"23 km E of Rivera, Colombia",1991-01-08T15:41:52.150Z,2.804,-75.044,3.4,md,33.0
+us,"25 km WSW of Sipí, Colombia",1991-01-07T11:07:40.480Z,4.604,-76.869,2.4,md,33.0
+us,"6 km NNE of San José del Palmar, Colombia",1991-01-07T09:45:28.750Z,4.951,-76.21,3.1,md,100.0
+us,"7 km WNW of Trujillo, Colombia",1991-01-06T17:40:28.870Z,4.234,-76.38,3.3,md,89.5
+us,"7 km NW of Palmira, Colombia",1991-01-06T16:10:11.770Z,3.593,-76.351,2.1,md,10.0
+us,"4 km SW of Buenaventura, Colombia",1991-01-06T05:50:15.080Z,3.855,-77.067,2.8,md,33.0
+us,Colombia,1991-01-05T21:53:59.040Z,4.439,-76.728,2.6,md,33.0
+us,"10 km N of Villa Rica, Colombia",1991-01-05T20:59:32.120Z,2.61,-76.857,3.7,md,10.0
+us,"22 km SSE of Totoró, Colombia",1991-01-05T16:53:18.990Z,2.328,-76.309,3.1,md,10.0
+us,"14 km SSW of Coyaima, Colombia",1991-01-04T22:47:58.740Z,3.674,-75.233,3.8,md,33.0
+us,"4 km E of Andalucía, Colombia",1991-01-04T12:29:34.850Z,4.171,-76.13,3.4,md,33.0
+us,"5 km NNE of Toro, Colombia",1991-01-03T20:12:36.470Z,4.652,-76.055,3.8,md,110.0
+us,"18 km NNE of Buenaventura, Colombia",1991-01-03T17:47:01.160Z,3.732,-76.917,2.8,md,33.0
+us,"42 km NNE of Buenaventura, Colombia",1991-01-03T05:13:44.920Z,4.22,-76.845,2.4,md,33.0
+us,"21 km ESE of San Pedro, Colombia",1991-01-03T02:39:10.840Z,3.915,-76.056,2.6,md,33.0
+us,"15 km NNE of La Cumbre, Colombia",1991-01-02T21:17:39.030Z,3.84,-75.951,2.7,md,10.0
+us,"12 km WNW of San Pedro, Colombia",1991-01-02T19:49:13.190Z,4.039,-76.336,2.8,md,110.0
+us,"10 km SSW of Génova, Colombia",1991-01-02T17:21:07.220Z,4.233,-75.808,4.2,md,10.0
+us,"38 km N of Buenaventura, Colombia",1991-01-02T14:38:00.770Z,4.228,-77.01,3.1,md,33.0
+us,"36 km SE of Baraya, Colombia",1991-01-02T01:42:30.790Z,2.889,-74.863,3.7,md,33.0
+us,"7 km SSW of Bolívar, Colombia",1991-01-02T01:27:05.340Z,4.278,-76.205,3.1,md,33.0
+us,"7 km NW of Palmira, Colombia",1991-01-01T23:21:03.570Z,3.588,-76.354,2.6,md,10.0
+us,"22 km WSW of El Dovio, Colombia",1991-01-01T23:19:20.050Z,4.417,-76.416,3.5,md,97.4
+us,"60 km SW of Buenaventura, Colombia",1990-12-29T01:55:13.700Z,3.272,-77.443,4.5,mb,89.9
+us,"7 km N of Salento, Colombia",1990-11-23T22:35:34.710Z,4.707,-75.574,6.1,mw,144.6
+us,"12 km SSW of Aipe, Colombia",1990-10-23T09:13:04.240Z,3.12,-75.282,4.2,mb,33.0
+us,"13 km WNW of Cubarral, Colombia",1990-09-10T05:25:21.420Z,3.853,-73.945,4.4,mb,31.3
+us,"20 km SE of Guadalupe, Colombia",1990-07-04T13:21:54.280Z,1.91,-75.613,3.7,mb,33.0
+us,"4 km S of Guadalajara de Buga, Colombia",1990-04-13T15:25:04.170Z,3.858,-76.298,4.6,mb,164.1
+us,"24 km SSE of Vistahermosa, Colombia",1989-10-11T14:42:09.370Z,2.94,-73.635,5.0,mb,32.9
+us,"17 km NNW of La Cumbre, Colombia",1989-08-31T16:02:10.250Z,3.879,-76.059,4.6,mb,130.7
+us,"33 km WNW of Trujillo, Colombia",1989-08-26T02:59:54.080Z,4.295,-76.61,4.6,mb,113.8
+us,"3 km WNW of La Victoria, Colombia",1989-06-28T15:16:18.410Z,4.535,-76.066,4.7,mb,129.4
+us,"3 km SSW of Padilla, Colombia",1989-05-05T08:11:38.900Z,3.189,-76.331,3.2,mb,10.4
+us,"1 km SE of San José, Colombia",1988-12-31T20:58:31.090Z,5.074,-75.78,4.8,mb,118.4
+us,"15 km NE of Chaparral, Colombia",1988-11-10T15:42:20.520Z,3.807,-75.375,4.2,mb,33.0
+us,"27 km NE of Timbiquí, Colombia",1988-10-30T00:48:49.530Z,2.976,-77.521,4.4,mb,91.1
+us,"12 km W of Buenaventura, Colombia",1988-03-27T09:09:34.690Z,3.868,-77.145,4.8,mb,71.7
+us,"5 km NNE of Choachí, Colombia",1988-03-23T05:31:47.620Z,4.57,-73.903,3.9,mb,33.0
+us,"10 km E of Villavicencio, Colombia",1988-03-20T04:08:48.760Z,4.135,-73.533,4.7,ms,10.0
+us,"7 km NNE of El Calvario, Colombia",1988-03-20T04:08:25.830Z,4.412,-73.673,5.0,ms,10.0
+us,"3 km N of El Calvario, Colombia",1988-02-20T22:51:12.670Z,4.387,-73.708,5.0,mb,26.0
+us,"17 km WNW of Dagua, Colombia",1988-01-30T17:29:56.160Z,3.691,-76.841,2.5,md,33.0
+us,"11 km WSW of Candelaria, Colombia",1988-01-30T10:13:20.740Z,3.365,-76.443,2.4,md,33.0
+us,"11 km SE of Buenaventura, Colombia",1988-01-30T08:47:09.980Z,3.802,-76.959,2.7,md,33.0
+us,"5 km WNW of Tuluá, Colombia",1988-01-29T23:54:54.800Z,4.096,-76.248,3.0,md,33.0
+us,"2 km WNW of Yumbo, Colombia",1988-01-28T18:32:47.110Z,3.593,-76.508,2.3,md,33.0
+us,"15 km NNE of La Cumbre, Colombia",1988-01-26T14:42:14.140Z,3.844,-75.96,2.6,md,33.0
+us,"17 km NNW of Buenaventura, Colombia",1988-01-25T16:27:35.080Z,3.717,-77.082,2.6,md,33.0
+us,"16 km WNW of Rioblanco, Colombia",1988-01-25T02:08:33.600Z,3.567,-75.786,3.2,md,10.0
+us,"4 km NNW of Santa María, Colombia",1988-01-23T15:10:47.130Z,2.983,-75.671,3.5,md,10.0
+us,"9 km NNE of Caloto, Colombia",1988-01-22T23:32:56.980Z,3.108,-76.365,2.8,md,103.0
+us,"31 km SSE of Buenaventura, Colombia",1988-01-20T05:22:30.800Z,3.307,-76.917,2.5,md,33.0
+us,"4 km W of Morales, Colombia",1988-01-20T01:48:14.210Z,2.754,-76.667,3.1,ml,33.0
+us,"17 km SSW of Roncesvalles, Colombia",1988-01-19T19:49:31.730Z,3.869,-75.683,3.2,md,33.0
+us,"16 km ESE of Guadalajara de Buga, Colombia",1988-01-19T11:38:06.940Z,3.84,-76.167,3.2,md,33.0
+us,"25 km NW of Darien, Colombia",1988-01-17T04:22:48.200Z,4.114,-76.623,3.9,md,33.0
+us,"19 km SE of Buenaventura, Colombia",1988-01-15T16:41:52.390Z,3.741,-76.93,3.4,ml,33.0
+us,"19 km E of Rivera, Colombia",1988-01-14T04:48:42.580Z,2.747,-75.084,3.7,md,33.0
+us,"15 km SSE of Buenaventura, Colombia",1988-01-10T18:30:16.870Z,3.744,-76.988,3.9,md,33.0
+us,"25 km W of Buenaventura, Colombia",1988-01-05T15:25:15.370Z,3.867,-77.258,3.2,md,33.0
+us,"4 km N of Puerto Tejada, Colombia",1988-01-04T09:55:19.660Z,3.27,-76.414,3.3,md,33.0
+us,"11 km WSW of Candelaria, Colombia",1988-01-03T14:33:10.350Z,3.365,-76.441,2.6,md,33.0
+us,"15 km WSW of Suárez, Colombia",1988-01-03T14:13:37.720Z,2.917,-76.833,2.7,md,10.0
+us,"21 km NW of Darien, Colombia",1988-01-03T08:06:26.050Z,4.042,-76.639,2.2,md,33.0
+us,"49 km W of Buenaventura, Colombia",1987-04-21T21:31:20.830Z,3.625,-77.443,4.7,mb,53.8
+us,"3 km SSW of San Pedro, Colombia",1987-03-20T09:15:30.330Z,3.964,-76.243,4.0,mb,126.2
+us,"1 km E of El Cairo, Colombia",1987-01-07T17:16:25.390Z,4.762,-76.21,4.6,mb,107.3
+us,"27 km ESE of Santa Genoveva de Docordó, Colombia",1986-08-23T05:14:43.240Z,4.148,-77.144,4.2,mb,112.1
+us,"10 km WNW of Caicedonia, Colombia",1986-07-22T19:53:52.540Z,4.365,-75.919,4.7,mb,169.8
+us,"3 km SSW of Versalles, Colombia",1986-04-09T08:21:44.190Z,4.547,-76.207,4.9,mb,142.7
+us,"3 km SSE of Circasia, Colombia",1986-03-29T09:48:55.000Z,4.59,-75.626,5.0,mb,158.1
+us,"7 km SSE of Yumbo, Colombia",1986-03-27T06:05:33.210Z,3.521,-76.454,4.6,mb,145.9
+us,"12 km ESE of San Pedro, Colombia",1986-03-27T04:04:55.020Z,3.934,-76.138,4.3,mb,137.8
+us,"6 km SE of San Sebastián de Mariquita, Colombia",1985-12-18T22:36:26.250Z,5.158,-74.848,5.0,mb,11.1
+us,"11 km S of Prado, Colombia",1985-11-20T07:11:57.050Z,3.65,-74.925,4.7,mb,33.0
+us,"19 km WNW of La Celia, Colombia",1985-11-05T22:58:02.980Z,5.065,-76.165,4.9,mb,107.7
+us,"28 km NE of Buenaventura, Colombia",1985-09-18T03:59:09.140Z,4.036,-76.83,4.9,mb,102.3
+us,Colombia,1985-06-03T07:06:18.780Z,4.91,-75.876,5.0,mb,135.0
+us,"5 km SE of Belén, Colombia",1985-04-10T20:15:36.610Z,1.56,-77.017,5.2,mw,10.0
+us,"26 km W of Trujillo, Colombia",1985-02-25T02:56:52.550Z,4.207,-76.562,4.5,mb,81.5
+us,"3 km ESE of Saladoblanco, Colombia",1984-11-13T14:03:15.850Z,1.978,-76.011,5.1,mb,16.5
+us,"46 km SSW of Sipí, Colombia",1984-11-08T07:47:01.020Z,4.26,-76.801,4.6,mb,63.3
+us,"5 km SW of Toribío, Colombia",1984-10-26T16:12:47.180Z,2.922,-76.304,4.5,mb,162.6
+us,"20 km WSW of Sipí, Colombia",1984-10-08T15:33:03.460Z,4.575,-76.811,4.4,mb,46.3
+us,"31 km ESE of Milán, Colombia",1984-09-17T07:36:34.810Z,1.17,-75.253,4.3,mb,33.0
+us,"16 km E of Sipí, Colombia",1984-07-24T17:20:36.250Z,4.635,-76.498,3.6,mb,139.6
+us,"16 km SE of Buenaventura, Colombia",1984-07-11T17:22:26.150Z,3.788,-76.92,5.1,mb,64.0
+us,"2 km SSW of Cali, Colombia",1984-01-25T18:46:25.440Z,3.417,-76.53,5.0,mb,65.9
+us,"37 km NE of Buenaventura, Colombia",1983-04-10T02:01:09.430Z,4.099,-76.778,4.6,mb,72.4
+us,"8 km WNW of Popayán, Colombia",1983-03-31T13:12:52.640Z,2.461,-76.686,5.5,mb,22.2
+us,"13 km WNW of El Cairo, Colombia",1982-12-05T03:18:27.340Z,4.802,-76.338,5.0,mb,113.2
+us,"13 km NE of El Calvario, Colombia",1982-07-12T13:35:41.800Z,4.446,-73.63,4.7,mb,16.1
+us,"16 km S of Algeciras, Colombia",1982-05-14T01:18:47.960Z,2.373,-75.311,4.7,mb,62.7
+us,"4 km NW of Mesetas, Colombia",1982-03-08T04:16:32.730Z,3.408,-74.074,4.3,mb,33.0
+us,"5 km NNE of Yotoco, Colombia",1982-02-13T01:09:22.160Z,3.905,-76.365,4.4,mb,150.5
+us,"26 km SE of Santa Genoveva de Docordó, Colombia",1982-01-13T16:36:07.690Z,4.06,-77.227,4.4,mb,80.0
+us,"4 km NW of Yotoco, Colombia",1981-08-05T12:58:27.460Z,3.895,-76.409,5.0,mb,58.4
+us,"9 km N of Balboa, Colombia",1981-07-23T02:52:16.610Z,2.126,-77.215,4.6,mb,97.7
+us,"14 km N of Belén de los Andaquíes, Colombia",1981-05-22T08:26:14.440Z,1.548,-75.893,4.2,mb,42.5
+us,"9 km WSW of San José del Palmar, Colombia",1981-05-20T03:01:47.840Z,4.877,-76.322,4.6,mb,119.1
+us,"13 km E of Buenaventura, Colombia",1981-05-13T04:38:25.330Z,3.869,-76.908,4.7,mb,71.6
+us,"11 km E of San Pedro, Colombia",1980-11-17T01:24:56.000Z,3.994,-76.122,4.0,mb,122.0
+us,"9 km SW of Bolívar, Colombia",1980-07-07T16:48:44.500Z,4.274,-76.238,4.9,mb,144.0
+us,"1 km SSE of La Tebaida, Colombia",1980-06-25T12:04:56.900Z,4.437,-75.779,5.7,mb,162.0
+us,"7 km S of San Martín, Colombia",1980-06-20T01:05:15.800Z,3.633,-73.702,4.4,mb,65.0
+us,"9 km SSE of San Martín, Colombia",1980-06-19T23:05:34.900Z,3.626,-73.657,4.3,mb,55.0
+us,"6 km N of Guayabetal, Colombia",1980-06-16T12:06:23.700Z,4.269,-73.825,4.4,mb,49.0
+us,"31 km NNW of Lejanías, Colombia",1980-02-12T08:18:50.100Z,3.781,-74.146,4.6,mb,45.0
+us,"4 km N of El Cairo, Colombia",1979-11-23T23:40:29.800Z,4.805,-76.217,6.4,mb,108.0
+us,"5 km W of Jerusalén, Colombia",1979-11-21T18:49:54.700Z,4.558,-74.743,4.6,mb,33.0
+us,"19 km SE of Pijao, Colombia",1979-09-11T14:02:57.800Z,4.235,-75.559,4.8,mb,38.0
+us,Colombia,1979-09-06T03:57:53.600Z,4.509,-75.881,5.0,mb,165.0
+us,"12 km WNW of Trujillo, Colombia",1979-09-02T02:00:11.800Z,4.27,-76.412,4.7,mb,95.0
+us,"22 km SE of Garzón, Colombia",1979-08-24T17:55:39.600Z,2.078,-75.459,4.3,mb,36.0
+us,"5 km WSW of Alcalá, Colombia",1979-05-16T12:43:03.800Z,4.653,-75.828,4.8,mb,164.0
+us,"23 km N of La Cumbre, Colombia",1979-03-27T09:09:16.900Z,3.934,-76.026,4.4,mb,127.0
+us,"5 km NE of La Argentina, Colombia",1979-01-06T12:50:51.100Z,2.236,-75.942,4.9,mb,36.0
+us,"38 km ESE of Timbiquí, Colombia",1978-08-12T08:25:26.600Z,2.626,-77.347,4.2,mb,111.0
+us,"26 km SE of Fuente de Oro, Colombia",1978-01-10T20:08:33.800Z,3.301,-73.441,5.1,mb,44.0
+us,"9 km NNE of Caldono, Colombia",1977-04-09T13:41:13.400Z,2.88,-76.457,4.3,mb,127.0
+us,"36 km SE of Tres Esquinas, Colombia",1977-03-16T16:29:00.700Z,3.62,-74.493,4.3,mb,135.0
+us,"8 km ESE of Timaná, Colombia",1977-02-12T11:44:25.400Z,1.947,-75.863,4.5,mb,47.0
+us,"18 km SSW of Anaime, Colombia",1976-11-25T14:59:35.700Z,4.249,-75.528,4.8,mb,197.0
+us,"36 km S of Buenaventura, Colombia",1976-10-12T23:49:34.800Z,3.254,-76.972,4.8,mb,90.0
+us,"38 km WNW of Suárez, Colombia",1976-08-26T18:26:49.300Z,3.106,-77.005,3.8,mb,181.0
+us,"2 km SW of Balboa, Colombia",1976-08-03T02:19:22.600Z,4.935,-75.975,4.9,mb,123.0
+us,"10 km WSW of Palmira, Colombia",1976-07-06T06:48:54.600Z,3.498,-76.388,4.5,mb,132.0
+us,"1 km NNE of La Tebaida, Colombia",1976-05-19T04:07:15.800Z,4.464,-75.783,5.9,mb,157.0
+us,"12 km WNW of Neira, Colombia",1976-04-30T17:35:12.000Z,5.192,-75.63,4.7,mb,71.0
+us,"12 km WNW of Playarrica, Colombia",1976-04-27T04:57:49.900Z,4.11,-75.511,3.9,mb,52.0
+us,"4 km NNE of Obando, Colombia",1975-04-21T08:48:53.700Z,4.616,-75.959,4.6,mb,150.0
+us,"6 km W of Pereira, Colombia",1975-04-13T01:53:30.700Z,4.813,-75.757,5.2,mb,144.0
+us,"8 km ESE of Palermo, Colombia",1975-03-31T01:42:32.300Z,2.852,-75.367,4.0,mb,83.0
+us,"2 km W of Rivera, Colombia",1974-12-08T14:54:34.600Z,2.774,-75.283,4.6,mb,86.0
+us,"19 km S of Génova, Colombia",1974-10-19T07:54:53.500Z,4.138,-75.758,4.4,mb,75.0
+us,"14 km SSW of Buenaventura, Colombia",1974-10-03T06:00:44.300Z,3.755,-77.069,3.5,mb,82.0
+us,"47 km SSW of Sipí, Colombia",1974-08-24T02:47:30.100Z,4.28,-76.855,5.9,mb,84.0
+us,"6 km NNE of Tesalia, Colombia",1974-07-27T01:31:58.000Z,2.542,-75.718,4.5,mb,240.0
+us,"1 km S of Tenjo, Colombia",1974-07-25T18:24:21.200Z,4.861,-74.144,4.2,mb,33.0
+us,"7 km W of Choachí, Colombia",1974-07-07T01:53:01.800Z,4.54,-73.986,4.4,mb,71.0
+us,"4 km NW of Argelia, Colombia",1974-04-29T22:20:52.200Z,4.752,-76.148,5.1,mb,87.0
+us,"20 km E of Cabrera, Colombia",1974-02-21T12:43:48.700Z,3.977,-74.302,4.9,mb,66.0
+us,"15 km ESE of Corinto, Colombia",1974-02-03T20:16:25.500Z,3.103,-76.142,4.3,mb,176.0
+us,"10 km SW of Mesetas, Colombia",1973-12-11T00:41:53.600Z,3.326,-74.12,3.9,mb,157.0
+us,"29 km SE of Baraya, Colombia",1973-10-18T09:18:32.600Z,2.968,-74.86,5.2,mb,42.0
+us,"5 km W of Risaralda, Colombia",1973-04-24T18:42:31.900Z,5.162,-75.813,5.5,mb,118.0
+us,"18 km WSW of San José del Palmar, Colombia",1973-04-13T12:05:27.700Z,4.819,-76.38,4.8,mb,121.0
+us,"3 km ENE of Filandia, Colombia",1973-04-03T13:54:01.800Z,4.691,-75.628,6.2,mb,158.0
+us,"6 km ENE of Toro, Colombia",1973-02-09T09:53:18.500Z,4.631,-76.028,5.0,mb,84.0
+iscgem,Colombia,1972-11-22T10:44:57.440Z,2.44,-75.362,5.31,mw,15.0
+iscgem,"27 km SE of Tello, Colombia",1968-01-28T01:50:47.330Z,2.916,-74.943,5.19,mw,51.5
+iscgem,"19 km ESE of Baraya, Colombia",1967-11-05T14:23:53.890Z,3.075,-74.895,5.2,mw,23.9
+iscgem,"38 km SE of Baraya, Colombia",1967-02-27T02:06:41.280Z,2.946,-74.77,5.25,mw,36.1
+iscgem,"41 km SE of Baraya, Colombia",1967-02-09T15:24:46.750Z,2.906,-74.772,7.0,mw,35.0
+iscgem,"28 km WNW of Lejanías, Colombia",1966-10-18T18:43:36.110Z,3.596,-74.274,5.14,mw,35.0
+iscgem,"7 km SE of Barrio San Luis, Colombia",1966-09-04T22:14:52.980Z,4.617,-73.981,5.31,mw,15.0
+iscgem,"8 km NW of Dagua, Colombia",1957-05-24T02:37:50.370Z,3.7,-76.752,6.12,mw,52.3
+iscgem,"2 km S of Tocaima, Colombia",1942-05-22T10:30:43.540Z,4.437,-74.636,5.98,mw,15.0
+iscgem,"12 km WNW of Santuario, Colombia",1935-09-18T04:57:55.780Z,5.099,-76.078,6.07,mw,15.0
+iscgem,"47 km NNE of Timbiquí, Colombia",1920-01-30T18:26:47.290Z,3.156,-77.469,6.35,mw,35.0
+iscgem,"5 km SE of Castilla La Nueva, Colombia",1917-08-31T11:36:24.560Z,3.792,-73.649,7.05,mw,15.0
+iscgem,"8 km SSW of Cubarral, Colombia",1917-08-30T03:24:19.570Z,3.725,-73.866,6.43,mw,15.0

@@ -81,7 +81,9 @@ def ajustar_gr(magnitudes):
 def graficar(radio, metodo):
     df, magnitudes = cargar_magnitudes(radio, metodo)
     archivo_replicas = DATOS / f"SISMO NEIVA-CONSOLIDADO-{radio}-REPLICAS-{metodo}.csv"
-    n_replicas = len(pd.read_csv(archivo_replicas, encoding="utf-8-sig"))
+    excluidos = pd.read_csv(archivo_replicas, encoding="utf-8-sig")
+    clasificacion = f"{metodo.lower()}_clasificacion"
+    n_replicas = excluidos[clasificacion].isin(["replica", "precursor"]).sum()
     ajuste = ajustar_gr(magnitudes)
     nombre_metodo = NOMBRES_METODOS.get(metodo, metodo)
     figura, ejes = plt.subplots(1, 2, figsize=(13, 5.5))

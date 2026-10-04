@@ -1,0 +1,21 @@
+agencia,lugar,hora,latitud,longitud,magnitud,tipo_magnitud,profundidad
+us,"3 km E of Tello, Colombia",2025-12-21T14:05:26.416Z,3.0699,-75.1055,4.4,mb,10.0
+us,"11 km SE of Santa María, Colombia",2019-01-29T06:10:56.080Z,2.8793,-75.5748,4.3,mb,27.74
+us,"12 km S of Planadas, Colombia",2019-01-28T21:07:09.960Z,3.0835,-75.6461,5.5,mww,13.06
+us,"3 km ESE of Santa María, Colombia",2018-07-07T00:19:52.490Z,2.9425,-75.621,4.5,mb,65.81
+us,"38 km E of Rivera, Colombia",2017-11-11T14:45:22.240Z,2.7641,-74.9148,4.7,mb,46.1
+us,"6 km E of Íquira, Colombia",2016-12-23T03:43:51.310Z,2.6595,-75.5794,4.4,mb,10.0
+us,"27 km SSE of Tello, Colombia",2003-08-12T05:37:06.630Z,2.855,-75.011,4.4,mb,60.2
+us,"4 km N of Rivera, Colombia",1991-10-27T13:55:12.960Z,2.814,-75.255,3.7,md,60.0
+us,"25 km ESE of Rivera, Colombia",1991-10-10T08:29:08.250Z,2.73,-75.031,3.9,md,10.0
+us,"18 km NNW of Neiva, Colombia",1991-01-27T14:25:11.180Z,3.077,-75.365,3.6,md,33.0
+us,"23 km E of Rivera, Colombia",1991-01-08T15:41:52.150Z,2.804,-75.044,3.4,md,33.0
+us,"36 km SE of Baraya, Colombia",1991-01-02T01:42:30.790Z,2.889,-74.863,3.7,md,33.0
+us,"12 km SSW of Aipe, Colombia",1990-10-23T09:13:04.240Z,3.12,-75.282,4.2,mb,33.0
+us,"4 km NNW of Santa María, Colombia",1988-01-23T15:10:47.130Z,2.983,-75.671,3.5,md,10.0
+us,"19 km E of Rivera, Colombia",1988-01-14T04:48:42.580Z,2.747,-75.084,3.7,md,33.0
+us,"8 km ESE of Palermo, Colombia",1975-03-31T01:42:32.300Z,2.852,-75.367,4.0,mb,83.0
+us,"2 km W of Rivera, Colombia",1974-12-08T14:54:34.600Z,2.774,-75.283,4.6,mb,86.0
+us,"29 km SE of Baraya, Colombia",1973-10-18T09:18:32.600Z,2.968,-74.86,5.2,mb,42.0
+iscgem,"27 km SE of Tello, Colombia",1968-01-28T01:50:47.330Z,2.916,-74.943,5.19,mw,51.5
+iscgem,"19 km ESE of Baraya, Colombia",1967-11-05T14:23:53.890Z,3.075,-74.895,5.2,mw,23.9
