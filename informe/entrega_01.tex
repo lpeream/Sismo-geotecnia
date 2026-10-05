@@ -341,6 +341,86 @@ independencia de los eventos y la estabilidad de la estimación.
 \label{fig:gutenberg-richter}
 \end{figure}
 
+\chapter{Asociación de sismos a sismofuentes y fallas}
+
+El análisis del catálogo CTM12 del radio de 260 km clasifica 2\,691 eventos
+según profundidad y ubicación respecto al modelo nacional de fuentes del SGC
+\parencite{criteriosAsociacionNeiva2026,sgcModeloFuentes}. La asignación es
+preliminar y no implica que los eventos sean independientes ni que las fallas
+cartografiadas sean activas.
+
+\section{Clasificación por sismofuente}
+
+Se evalúa primero el nido de Bucaramanga ($100\leq z\leq200$ km dentro del
+polígono intermedio); luego, la subducción interplaca ($z\leq50$ km dentro del
+polígono de subducción); después, la intraplaca ($z>50$ km fuera del nido).
+Los eventos restantes se asignan a fuentes corticales, incluidos los de 30 a
+50 km fuera del polígono de subducción. Siete profundidades negativas se
+trataron como cero. El modelo consultado comprende 40 polígonos corticales, 4
+de subducción y 3 de sismicidad intermedia \parencite{sgcModeloFuentes}.
+
+\begin{table}[htbp]
+\centering
+\caption{Clasificación de los eventos del catálogo CTM12 por sismofuente.}
+\label{tab:asociacion-fuentes}
+\small
+\begin{tabular}{p{3.1cm}r p{2.2cm} p{7.4cm}}
+\toprule
+Fuente & Eventos & Rango $M_w$ & Criterio resumido \\
+\midrule
+Cortical & 1\,308 & 3.0--7.05 & Fuera de subducción y del nido; incluye el tramo 30--50 km fuera de subducción. \\
+Subducción interplaca & 359 & 3.0--6.1 & Dentro del polígono de subducción y con $z\leq50$ km. \\
+Subducción intraplaca & 1\,024 & 3.0--7.4 & $z>50$ km, fuera del polígono del nido. \\
+Nido de Bucaramanga & 0 & -- & Dentro del polígono intermedio y con $100\leq z\leq200$ km. \\
+\midrule
+Total & 2\,691 & & \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La frontera de 50 km se adoptó frente a la referencia verbal de 70 km: coincide
+con el límite superior del criterio escrito y con la división entre sismicidad
+somera y profunda usada por Petersen et al. (2018), aunque esos autores
+reconocen una transición entre 30 y 70 km. La decisión requiere confirmación,
+pues modificarla cambia la asignación de eventos. Además, parte de los 359
+eventos interplaca queda tierra adentro por la extensión del polígono del SGC;
+esta clasificación debe contrastarse con la geometría de la placa, por ejemplo
+con Slab2 \parencite{petersen2018seismic,hayes2018slab2}.
+
+\section{Proximidad de los eventos corticales a fallas}
+
+En las 40 áreas corticales se consideraron 809 trazas de la capa de fallas del
+Mapa Geológico de Colombia 2023, escala 1:500\,000; el tipo se reporta cuando
+está disponible \parencite{sgcMapaGeologico2023}. De los 1\,308 eventos
+corticales, 1\,184 (90.5\%) tienen una falla cartografiada a 15 km o menos y
+124 (9.5\%) quedan sin falla cercana. Estos últimos permanecen dentro de la
+fuente cortical generalizada.
+
+\begin{table}[H]
+\centering
+\caption{Asociación de eventos corticales a la falla cartografiada más cercana.}
+\label{tab:asociacion-fallas}
+\begin{tabular}{lrr}
+\toprule
+Resultado & Eventos & Porcentaje \\
+\midrule
+Falla a $\leq15$ km & 1\,184 & 90.5\% \\
+Sin falla a $\leq15$ km & 124 & 9.5\% \\
+Total cortical & 1\,308 & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La asociación mide proximidad epicentral en planta, no causalidad: la capa no
+identifica necesariamente fallas activas ni incluye buzamientos para una
+distancia tridimensional. El umbral de 15 km es una decisión de modelado; se
+recomienda evaluar su sensibilidad con radios de 5, 10, 20 y 30 km. Además,
+el catálogo CTM12 usado presenta 614 registros adicionales y 48 faltantes
+frente al archivo ``def'' y puede conservar duplicados; estos conteos no deben
+mezclarse directamente con los del análisis de recurrencia. La incertidumbre
+de profundidad, la falta de declustering y el análisis de completitud también
+limitan la interpretación.
+
 \chapter{Conclusiones y alcance}
 
 \begin{enumerate}
