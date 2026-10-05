@@ -1,5 +1,15 @@
 \documentclass[12pt,oneside]{report}
-\usepackage[a4paper,top=2.7cm,bottom=2.7cm,left=2.4cm,right=2.4cm,includefoot]{geometry}
+\usepackage[
+    a4paper,
+    top=2.2cm,
+    bottom=2.2cm,
+    left=2.4cm,
+    right=2.4cm,
+    headheight=42pt,
+    headsep=10pt,       % Espacio entre el encabezado y el texto
+    footskip=18pt       % Espacio entre el texto y el pie de página
+]{geometry}
+
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,es-tabla]{babel}
@@ -11,13 +21,27 @@
 \usepackage{subcaption}
 \usepackage{fancyhdr}
 \usepackage{csquotes}
+\usepackage{titlesec}   % Control de capítulos y secciones
 \usepackage[colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black]{hyperref}
 \usepackage[backend=biber,style=apa,sortcites,url=true]{biblatex}
 \addbibresource{biblio.bib}
 
-\setlength{\parskip}{0.45em}
+% --- ESPACIADO DE PÁRRAFOS ---
+\setlength{\parskip}{0.2em}
 \setlength{\parindent}{0pt}
-\setlength{\headheight}{42pt}
+
+% --- 1. CAPÍTULOS Y SECCIONES COMPACTOS, SIN SALTO DE PÁGINA ---
+\titleclass{\chapter}{straight}
+\titleformat{\chapter}[hang]
+    {\thispagestyle{fancy}\normalfont\LARGE\bfseries}
+    {\chaptername\ \thechapter.} 
+    {0.5em}
+    {}
+\titlespacing*{\chapter}{0pt}{3pt}{3pt}
+\titlespacing*{\section}{0pt}{7pt}{2pt}
+\titlespacing*{\subsection}{0pt}{5pt}{2pt}
+
+% --- 2. CONFIGURACIÓN DEL ENCABEZADO Y PIE DE PÁGINA (ESTILO FANCY) ---
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\includegraphics[height=1.1cm]{../figuras/Logo_encabezado.png}}
@@ -26,8 +50,23 @@
 \renewcommand{\headrulewidth}{0.4pt}
 \renewcommand{\footrulewidth}{0pt}
 
+% --- 3. APLICAR EL ENCABEZADO A PÁGINAS PLAIN (ÍNDICES Y CONTENIDO) ---
+\fancypagestyle{plain}{           % Redefine 'plain' para que la página 2 (TOC) tenga encabezado
+    \fancyhf{}
+    \fancyhead[L]{\includegraphics[height=1.1cm]{../figuras/Logo_encabezado.png}}
+    \fancyhead[R]{\small\textbf{Ingeniería Sismo-Geotécnica}}
+    \fancyfoot[C]{Página \thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+    \renewcommand{\footrulewidth}{0pt}
+}
+\makeatletter
+\let\ps@plain\ps@fancy
+\makeatother
+
 \begin{document}
 \hypersetup{pageanchor=false}
+
+% PÁGINA 1: PORTADA (Sin encabezado por estándar)
 \begin{titlepage}
     \centering
     \includegraphics[width=0.2\textwidth]{../figuras/Logo_1.png}\par\vspace{1cm}
@@ -47,11 +86,14 @@
     \textbf{OCTUBRE 2026}
 \end{titlepage}
 
+% PÁGINA 2: TABLA DE CONTENIDO E ÍNDICES (Con encabezado visible)
 \hypersetup{pageanchor=true}
 \pagenumbering{roman}
 \tableofcontents
 \listoffigures
 \clearpage
+
+% PÁGINA 3 EN ADELANTE: CUERPO DEL DOCUMENTO
 \pagenumbering{arabic}
 
 \chapter{Descripción del proyecto}
@@ -100,6 +142,12 @@ combinan los registros por radio y se eliminan filas con valores nulos en la
 etapa de unificación. La integración amplía la cobertura disponible, pero no
 resuelve automáticamente posibles duplicados entre agencias ni las
 diferencias de completitud de cada catálogo.
+
+Para la representación en el sistema MAGNA-SIRGAS / Origen-Nacional, el
+notebook \textit{Conversión CTM12} transforma las coordenadas geográficas
+EPSG:4326 a EPSG:9377 y exporta latitud, longitud, Este ($X$), Norte ($Y$) y
+profundidad ($Z$). La figura CTM12 se elaboró a partir de esos CSV; el notebook
+de conversión genera los archivos tabulares, no imágenes.
 
 \section{Homogeneización de magnitudes}
 
@@ -203,6 +251,21 @@ Neiva.
 \end{subfigure}
 \caption{Comparación espacial de los catálogos sísmicos de 50 y 260 km alrededor de Neiva.}
 \label{fig:mapas-catalogos}
+\end{figure}
+
+\section{Coordenadas proyectadas en CTM12}
+
+La Figura~\ref{fig:mapas-ctm12} representa los eventos de los archivos
+convertidos en coordenadas métricas Este--Norte. El color codifica la
+profundidad $Z$ en kilómetros; los círculos muestran los radios de 50 y
+260 km respecto al centro de referencia. Los archivos usados contienen 105
+registros locales y 2\,691 regionales después de retirar filas incompletas.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.96\textwidth]{../figuras/Mapa_Sismos_CTM12.png}
+\caption{Distribución espacial en MAGNA-SIRGAS / Origen-Nacional (EPSG:9377), con profundidad codificada por color.}
+\label{fig:mapas-ctm12}
 \end{figure}
 
 \section{Estadística descriptiva de magnitudes}
