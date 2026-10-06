@@ -1,0 +1,2 @@
+Ranking,Estacion_Sismo,Canales_Exportados,Factor_Escala_SF,Error_MSE,PGA_Max_H1_g,PGA_Max_H2_g
+1,CTRUJ,"['HNE', 'HNN']",1.924,0.00449,0.197,0.274

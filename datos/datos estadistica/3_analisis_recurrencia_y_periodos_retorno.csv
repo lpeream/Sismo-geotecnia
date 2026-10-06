@@ -1,0 +1,37 @@
+Fuente / Catálogo,Magnitud Umbral (Mw ≥ M0),N° Eventos Cumplidos,Periodo Evaluación (años),Tasa Anual λ (eventos/año),Periodo de Retorno Tr (años),Prob. Excedencia a 50 años (%),Prob. Excedencia a 100 años (%)
+CATÁLOGO TOTAL,3.0,2691,110,24.4636,0.04,100.0,100.0
+CATÁLOGO TOTAL,3.5,1333,110,12.1182,0.08,100.0,100.0
+CATÁLOGO TOTAL,4.0,805,110,7.3182,0.14,100.0,100.0
+CATÁLOGO TOTAL,4.5,486,110,4.4182,0.23,100.0,100.0
+CATÁLOGO TOTAL,5.0,146,110,1.3273,0.75,100.0,100.0
+CATÁLOGO TOTAL,5.5,52,110,0.4727,2.12,100.0,100.0
+CATÁLOGO TOTAL,6.0,24,110,0.2182,4.58,100.0,100.0
+CATÁLOGO TOTAL,6.5,11,110,0.1,10.0,99.33,100.0
+CATÁLOGO TOTAL,7.0,6,110,0.0545,18.33,93.46,99.57
+Cortical,3.0,1308,110,11.8909,0.08,100.0,100.0
+Cortical,3.5,577,110,5.2455,0.19,100.0,100.0
+Cortical,4.0,319,110,2.9,0.34,100.0,100.0
+Cortical,4.5,163,110,1.4818,0.67,100.0,100.0
+Cortical,5.0,53,110,0.4818,2.08,100.0,100.0
+Cortical,5.5,16,110,0.1455,6.88,99.93,100.0
+Cortical,6.0,7,110,0.0636,15.71,95.85,99.83
+Cortical,6.5,3,110,0.0273,36.67,74.43,93.46
+Cortical,7.0,2,110,0.0182,55.0,59.71,83.77
+Subducción interplaca,3.0,359,110,3.2636,0.31,100.0,100.0
+Subducción interplaca,3.5,142,110,1.2909,0.77,100.0,100.0
+Subducción interplaca,4.0,65,110,0.5909,1.69,100.0,100.0
+Subducción interplaca,4.5,26,110,0.2364,4.23,100.0,100.0
+Subducción interplaca,5.0,8,110,0.0727,13.75,97.37,99.93
+Subducción interplaca,5.5,5,110,0.0455,22.0,89.7,98.94
+Subducción interplaca,6.0,2,110,0.0182,55.0,59.71,83.77
+Subducción interplaca,6.5,0,110,0.0,N/A,0.0,0.0
+Subducción interplaca,7.0,0,110,0.0,N/A,0.0,0.0
+Subducción intraplaca,3.0,1024,110,9.3091,0.11,100.0,100.0
+Subducción intraplaca,3.5,614,110,5.5818,0.18,100.0,100.0
+Subducción intraplaca,4.0,421,110,3.8273,0.26,100.0,100.0
+Subducción intraplaca,4.5,297,110,2.7,0.37,100.0,100.0
+Subducción intraplaca,5.0,85,110,0.7727,1.29,100.0,100.0
+Subducción intraplaca,5.5,31,110,0.2818,3.55,100.0,100.0
+Subducción intraplaca,6.0,15,110,0.1364,7.33,99.89,100.0
+Subducción intraplaca,6.5,8,110,0.0727,13.75,97.37,99.93
+Subducción intraplaca,7.0,4,110,0.0364,27.5,83.77,97.37

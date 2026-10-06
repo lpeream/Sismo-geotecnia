@@ -1,0 +1,4 @@
+Ranking,Estacion_Sismo,Canales_Exportados,Error_MSE,PGA_Max_H1_g,PGA_Max_H2_g
+1,LCBC,"['BHE', 'BHN']",0.000426,0.487,0.628
+2,SMAR,"['BHE', 'BHN']",0.001956,0.314,0.78
+3,SJC,"['BHE', 'BHN']",0.00222,0.273,0.455

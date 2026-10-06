@@ -1,0 +1,4 @@
+Fuente Sismogénica,N° Sismos,Porcentaje (%),Mw Promedio,Mw Máxima,Profundidad Promedio (km),Profundidad Máxima (km),Energía Total (J),Valor b (G-R),Error std b,Valor a (G-R)
+Cortical,1308,48.61,3.64,7.05,12.6,50.0,6.499e+15,0.629,0.017,5.003
+Subducción interplaca,359,13.34,3.56,6.1,15.0,50.0,2.907e+14,0.713,0.038,4.693
+Subducción intraplaca,1024,38.05,3.94,7.4,110.8,423.0,2.909e+16,0.441,0.014,4.333

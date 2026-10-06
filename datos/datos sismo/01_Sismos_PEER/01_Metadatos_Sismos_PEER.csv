@@ -1,0 +1,18 @@
+Result ID,Spectral Ordinate,Record Sequence Number,Mean Squared Error,Scale Factor,Tp-Pulse Period (sec),5-75% Duration (sec),5-95% Duration (sec),Arias Intensity (m/sec),Earthquake Name,Year,Station Name,Magnitude,Mechanism,Rjb (km),Rrup (km),Vs30 (m/sec),Lowest Useable Frequency (Hz),Initial-search Scale Factor,Horizontal-1 Acc. Filename,Horizontal-2 Acc. Filename,Vertical Acc. Filename
+1, SRSS, 1011,0.0885,1.6569, -,5.1,8.7,0.2," ""Northridge-01""",1994.0," ""LA - Wonderland Ave""",6.69, Reverse,15.11,20.29,1222.52,0.175,1.7575, RSN1011_NORTHR_WON095.AT2, RSN1011_NORTHR_WON185.AT2 , RSN1011_NORTHR_WON-UP.AT2  
+2, SRSS, 1091,0.0499,1.2334, -,4.3,8.3,0.4," ""Northridge-01""",1994.0," ""Vasquez Rocks Park""",6.69, Reverse,23.1,23.64,996.43,0.25,1.3083, RSN1091_NORTHR_VAS000.AT2, RSN1091_NORTHR_VAS090.AT2 , RSN1091_NORTHR_VAS-UP.AT2  
+3, SRSS, 1613,0.1081,4.327, -,12.2,18.6,0.0," ""Duzce_ Turkey""",1999.0," ""Lamont 1060""",7.14, strike slip,25.78,25.88,782.0,0.075,4.5896, RSN1613_DUZCE_1060-N.AT2, RSN1613_DUZCE_1060-E.AT2 , RSN1613_DUZCE_1060-V.AT2  
+4, SRSS, 2753,0.2304,5.1369, -,9.2,15.1,0.1," ""Chi-Chi_ Taiwan-04""",1999.0," ""CHY102""",6.2, strike slip,39.3,39.32,804.36,0.05,5.4487, RSN2753_CHICHI.04_CHY102N.AT2, RSN2753_CHICHI.04_CHY102E.AT2 , RSN2753_CHICHI.04_CHY102V.AT2  
+5, SRSS, 2995,0.1486,7.1343, -,11.8,20.2,0.0," ""Chi-Chi_ Taiwan-05""",1999.0," ""HWA002""",6.2, Reverse,44.36,45.03,789.18,0.075,7.5673, RSN2995_CHICHI.05_HWA002N.AT2, RSN2995_CHICHI.05_HWA002W.AT2 , RSN2995_CHICHI.05_HWA002V.AT2  
+6, SRSS, 3324,0.1342,7.8515, -,12.0,22.5,0.0," ""Chi-Chi_ Taiwan-06""",1999.0," ""HWA002""",6.3, Reverse,47.81,51.83,789.18,0.1,8.328, RSN3324_CHICHI.06_HWA002N.AT2, RSN3324_CHICHI.06_HWA002W.AT2 , RSN3324_CHICHI.06_HWA002V.AT2  
+7, SRSS, 3925,0.2059,2.1658, -,10.4,19.6,0.3," ""Tottori_ Japan""",2000.0," ""OKYH07""",6.61, strike slip,15.23,15.23,940.2,0.0075,2.2972, RSN3925_TOTTORI_OKYH07NS.AT2, RSN3925_TOTTORI_OKYH07EW.AT2 , RSN3925_TOTTORI_OKYH07UD.AT2  
+8, SRSS, 3954,0.1668,1.0868, -,4.0,12.8,0.5," ""Tottori_ Japan""",2000.0," ""SMNH10""",6.61, strike slip,15.58,15.59,967.27,0.0375,1.1528, RSN3954_TOTTORI_SMNH10NS.AT2, RSN3954_TOTTORI_SMNH10EW.AT2 , RSN3954_TOTTORI_SMNH10UD.AT2  
+9, SRSS, 5618,0.0484,0.7036, -,9.3,22.6,1.4," ""Iwate_ Japan""",2008.0," ""IWT010""",6.9, Reverse,16.26,16.27,825.83,0.025,0.7463, RSN5618_IWATE_IWT010NS.AT2, RSN5618_IWATE_IWT010EW.AT2 , RSN5618_IWATE_IWT010UD.AT2  
+10, SRSS, 8167,0.121,3.7935, -,8.3,16.9,0.0," ""San Simeon_ CA""",2003.0," ""Diablo Canyon Power Plant""",6.52, Reverse,37.92,37.97,1100.0,0.0375,4.0238, RSN8167_SANSIMEO_DCPP337.AT2, RSN8167_SANSIMEO_DCPP247.AT2 , RSN8167_SANSIMEO_DCPP-UP.AT2  
+ These records were obtained from the NGA-West2 On-Line Ground-Motion Database Tool,,,,,,,,,,,,,,,,,,,,,
+ These records are UNSCALED, AS RECORDED,,,,,,,,,,,,,,,,,,,,
+ Filename Extension: ,,,,,,,,,,,,,,,,,,,,,
+   ,AT2 = Acceleration,,,,,,,,,,,,,,,,,,,,
+   ,VT2 = Velocity,,,,,,,,,,,,,,,,,,,,
+   ,DT2 = Displacement,,,,,,,,,,,,,,,,,,,,
+ The users of the NGA-West2 databases, flatfiles, models and reports are requested to acknowledge the Pacific Earthquake Engineering Research Center (PEER) in their work and publications.,,,,,,,,,,,,,,,,,,,

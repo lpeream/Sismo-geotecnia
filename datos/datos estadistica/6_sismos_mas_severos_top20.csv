@@ -1,0 +1,21 @@
+id,hora,anio,latitud,longitud,Z,Mw,fuente,agencia,lugar,energia_J
+2554,2026/08/10 07:34:27+00,2026,4.9909,-76.2917,103.0,7.4,Subducción intraplaca,SGC,"San José del Palmar - Chocó, Colombia",7943282347242854.0
+501,2026/08/10 12:34:28.009+00,2026,4.8836,-76.2182,108.174,7.4,Subducción intraplaca,us,"2 km SE of San José del Palmar, Colombia",7943282347242854.0
+356,2012/09/30 16:31:35.970+00,2012,1.929,-76.362,170.0,7.3,Subducción intraplaca,us,"11 km WNW of San Agustín, Colombia",5623413251903491.0
+1600,2012/09/30 11:31:34+00,2012,1.971,-76.555,172.0,7.1,Subducción intraplaca,SGC,"La Vega - Cauca, Colombia",2818382931264449.0
+2,1917/08/31 11:36:24.560+00,1917,3.792,-73.649,15.0,7.05,Cortical,iscgem,"5 km SE of Castilla La Nueva, Colombia",2371373705661655.5
+9,1967/02/09 15:24:46.750+00,1967,2.906,-74.772,35.0,7.0,Cortical,iscgem,"41 km SE of Baraya, Colombia",1995262314968882.8
+51,1979/11/23 23:40:29.800+00,1979,4.805,-76.217,108.0,6.8212,Subducción intraplaca,us,"4 km N of El Cairo, Colombia",1075969597207687.5
+183,1994/06/06 20:47:40.530+00,1994,2.917,-76.057,12.1,6.8,Cortical,us,"23 km E of Toribío, Colombia",1000000000000000.0
+211,1997/09/02 12:13:22.920+00,1997,3.849,-75.749,198.7,6.8,Subducción intraplaca,us,"24 km SW of Roncesvalles, Colombia",1000000000000000.0
+197,1995/08/19 21:43:31.920+00,1995,5.139,-75.577,119.6,6.6,Subducción intraplaca,us,"7 km WSW of Neira, Colombia",501187233627271.44
+15,1973/04/03 13:54:01.800+00,1973,4.691,-75.628,158.0,6.5346,Subducción intraplaca,us,"3 km ENE of Filandia, Colombia",399852669680733.75
+1,1917/08/30 03:24:19.570+00,1917,3.725,-73.866,15.0,6.43,Cortical,iscgem,"8 km SSW of Cubarral, Colombia",278612116862977.22
+215,1997/12/11 07:56:28.850+00,1997,3.929,-75.787,177.5,6.4,Subducción intraplaca,us,"22 km WSW of Roncesvalles, Colombia",251188643150959.25
+191,1995/02/08 18:40:25.380+00,1995,4.104,-76.622,73.5,6.4,Subducción intraplaca,us,"24 km NW of Darien, Colombia",251188643150959.25
+3,1920/01/30 18:26:47.290+00,1920,3.156,-77.469,35.0,6.35,Cortical,iscgem,"47 km NNE of Timbiquí, Colombia",211348903983664.34
+6,1957/05/24 02:37:50.370+00,1957,3.7,-76.752,52.3,6.12,Subducción intraplaca,iscgem,"8 km NW of Dagua, Colombia",95499258602143.69
+25,1974/08/24 02:47:30.100+00,1974,4.28,-76.855,84.0,6.1047,Subducción intraplaca,us,"47 km SSW of Sipí, Colombia",90583688322030.89
+32,1976/05/19 04:07:15.800+00,1976,4.464,-75.783,157.0,6.1047,Subducción intraplaca,us,"1 km NNE of La Tebaida, Colombia",90583688322030.89
+421,2019/03/23 19:21:17.998+00,2019,4.5595,-76.223,122.0,6.1,Subducción intraplaca,us,"3 km WSW of Versalles, Colombia",89125093813374.4
+114,1990/11/23 22:35:34.710+00,1990,4.707,-75.574,144.6,6.1,Subducción intraplaca,us,"7 km N of Salento, Colombia",89125093813374.4

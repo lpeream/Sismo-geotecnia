@@ -27,8 +27,12 @@
 \addbibresource{biblio.bib}
 
 % --- ESPACIADO DE PÁRRAFOS ---
-\setlength{\parskip}{0.2em}
+\setlength{\parskip}{0pt}
 \setlength{\parindent}{0pt}
+\setlength{\intextsep}{4pt}
+\setlength{\textfloatsep}{6pt}
+\setlength{\floatsep}{6pt}
+\captionsetup{skip=3pt}
 
 % --- 1. CAPÍTULOS Y SECCIONES COMPACTOS, SIN SALTO DE PÁGINA ---
 \titleclass{\chapter}{straight}
@@ -37,9 +41,9 @@
     {\chaptername\ \thechapter.} 
     {0.5em}
     {}
-\titlespacing*{\chapter}{0pt}{3pt}{3pt}
-\titlespacing*{\section}{0pt}{7pt}{2pt}
-\titlespacing*{\subsection}{0pt}{5pt}{2pt}
+\titlespacing*{\chapter}{0pt}{2pt}{2pt}
+\titlespacing*{\section}{0pt}{4pt}{1pt}
+\titlespacing*{\subsection}{0pt}{3pt}{1pt}
 
 % --- 2. CONFIGURACIÓN DEL ENCABEZADO Y PIE DE PÁGINA (ESTILO FANCY) ---
 \pagestyle{fancy}
@@ -96,7 +100,7 @@
 % PÁGINA 3 EN ADELANTE: CUERPO DEL DOCUMENTO
 \pagenumbering{arabic}
 
-\chapter{Descripción del proyecto}
+\chapter{Descripción y metodología}
 
 \section{Contexto y propósito}
 
@@ -131,6 +135,15 @@ Los resultados dependen de la cobertura y calidad de las fuentes, de las
 relaciones de conversión disponibles y de los parámetros definidos en el
 notebook.
 
+\section{Enfoque metodológico}
+
+El análisis integra los catálogos local y regional, homogeneiza magnitudes,
+depura registros y resume la distribución, completitud y recurrencia. En
+paralelo, un catálogo proyectado en CTM12 se asocia espacialmente con las
+sismofuentes del SGC y se comparan espectros de referencia con registros
+seleccionados. Los resultados se interpretan como caracterización preliminar,
+no como evaluación completa de amenaza.
+
 \chapter{Datos y metodología}
 
 \section{Fuentes y preparación}
@@ -157,6 +170,8 @@ magnitud y sus intervalos de calibración; los registros sin conversión
 utilizable se excluyen de los productos homogéneos. La selección de relaciones
 se apoya en los trabajos incorporados al flujo de conversión
 \parencite{bormann2005globally,lolli2014empirical,senel2016new}.
+Las ecuaciones y los intervalos utilizados se presentan en el
+Anexo~\ref{app:conversiones}.
 
 El catálogo analizado se restringe a $M_w\geq3$. Esta convención se mantiene
 en las tablas y figuras de este informe: el catálogo regional incluye 33
@@ -175,7 +190,8 @@ secuencias sísmicas; sus resultados dependen de los umbrales adoptados. La
 identificación de réplicas es un paso relevante en el análisis de secuencias
 sísmicas \parencite{gardner1974isoseismal}.
 
-\section{Estadística descriptiva y recurrencia}
+\section{Método estadístico y recurrencia}
+\label{sec:metodo-recurrencia}
 
 Para cada radio se resumen el número de eventos, la media, la mediana, la
 desviación estándar, los extremos, la varianza, la asimetría y la curtosis de
@@ -194,246 +210,443 @@ donde $N$ es la cantidad acumulada de eventos, $a$ representa el nivel de
 actividad del catálogo y $b$ describe la proporción relativa de eventos
 pequeños frente a grandes. En esta implementación, $M_c=3.05$ corresponde al
 centro del intervalo de máxima frecuencia; las leyendas de los gráficos lo
-muestran redondeado a un decimal.
+muestran redondeado a un decimal. La formulación y las ecuaciones de retorno
+se reúnen en el Anexo~\ref{app:recurrencia}.
 
-\chapter{Resultados}
+\chapter{Asociación a sismofuentes}
 
-\section{Balance de selección y depuración}
+Se clasifican 2\,691 eventos del catálogo CTM12 regional usando la profundidad
+y su posición respecto al modelo de fuentes del SGC
+\parencite{criteriosAsociacionNeiva2026,sgcModeloFuentes}. Es una asignación
+espacial preliminar, no una demostración de causalidad ni de actividad de las
+fallas.
 
-La Tabla~\ref{tab:balance} resume la última ejecución registrada del notebook.
-La columna de exclusiones agrupa los registros sin $M_w$ utilizable y los que
-quedan por debajo del umbral $M_w\geq3$. El número previo a la depuración de
-réplicas se obtiene del balance de entradas y exclusiones.
+\section{Criterios y resultados}
+
+Se asigna primero el nido de Bucaramanga ($100\leq z\leq200$ km dentro del
+polígono intermedio), luego la subducción interplaca ($z\leq50$ km dentro del
+polígono de subducción) y la intraplaca ($z>50$ km fuera del nido). Los demás
+eventos se asignan a fuentes corticales. Siete profundidades negativas se
+trataron como cero. El modelo consultado comprende 40 polígonos corticales, 4
+de subducción y 3 de sismicidad intermedia \parencite{sgcModeloFuentes}.
 
 \begin{table}[htbp]
 \centering
-\caption{Balance de selección de los catálogos en la última ejecución del notebook.}
+\caption{Eventos clasificados por sismofuente en el catálogo CTM12.}
+\label{tab:asociacion-fuentes}
+\small
+\begin{tabular}{lrr}
+\toprule
+Fuente & Eventos & Porcentaje \\
+\midrule
+Cortical & 1\,308 & 48.61\% \\
+Subducción interplaca & 359 & 13.34\% \\
+Subducción intraplaca & 1\,024 & 38.05\% \\
+Nido de Bucaramanga & 0 & 0\% \\
+\midrule
+Total & 2\,691 & 100\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La frontera de 50 km sigue el criterio escrito del proyecto; debe confirmarse
+frente a la transición de 30--70 km descrita en la literatura. Parte de los
+eventos interplaca queda tierra adentro por la geometría del polígono SGC, por
+lo que conviene contrastarla con Slab2
+\parencite{petersen2018seismic,hayes2018slab2}.
+
+\section{Proximidad a fallas}
+
+De 1\,308 eventos corticales, 1\,184 (90.5\%) quedan a 15 km o menos de una
+falla cartografiada; 124 (9.5\%) no tienen una falla cercana. Se consideraron
+809 trazas del Mapa Geológico de Colombia 2023
+\parencite{sgcMapaGeologico2023}. La distancia es epicentral en planta: no
+implica causalidad ni confirma que la falla esté activa.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\textwidth]{../recursos/Qgis/datos/Figura_asociacion_sismofuentes.png}
+\caption{Asociación espacial de eventos con las sismofuentes del SGC.}
+\label{fig:asociacion-sismofuentes}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\textwidth]{../recursos/Qgis/datos/Figura_areas_corticales_fallas.png}
+\caption{Áreas corticales, fallas cartografiadas y eventos asociados.}
+\label{fig:areas-fallas}
+\end{figure}
+
+\chapter{Resultados y análisis}
+
+\section{Selección y distribución espacial}
+
+La Tabla~\ref{tab:balance} resume la última ejecución. Las exclusiones
+comprenden registros sin $M_w$ utilizable y eventos por debajo de $M_w=3$.
+
+\begin{table}[htbp]
+\centering
+\caption{Balance de selección y depuración de los catálogos.}
 \label{tab:balance}
 \small
 \begin{tabular}{lrrrrr}
 \toprule
 Radio & Entrada & Excluidos & Candidatos $M_w\geq3$ & Réplicas & Final \\
 \midrule
-50 km  & 2\,400  & 2\,290  & 110   & 0   & 110 \\
+50 km  & 2\,400 & 2\,290 & 110 & 0 & 110 \\
 260 km & 68\,592 & 65\,718 & 2\,874 & 247 & 2\,627 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-En el radio de 50 km, los 110 eventos que superan el filtro se conservaron
-después del criterio de réplicas. En el radio de 260 km se identificaron 247
-réplicas entre 2\,874 candidatos; el catálogo final contiene 2\,627 eventos.
-La diferencia de volumen entre radios es coherente con la extensión espacial
-mayor del catálogo regional, aunque también refleja las limitaciones de
-cobertura y completitud de las fuentes.
+El radio local retuvo 110 eventos sin eliminar réplicas; el regional conservó
+2\,627 de 2\,874 candidatos. La Figura~\ref{fig:mapas-catalogos} compara la
+distribución antes y después del filtrado.
 
-\section{Distribución espacial}
-
-La Figura~\ref{fig:mapas-catalogos} compara en una sola figura los catálogos
-combinados de entrada, antes de homogeneizar magnitudes y eliminar réplicas,
-con los catálogos finales restringidos a $M_w\geq3$. Los anillos representan
-los radios de búsqueda de 50 y 260 km respecto al punto de referencia en
-Neiva.
-
-\begin{figure}[htbp]
+\begin{figure}[H]
 \centering
-\begin{subfigure}[t]{0.485\textwidth}
+\begin{subfigure}[t]{0.40\textwidth}
     \centering
     \includegraphics[width=\linewidth]{../figuras/Mapa_Sismos_No_Depurados.png}
-    \caption{Catálogos combinados de entrada, sin el filtro final de magnitud ni la depuración de réplicas.}
+    \caption{Catálogos de entrada.}
     \label{fig:mapa-no-depurado}
 \end{subfigure}\hfill
-\begin{subfigure}[t]{0.485\textwidth}
+\begin{subfigure}[t]{0.40\textwidth}
     \centering
     \includegraphics[width=\linewidth]{../figuras/Mapa_Sismos_Depurados.png}
-    \caption{Eventos principales con $M_w\geq3$, después de la homogeneización y depuración.}
+    \caption{Eventos principales con $M_w\geq3$.}
     \label{fig:mapa-depurado}
 \end{subfigure}
-\caption{Comparación espacial de los catálogos sísmicos de 50 y 260 km alrededor de Neiva.}
+\caption{Catálogos sísmicos en radios de 50 y 260 km alrededor de Neiva.}
 \label{fig:mapas-catalogos}
 \end{figure}
 
-\section{Coordenadas proyectadas en CTM12}
+El catálogo CTM12 usado en la asociación contiene 2\,691 eventos y no es
+idéntico al catálogo final depurado empleado en estas estadísticas. Por ello,
+los totales de las dos etapas se presentan por separado.
 
-La Figura~\ref{fig:mapas-ctm12} representa los eventos de los archivos
-convertidos en coordenadas métricas Este--Norte. El color codifica la
-profundidad $Z$ en kilómetros; los círculos muestran los radios de 50 y
-260 km respecto al centro de referencia. Los archivos usados contienen 105
-registros locales y 2\,691 regionales después de retirar filas incompletas.
+\section{Completitud temporal}
 
-\begin{figure}[htbp]
+La Figura~\ref{fig:completitud} muestra la desviación estándar de la tasa anual
+frente a la ventana de observación para intervalos de magnitud. En el método
+de Stepp, el tramo compatible con una pendiente $1/\sqrt{T}$ indica el periodo
+completo; el cambio de pendiente ayuda a estimar su inicio. El gráfico
+disponible no marca años de inicio por intervalo, por lo que no se reporta aquí
+una fecha de completitud.
+
+\begin{figure}[H]
 \centering
-\includegraphics[width=0.96\textwidth]{../figuras/Mapa_Sismos_CTM12.png}
-\caption{Distribución espacial en MAGNA-SIRGAS / Origen-Nacional (EPSG:9377), con profundidad codificada por color.}
-\label{fig:mapas-ctm12}
+\includegraphics[width=0.72\textwidth]{../figuras/stepp_completitud.png}
+\caption{Evaluación de completitud temporal mediante el método de Stepp.}
+\label{fig:completitud}
 \end{figure}
 
-\section{Estadística descriptiva de magnitudes}
+Para la recurrencia, $M_c=3.05$ se estimó por máxima curvatura. Este umbral de
+magnitud no sustituye los periodos de completitud temporal que se obtienen
+con Stepp.
 
-La Tabla~\ref{tab:estadistica} presenta los estadísticos de los catálogos
-finales con $M_w\geq3$. En los dos radios la media supera la mediana y la
-asimetría es positiva, lo que indica una cola hacia magnitudes mayores. El
-catálogo regional alcanza $M_w=7.4$, frente a $M_w=5.5$ en el radio local.
+\section{Estadística descriptiva}
+
+El análisis se concentra en el conteo anual, los patrones temporales y los
+diagramas de violín del catálogo CTM12 regional de 2\,691 eventos.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{../datos/datos estadistica/fig_02_sismicidad_anual_y_energia.png}
+\caption{Conteo anual de sismos del catálogo CTM12.}
+\label{fig:evolucion-sismicidad}
+\end{figure}
+
+El conteo anual aumenta marcadamente desde la década de 1990, pero el gráfico
+por sí solo no permite atribuir ese cambio a un aumento de la actividad
+sísmica: también puede reflejar una cobertura instrumental y documental más
+completa. Por tanto, la tendencia debe leerse junto con la evaluación de
+completitud, no como una tasa constante a lo largo de todo el periodo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{../datos/datos estadistica/fig_03_patrones_temporales_mes_hora_semana.png}
+\caption{Conteos del catálogo por mes, hora UTC y día de la semana.}
+\label{fig:patrones-temporales}
+\end{figure}
+
+Los conteos mensuales varían de 187 eventos en junio a 284 en agosto, sin un
+ciclo estacional claramente establecido. Por hora UTC, los valores se
+mantienen entre 93 y 128 eventos, y por día de la semana las diferencias son
+moderadas. En consecuencia, estos patrones descriptivos no bastan para
+concluir que exista una periodicidad temporal física.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth]{../datos/datos estadistica/fig_04_analisis_por_fuente_sismica.png}
+\caption{Diagramas de violín de magnitud y profundidad por fuente sísmica.}
+\label{fig:estadistica-fuentes}
+\end{figure}
+
+Los violines muestran magnitudes centrales similares entre fuentes: las
+medianas están entre $M_w=3.36$ y $3.70$. La diferencia más marcada aparece en
+la profundidad: las medianas cortical e interplaca son 6 y 8 km,
+respectivamente, mientras que la intraplaca alcanza 109 km. Esto concuerda
+con la clasificación por profundidad usada para asociar los eventos a las
+fuentes; no constituye por sí mismo evidencia de causalidad tectónica.
+
+\section{Recurrencia y periodos de retorno}
+\label{sec:resultados-recurrencia}
+
+El ajuste Gutenberg--Richter se realiza desde $M_c=3.05$. En 260 km, 33
+eventos con $M_w=3.0$ quedan fuera del ajuste: se usan 2\,594 de los 2\,627
+registros finales.
 
 \begin{table}[htbp]
 \centering
-\caption{Estadística descriptiva de $M_w$ en los catálogos finales.}
-\label{tab:estadistica}
-\small
-\begin{tabular}{lrrrrrrrr}
-\toprule
-Radio & $N$ & Media & Mediana & Desv. est. & Mín. & Máx. & Asimetría & Curtosis \\
-\midrule
-50 km  & 110   & 3.688 & 3.453 & 0.625 & 3.070 & 5.500 & 1.009 & 0.072 \\
-260 km & 2\,627 & 3.765 & 3.500 & 0.706 & 3.000 & 7.400 & 1.273 & 1.648 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-La mayor asimetría y curtosis regionales reflejan una distribución más
-extendida hacia magnitudes altas y la presencia de eventos extremos. Estos
-estadísticos describen los registros retenidos; no corrigen sesgos por
-completitud, cambios de red o incertidumbre de conversión.
-
-\section{Relación Gutenberg--Richter}
-
-Los ajustes Gutenberg--Richter se realizaron sobre los catálogos depurados,
-desde $M_c=3.05$. En el radio de 260 km, los 33 eventos con $M_w=3.0$ forman
-parte del catálogo final, pero quedan por debajo de $M_c$ y no entran en el
-ajuste. Por esta razón, el tamaño de muestra regional del ajuste es menor que
-el número total del catálogo.
-
-\begin{table}[htbp]
-\centering
-\caption{Parámetros del ajuste Gutenberg--Richter calculados por el notebook.}
+\caption{Parámetros de Gutenberg--Richter de los catálogos finales.}
 \label{tab:gutenberg-richter}
+\small
 \begin{tabular}{lrrrrrr}
 \toprule
 Radio & $M_c$ & $N$ catálogo & $N$ ajuste & $a$ & $b$ & $R^2$ \\
 \midrule
-50 km  & 3.05 & 110   & 110   & 4.117 & 0.666 & 0.958 \\
+50 km & 3.05 & 110 & 110 & 4.117 & 0.666 & 0.958 \\
 260 km & 3.05 & 2\,627 & 2\,594 & 5.813 & 0.728 & 0.982 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-El valor de $b$ es 0.666 para 50 km y 0.728 para 260 km; ambos ajustes
-presentan coeficientes de determinación altos ($R^2=0.958$ y $R^2=0.982$).
-El parámetro $b$ expresa la pendiente del ajuste en el dominio de magnitudes
-considerado y no debe extrapolarse sin verificar la completitud, la
-independencia de los eventos y la estabilidad de la estimación.
+Los ajustes presentan $R^2=0.958$ y $0.982$ para 50 y 260 km,
+respectivamente. El parámetro $b$ expresa la pendiente observada sobre el
+intervalo completo considerado; su extrapolación requiere verificar
+completitud e independencia de eventos.
 
-\begin{figure}[htbp]
+Los periodos empíricos de retorno se estimaron sobre una ventana de 110 años
+del catálogo CTM12. El cálculo se resume así:
+\begin{itemize}
+    \item Contar los eventos con $M_w\geq M_0$.
+    \item Calcular la tasa anual $\lambda=N/110$ y el retorno medio $T_r=1/\lambda$.
+    \item Estimar la probabilidad de excedencia en $t$ años como
+    $P=1-\exp(-\lambda t)$, bajo un modelo de Poisson.
+\end{itemize}
+Para $M_w\geq5$, $\geq6$ y $\geq7$, los retornos son 0.75, 4.58 y 18.33 años,
+respectivamente. Son promedios estadísticos, no calendarios predictivos; los
+resultados provienen del catálogo CTM12 y no del conjunto depurado por radio.
+
+\begin{figure}[H]
 \centering
 \begin{subfigure}[t]{0.485\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{../figuras/gutenberg_richter_50km_onlymw.png}
-    \caption{Radio de 50 km.}
-    \label{fig:gr50}
+    \includegraphics[width=\linewidth]{../datos/datos estadistica/fig_05_ley_gutenberg_richter.png}
+    \caption{Ajustes por fuente.}
+    \label{fig:gr-fuentes}
 \end{subfigure}\hfill
 \begin{subfigure}[t]{0.485\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{../figuras/gutenberg_richter_260km_onlymw.png}
-    \caption{Radio de 260 km.}
-    \label{fig:gr260}
+    \includegraphics[width=\linewidth]{../datos/datos estadistica/fig_06_periodos_de_retorno.png}
+    \caption{Retornos por magnitud umbral.}
+    \label{fig:periodos-retorno}
 \end{subfigure}
-\caption{Frecuencia por magnitud y ajustes Gutenberg--Richter del notebook.}
-\label{fig:gutenberg-richter}
+\caption{Recurrencia y periodos empíricos para el catálogo CTM12.}
+\label{fig:recurrencia-ctm12}
 \end{figure}
 
-\chapter{Asociación de sismos a sismofuentes y fallas}
+En conjunto, el ajuste Gutenberg--Richter muestra que la frecuencia acumulada
+disminuye al aumentar la magnitud; los valores de $b$ (0.666 y 0.728) describen
+esa pendiente para los catálogos de 50 y 260 km, respectivamente. Los periodos
+del CTM12 siguen el mismo patrón: se estima un evento de $M_w\geq5$ cada
+0.75 años, de $M_w\geq6$ cada 4.58 años y de $M_w\geq7$ cada 18.33 años. En
+particular, el umbral de $M_w\geq7$ se apoya en pocos eventos dentro de la
+ventana de 110 años, por lo que su tasa tiene mayor incertidumbre. Estos
+valores son promedios condicionados a la completitud del catálogo y al modelo
+de Poisson; no indican cuándo ocurrirá el siguiente sismo ni deben
+interpretarse como pronósticos.
 
-El análisis del catálogo CTM12 del radio de 260 km clasifica 2\,691 eventos
-según profundidad y ubicación respecto al modelo nacional de fuentes del SGC
-\parencite{criteriosAsociacionNeiva2026,sgcModeloFuentes}. La asignación es
-preliminar y no implica que los eventos sean independientes ni que las fallas
-cartografiadas sean activas.
+\chapter{Espectros de respuesta}
 
-\section{Clasificación por sismofuente}
+\section{Espectro objetivo en roca}
 
-Se evalúa primero el nido de Bucaramanga ($100\leq z\leq200$ km dentro del
-polígono intermedio); luego, la subducción interplaca ($z\leq50$ km dentro del
-polígono de subducción); después, la intraplaca ($z>50$ km fuera del nido).
-Los eventos restantes se asignan a fuentes corticales, incluidos los de 30 a
-50 km fuera del polígono de subducción. Siete profundidades negativas se
-trataron como cero. El modelo consultado comprende 40 polígonos corticales, 4
-de subducción y 3 de sismicidad intermedia \parencite{sgcModeloFuentes}.
+Se calculó el espectro elástico NSR-10 para Neiva, Parque Santander, con
+perfil tipo B (roca), $A_a=A_v=0.25$, $F_a=F_v=1$ e importancia $I=1$.
+Los periodos de control son $T_0=0.10$ s, $T_C=0.48$ s y $T_L=2.40$ s; la
+meseta alcanza $S_a=0.625\,g$. Es un espectro objetivo de referencia del
+proyecto, no un espectro específico obtenido de una evaluación probabilista
+de amenaza. Los parámetros y pasos de cálculo, así como el procedimiento de
+escalamiento, se detallan en el Anexo~\ref{app:espectros}.
 
-\begin{table}[htbp]
+\begin{figure}[H]
 \centering
-\caption{Clasificación de los eventos del catálogo CTM12 por sismofuente.}
-\label{tab:asociacion-fuentes}
-\small
-\begin{tabular}{p{3.1cm}r p{2.2cm} p{7.4cm}}
-\toprule
-Fuente & Eventos & Rango $M_w$ & Criterio resumido \\
-\midrule
-Cortical & 1\,308 & 3.0--7.05 & Fuera de subducción y del nido; incluye el tramo 30--50 km fuera de subducción. \\
-Subducción interplaca & 359 & 3.0--6.1 & Dentro del polígono de subducción y con $z\leq50$ km. \\
-Subducción intraplaca & 1\,024 & 3.0--7.4 & $z>50$ km, fuera del polígono del nido. \\
-Nido de Bucaramanga & 0 & -- & Dentro del polígono intermedio y con $100\leq z\leq200$ km. \\
-\midrule
-Total & 2\,691 & & \\
-\bottomrule
-\end{tabular}
-\end{table}
+\includegraphics[width=0.68\textwidth]{../figuras/Espectro_Objetivo_Neiva_Roca.png}
+\caption{Espectro de diseño NSR-10 calculado para el perfil tipo B en Neiva.}
+\label{fig:espectro-roca}
+\end{figure}
 
-La frontera de 50 km se adoptó frente a la referencia verbal de 70 km: coincide
-con el límite superior del criterio escrito y con la división entre sismicidad
-somera y profunda usada por Petersen et al. (2018), aunque esos autores
-reconocen una transición entre 30 y 70 km. La decisión requiere confirmación,
-pues modificarla cambia la asignación de eventos. Además, parte de los 359
-eventos interplaca queda tierra adentro por la extensión del polígono del SGC;
-esta clasificación debe contrastarse con la geometría de la placa, por ejemplo
-con Slab2 \parencite{petersen2018seismic,hayes2018slab2}.
+\section{Registros de PEER}
 
-\section{Proximidad de los eventos corticales a fallas}
+La Figura~\ref{fig:peer-escalados} compara los registros escalados con el
+espectro objetivo de selección PEER y su media; la Figura~\ref{fig:peer-originales}
+muestra los espectros originales sin escalar.
 
-En las 40 áreas corticales se consideraron 809 trazas de la capa de fallas del
-Mapa Geológico de Colombia 2023, escala 1:500\,000; el tipo se reporta cuando
-está disponible \parencite{sgcMapaGeologico2023}. De los 1\,308 eventos
-corticales, 1\,184 (90.5\%) tienen una falla cartografiada a 15 km o menos y
-124 (9.5\%) quedan sin falla cercana. Estos últimos permanecen dentro de la
-fuente cortical generalizada.
-
-\begin{table}[H]
+\begin{figure}[H]
 \centering
-\caption{Asociación de eventos corticales a la falla cartografiada más cercana.}
-\label{tab:asociacion-fallas}
-\begin{tabular}{lrr}
-\toprule
-Resultado & Eventos & Porcentaje \\
-\midrule
-Falla a $\leq15$ km & 1\,184 & 90.5\% \\
-Sin falla a $\leq15$ km & 124 & 9.5\% \\
-Total cortical & 1\,308 & 100\% \\
-\bottomrule
-\end{tabular}
-\end{table}
+\includegraphics[width=0.68\textwidth]{\detokenize{../datos/datos sismo/01_Sismos_PEER/Grafica_Espectros_Escalados_PEER.png}}
+\caption{Espectros PEER escalados y comparación con el objetivo.}
+\label{fig:peer-escalados}
+\end{figure}
 
-La asociación mide proximidad epicentral en planta, no causalidad: la capa no
-identifica necesariamente fallas activas ni incluye buzamientos para una
-distancia tridimensional. El umbral de 15 km es una decisión de modelado; se
-recomienda evaluar su sensibilidad con radios de 5, 10, 20 y 30 km. Además,
-el catálogo CTM12 usado presenta 614 registros adicionales y 48 faltantes
-frente al archivo ``def'' y puede conservar duplicados; estos conteos no deben
-mezclarse directamente con los del análisis de recurrencia. La incertidumbre
-de profundidad, la falta de declustering y el análisis de completitud también
-limitan la interpretación.
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\textwidth]{\detokenize{../datos/datos sismo/01_Sismos_PEER/Grafica_Espectros_SinEscalar_PEER.png}}
+\caption{Espectros PEER originales, antes del escalamiento.}
+\label{fig:peer-originales}
+\end{figure}
 
-\chapter{Conclusiones y alcance}
+\section{Registro horizontal de San José del Palmar}
 
-\begin{enumerate}
-    \item El flujo integra catálogos SGC y USGS, homogeniza las magnitudes disponibles y aplica un filtro $M_w\geq3$ junto con una regla reproducible de depuración espacio-temporal.
-    \item La última ejecución retuvo 110 eventos en 50 km y 2\,627 en 260 km. El criterio implementado no eliminó eventos locales y retiró 247 candidatos regionales.
-    \item Las distribuciones presentan asimetría positiva. El catálogo regional contiene la cola de magnitudes más altas y alcanza $M_w=7.4$.
-    \item El análisis de recurrencia obtuvo $M_c=3.05$, con $b=0.666$ y $R^2=0.958$ para 50 km, y $b=0.728$ y $R^2=0.982$ para 260 km. En el ajuste regional se incluyeron 2\,594 de los 2\,627 eventos finales, debido al umbral $M_w\geq M_c$.
-    \item Los resultados son preliminares y están condicionados por la calidad, completitud y compatibilidad de los catálogos; las conversiones empíricas y el criterio sencillo de réplicas también introducen incertidumbre.
-    \item Para una evaluación de amenaza sísmica se requiere complementar este trabajo con análisis de completitud y sensibilidad, control explícito de duplicados, caracterización de sismofuentes, relaciones de movimiento fuerte y evaluación de condiciones locales, de acuerdo con el marco técnico aplicable \parencite{nsr10,sgc2018amenaza}.
-\end{enumerate}
+El par horizontal seleccionado disponible es CTRUJ, canales HNE y HNN. El
+factor de escala reportado es 1.924 y el error cuadrático medio es 0.00449.
+La comparación cubre el intervalo de ajuste de 0.1--1.5 s; fuera de él la
+forma espectral puede apartarse del objetivo.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.68\textwidth]{\detokenize{../datos/datos sismo/sismos_horizontales_seleccionados/Top_Pares_Horizontales_Seleccionados.png}}
+\caption{Par horizontal CTRUJ seleccionado frente al espectro objetivo NSR-10.}
+\label{fig:registro-san-jose}
+\end{figure}
+
+\chapter{Conclusiones}
+
+\begin{itemize}
+    \item La integración y depuración retuvo 110 eventos en 50 km y 2\,627 en 260 km; el catálogo regional registra magnitudes hasta $M_w=7.4$.
+    \item La completitud temporal se examinó con Stepp y $M_c=3.05$ se estimó por máxima curvatura. El gráfico no reporta años de inicio completos por intervalo.
+    \item Los ajustes Gutenberg--Richter obtuvieron $b=0.666$ y $0.728$; los retornos del catálogo CTM12 se calcularon con tasa anual y supuesto de Poisson.
+    \item La asociación a fuentes y la comparación espectral son preliminares; validar duplicados, geometría y efectos locales antes de evaluar la amenaza \parencite{nsr10,sgc2018amenaza}.
+\end{itemize}
 
 \chapter*{Referencias}
 \addcontentsline{toc}{chapter}{Referencias}
 \printbibliography[heading=none]
+
+\appendix
+\renewcommand{\chaptername}{Anexo}
+\chapter{Ecuaciones y cálculos}
+\label{app:ecuaciones}
+
+\section{Homogeneización de magnitudes a Mw}
+\label{app:conversiones}
+
+Las magnitudes informadas como $M_w$ se conservaron sin transformación.
+Para otros tipos de magnitud se aplicaron las relaciones empíricas siguientes,
+solo dentro de los intervalos definidos en el procedimiento; los valores fuera
+de esos intervalos no se extrapolaron \parencite{bormann2005globally,lolli2014empirical,senel2016new}.
+
+\begin{align*}
+M_w &=
+\begin{cases}
+0.954\,m_b+0.42, & 3.6<m_b\leq5.7,\\
+1.433\,m_b-2.35, & 5.7<m_b\leq7.7,
+\end{cases}
+&
+\sigma_{\mathrm{conv}}&=
+\begin{cases}
+0.28, & 3.6<m_b\leq5.7,\\
+0.36, & 5.7<m_b\leq7.7;
+\end{cases}\\[4pt]
+M_w &=
+\begin{cases}
+0.689\,M_s+1.93, & 3.6<M_s\leq6.1,\\
+0.928\,M_s+0.474, & 6.1<M_s\leq8.9,
+\end{cases}
+&
+\sigma_{\mathrm{conv}}&=
+\begin{cases}
+0.20, & 3.6<M_s\leq6.1,\\
+0.18, & 6.1<M_s\leq8.9;
+\end{cases}\\[4pt]
+M_w &= 0.958\,M_L+0.1,
+&&2.9<M_L\leq6.1,\qquad \sigma_{\mathrm{conv}}=0.50;\\
+M_w &= 0.7947\,M_d+1.3420,
+&&3.5\leq M_d\leq7.4.
+\end{align*}
+
+En la implementación, los tipos \texttt{mbasic} y \texttt{msk} se procesan,
+respectivamente, con las relaciones de $m_b$ y $M_s$; los tipos locales
+\texttt{ml}, \texttt{mlr} y \texttt{mlv} usan la relación de $M_L$. Los tipos
+\texttt{md} y \texttt{mc} comparten la última relación, aunque la incertidumbre
+de conversión no está especificada para ese caso. Finalmente, se retuvieron
+los registros convertidos con $M_w\geq3$; las magnitudes directas mantienen
+incertidumbre de conversión igual a cero en el flujo de cálculo.
+
+\section{Recurrencia y periodos de retorno}
+\label{app:recurrencia}
+
+La frecuencia acumulada se ajustó mediante la relación de Gutenberg--Richter:
+\begin{equation}
+    \log_{10}N(M_w\geq M)=a-bM_w,
+\end{equation}
+donde $N$ es el número acumulado de eventos por encima de la magnitud $M$,
+$a$ representa el nivel de actividad y $b$ la pendiente de la distribución.
+El ajuste por mínimos cuadrados se efectuó desde $M_c=3.05$, estimado por
+máxima curvatura. Para los radios de 50 y 260 km se obtuvieron, respectivamente,
+$b=0.666$ y $b=0.728$ ($R^2=0.958$ y $R^2=0.982$).
+
+Para un umbral $M_0$, la tasa media anual $\lambda$, el periodo medio de retorno
+$T_r$ y la probabilidad de excedencia en una ventana $t$ se calcularon como:
+\begin{align}
+    \lambda(M_w\geq M_0)&=\frac{N(M_w\geq M_0)}{T_{\mathrm{obs}}},\\
+    T_r(M_w\geq M_0)&=\frac{1}{\lambda}
+    =\frac{T_{\mathrm{obs}}}{N(M_w\geq M_0)},\\
+    P(M_w\geq M_0\text{ en }t)&=1-\exp(-\lambda t),
+\end{align}
+bajo el supuesto de ocurrencia de Poisson y usando $T_{\mathrm{obs}}=110$
+años para el catálogo CTM12. Los periodos calculados para $M_w\geq5$, $M_w\geq6$
+y $M_w\geq7$ son 0.75, 4.58 y 18.33 años. Son promedios de largo plazo y no
+predicciones de la fecha del siguiente evento.
+
+\section{Construcción del espectro objetivo y comparación de registros}
+\label{app:espectros}
+
+\begin{enumerate}
+    \item \textbf{Definir los parámetros del sitio y de diseño.}
+    Para Neiva (Parque Santander), perfil tipo B, se adoptaron
+    $A_a=A_v=0.25$, $F_a=F_v=1.0$ e importancia $I=1.0$.
+    \item \textbf{Calcular los periodos de control.}
+    \begin{align*}
+        T_0&=0.1\frac{A_vF_v}{A_aF_a}=0.10\ \mathrm{s},\\
+        T_C&=0.48\frac{A_vF_v}{A_aF_a}=0.48\ \mathrm{s},\\
+        T_L&=2.4F_v=2.40\ \mathrm{s}.
+    \end{align*}
+    \item \textbf{Evaluar la ordenada espectral por tramos.}
+    Para cada periodo $T$, la pseudoaceleración elástica se calculó con:
+    \begin{equation}
+    S_a(T)=
+    \begin{cases}
+    A_aF_aI\left(1+1.5\frac{T}{T_0}\right), & 0\leq T<T_0,\\
+    2.5A_aF_aI, & T_0\leq T\leq T_C,\\
+    \dfrac{1.2A_vF_vI}{T}, & T_C<T\leq T_L,\\
+    \dfrac{1.2A_vF_vT_LI}{T^2}, & T>T_L.
+    \end{cases}
+    \label{eq:espectro-nsr10}
+    \end{equation}
+    Con los parámetros anteriores, la meseta es $S_a=0.625\,g$. Se generó el
+    espectro en el intervalo de 0 a 4 s, con incrementos de 0.01 s.
+    \item \textbf{Procesar y calcular los espectros de los registros.}
+    Los registros de aceleración se expresaron en $g$, se corrigió su tendencia
+    lineal y se aplicó un filtro pasa-banda de 0.1--25 Hz, de cuarto orden y
+    fase cero. Para cada periodo se resolvió la respuesta de un oscilador de un
+    grado de libertad con amortiguamiento del 5\%, usando integración de
+    Newmark--$\beta$ (parámetros $\gamma=1/2$ y $\beta=1/4$). La pseudoaceleración
+    espectral se obtuvo como $S_a(T)=\omega^2\max|u(t)|/g$, donde
+    $\omega=2\pi/T$ y $u(t)$ es el desplazamiento relativo. La comparación
+    utilizó 400 periodos entre 0.01 y 4.0 s.
+    \item \textbf{Escalar y comparar en el intervalo de ajuste.}
+    En el intervalo $0.1\leq T\leq1.5$ s, el factor de escala que minimiza la
+    suma de errores cuadráticos entre el espectro del registro y el objetivo es:
+    \begin{equation}
+        SF=
+        \frac{\sum_T S_{a,\mathrm{obj}}(T)S_{a,\mathrm{reg}}(T)}
+        {\sum_T S_{a,\mathrm{reg}}^2(T)}.
+    \end{equation}
+    Se multiplicó por $SF$ el registro (y su espectro) y se calculó el error
+    cuadrático medio en el mismo intervalo. Para el par CTRUJ, canales HNE y
+    HNN, se reportaron $SF=1.924$ y error cuadrático medio 0.00449.
+\end{enumerate}
 
 \end{document}
