@@ -14,6 +14,14 @@
 \usepackage[utf8]{inputenc}
 \usepackage[spanish,es-tabla]{babel}
 \usepackage{amsmath,amssymb}
+
+% --- TIPOGRAFÍA: Times (texto y fórmulas). lmodern solo aporta las
+%     variantes vectoriales de la fuente monoespaciada (\texttt). ---
+\usepackage{lmodern}
+\usepackage{mathptmx}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\setlength{\emergencystretch}{2em}
+
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{float}
@@ -22,44 +30,83 @@
 \usepackage{fancyhdr}
 \usepackage{csquotes}
 \usepackage{titlesec}   % Control de capítulos y secciones
-\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black]{hyperref}
+\usepackage{enumitem}
+\usepackage{tocloft}    % Índices más compactos
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black,
+    pdftitle={Análisis de sismicidad y recurrencia para la ciudad de Neiva},
+    pdfauthor={Andrés Stiven Jaramillo Cataño, Emmel Escovitch Riaño, Laury Yocely Perea Mena}]{hyperref}
 \usepackage[backend=biber,style=apa,sortcites,url=true]{biblatex}
 \addbibresource{biblio.bib}
 
-% --- ESPACIADO DE PÁRRAFOS ---
-\setlength{\parskip}{0pt}
+% --- ESPACIADO DE PÁRRAFOS Y FLOTANTES ---
 \setlength{\parindent}{0pt}
-\setlength{\intextsep}{4pt}
-\setlength{\textfloatsep}{6pt}
-\setlength{\floatsep}{6pt}
-\captionsetup{skip=3pt}
+% Espacio entre párrafos. Si el cuerpo pasa de 10 páginas, cambiar 9pt por 6pt.
+\newlength{\espaciopar}
+\setlength{\espaciopar}{9pt plus 2pt minus 1pt}
+\setlength{\parskip}{\espaciopar}
+\setlength{\intextsep}{6pt}
+\setlength{\textfloatsep}{8pt}
+\setlength{\floatsep}{8pt}
+\setlist{itemsep=2pt,topsep=2pt,parsep=0pt}
 
-% --- 1. CAPÍTULOS Y SECCIONES COMPACTOS, SIN SALTO DE PÁGINA ---
+% --- LEYENDAS Y TABLAS ---
+\captionsetup{font=small,labelfont=bf,skip=4pt}
+\renewcommand{\arraystretch}{1.12}
+
+% --- ÍNDICES COMPACTOS (el índice de figuras cabe en la misma página) ---
+\setlength{\parskip}{0pt}  % se restablece abajo, después de los índices
+\renewcommand{\cfttoctitlefont}{\large\bfseries}
+\renewcommand{\cftloftitlefont}{\large\bfseries}
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{4pt}
+\setlength{\cftbeforeloftitleskip}{8pt}
+\setlength{\cftafterloftitleskip}{4pt}
+\setlength{\cftbeforechapskip}{3pt}
+\setlength{\cftbeforesecskip}{0pt}
+\setlength{\cftbeforefigskip}{0pt}
+\renewcommand{\cftchapfont}{\bfseries\small}
+\renewcommand{\cftsecfont}{\small}
+\renewcommand{\cftfigfont}{\small}
+\renewcommand{\cftchappagefont}{\bfseries\small}
+\renewcommand{\cftsecpagefont}{\small}
+\renewcommand{\cftfigpagefont}{\small}
+
+% --- 1. CAPÍTULOS Y SECCIONES: NEGRITA, TAMAÑO MODERADO, SIN LÍNEAS ---
 \titleclass{\chapter}{straight}
 \titleformat{\chapter}[hang]
-    {\thispagestyle{fancy}\normalfont\LARGE\bfseries}
-    {\chaptername\ \thechapter.} 
+    {\thispagestyle{fancy}\normalfont\large\bfseries}
+    {\chaptername\ \thechapter.}
     {0.5em}
     {}
-\titlespacing*{\chapter}{0pt}{2pt}{2pt}
-\titlespacing*{\section}{0pt}{4pt}{1pt}
-\titlespacing*{\subsection}{0pt}{3pt}{1pt}
+\titleformat{\section}
+    {\normalfont\normalsize\bfseries}
+    {\thesection}
+    {0.6em}
+    {}
+\titleformat{\subsection}
+    {\normalfont\normalsize\bfseries\itshape}
+    {\thesubsection}
+    {0.6em}
+    {}
+\titlespacing*{\chapter}{0pt}{12pt}{4pt}
+\titlespacing*{\section}{0pt}{8pt}{0pt}
+\titlespacing*{\subsection}{0pt}{6pt}{0pt}
 
 % --- 2. CONFIGURACIÓN DEL ENCABEZADO Y PIE DE PÁGINA (ESTILO FANCY) ---
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\includegraphics[height=1.1cm]{../figuras/Logo_encabezado.png}}
-\fancyhead[R]{\small\textbf{Ingeniería Sismo-Geotécnica}}
-\fancyfoot[C]{Página \thepage}
-\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[R]{\small\bfseries Ingeniería Sismo-Geotécnica}
+\fancyfoot[C]{\small Página \thepage}
+\renewcommand{\headrulewidth}{0.4pt}    % línea bajo el encabezado (negra)
 \renewcommand{\footrulewidth}{0pt}
 
 % --- 3. APLICAR EL ENCABEZADO A PÁGINAS PLAIN (ÍNDICES Y CONTENIDO) ---
-\fancypagestyle{plain}{           % Redefine 'plain' para que la página 2 (TOC) tenga encabezado
+\fancypagestyle{plain}{
     \fancyhf{}
     \fancyhead[L]{\includegraphics[height=1.1cm]{../figuras/Logo_encabezado.png}}
-    \fancyhead[R]{\small\textbf{Ingeniería Sismo-Geotécnica}}
-    \fancyfoot[C]{Página \thepage}
+    \fancyhead[R]{\small\bfseries Ingeniería Sismo-Geotécnica}
+    \fancyfoot[C]{\small Página \thepage}
     \renewcommand{\headrulewidth}{0.4pt}
     \renewcommand{\footrulewidth}{0pt}
 }
@@ -70,34 +117,50 @@
 \begin{document}
 \hypersetup{pageanchor=false}
 
-% PÁGINA 1: PORTADA (Sin encabezado por estándar)
+% ======================= PORTADA (sin encabezado) =======================
 \begin{titlepage}
     \centering
-    \includegraphics[width=0.2\textwidth]{../figuras/Logo_1.png}\par\vspace{1cm}
-    {\Huge\textbf{ANÁLISIS DE SISMICIDAD Y RECURRENCIA PARA LA CIUDAD DE NEIVA}}\par
-    \vspace{2cm}
-    {\Large\textbf{ELABORADO POR:}\\
-    ANDRÉS STIVEN JARAMILLO CATAÑO\\
-    EMMEL ESCOVITHCH RIAÑO\\
-    LAURY YOCELY PEREA MENA\par}
-    \vspace{1.5cm}
-    {\Large\textbf{DOCENTE:}\\ANDRES FELIPE SERNA VAZQUEZ\par}
+    \setlength{\parskip}{0pt}
+    \vspace*{0.3cm}
+    \includegraphics[width=0.20\textwidth]{../figuras/Logo_1.png}\par
+
+    \vspace{2.6cm}
+    {\LARGE\bfseries Análisis de sismicidad y recurrencia\\[6pt]
+    para la ciudad de Neiva\par}
+
+    \vspace{0.9cm}
+    {\large\bfseries Ingeniería Sismo-Geotécnica\par}
+
+    \vspace{2.2cm}
+    {\large\bfseries Elaborado por:\par}
+    \vspace{8pt}
+    {\large Andrés Stiven Jaramillo Cataño\\[4pt]
+    Emmel Escovitch Riaño\\[4pt]
+    Laury Yocely Perea Mena\par}
+
+    \vspace{1.0cm}
+    {\large\bfseries Docente:\par}
+    \vspace{8pt}
+    {\large Andrés Felipe Serna Vazquez\par}
+
     \vfill
-    {\large Universidad Nacional de Colombia\\
-    Facultad de Ingeniería\\
-    Departamento de Ingeniería Civil\par}
-    \vspace{1cm}
-    \textbf{OCTUBRE 2026}
+    {\large Universidad Nacional de Colombia\\[4pt]
+    Sede Medellín\\[4pt]
+    Facultad de Minas\\[4pt]
+    Departamento de Ingeniería Civil\\[4pt]
+    Octubre de 2026\par}
+    \vspace{0.3cm}
 \end{titlepage}
 
-% PÁGINA 2: TABLA DE CONTENIDO E ÍNDICES (Con encabezado visible)
+% ======================= TABLA DE CONTENIDO E ÍNDICES =======================
 \hypersetup{pageanchor=true}
 \pagenumbering{roman}
 \tableofcontents
 \listoffigures
 \clearpage
+\setlength{\parskip}{\espaciopar}
 
-% PÁGINA 3 EN ADELANTE: CUERPO DEL DOCUMENTO
+% ======================= CUERPO DEL DOCUMENTO =======================
 \pagenumbering{arabic}
 
 \chapter{Descripción y metodología}
@@ -431,15 +494,15 @@ resultados provienen del catálogo CTM12 y no del conjunto depurado por radio.
 
 \begin{figure}[H]
 \centering
-\begin{subfigure}[t]{0.485\textwidth}
+\begin{subfigure}[t]{0.5\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{../datos/datos estadistica/fig_05_ley_gutenberg_richter.png}
-    \caption{Ajustes por fuente.}
-    \label{fig:gr-fuentes}
+    \includegraphics[height=5.2cm]{../datos/datos estadistica/fig_05_ley_gutenberg_richter.png}
+\caption{Ajustes por fuente.}
+\label{fig:gr-fuentes}
 \end{subfigure}\hfill
-\begin{subfigure}[t]{0.485\textwidth}
+\begin{subfigure}[t]{0.5\textwidth}
     \centering
-    \includegraphics[width=\linewidth]{../datos/datos estadistica/fig_06_periodos_de_retorno.png}
+    \includegraphics[height=5.2cm]{../datos/datos estadistica/fig_06_periodos_de_retorno.png}
     \caption{Retornos por magnitud umbral.}
     \label{fig:periodos-retorno}
 \end{subfigure}
@@ -472,41 +535,58 @@ escalamiento, se detallan en el Anexo~\ref{app:espectros}.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.68\textwidth]{../figuras/Espectro_Objetivo_Neiva_Roca.png}
+\includegraphics[width=0.50\textwidth]{../figuras/Espectro_Objetivo_Neiva_Roca.png}
 \caption{Espectro de diseño NSR-10 calculado para el perfil tipo B en Neiva.}
 \label{fig:espectro-roca}
 \end{figure}
 
 \section{Registros de PEER}
 
+Los acelerogramas de referencia se tomaron de la base de datos de movimientos
+fuertes del PEER (\emph{Pacific Earthquake Engineering Research Center}), que
+reúne registros con sus espectros de respuesta y permite escalarlos para
+aproximar un espectro objetivo. En este trabajo el objetivo es el espectro
+NSR-10 en roca de la sección anterior (meseta de $0.625\,g$). El criterio de
+selección es la similitud de forma espectral: se buscan registros cuyo espectro,
+tras multiplicarlo por un único factor de escala, quede cerca del objetivo en
+el intervalo de periodos de interés.
+
 La Figura~\ref{fig:peer-escalados} compara los registros escalados con el
 espectro objetivo de selección PEER y su media; la Figura~\ref{fig:peer-originales}
-muestra los espectros originales sin escalar.
+muestra los espectros originales sin escalar. El escalamiento acerca los registros al
+objetivo, pero la dispersión entre ellos sigue siendo notable, pues cada
+registro conserva su contenido frecuencial propio; por eso la media, y no un
+registro individual, es la referencia adecuada para comparar con el espectro de
+diseño.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.68\textwidth]{\detokenize{../datos/datos sismo/01_Sismos_PEER/Grafica_Espectros_Escalados_PEER.png}}
+\includegraphics[width=0.5\textwidth]{\detokenize{../datos/datos sismo/01_Sismos_PEER/Grafica_Espectros_SinEscalar_PEER.png}}
+\caption{Espectros PEER originales, antes del escalamiento.}
+\label{fig:peer-originales}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{\detokenize{../datos/datos sismo/01_Sismos_PEER/Grafica_Espectros_Escalados_PEER.png}}
 \caption{Espectros PEER escalados y comparación con el objetivo.}
 \label{fig:peer-escalados}
 \end{figure}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.68\textwidth]{\detokenize{../datos/datos sismo/01_Sismos_PEER/Grafica_Espectros_SinEscalar_PEER.png}}
-\caption{Espectros PEER originales, antes del escalamiento.}
-\label{fig:peer-originales}
-\end{figure}
 
 \section{Registro horizontal de San José del Palmar}
 
 El par horizontal seleccionado disponible es CTRUJ, canales HNE y HNN. El
 factor de escala reportado es 1.924 y el error cuadrático medio es 0.00449.
 La comparación cubre el intervalo de ajuste de 0.1--1.5 s; fuera de él la
-forma espectral puede apartarse del objetivo.
+forma espectral puede apartarse del objetivo. Este registro tiene la ventaja
+de ser un movimiento colombiano y de la región, pero proviene de un solo sitio
+y un solo evento; por eso complementa, y no reemplaza, a los registros de la
+base PEER.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.68\textwidth]{\detokenize{../datos/datos sismo/sismos_horizontales_seleccionados/Top_Pares_Horizontales_Seleccionados.png}}
+\includegraphics[width=0.5\textwidth]{\detokenize{../datos/datos sismo/sismos_horizontales_seleccionados/Top_Pares_Horizontales_Seleccionados.png}}
 \caption{Par horizontal CTRUJ seleccionado frente al espectro objetivo NSR-10.}
 \label{fig:registro-san-jose}
 \end{figure}
@@ -518,12 +598,16 @@ forma espectral puede apartarse del objetivo.
     \item La completitud temporal se examinó con Stepp y $M_c=3.05$ se estimó por máxima curvatura. El gráfico no reporta años de inicio completos por intervalo.
     \item Los ajustes Gutenberg--Richter obtuvieron $b=0.666$ y $0.728$; los retornos del catálogo CTM12 se calcularon con tasa anual y supuesto de Poisson.
     \item La asociación a fuentes y la comparación espectral son preliminares; validar duplicados, geometría y efectos locales antes de evaluar la amenaza \parencite{nsr10,sgc2018amenaza}.
+    \item De los 2\,691 eventos del catálogo CTM12, 1\,308 (48.61\,\%) son corticales, 359 (13.34\,\%) de subducción interplaca y 1\,024 (38.05\,\%) de subducción intraplaca; ninguno se asoció al Nido de Bucaramanga. De los eventos corticales, 1\,184 (90.5\,\%) quedan a 15 km o menos de una falla cartografiada, de modo que la sismicidad cortical, la más cercana a Neiva, está estrechamente ligada al sistema de fallas.
+    \item La recurrencia estimada para el catálogo CTM12 es de un evento de $M_w\geq5$ cada 0.75 años, de $M_w\geq6$ cada 4.58 años y de $M_w\geq7$ cada 18.33 años. El valor para $M_w\geq7$ se apoya en pocos eventos dentro de la ventana de 110 años y tiene mayor incertidumbre; todos los retornos son promedios de largo plazo, no pronósticos de ocurrencia.
 \end{itemize}
 
+\clearpage
 \chapter*{Referencias}
 \addcontentsline{toc}{chapter}{Referencias}
 \printbibliography[heading=none]
 
+\clearpage
 \appendix
 \renewcommand{\chaptername}{Anexo}
 \chapter{Ecuaciones y cálculos}
@@ -618,9 +702,9 @@ predicciones de la fecha del siguiente evento.
     \begin{equation}
     S_a(T)=
     \begin{cases}
-    A_aF_aI\left(1+1.5\frac{T}{T_0}\right), & 0\leq T<T_0,\\
-    2.5A_aF_aI, & T_0\leq T\leq T_C,\\
-    \dfrac{1.2A_vF_vI}{T}, & T_C<T\leq T_L,\\
+    A_aF_aI\left(1+1.5\frac{T}{T_0}\right), & 0\leq T<T_0,\\[6pt]
+    2.5A_aF_aI, & T_0\leq T\leq T_C,\\[6pt]
+    \dfrac{1.2A_vF_vI}{T}, & T_C<T\leq T_L,\\[10pt]
     \dfrac{1.2A_vF_vT_LI}{T^2}, & T>T_L.
     \end{cases}
     \label{eq:espectro-nsr10}
