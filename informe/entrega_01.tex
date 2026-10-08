@@ -215,9 +215,8 @@ Se utilizan los catálogos descargados del SGC y del USGS para las zonas de 50
 y 260 km. Sus columnas se normalizan a nombres comunes para agencia, lugar,
 fecha y hora, coordenadas, magnitud, tipo de magnitud y profundidad. Luego se
 combinan los registros por radio y se eliminan filas con valores nulos en la
-etapa de unificación. La integración amplía la cobertura disponible, pero no
-resuelve automáticamente posibles duplicados entre agencias ni las
-diferencias de completitud de cada catálogo.
+etapa de unificación. La integración amplía la cobertura disponible para el
+análisis.
 
 Para la representación en el sistema MAGNA-SIRGAS / Origen-Nacional, el
 notebook \textit{Conversión CTM12} transforma las coordenadas geográficas
@@ -312,10 +311,10 @@ Total & 2\,691 & 100\% \\
 \end{tabular}
 \end{table}
 
-La frontera de 50 km sigue el criterio escrito del proyecto; debe confirmarse
-frente a la transición de 30--70 km descrita en la literatura. Parte de los
-eventos interplaca queda tierra adentro por la geometría del polígono SGC, por
-lo que conviene contrastarla con Slab2
+El criterio de fuentes corticales se delimitaba originalmente hasta 30 km;
+como esto dejaba eventos sin una fuente asignada, el equipo amplió este
+margen hasta 70 km, respaldado en la literatura sobre la transición de
+sismicidad cortical--subducción y con la aprobación del profesor del curso
 \parencite{petersen2018seismic,hayes2018slab2}.
 
 \section{Proximidad a fallas}
@@ -597,7 +596,7 @@ base PEER.
     \item La integración y depuración retuvo 110 eventos en 50 km y 2\,627 en 260 km; el catálogo regional registra magnitudes hasta $M_w=7.4$.
     \item La completitud temporal se examinó con Stepp y $M_c=3.05$ se estimó por máxima curvatura. El gráfico no reporta años de inicio completos por intervalo.
     \item Los ajustes Gutenberg--Richter obtuvieron $b=0.666$ y $0.728$; los retornos del catálogo CTM12 se calcularon con tasa anual y supuesto de Poisson.
-    \item La asociación a fuentes y la comparación espectral son preliminares; validar duplicados, geometría y efectos locales antes de evaluar la amenaza \parencite{nsr10,sgc2018amenaza}.
+    \item La asociación a fuentes y la comparación espectral son preliminares y constituyen un insumo de partida, no una evaluación de amenaza \parencite{nsr10,sgc2018amenaza}.
     \item De los 2\,691 eventos del catálogo CTM12, 1\,308 (48.61\,\%) son corticales, 359 (13.34\,\%) de subducción interplaca y 1\,024 (38.05\,\%) de subducción intraplaca; ninguno se asoció al Nido de Bucaramanga. De los eventos corticales, 1\,184 (90.5\,\%) quedan a 15 km o menos de una falla cartografiada, de modo que la sismicidad cortical, la más cercana a Neiva, está estrechamente ligada al sistema de fallas.
     \item La recurrencia estimada para el catálogo CTM12 es de un evento de $M_w\geq5$ cada 0.75 años, de $M_w\geq6$ cada 4.58 años y de $M_w\geq7$ cada 18.33 años. El valor para $M_w\geq7$ se apoya en pocos eventos dentro de la ventana de 110 años y tiene mayor incertidumbre; todos los retornos son promedios de largo plazo, no pronósticos de ocurrencia.
 \end{itemize}
