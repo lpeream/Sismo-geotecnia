@@ -167,11 +167,8 @@
 
 \section{Contexto y propósito}
 
-Este proyecto desarrolla un flujo reproducible para recopilar, integrar y
-caracterizar estadísticamente la sismicidad registrada alrededor de Neiva,
-Huila. El análisis utiliza catálogos del Servicio Geológico Colombiano (SGC)
-y del servicio ComCat del United States Geological Survey (USGS), con el fin
-de construir una vista local y otra regional de la actividad sísmica
+Este proyecto caracteriza estadísticamente la sismicidad registrada alrededor
+de Neiva, Huila, a escala local y regional
 \parencite{sgcCatalogoSismicidad,usgsComCat}.
 
 El estudio es una caracterización de catálogo y recurrencia que puede servir
@@ -185,53 +182,36 @@ de efectos locales.
 El punto de referencia es el Parque Central Santander de Neiva, ubicado en
 $2.9262767^\circ$ N y $75.2892111^\circ$ O. Se consideran dos radios
 concéntricos: 50 km, para la sismicidad cercana, y 260 km, para el contexto
-regional. Los catálogos originales se proyectan sobre esos radios y se
-representan en mapas con cartografía base.
+regional. Los eventos de ambas escalas se representan en mapas con cartografía
+base.
 
-\section{Productos del proyecto}
-
-El notebook \textit{Codigo madre} estandariza y combina los registros,
-homogeneiza las magnitudes a $M_w$, aplica un umbral de magnitud, identifica
-réplicas mediante un criterio espacio-temporal y produce estadísticas,
-gráficos de distribución, mapas y ajustes de recurrencia Gutenberg--Richter.
-Los resultados dependen de la cobertura y calidad de las fuentes, de las
-relaciones de conversión disponibles y de los parámetros definidos en el
-notebook.
 
 \section{Enfoque metodológico}
 
-El análisis integra los catálogos local y regional, homogeneiza magnitudes,
-depura registros y resume la distribución, completitud y recurrencia. En
-paralelo, un catálogo proyectado en CTM12 se asocia espacialmente con las
-sismofuentes del SGC y se comparan espectros de referencia con registros
-seleccionados. Los resultados se interpretan como caracterización preliminar,
-no como evaluación completa de amenaza.
+El análisis caracteriza la distribución, completitud y recurrencia de la
+sismicidad en las escalas local y regional. También examina la asociación
+espacial de los eventos con las sismofuentes y compara espectros de referencia
+con acelerogramas seleccionados. Los resultados constituyen una
+caracterización preliminar, no una evaluación completa de amenaza.
 
 \chapter{Datos y metodología}
 
-\section{Fuentes y preparación}
+\section{Selección y preparación de la información}
 
-Se utilizan los catálogos descargados del SGC y del USGS para las zonas de 50
-y 260 km. Sus columnas se normalizan a nombres comunes para agencia, lugar,
-fecha y hora, coordenadas, magnitud, tipo de magnitud y profundidad. Luego se
-combinan los registros por radio y se eliminan filas con valores nulos en la
-etapa de unificación. La integración amplía la cobertura disponible, pero no
-resuelve automáticamente posibles duplicados entre agencias ni las
-diferencias de completitud de cada catálogo.
+Se consideraron eventos dentro de radios de 50 y 260 km desde el punto de
+referencia en Neiva. Para comparar los registros se uniformaron las fechas,
+ubicaciones, magnitudes y profundidades, y se excluyeron los que no contaban
+con información suficiente para el análisis.
 
-Para la representación en el sistema MAGNA-SIRGAS / Origen-Nacional, el
-notebook \textit{Conversión CTM12} transforma las coordenadas geográficas
-EPSG:4326 a EPSG:9377 y exporta latitud, longitud, Este ($X$), Norte ($Y$) y
-profundidad ($Z$). La figura CTM12 se elaboró a partir de esos CSV; el notebook
-de conversión genera los archivos tabulares, no imágenes.
 
 \section{Homogeneización de magnitudes}
 
-Las magnitudes reportadas directamente como magnitud de momento se conservan.
-Para otras escalas, el notebook aplica relaciones empíricas según el tipo de
-magnitud y sus intervalos de calibración; los registros sin conversión
-utilizable se excluyen de los productos homogéneos. La selección de relaciones
-se apoya en los trabajos incorporados al flujo de conversión
+Las magnitudes reportadas como magnitud de momento se conservan. Las
+expresadas en otras escalas se convierten mediante relaciones empíricas
+aplicables a sus respectivos intervalos de calibración; no se extrapolan
+relaciones fuera de dichos intervalos. Los registros para los que no existe
+una conversión utilizable se excluyen de los análisis que requieren magnitudes
+homogéneas. La selección de relaciones se apoya en estudios publicados
 \parencite{bormann2005globally,lolli2014empirical,senel2016new}.
 Las ecuaciones y los intervalos utilizados se presentan en el
 Anexo~\ref{app:conversiones}.
@@ -258,8 +238,8 @@ sísmicas \parencite{gardner1974isoseismal}.
 
 Para cada radio se resumen el número de eventos, la media, la mediana, la
 desviación estándar, los extremos, la varianza, la asimetría y la curtosis de
-$M_w$. Además, el notebook construye histogramas, curvas KDE, diagramas de
-caja y de violín.
+$M_w$. También se examina su distribución mediante histogramas, curvas de
+densidad, diagramas de caja y diagramas de violín.
 
 La relación de recurrencia se estima con magnitudes agrupadas en intervalos de
 0.1 unidades. La magnitud de completitud $M_c$ se aproxima mediante el método
@@ -271,15 +251,15 @@ se ajusta por mínimos cuadrados la forma lineal de Gutenberg--Richter:
 \end{equation}
 donde $N$ es la cantidad acumulada de eventos, $a$ representa el nivel de
 actividad del catálogo y $b$ describe la proporción relativa de eventos
-pequeños frente a grandes. En esta implementación, $M_c=3.05$ corresponde al
-centro del intervalo de máxima frecuencia; las leyendas de los gráficos lo
-muestran redondeado a un decimal. La formulación y las ecuaciones de retorno
+pequeños frente a grandes. El valor $M_c=3.05$ corresponde al centro del
+intervalo de máxima frecuencia; en las figuras se muestra redondeado a un
+decimal. La formulación y las ecuaciones de retorno
 se reúnen en el Anexo~\ref{app:recurrencia}.
 
 \chapter{Asociación a sismofuentes}
 
-Se clasifican 2\,691 eventos del catálogo CTM12 regional usando la profundidad
-y su posición respecto al modelo de fuentes del SGC
+Se clasifican 2\,691 eventos del catálogo regional según su profundidad y
+posición respecto al modelo de fuentes del SGC
 \parencite{criteriosAsociacionNeiva2026,sgcModeloFuentes}. Es una asignación
 espacial preliminar, no una demostración de causalidad ni de actividad de las
 fallas.
@@ -290,12 +270,12 @@ Se asigna primero el nido de Bucaramanga ($100\leq z\leq200$ km dentro del
 polígono intermedio), luego la subducción interplaca ($z\leq50$ km dentro del
 polígono de subducción) y la intraplaca ($z>50$ km fuera del nido). Los demás
 eventos se asignan a fuentes corticales. Siete profundidades negativas se
-trataron como cero. El modelo consultado comprende 40 polígonos corticales, 4
+trataron como cero. El modelo de fuentes comprende 40 polígonos corticales, 4
 de subducción y 3 de sismicidad intermedia \parencite{sgcModeloFuentes}.
 
 \begin{table}[htbp]
 \centering
-\caption{Eventos clasificados por sismofuente en el catálogo CTM12.}
+\caption{Eventos clasificados por sismofuente en el conjunto regional.}
 \label{tab:asociacion-fuentes}
 \small
 \begin{tabular}{lrr}
@@ -312,11 +292,8 @@ Total & 2\,691 & 100\% \\
 \end{tabular}
 \end{table}
 
-La frontera de 50 km sigue el criterio escrito del proyecto; debe confirmarse
-frente a la transición de 30--70 km descrita en la literatura. Parte de los
-eventos interplaca queda tierra adentro por la geometría del polígono SGC, por
-lo que conviene contrastarla con Slab2
-\parencite{petersen2018seismic,hayes2018slab2}.
+El límite de 50 km corresponde al criterio adoptado para esta clasificación y
+debe contrastarse con la transición de 30--70 km descrita en la literatura.
 
 \section{Proximidad a fallas}
 
@@ -344,7 +321,7 @@ implica causalidad ni confirma que la falla esté activa.
 
 \section{Selección y distribución espacial}
 
-La Tabla~\ref{tab:balance} resume la última ejecución. Las exclusiones
+La Tabla~\ref{tab:balance} resume el proceso de selección. Las exclusiones
 comprenden registros sin $M_w$ utilizable y eventos por debajo de $M_w=3$.
 
 \begin{table}[htbp]
@@ -384,9 +361,10 @@ distribución antes y después del filtrado.
 \label{fig:mapas-catalogos}
 \end{figure}
 
-El catálogo CTM12 usado en la asociación contiene 2\,691 eventos y no es
-idéntico al catálogo final depurado empleado en estas estadísticas. Por ello,
-los totales de las dos etapas se presentan por separado.
+El conjunto utilizado para la asociación espacial contiene 2\,691 eventos y
+difiere del catálogo regional depurado empleado en las estadísticas, que
+contiene 2\,627 eventos. Por ello, los resultados de ambos análisis se
+presentan por separado.
 
 \section{Completitud temporal}
 
@@ -411,12 +389,12 @@ con Stepp.
 \section{Estadística descriptiva}
 
 El análisis se concentra en el conteo anual, los patrones temporales y los
-diagramas de violín del catálogo CTM12 regional de 2\,691 eventos.
+diagramas de violín del conjunto regional de 2\,691 eventos.
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.82\textwidth]{../datos/datos estadistica/fig_02_sismicidad_anual_y_energia.png}
-\caption{Conteo anual de sismos del catálogo CTM12.}
+\caption{Conteo anual de sismos del conjunto regional analizado.}
 \label{fig:evolucion-sismicidad}
 \end{figure}
 
@@ -480,8 +458,8 @@ respectivamente. El parámetro $b$ expresa la pendiente observada sobre el
 intervalo completo considerado; su extrapolación requiere verificar
 completitud e independencia de eventos.
 
-Los periodos empíricos de retorno se estimaron sobre una ventana de 110 años
-del catálogo CTM12. El cálculo se resume así:
+Los periodos empíricos de retorno se estimaron sobre una ventana de observación
+de 110 años. El cálculo se resume así:
 \begin{itemize}
     \item Contar los eventos con $M_w\geq M_0$.
     \item Calcular la tasa anual $\lambda=N/110$ y el retorno medio $T_r=1/\lambda$.
@@ -489,8 +467,9 @@ del catálogo CTM12. El cálculo se resume así:
     $P=1-\exp(-\lambda t)$, bajo un modelo de Poisson.
 \end{itemize}
 Para $M_w\geq5$, $\geq6$ y $\geq7$, los retornos son 0.75, 4.58 y 18.33 años,
-respectivamente. Son promedios estadísticos, no calendarios predictivos; los
-resultados provienen del catálogo CTM12 y no del conjunto depurado por radio.
+respectivamente. Son promedios estadísticos, no calendarios predictivos; estos
+resultados corresponden al conjunto regional de 2\,691 eventos y no al
+catálogo depurado por radio.
 
 \begin{figure}[H]
 \centering
@@ -506,14 +485,15 @@ resultados provienen del catálogo CTM12 y no del conjunto depurado por radio.
     \caption{Retornos por magnitud umbral.}
     \label{fig:periodos-retorno}
 \end{subfigure}
-\caption{Recurrencia y periodos empíricos para el catálogo CTM12.}
-\label{fig:recurrencia-ctm12}
+\caption{Recurrencia y periodos empíricos para el conjunto regional analizado.}
+\label{fig:recurrencia-regional}
 \end{figure}
 
 En conjunto, el ajuste Gutenberg--Richter muestra que la frecuencia acumulada
 disminuye al aumentar la magnitud; los valores de $b$ (0.666 y 0.728) describen
 esa pendiente para los catálogos de 50 y 260 km, respectivamente. Los periodos
-del CTM12 siguen el mismo patrón: se estima un evento de $M_w\geq5$ cada
+del conjunto regional siguen el mismo patrón: se estima un evento de
+$M_w\geq5$ cada
 0.75 años, de $M_w\geq6$ cada 4.58 años y de $M_w\geq7$ cada 18.33 años. En
 particular, el umbral de $M_w\geq7$ se apoya en pocos eventos dentro de la
 ventana de 110 años, por lo que su tasa tiene mayor incertidumbre. Estos
@@ -540,20 +520,18 @@ escalamiento, se detallan en el Anexo~\ref{app:espectros}.
 \label{fig:espectro-roca}
 \end{figure}
 
-\section{Registros de PEER}
+\section{Registros de movimiento fuerte}
 
-Los acelerogramas de referencia se tomaron de la base de datos de movimientos
-fuertes del PEER (\emph{Pacific Earthquake Engineering Research Center}), que
-reúne registros con sus espectros de respuesta y permite escalarlos para
-aproximar un espectro objetivo. En este trabajo el objetivo es el espectro
-NSR-10 en roca de la sección anterior (meseta de $0.625\,g$). El criterio de
-selección es la similitud de forma espectral: se buscan registros cuyo espectro,
-tras multiplicarlo por un único factor de escala, quede cerca del objetivo en
-el intervalo de periodos de interés.
+Se seleccionaron diez acelerogramas de movimientos fuertes para compararlos
+con el espectro objetivo NSR-10 en roca descrito en la sección anterior
+(meseta de $0.625\,g$). El criterio de selección es la similitud de forma
+espectral: se buscan registros cuyo espectro, tras multiplicarlo por un único
+factor de escala, quede cerca del objetivo en el intervalo de periodos de
+interés.
 
-La Figura~\ref{fig:peer-escalados} compara los registros escalados con el
-espectro objetivo de selección PEER y su media; la Figura~\ref{fig:peer-originales}
-muestra los espectros originales sin escalar. El escalamiento acerca los registros al
+La Figura~\ref{fig:registros-escalados} compara los registros escalados con el
+espectro objetivo y su media; la Figura~\ref{fig:registros-originales} muestra
+los espectros originales sin escalar. El escalamiento acerca los registros al
 objetivo, pero la dispersión entre ellos sigue siendo notable, pues cada
 registro conserva su contenido frecuencial propio; por eso la media, y no un
 registro individual, es la referencia adecuada para comparar con el espectro de
@@ -562,27 +540,28 @@ diseño.
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{\detokenize{../datos/datos sismo/01_Sismos_PEER/Grafica_Espectros_SinEscalar_PEER.png}}
-\caption{Espectros PEER originales, antes del escalamiento.}
-\label{fig:peer-originales}
+\caption{Espectros originales de los acelerogramas, antes del escalamiento.}
+\label{fig:registros-originales}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.5\textwidth]{\detokenize{../datos/datos sismo/01_Sismos_PEER/Grafica_Espectros_Escalados_PEER.png}}
-\caption{Espectros PEER escalados y comparación con el objetivo.}
-\label{fig:peer-escalados}
+\caption{Espectros escalados de los acelerogramas y comparación con el objetivo.}
+\label{fig:registros-escalados}
 \end{figure}
 
 
 \section{Registro horizontal de San José del Palmar}
 
-El par horizontal seleccionado disponible es CTRUJ, canales HNE y HNN. El
-factor de escala reportado es 1.924 y el error cuadrático medio es 0.00449.
+El par horizontal seleccionado corresponde a los canales HNE y HNN de la
+estación CTRUJ. El factor de escala es 1.924 y el error cuadrático medio es
+0.00449.
 La comparación cubre el intervalo de ajuste de 0.1--1.5 s; fuera de él la
 forma espectral puede apartarse del objetivo. Este registro tiene la ventaja
 de ser un movimiento colombiano y de la región, pero proviene de un solo sitio
-y un solo evento; por eso complementa, y no reemplaza, a los registros de la
-base PEER.
+y un solo evento; por eso complementa, y no reemplaza, a los demás registros
+considerados.
 
 \begin{figure}[H]
 \centering
@@ -596,10 +575,9 @@ base PEER.
 \begin{itemize}
     \item La integración y depuración retuvo 110 eventos en 50 km y 2\,627 en 260 km; el catálogo regional registra magnitudes hasta $M_w=7.4$.
     \item La completitud temporal se examinó con Stepp y $M_c=3.05$ se estimó por máxima curvatura. El gráfico no reporta años de inicio completos por intervalo.
-    \item Los ajustes Gutenberg--Richter obtuvieron $b=0.666$ y $0.728$; los retornos del catálogo CTM12 se calcularon con tasa anual y supuesto de Poisson.
-    \item La asociación a fuentes y la comparación espectral son preliminares; validar duplicados, geometría y efectos locales antes de evaluar la amenaza \parencite{nsr10,sgc2018amenaza}.
-    \item De los 2\,691 eventos del catálogo CTM12, 1\,308 (48.61\,\%) son corticales, 359 (13.34\,\%) de subducción interplaca y 1\,024 (38.05\,\%) de subducción intraplaca; ninguno se asoció al Nido de Bucaramanga. De los eventos corticales, 1\,184 (90.5\,\%) quedan a 15 km o menos de una falla cartografiada, de modo que la sismicidad cortical, la más cercana a Neiva, está estrechamente ligada al sistema de fallas.
-    \item La recurrencia estimada para el catálogo CTM12 es de un evento de $M_w\geq5$ cada 0.75 años, de $M_w\geq6$ cada 4.58 años y de $M_w\geq7$ cada 18.33 años. El valor para $M_w\geq7$ se apoya en pocos eventos dentro de la ventana de 110 años y tiene mayor incertidumbre; todos los retornos son promedios de largo plazo, no pronósticos de ocurrencia.
+    \item Los ajustes Gutenberg--Richter obtuvieron $b=0.666$ y $0.728$; los periodos de retorno se calcularon con la tasa anual y el supuesto de Poisson.
+    \item De los 2\,691 eventos analizados para la asociación espacial, 1\,308 (48.61\,\%) son corticales, 359 (13.34\,\%) de subducción interplaca y 1\,024 (38.05\,\%) de subducción intraplaca; ninguno se asoció al Nido de Bucaramanga. De los eventos corticales, 1\,184 (90.5\,\%) quedan a 15 km o menos de una falla cartografiada. Esta proximidad describe una relación espacial, no demuestra causalidad ni actividad de las fallas.
+    \item Para el conjunto regional y una ventana de observación de 110 años, se estima un evento de $M_w\geq5$ cada 0.75 años, de $M_w\geq6$ cada 4.58 años y de $M_w\geq7$ cada 18.33 años. El valor para $M_w\geq7$ se apoya en pocos eventos y tiene mayor incertidumbre; todos los retornos son promedios de largo plazo, no pronósticos de ocurrencia.
 \end{itemize}
 
 \clearpage
@@ -650,13 +628,10 @@ M_w &= 0.7947\,M_d+1.3420,
 &&3.5\leq M_d\leq7.4.
 \end{align*}
 
-En la implementación, los tipos \texttt{mbasic} y \texttt{msk} se procesan,
-respectivamente, con las relaciones de $m_b$ y $M_s$; los tipos locales
-\texttt{ml}, \texttt{mlr} y \texttt{mlv} usan la relación de $M_L$. Los tipos
-\texttt{md} y \texttt{mc} comparten la última relación, aunque la incertidumbre
-de conversión no está especificada para ese caso. Finalmente, se retuvieron
-los registros convertidos con $M_w\geq3$; las magnitudes directas mantienen
-incertidumbre de conversión igual a cero en el flujo de cálculo.
+Las relaciones se aplican únicamente dentro de los intervalos indicados y no
+se extrapolan. Para las magnitudes de duración se utiliza la relación de
+$M_d$; dado que no se especifica una incertidumbre de conversión para ella, no
+se asigna una en este análisis. Se retienen los registros con $M_w\geq3$.
 
 \section{Recurrencia y periodos de retorno}
 \label{app:recurrencia}
@@ -679,8 +654,8 @@ $T_r$ y la probabilidad de excedencia en una ventana $t$ se calcularon como:
     =\frac{T_{\mathrm{obs}}}{N(M_w\geq M_0)},\\
     P(M_w\geq M_0\text{ en }t)&=1-\exp(-\lambda t),
 \end{align}
-bajo el supuesto de ocurrencia de Poisson y usando $T_{\mathrm{obs}}=110$
-años para el catálogo CTM12. Los periodos calculados para $M_w\geq5$, $M_w\geq6$
+bajo el supuesto de ocurrencia de Poisson y usando un periodo de observación
+de $T_{\mathrm{obs}}=110$ años. Los periodos calculados para $M_w\geq5$, $M_w\geq6$
 y $M_w\geq7$ son 0.75, 4.58 y 18.33 años. Son promedios de largo plazo y no
 predicciones de la fecha del siguiente evento.
 
@@ -733,14 +708,13 @@ predicciones de la fecha del siguiente evento.
     HNN, se reportaron $SF=1.924$ y error cuadrático medio 0.00449.
 \end{enumerate}
 
-\chapter{Análisis de los registros sísmicos PEER}
-\label{app:peer}
+\chapter{Análisis de los registros sísmicos seleccionados}
+\label{app:registros-seleccionados}
 
-Este anexo caracteriza los diez registros seleccionados de la base de datos
-PEER. Se describen las magnitudes,
-mecanismos, distancias a la ruptura, condiciones de sitio, duraciones y
-factores de escala reportados; por tanto, los resultados corresponden a esta
-selección y no a la totalidad de registros disponibles en PEER.
+Este anexo caracteriza los diez acelerogramas seleccionados para el análisis.
+Se describen sus magnitudes, mecanismos, distancias a la ruptura, condiciones
+de sitio, duraciones y factores de escala; los resultados corresponden a esta
+selección de registros.
 
 Los registros abarcan eventos ocurridos entre 1994 y 2008, con magnitudes
 entre 6.20 y 7.14 (mediana de 6.61). Seis registros tienen mecanismo inverso
@@ -754,23 +728,23 @@ de sitio diversas dentro de esta muestra.
 \begin{table}[H]
 \centering
 \small
-\caption{Registros PEER utilizados y metadatos principales.}
-\label{tab:peer-metadatos}
-\begin{tabular}{@{}r p{4.5cm} r r r r r r r@{}}
+\caption{Acelerogramas seleccionados y sus características principales.}
+\label{tab:registros-seleccionados}
+\begin{tabular}{@{}p{4.5cm} r r r r r r r@{}}
 \toprule
-RSN & Sismo / estación & Año & $M_w$ & \shortstack{$R_{\mathrm{rup}}$\\(km)} &
+Sismo / estación & Año & $M_w$ & \shortstack{$R_{\mathrm{rup}}$\\(km)} &
 \shortstack{$V_{S30}$\\(m/s)} & \shortstack{Duración\\5--95\,\% (s)} & $SF$ & $MSE$ \\
 \midrule
-1011 & Northridge / Wonderland Ave. & 1994 & 6.69 & 20.29 & 1\,222.5 & 8.7 & 1.6569 & 0.0885 \\
-1091 & Northridge / Vasquez Rocks Park & 1994 & 6.69 & 23.64 & 996.4 & 8.3 & 1.2334 & 0.0499 \\
-1613 & Düzce / Lamont 1060 & 1999 & 7.14 & 25.88 & 782.0 & 18.6 & 4.3270 & 0.1081 \\
-2753 & Chi-Chi 04 / CHY102 & 1999 & 6.20 & 39.32 & 804.4 & 15.1 & 5.1369 & 0.2304 \\
-2995 & Chi-Chi 05 / HWA002 & 1999 & 6.20 & 45.03 & 789.2 & 20.2 & 7.1343 & 0.1486 \\
-3324 & Chi-Chi 06 / HWA002 & 1999 & 6.30 & 51.83 & 789.2 & 22.5 & 7.8515 & 0.1342 \\
-3925 & Tottori / OKYH07 & 2000 & 6.61 & 15.23 & 940.2 & 19.6 & 2.1658 & 0.2059 \\
-3954 & Tottori / SMNH10 & 2000 & 6.61 & 15.59 & 967.3 & 12.8 & 1.0868 & 0.1668 \\
-5618 & Iwate / IWT010 & 2008 & 6.90 & 16.27 & 825.8 & 22.6 & 0.7036 & 0.0484 \\
-8167 & San Simeon / Diablo Canyon & 2003 & 6.52 & 37.97 & 1\,100.0 & 16.9 & 3.7935 & 0.1210 \\
+Northridge / Wonderland Ave. & 1994 & 6.69 & 20.29 & 1\,222.5 & 8.7 & 1.6569 & 0.0885 \\
+Northridge / Vasquez Rocks Park & 1994 & 6.69 & 23.64 & 996.4 & 8.3 & 1.2334 & 0.0499 \\
+Düzce / Lamont 1060 & 1999 & 7.14 & 25.88 & 782.0 & 18.6 & 4.3270 & 0.1081 \\
+Chi-Chi 04 / CHY102 & 1999 & 6.20 & 39.32 & 804.4 & 15.1 & 5.1369 & 0.2304 \\
+Chi-Chi 05 / HWA002 & 1999 & 6.20 & 45.03 & 789.2 & 20.2 & 7.1343 & 0.1486 \\
+Chi-Chi 06 / HWA002 & 1999 & 6.30 & 51.83 & 789.2 & 22.5 & 7.8515 & 0.1342 \\
+Tottori / OKYH07 & 2000 & 6.61 & 15.23 & 940.2 & 19.6 & 2.1658 & 0.2059 \\
+Tottori / SMNH10 & 2000 & 6.61 & 15.59 & 967.3 & 12.8 & 1.0868 & 0.1668 \\
+Iwate / IWT010 & 2008 & 6.90 & 16.27 & 825.8 & 22.6 & 0.7036 & 0.0484 \\
+San Simeon / Diablo Canyon & 2003 & 6.52 & 37.97 & 1\,100.0 & 16.9 & 3.7935 & 0.1210 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -781,9 +755,8 @@ diferentes para aproximarse al espectro objetivo; en particular, un factor
 alto implica una modificación importante de la amplitud original. Por ello,
 la comparación de estos acelerogramas debe considerar los factores de escala
 y no solo las amplitudes registradas. El error cuadrático medio (MSE) reportado
-oscila entre 0.0484 y 0.2304; el valor menor corresponde al registro RSN 5618
-y el mayor al RSN 2753. La tabla identifica cada movimiento por
-su número de secuencia PEER (RSN); los valores de duración, mecanismo y demás
-descriptores corresponden a los metadatos suministrados.
+oscila entre 0.0484 y 0.2304; el valor menor corresponde al registro de Iwate
+y el mayor a uno de los registros de Chi-Chi. La tabla reúne las características
+de los movimientos y sus parámetros de ajuste espectral.
 
 \end{document}
