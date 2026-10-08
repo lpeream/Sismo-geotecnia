@@ -733,4 +733,57 @@ predicciones de la fecha del siguiente evento.
     HNN, se reportaron $SF=1.924$ y error cuadrático medio 0.00449.
 \end{enumerate}
 
+\chapter{Análisis de los registros sísmicos PEER}
+\label{app:peer}
+
+Este anexo caracteriza los diez registros seleccionados de la base de datos
+PEER. Se describen las magnitudes,
+mecanismos, distancias a la ruptura, condiciones de sitio, duraciones y
+factores de escala reportados; por tanto, los resultados corresponden a esta
+selección y no a la totalidad de registros disponibles en PEER.
+
+Los registros abarcan eventos ocurridos entre 1994 y 2008, con magnitudes
+entre 6.20 y 7.14 (mediana de 6.61). Seis registros tienen mecanismo inverso
+y cuatro, de rumbo. La distancia a la ruptura, $R_{\mathrm{rup}}$,
+varía entre 15.23 y 51.83 km, mientras que las velocidades $V_{S30}$ están
+entre 782 y 1\,222.52 m/s. La duración significativa entre el 5\,\% y el
+95\,\% de la intensidad de Arias va de 8.3 a 22.6 s. En conjunto, los datos
+incluyen registros de magnitud moderada a alta, con distancias y condiciones
+de sitio diversas dentro de esta muestra.
+
+\begin{table}[H]
+\centering
+\small
+\caption{Registros PEER utilizados y metadatos principales.}
+\label{tab:peer-metadatos}
+\begin{tabular}{@{}r p{4.5cm} r r r r r r r@{}}
+\toprule
+RSN & Sismo / estación & Año & $M_w$ & \shortstack{$R_{\mathrm{rup}}$\\(km)} &
+\shortstack{$V_{S30}$\\(m/s)} & \shortstack{Duración\\5--95\,\% (s)} & $SF$ & $MSE$ \\
+\midrule
+1011 & Northridge / Wonderland Ave. & 1994 & 6.69 & 20.29 & 1\,222.5 & 8.7 & 1.6569 & 0.0885 \\
+1091 & Northridge / Vasquez Rocks Park & 1994 & 6.69 & 23.64 & 996.4 & 8.3 & 1.2334 & 0.0499 \\
+1613 & Düzce / Lamont 1060 & 1999 & 7.14 & 25.88 & 782.0 & 18.6 & 4.3270 & 0.1081 \\
+2753 & Chi-Chi 04 / CHY102 & 1999 & 6.20 & 39.32 & 804.4 & 15.1 & 5.1369 & 0.2304 \\
+2995 & Chi-Chi 05 / HWA002 & 1999 & 6.20 & 45.03 & 789.2 & 20.2 & 7.1343 & 0.1486 \\
+3324 & Chi-Chi 06 / HWA002 & 1999 & 6.30 & 51.83 & 789.2 & 22.5 & 7.8515 & 0.1342 \\
+3925 & Tottori / OKYH07 & 2000 & 6.61 & 15.23 & 940.2 & 19.6 & 2.1658 & 0.2059 \\
+3954 & Tottori / SMNH10 & 2000 & 6.61 & 15.59 & 967.3 & 12.8 & 1.0868 & 0.1668 \\
+5618 & Iwate / IWT010 & 2008 & 6.90 & 16.27 & 825.8 & 22.6 & 0.7036 & 0.0484 \\
+8167 & San Simeon / Diablo Canyon & 2003 & 6.52 & 37.97 & 1\,100.0 & 16.9 & 3.7935 & 0.1210 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Los factores de escala de la tabla varían entre 0.7036 y 7.8515, con una
+mediana de 2.9797. Esta amplitud muestra que los registros requirieron ajustes
+diferentes para aproximarse al espectro objetivo; en particular, un factor
+alto implica una modificación importante de la amplitud original. Por ello,
+la comparación de estos acelerogramas debe considerar los factores de escala
+y no solo las amplitudes registradas. El error cuadrático medio (MSE) reportado
+oscila entre 0.0484 y 0.2304; el valor menor corresponde al registro RSN 5618
+y el mayor al RSN 2753. La tabla identifica cada movimiento por
+su número de secuencia PEER (RSN); los valores de duración, mecanismo y demás
+descriptores corresponden a los metadatos suministrados.
+
 \end{document}
