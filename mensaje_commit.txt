@@ -1,0 +1,12 @@
+Revision de tareas pendientes del catalogo y analisis de amenaza
+
+- Revision de registros no_convertida y extrapolada (Tarea 1)
+- Correccion de bug critico en depurar_replicas.py: fechas del SGC se
+  perdian por formato ISO8601 mixto con USGS, lo que dejaba sin depurar
+  la mayoria de replicas/precursores del SGC
+- Estimacion de completitud (Mc) por fuente, periodo y radio (Tarea 2)
+- Revision de formatos de fecha, decimales y profundidades (Tarea 3)
+- Sensibilidad de la depuracion: tabla de ventanas alternativa
+  (Uhrhammer) y duplicados SGC/USGS (Tarea 4)
+- Construccion del espectro NSR-10 para Neiva y generacion de
+  acelerogramas sinteticos compatibles (Tarea 5)
