@@ -18,7 +18,9 @@
 \usepackage{amsmath}
 \usepackage[protrusion=true,expansion=true]{microtype}
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{caption}
+\usepackage{subcaption}
 \usepackage{booktabs}
 \usepackage{fancyhdr}
 \usepackage{csquotes}
@@ -137,7 +139,7 @@ interplaca (13.34\%), 1\,024 de subducción intraplaca (38.05\%) y ninguno en
 el nido de Bucaramanga. La Figura~\ref{fig:e2-asociacion-sismofuentes}
 presenta su distribución respecto a las sismofuentes.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.92\linewidth]{../recursos/Qgis/datos/Figura_asociacion_sismofuentes.png}
     \caption{Asociación espacial de los eventos clasificados con las sismofuentes del SGC en el entorno de Neiva.}
@@ -151,7 +153,7 @@ medida epicentral en planta y no demuestra causalidad ni actividad de las
 fallas. La Figura~\ref{fig:e2-areas-fallas} muestra los eventos corticales,
 las áreas asociadas a fallas y los radios de estudio.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.92\linewidth]{../recursos/Qgis/datos/Figura_areas_corticales_fallas.png}
     \caption{Eventos corticales, fallas cartografiadas y radios de 50 y 260 km alrededor de Neiva.}
@@ -236,7 +238,7 @@ especialmente inciertos. Los R² altos describen el ajuste lineal de los
 acumulados en el tramo seleccionado; no prueban por sí solos que todos los
 eventos estén detectados.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.92\linewidth]{../figuras/completez_acumulada_catalogo_regional.png}
     \caption{Conteo acumulado por año e intervalo de magnitud, con los ajustes lineales segmentados.}
@@ -308,7 +310,7 @@ $R^2=0.983$), subducción interplaca ($a=3.209$, $b=0.745$, $R^2=0.994$) y
 subducción intraplaca ($a=3.443$, $b=0.648$, $R^2=0.969$). La
 Figura~\ref{fig:curvas-recurrencia} muestra las tasas y sus ajustes.
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \includegraphics[width=0.82\linewidth]{../figuras/curvas_recurrencia_sismofuentes.png}
     \caption{Tasas acumuladas con completez por umbral y ajustes Gutenberg--Richter por sismofuente.}
@@ -438,29 +440,53 @@ distancia difieren entre fuentes, por lo que no se interpretan como una
 comparación a magnitud fija. La figura muestra las predicciones por evento y
 las curvas del modelo:
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.98\linewidth,height=0.68\textheight,keepaspectratio]{../figuras/curvas_atenuacion_neiva_pga_cortical.png}
-    \caption{Atenuación para sismos corticales en Neiva: PGA condicional por evento y curvas a magnitudes de referencia. Se usa clase de sitio III y profundidad mediana cortical.}
+    \begin{subfigure}[t]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../figuras/curvas_atenuacion_neiva_pga_cortical.png}
+        \caption{Eje de distancia lineal.}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../figuras/curvas_atenuacion_neiva_pga_cortical_logx.png}
+        \caption{Eje de distancia logarítmico.}
+    \end{subfigure}
+    \caption{Atenuación para sismos corticales en Neiva: PGA condicional por evento y curvas a magnitudes de referencia.}
     \label{fig:atenuacion-neiva}
 \end{figure}
-\clearpage
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.98\linewidth,height=0.68\textheight,keepaspectratio]{../figuras/curvas_atenuacion_neiva_pga_interplaca.png}
-    \caption{Atenuación de subducción interplaca: PGA condicional por evento y curvas a magnitudes de referencia. Se usa clase de sitio III y profundidad mediana de la fuente.}
+    \begin{subfigure}[t]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../figuras/curvas_atenuacion_neiva_pga_interplaca.png}
+        \caption{Eje de distancia lineal.}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../figuras/curvas_atenuacion_neiva_pga_interplaca_logx.png}
+        \caption{Eje de distancia logarítmico.}
+    \end{subfigure}
+    \caption{Atenuación de subducción interplaca: PGA condicional por evento y curvas a magnitudes de referencia.}
     \label{fig:atenuacion-neiva-interplaca}
 \end{figure}
-\clearpage
 
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
-    \includegraphics[width=0.98\linewidth,height=0.68\textheight,keepaspectratio]{../figuras/curvas_atenuacion_neiva_pga_intraplaca.png}
-    \caption{Atenuación de subducción intraplaca (slab): PGA condicional por evento y curvas a magnitudes de referencia. Se usa clase de sitio III y profundidad mediana de la fuente.}
+    \begin{subfigure}[t]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../figuras/curvas_atenuacion_neiva_pga_intraplaca.png}
+        \caption{Eje de distancia lineal.}
+    \end{subfigure}\hfill
+    \begin{subfigure}[t]{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{../figuras/curvas_atenuacion_neiva_pga_intraplaca_logx.png}
+        \caption{Eje de distancia logarítmico.}
+    \end{subfigure}
+    \caption{Atenuación de subducción intraplaca (slab): PGA condicional por evento y curvas a magnitudes de referencia.}
     \label{fig:atenuacion-neiva-intraplaca}
 \end{figure}
-\clearpage
 
 Las predicciones se calcularon para cada evento y se resumieron por
 sismofuente y magnitud, usando las coordenadas, la clase de sitio, la medida

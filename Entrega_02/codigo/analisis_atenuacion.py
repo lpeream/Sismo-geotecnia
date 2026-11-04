@@ -419,17 +419,6 @@ def _plot_attenuation_curves(
     }
     for source in sources:
         subset = events[events["fuente"] == source]
-        fig, axis = plt.subplots(figsize=(10, 7))
-        scatter = axis.scatter(
-            subset["distancia_epicentral_km"],
-            subset["intensidad_predicha_cm_s2"],
-            c=subset["Mw"],
-            cmap=magnitude_cmap,
-            norm=magnitude_norm,
-            s=22,
-            alpha=0.42,
-            edgecolors="none",
-        )
         reference_depth = (
             float(subset["profundidad_ajustada_km"].median())
             if config["reference_depth"] == "source_median"
@@ -440,78 +429,84 @@ def _plot_attenuation_curves(
             float(config["minimum_distance_km"]),
         )
         distance_max = float(subset["distancia_epicentral_km"].max())
-        distance_grid = np.linspace(distance_min, distance_max, 160)
+        distance_grid = np.geomspace(distance_min, distance_max, 160)
         source_magnitude_min = float(subset["Mw"].min())
         source_magnitude_max = float(subset["Mw"].max())
-        for magnitude in config["reference_magnitudes"]:
-            if not source_magnitude_min <= float(magnitude) <= source_magnitude_max:
-                continue
-            intensity_curve = _predict_intensity(
-                np.full_like(distance_grid, float(magnitude)),
-                distance_grid,
-                np.full_like(distance_grid, reference_depth),
-                source,
-                parameters,
-                config,
+        for x_scale, suffix in (("linear", ""), ("log", "_logx")):
+            fig, axis = plt.subplots(figsize=(10, 7))
+            scatter = axis.scatter(
+                subset["distancia_epicentral_km"],
+                subset["intensidad_predicha_cm_s2"],
+                c=subset["Mw"],
+                cmap=magnitude_cmap,
+                norm=magnitude_norm,
+                s=22,
+                alpha=0.42,
+                edgecolors="none",
             )
-            axis.plot(
-                distance_grid,
-                intensity_curve,
-                color=magnitude_cmap(magnitude_norm(float(magnitude))),
-                linewidth=1.2,
-                label=f"Mw={float(magnitude):g}",
+            for magnitude in config["reference_magnitudes"]:
+                if not source_magnitude_min <= float(magnitude) <= source_magnitude_max:
+                    continue
+                intensity_curve = _predict_intensity(
+                    np.full_like(distance_grid, float(magnitude)),
+                    distance_grid,
+                    np.full_like(distance_grid, reference_depth),
+                    source,
+                    parameters,
+                    config,
+                )
+                axis.plot(
+                    distance_grid,
+                    intensity_curve,
+                    color=magnitude_cmap(magnitude_norm(float(magnitude))),
+                    linewidth=1.2,
+                    label=f"Mw={float(magnitude):g}",
+                )
+            axis.set_xscale(x_scale)
+            axis.set_yscale("log")
+            axis.set_xlabel("Distancia epicentral al sitio (km)")
+            axis.set_ylabel(
+                f"{parameters['label']} predicha (cm/s², mediana condicional)"
             )
-        axis.set_yscale("log")
-        axis.set_xlabel("Distancia epicentral al sitio (km)")
-        axis.set_ylabel(
-            f"{parameters['label']} predicha (cm/s², mediana condicional)"
-        )
-        axis.set_title(source)
-        axis.grid(True, which="both", alpha=0.25)
-        axis.set_xlim(left=0)
-        colorbar = fig.colorbar(scatter, ax=axis, pad=0.02)
-        colorbar.set_label("Magnitud Mw")
-        handles = [
-            Line2D(
-                [0],
-                [0],
-                color=magnitude_cmap(magnitude_norm(magnitude)),
-                linewidth=2,
-                label=f"Mw={magnitude:g}",
+            axis.set_title(source)
+            axis.grid(True, which="both", alpha=0.25)
+            axis.set_xlim(distance_min, distance_max)
+            colorbar = fig.colorbar(scatter, ax=axis, pad=0.02)
+            colorbar.set_label("Magnitud Mw")
+            handles = [
+                Line2D(
+                    [0],
+                    [0],
+                    color=magnitude_cmap(magnitude_norm(magnitude)),
+                    linewidth=2,
+                    label=f"Mw={magnitude:g}",
+                )
+                for magnitude in reference_magnitudes
+                if source_magnitude_min <= magnitude <= source_magnitude_max
+            ]
+            if handles:
+                axis.legend(
+                    handles=handles,
+                    title="Curvas para magnitud fija",
+                    loc="upper right",
+                    framealpha=0.9,
+                    fontsize=9,
+                    title_fontsize=9,
+                )
+            fig.suptitle(
+                f"{parameters['label']} según Zhao et al. (2006)\n"
+                f"{config['site_name']} — {source}; clase "
+                f"{config['site_class']}",
+                fontsize=15,
             )
-            for magnitude in reference_magnitudes
-            if float(subset["Mw"].min())
-            <= magnitude
-            <= float(subset["Mw"].max())
-        ]
-        if handles:
-            axis.legend(
-                handles=handles,
-                title="Curvas para magnitud fija",
-                loc="upper right",
-                framealpha=0.9,
-                fontsize=9,
-                title_fontsize=9,
+            fig.tight_layout(rect=(0, 0, 1, 0.93))
+            figure_path = FIGURES_DIRECTORY / (
+                f"curvas_atenuacion_neiva_{measure_slug(parameters)}_"
+                f"{source_slugs.get(source, 'fuente')}{suffix}.png"
             )
-        reference_depth = (
-            float(subset["profundidad_ajustada_km"].median())
-            if config["reference_depth"] == "source_median"
-            else float(config["reference_depth"])
-        )
-        fig.suptitle(
-            f"{parameters['label']} según Zhao et al. (2006)\n"
-            f"{config['site_name']} — {source}; clase {config['site_class']}; "
-            f"h de referencia={reference_depth:.1f} km",
-            fontsize=15,
-        )
-        fig.tight_layout(rect=(0, 0, 1, 0.93))
-        figure_path = FIGURES_DIRECTORY / (
-            f"curvas_atenuacion_neiva_{measure_slug(parameters)}_"
-            f"{source_slugs.get(source, 'fuente')}.png"
-        )
-        fig.savefig(figure_path, dpi=300, bbox_inches="tight")
-        plt.close(fig)
-        figure_paths.append(figure_path)
+            fig.savefig(figure_path, dpi=300, bbox_inches="tight")
+            plt.close(fig)
+            figure_paths.append(figure_path)
     return figure_paths
 
 
