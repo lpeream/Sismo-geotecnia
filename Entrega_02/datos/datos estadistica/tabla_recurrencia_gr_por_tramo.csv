@@ -1,41 +1,81 @@
-﻿Conjunto,Intervalo Mw,Mw mínimo,Mw máximo,N incremental,N acumulado (misma ventana),Año inicio completo,t (años),lambda acumulada (año^-1),log10(lambda),Estado completez,a,b,R2 ajuste
-Catálogo regional,"[3, 3.3)",3.0,3.3,845.0,2289.0,1994.0,32.0,71.53125,1.8544958143546368,Estimado,4.297314630446754,0.7848024348906686,0.9853103355994871
-Catálogo regional,"[3.3, 3.5)",3.3,3.5,389.0,1407.0,1995.0,31.0,45.38709677419355,1.6569324036004731,Estimado,4.297314630446754,0.7848024348906686,0.9853103355994871
-Catálogo regional,"[3.5, 4)",3.5,4.0,470.0,1018.0,1995.0,31.0,32.83870967741935,1.5163860841664671,Estimado,4.297314630446754,0.7848024348906686,0.9853103355994871
-Catálogo regional,"[4, 4.5)",4.0,4.5,283.0,631.0,1991.0,35.0,18.02857142857143,1.2559613148938586,Estimado,4.297314630446754,0.7848024348906686,0.9853103355994871
-Catálogo regional,"[4.5, 5)",4.5,5.0,270.0,374.0,1985.0,41.0,9.121951219512194,0.9600877454807446,Estimado,4.297314630446754,0.7848024348906686,0.9853103355994871
-Catálogo regional,"[5, 5.5)",5.0,5.5,84.0,127.0,1971.0,55.0,2.309090909090909,0.363441031461713,Estimado,4.297314630446754,0.7848024348906686,0.9853103355994871
-Catálogo regional,"[5.5, 6)",5.5,6.0,24.0,35.0,1991.0,35.0,1.0,0.0,Estimado,4.297314630446754,0.7848024348906686,0.9853103355994871
-Catálogo regional,"[6, 6.5)",6.0,6.5,9.0,15.0,1974.0,52.0,0.28846153846153844,-0.539912084579118,Estimado,4.297314630446754,0.7848024348906686,0.9853103355994871
-Catálogo regional,"[6.5, 7)",6.5,7.0,,,,,,,No estimable: menos de 10 eventos,4.297314630446754,0.7848024348906686,0.9853103355994871
-Catálogo regional,"[7, 7.5)",7.0,7.5,,,,,,,No estimable: menos de 10 eventos,4.297314630446754,0.7848024348906686,0.9853103355994871
-Cortical,"[3, 3.3)",3.0,3.3,466.0,1157.0,1994.0,32.0,36.15625,1.5581833806318435,Estimado,3.9872225685780687,0.7992750867798141,0.9834185285581621
-Cortical,"[3.3, 3.5)",3.3,3.5,213.0,666.0,1995.0,31.0,21.483870967741936,1.3321125353360284,Estimado,3.9872225685780687,0.7992750867798141,0.9834185285581621
-Cortical,"[3.5, 4)",3.5,4.0,239.0,473.0,1994.0,32.0,14.78125,1.1697111624179055,Estimado,3.9872225685780687,0.7992750867798141,0.9834185285581621
-Cortical,"[4, 4.5)",4.0,4.5,139.0,265.0,1989.0,37.0,7.162162162162162,0.8550441498698128,Estimado,3.9872225685780687,0.7992750867798141,0.9834185285581621
-Cortical,"[4.5, 5)",4.5,5.0,92.0,128.0,1986.0,40.0,3.2,0.505149978319906,Estimado,3.9872225685780687,0.7992750867798141,0.9834185285581621
-Cortical,"[5, 5.5)",5.0,5.5,33.0,44.0,1968.0,58.0,0.7586206896551724,-0.11997531707674987,Estimado,3.9872225685780687,0.7992750867798141,0.9834185285581621
-Cortical,"[5.5, 6)",5.5,6.0,,,,,,,No estimable: menos de 10 eventos,3.9872225685780687,0.7992750867798141,0.9834185285581621
-Cortical,"[6, 6.5)",6.0,6.5,,,,,,,No estimable: menos de 10 eventos,3.9872225685780687,0.7992750867798141,0.9834185285581621
-Cortical,"[6.5, 7)",6.5,7.0,,,,,,,No estimable: menos de 10 eventos,3.9872225685780687,0.7992750867798141,0.9834185285581621
-Cortical,"[7, 7.5)",7.0,7.5,,,,,,,No estimable: menos de 10 eventos,3.9872225685780687,0.7992750867798141,0.9834185285581621
-Subducción interplaca,"[3, 3.3)",3.0,3.3,104.0,274.0,1999.0,27.0,10.148148148148149,1.0063867986614006,Estimado,3.2087738800767784,0.7453505939882005,0.9935635942396943
-Subducción interplaca,"[3.3, 3.5)",3.3,3.5,46.0,129.0,2000.0,26.0,4.961538461538462,0.695616362328431,Estimado,3.2087738800767784,0.7453505939882005,0.9935635942396943
-Subducción interplaca,"[3.5, 4)",3.5,4.0,58.0,107.0,1999.0,27.0,3.962962962962963,0.5980200135262224,Estimado,3.2087738800767784,0.7453505939882005,0.9935635942396943
-Subducción interplaca,"[4, 4.5)",4.0,4.5,29.0,49.0,1999.0,27.0,1.8148148148148149,0.2588323158695264,Estimado,3.2087738800767784,0.7453505939882005,0.9935635942396943
-Subducción interplaca,"[4.5, 5)",4.5,5.0,14.0,21.0,1996.0,30.0,0.7,-0.1549019599857432,Estimado,3.2087738800767784,0.7453505939882005,0.9935635942396943
-Subducción interplaca,"[5, 5.5)",5.0,5.5,,,,,,,No estimable: menos de 10 eventos,3.2087738800767784,0.7453505939882005,0.9935635942396943
-Subducción interplaca,"[5.5, 6)",5.5,6.0,,,,,,,No estimable: menos de 10 eventos,3.2087738800767784,0.7453505939882005,0.9935635942396943
-Subducción interplaca,"[6, 6.5)",6.0,6.5,,,,,,,No estimable: menos de 10 eventos,3.2087738800767784,0.7453505939882005,0.9935635942396943
-Subducción interplaca,"[6.5, 7)",6.5,7.0,,,,,,,No estimable: menos de 10 eventos,3.2087738800767784,0.7453505939882005,0.9935635942396943
-Subducción interplaca,"[7, 7.5)",7.0,7.5,,,,,,,No estimable: menos de 10 eventos,3.2087738800767784,0.7453505939882005,0.9935635942396943
-Subducción intraplaca,"[3, 3.3)",3.0,3.3,256.0,821.0,1995.0,31.0,26.483870967741936,1.422981463285168,Estimado,3.4434689650358523,0.648138100894513,0.9691730999798626
-Subducción intraplaca,"[3.3, 3.5)",3.3,3.5,106.0,543.0,1996.0,30.0,18.1,1.2576785748691846,Estimado,3.4434689650358523,0.648138100894513,0.9691730999798626
-Subducción intraplaca,"[3.5, 4)",3.5,4.0,168.0,410.0,1998.0,28.0,14.642857142857142,1.1656258253775162,Estimado,3.4434689650358523,0.648138100894513,0.9691730999798626
-Subducción intraplaca,"[4, 4.5)",4.0,4.5,113.0,314.0,1991.0,35.0,8.971428571428572,0.9528616037229393,Estimado,3.4434689650358523,0.648138100894513,0.9691730999798626
-Subducción intraplaca,"[4.5, 5)",4.5,5.0,164.0,225.0,1983.0,43.0,5.232558139534884,0.7187140625317759,Estimado,3.4434689650358523,0.648138100894513,0.9691730999798626
-Subducción intraplaca,"[5, 5.5)",5.0,5.5,45.0,70.0,1975.0,51.0,1.3725490196078431,0.13752786391632046,Estimado,3.4434689650358523,0.648138100894513,0.9691730999798626
-Subducción intraplaca,"[5.5, 6)",5.5,6.0,13.0,20.0,1993.0,33.0,0.6060606060606061,-0.21748394421390627,Estimado,3.4434689650358523,0.648138100894513,0.9691730999798626
-Subducción intraplaca,"[6, 6.5)",6.0,6.5,,,,,,,No estimable: menos de 10 eventos,3.4434689650358523,0.648138100894513,0.9691730999798626
-Subducción intraplaca,"[6.5, 7)",6.5,7.0,,,,,,,No estimable: menos de 10 eventos,3.4434689650358523,0.648138100894513,0.9691730999798626
-Subducción intraplaca,"[7, 7.5)",7.0,7.5,,,,,,,No estimable: menos de 10 eventos,3.4434689650358523,0.648138100894513,0.9691730999798626
+﻿Escala,Conjunto,Intervalo Mw,Mw mínimo,Mw máximo,N incremental,N acumulado (misma ventana),Año inicio completo,t (años),lambda acumulada (año^-1),log10(lambda),Estado completez,Base tasa,a,b,R2 ajuste
+Regional (260 km),Catálogo regional,"[3, 3.3)",3.0,3.3,845,2289,1994,32,71.53125,1.8544958143546368,Estimado,Completez estimada,4.297314630446754,0.7848024348906686,0.9853103355994871
+Regional (260 km),Catálogo regional,"[3.3, 3.5)",3.3,3.5,389,1407,1995,31,45.38709677419355,1.6569324036004731,Estimado,Completez estimada,4.297314630446754,0.7848024348906686,0.9853103355994871
+Regional (260 km),Catálogo regional,"[3.5, 4)",3.5,4.0,470,1018,1995,31,32.83870967741935,1.5163860841664671,Estimado,Completez estimada,4.297314630446754,0.7848024348906686,0.9853103355994871
+Regional (260 km),Catálogo regional,"[4, 4.5)",4.0,4.5,283,631,1991,35,18.02857142857143,1.2559613148938586,Estimado,Completez estimada,4.297314630446754,0.7848024348906686,0.9853103355994871
+Regional (260 km),Catálogo regional,"[4.5, 5)",4.5,5.0,270,374,1985,41,9.121951219512194,0.9600877454807446,Estimado,Completez estimada,4.297314630446754,0.7848024348906686,0.9853103355994871
+Regional (260 km),Catálogo regional,"[5, 5.5)",5.0,5.5,84,127,1971,55,2.309090909090909,0.363441031461713,Estimado,Completez estimada,4.297314630446754,0.7848024348906686,0.9853103355994871
+Regional (260 km),Catálogo regional,"[5.5, 6)",5.5,6.0,24,35,1991,35,1.0,0.0,Estimado,Completez estimada,4.297314630446754,0.7848024348906686,0.9853103355994871
+Regional (260 km),Catálogo regional,"[6, 6.5)",6.0,6.5,9,15,1974,52,0.28846153846153844,-0.539912084579118,Estimado,Completez estimada,4.297314630446754,0.7848024348906686,0.9853103355994871
+Regional (260 km),Catálogo regional,"[6.5, 7)",6.5,7.0,5,9,1917,109,0.08256880733944955,-1.0831839885012988,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,4.297314630446754,0.7848024348906686,0.9853103355994871
+Regional (260 km),Catálogo regional,"[7, 7.5)",7.0,7.5,4,4,1917,109,0.03669724770642202,-1.4353665066126613,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,4.297314630446754,0.7848024348906686,0.9853103355994871
+Regional (260 km),Cortical,"[3, 3.3)",3.0,3.3,466,1157,1994,32,36.15625,1.5581833806318435,Estimado,Completez estimada,3.9872225685780687,0.7992750867798141,0.9834185285581621
+Regional (260 km),Cortical,"[3.3, 3.5)",3.3,3.5,213,666,1995,31,21.483870967741936,1.3321125353360284,Estimado,Completez estimada,3.9872225685780687,0.7992750867798141,0.9834185285581621
+Regional (260 km),Cortical,"[3.5, 4)",3.5,4.0,239,473,1994,32,14.78125,1.1697111624179055,Estimado,Completez estimada,3.9872225685780687,0.7992750867798141,0.9834185285581621
+Regional (260 km),Cortical,"[4, 4.5)",4.0,4.5,139,265,1989,37,7.162162162162162,0.8550441498698128,Estimado,Completez estimada,3.9872225685780687,0.7992750867798141,0.9834185285581621
+Regional (260 km),Cortical,"[4.5, 5)",4.5,5.0,92,128,1986,40,3.2,0.505149978319906,Estimado,Completez estimada,3.9872225685780687,0.7992750867798141,0.9834185285581621
+Regional (260 km),Cortical,"[5, 5.5)",5.0,5.5,33,44,1968,58,0.7586206896551724,-0.11997531707674987,Estimado,Completez estimada,3.9872225685780687,0.7992750867798141,0.9834185285581621
+Regional (260 km),Cortical,"[5.5, 6)",5.5,6.0,9,16,1917,109,0.14678899082568808,-0.8333065152846988,No validado: R² posterior < 0.90,Referencia cruda; completez no estimable,3.9872225685780687,0.7992750867798141,0.9834185285581621
+Regional (260 km),Cortical,"[6, 6.5)",6.0,6.5,4,7,1917,109,0.06422018348623854,-1.1923284579263669,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,3.9872225685780687,0.7992750867798141,0.9834185285581621
+Regional (260 km),Cortical,"[6.5, 7)",6.5,7.0,1,3,1917,109,0.027522935779816515,-1.5603052432209612,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,3.9872225685780687,0.7992750867798141,0.9834185285581621
+Regional (260 km),Cortical,"[7, 7.5)",7.0,7.5,2,2,1917,109,0.01834862385321101,-1.7363965022766423,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,3.9872225685780687,0.7992750867798141,0.9834185285581621
+Regional (260 km),Subducción interplaca,"[3, 3.3)",3.0,3.3,104,274,1999,27,10.148148148148149,1.0063867986614006,Estimado,Completez estimada,3.2087738800767784,0.7453505939882005,0.9935635942396943
+Regional (260 km),Subducción interplaca,"[3.3, 3.5)",3.3,3.5,46,129,2000,26,4.961538461538462,0.695616362328431,Estimado,Completez estimada,3.2087738800767784,0.7453505939882005,0.9935635942396943
+Regional (260 km),Subducción interplaca,"[3.5, 4)",3.5,4.0,58,107,1999,27,3.962962962962963,0.5980200135262224,Estimado,Completez estimada,3.2087738800767784,0.7453505939882005,0.9935635942396943
+Regional (260 km),Subducción interplaca,"[4, 4.5)",4.0,4.5,29,49,1999,27,1.8148148148148149,0.2588323158695264,Estimado,Completez estimada,3.2087738800767784,0.7453505939882005,0.9935635942396943
+Regional (260 km),Subducción interplaca,"[4.5, 5)",4.5,5.0,14,21,1996,30,0.7,-0.1549019599857432,Estimado,Completez estimada,3.2087738800767784,0.7453505939882005,0.9935635942396943
+Regional (260 km),Subducción interplaca,"[5, 5.5)",5.0,5.5,3,8,1917,109,0.07339449541284404,-1.13433651094868,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,3.2087738800767784,0.7453505939882005,0.9935635942396943
+Regional (260 km),Subducción interplaca,"[5.5, 6)",5.5,6.0,3,5,1917,109,0.045871559633027525,-1.3384564936046048,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,3.2087738800767784,0.7453505939882005,0.9935635942396943
+Regional (260 km),Subducción interplaca,"[6, 6.5)",6.0,6.5,2,2,1917,109,0.01834862385321101,-1.7363965022766423,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,3.2087738800767784,0.7453505939882005,0.9935635942396943
+Regional (260 km),Subducción interplaca,"[6.5, 7)",6.5,7.0,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,3.2087738800767784,0.7453505939882005,0.9935635942396943
+Regional (260 km),Subducción interplaca,"[7, 7.5)",7.0,7.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,3.2087738800767784,0.7453505939882005,0.9935635942396943
+Regional (260 km),Subducción intraplaca,"[3, 3.3)",3.0,3.3,256,821,1995,31,26.483870967741936,1.422981463285168,Estimado,Completez estimada,3.4434689650358523,0.648138100894513,0.9691730999798626
+Regional (260 km),Subducción intraplaca,"[3.3, 3.5)",3.3,3.5,106,543,1996,30,18.1,1.2576785748691846,Estimado,Completez estimada,3.4434689650358523,0.648138100894513,0.9691730999798626
+Regional (260 km),Subducción intraplaca,"[3.5, 4)",3.5,4.0,168,410,1998,28,14.642857142857142,1.1656258253775162,Estimado,Completez estimada,3.4434689650358523,0.648138100894513,0.9691730999798626
+Regional (260 km),Subducción intraplaca,"[4, 4.5)",4.0,4.5,113,314,1991,35,8.971428571428572,0.9528616037229393,Estimado,Completez estimada,3.4434689650358523,0.648138100894513,0.9691730999798626
+Regional (260 km),Subducción intraplaca,"[4.5, 5)",4.5,5.0,164,225,1983,43,5.232558139534884,0.7187140625317759,Estimado,Completez estimada,3.4434689650358523,0.648138100894513,0.9691730999798626
+Regional (260 km),Subducción intraplaca,"[5, 5.5)",5.0,5.5,45,70,1975,51,1.3725490196078431,0.13752786391632046,Estimado,Completez estimada,3.4434689650358523,0.648138100894513,0.9691730999798626
+Regional (260 km),Subducción intraplaca,"[5.5, 6)",5.5,6.0,13,20,1993,33,0.6060606060606061,-0.21748394421390627,Estimado,Completez estimada,3.4434689650358523,0.648138100894513,0.9691730999798626
+Regional (260 km),Subducción intraplaca,"[6, 6.5)",6.0,6.5,7,13,1917,109,0.11926605504587157,-0.9234831456337869,No validado: R² posterior < 0.90,Referencia cruda; completez no estimable,3.4434689650358523,0.648138100894513,0.9691730999798626
+Regional (260 km),Subducción intraplaca,"[6.5, 7)",6.5,7.0,4,6,1917,109,0.05504587155963303,-1.25927524755698,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,3.4434689650358523,0.648138100894513,0.9691730999798626
+Regional (260 km),Subducción intraplaca,"[7, 7.5)",7.0,7.5,2,2,1917,109,0.01834862385321101,-1.7363965022766423,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,3.4434689650358523,0.648138100894513,0.9691730999798626
+Local (50 km),Catálogo local,"[3, 3.3)",3.0,3.3,40,106,1917,109,0.9724770642201835,-0.01212063267585337,No validado: R² posterior < 0.90,Referencia cruda; completez no estimable,,,
+Local (50 km),Catálogo local,"[3.3, 3.5)",3.3,3.5,12,41,2003,23,1.7826086956521738,0.2510560207021426,Estimado,Completez estimada,,,
+Local (50 km),Catálogo local,"[3.5, 4)",3.5,4.0,20,36,1998,28,1.2857142857142858,0.10914446942506807,Estimado,Completez estimada,,,
+Local (50 km),Catálogo local,"[4, 4.5)",4.0,4.5,13,28,1917,109,0.25688073394495414,-0.5902684665984044,No validado: R² posterior < 0.90,Referencia cruda; completez no estimable,,,
+Local (50 km),Catálogo local,"[4.5, 5)",4.5,5.0,11,15,1917,109,0.13761467889908258,-0.8613352388849423,No validado: R² posterior < 0.90,Referencia cruda; completez no estimable,,,
+Local (50 km),Catálogo local,"[5, 5.5)",5.0,5.5,3,4,1917,109,0.03669724770642202,-1.4353665066126613,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,,,
+Local (50 km),Catálogo local,"[5.5, 6)",5.5,6.0,1,1,1917,109,0.009174311926605505,-2.037426497940624,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,,,
+Local (50 km),Catálogo local,"[6, 6.5)",6.0,6.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Catálogo local,"[6.5, 7)",6.5,7.0,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Catálogo local,"[7, 7.5)",7.0,7.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Cortical,"[3, 3.3)",3.0,3.3,34,81,1995,31,2.6129032258064515,0.41712332504437705,Estimado,Completez estimada,2.786862668551608,0.7869221599431093,0.9991286500440243
+Local (50 km),Cortical,"[3.3, 3.5)",3.3,3.5,11,36,2003,23,1.565217391304348,0.1945746647496944,Estimado,Completez estimada,2.786862668551608,0.7869221599431093,0.9991286500440243
+Local (50 km),Cortical,"[3.5, 4)",3.5,4.0,19,31,1998,28,1.1071428571428572,0.044203662492053486,Estimado,Completez estimada,2.786862668551608,0.7869221599431093,0.9991286500440243
+Local (50 km),Cortical,"[4, 4.5)",4.0,4.5,7,15,1991,35,0.42857142857142855,-0.36797678529459443,Estimado,Completez estimada,2.786862668551608,0.7869221599431093,0.9991286500440243
+Local (50 km),Cortical,"[4.5, 5)",4.5,5.0,7,10,1917,109,0.09174311926605505,-1.0374264979406236,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,2.786862668551608,0.7869221599431093,0.9991286500440243
+Local (50 km),Cortical,"[5, 5.5)",5.0,5.5,2,3,1917,109,0.027522935779816515,-1.5603052432209612,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,2.786862668551608,0.7869221599431093,0.9991286500440243
+Local (50 km),Cortical,"[5.5, 6)",5.5,6.0,1,1,1917,109,0.009174311926605505,-2.037426497940624,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,2.786862668551608,0.7869221599431093,0.9991286500440243
+Local (50 km),Cortical,"[6, 6.5)",6.0,6.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,2.786862668551608,0.7869221599431093,0.9991286500440243
+Local (50 km),Cortical,"[6.5, 7)",6.5,7.0,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,2.786862668551608,0.7869221599431093,0.9991286500440243
+Local (50 km),Cortical,"[7, 7.5)",7.0,7.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,2.786862668551608,0.7869221599431093,0.9991286500440243
+Local (50 km),Subducción interplaca,"[3, 3.3)",3.0,3.3,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción interplaca,"[3.3, 3.5)",3.3,3.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción interplaca,"[3.5, 4)",3.5,4.0,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción interplaca,"[4, 4.5)",4.0,4.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción interplaca,"[4.5, 5)",4.5,5.0,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción interplaca,"[5, 5.5)",5.0,5.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción interplaca,"[5.5, 6)",5.5,6.0,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción interplaca,"[6, 6.5)",6.0,6.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción interplaca,"[6.5, 7)",6.5,7.0,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción interplaca,"[7, 7.5)",7.0,7.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción intraplaca,"[3, 3.3)",3.0,3.3,2,12,1917,109,0.11009174311926606,-0.9582452518929988,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción intraplaca,"[3.3, 3.5)",3.3,3.5,1,10,1917,109,0.09174311926605505,-1.0374264979406236,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción intraplaca,"[3.5, 4)",3.5,4.0,1,9,1917,109,0.08256880733944955,-1.0831839885012988,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción intraplaca,"[4, 4.5)",4.0,4.5,3,8,1917,109,0.07339449541284404,-1.13433651094868,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción intraplaca,"[4.5, 5)",4.5,5.0,4,5,1917,109,0.045871559633027525,-1.3384564936046048,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción intraplaca,"[5, 5.5)",5.0,5.5,1,1,1917,109,0.009174311926605505,-2.037426497940624,Sin quiebre; usar tasa de referencia sin corregir,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción intraplaca,"[5.5, 6)",5.5,6.0,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción intraplaca,"[6, 6.5)",6.0,6.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción intraplaca,"[6.5, 7)",6.5,7.0,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
+Local (50 km),Subducción intraplaca,"[7, 7.5)",7.0,7.5,0,0,1917,109,0.0,,Sin eventos,Referencia cruda; completez no estimable,,,
