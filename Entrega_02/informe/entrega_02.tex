@@ -1,0 +1,478 @@
+\documentclass[12pt,oneside]{article}
+\usepackage[
+    a4paper,
+    top=2.2cm,
+    bottom=2.2cm,
+    left=2.4cm,
+    right=2.4cm,
+    headheight=42pt,
+    headsep=10pt,
+    footskip=18pt
+]{geometry}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{lmodern}
+\usepackage{mathptmx}
+\usepackage{amsmath}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{csquotes}
+\usepackage{titlesec}
+\usepackage[
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+    citecolor=black,
+    pdftitle={TRABAJO AMENAZA SÍSMICA (20\%)},
+    pdfauthor={Andrés Stiven Jaramillo Cataño, Emmel Escovitch Riaño, Laury Yocely Perea Mena}
+]{hyperref}
+\usepackage[backend=biber,style=apa,sortcites=true]{biblatex}
+\addbibresource{biblio.bib}
+
+\setlength{\emergencystretch}{2em}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\titleformat{\section}
+    {\normalfont\normalsize\bfseries}
+    {\thesection.}
+    {0.6em}
+    {}
+\titlespacing*{\section}{0pt}{12pt}{4pt}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\includegraphics[height=1.1cm]{../figuras/Logo_encabezado.png}}
+\fancyhead[R]{\small\bfseries Ingeniería Sismo-Geotécnica}
+\fancyfoot[C]{\small Página \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\begin{document}
+
+\pagenumbering{roman}
+
+\begin{titlepage}
+    \thispagestyle{empty}
+    \centering
+    \vspace*{0.3cm}
+    \includegraphics[width=0.20\textwidth]{../figuras/Logo_1.png}\par
+
+    \vspace{2.6cm}
+    {\LARGE\bfseries TRABAJO AMENAZA SÍSMICA (20\%)\par}
+
+    \vspace{0.9cm}
+    {\large\bfseries Segunda entrega\\[4pt]
+    Ingeniería Sismo-Geotécnica\par}
+
+    \vspace{2.2cm}
+    {\large\bfseries Elaborado por:\par}
+    \vspace{8pt}
+    {\large Andrés Stiven Jaramillo Cataño\\[4pt]
+    Emmel Escovitch Riaño\\[4pt]
+    Laury Yocely Perea Mena\par}
+
+    \vspace{1.0cm}
+    {\large\bfseries Docente:\par}
+    \vspace{8pt}
+    {\large Andrés Felipe Serna Vazquez\par}
+
+    \vfill
+    {\large Universidad Nacional de Colombia\\[4pt]
+    Sede Medellín\\[4pt]
+    Facultad de Minas\\[4pt]
+    Departamento de Ingeniería Civil\\[4pt]
+    Octubre de 2026\par}
+    \vspace{0.3cm}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+\listoffigures
+\addcontentsline{toc}{section}{Índice de figuras}
+\clearpage
+\renewcommand{\listtablename}{Índice de tablas}
+\listoftables
+\addcontentsline{toc}{section}{Índice de tablas}
+\clearpage
+
+\pagenumbering{arabic}
+\setcounter{section}{0}
+
+\section{Descripción del proyecto y procedimiento}
+
+\subsection{Descripción del proyecto}
+
+Esta entrega plantea una evaluación probabilista de la amenaza sísmica para
+Neiva, con el Parque Santander como punto de referencia. Se consideran un
+ámbito local de 50 km y uno regional de 260 km. El objetivo es integrar la
+definición de las sismofuentes, su recurrencia, las relaciones de atenuación y
+la respuesta esperada en roca, para estimar la amenaza en los sitios de
+estudio.
+
+La secuencia metodológica toma como referencia el capítulo 1 de
+\textit{Tarea 2: Ingeniería Sismogeotécnica}, incluido en los recursos de esta
+entrega, y se adapta a la información disponible para Neiva. Comprende cuatro
+pasos de evaluación probabilista de amenaza sísmica y un paso adicional para
+obtener el espectro de aceleración:
+
+\begin{enumerate}
+    \item \textbf{Definición de sismofuentes.} Se clasifica la sismicidad con base en la ubicación y profundidad de los eventos y su relación espacial con los polígonos de fuentes sísmicas. Para los eventos corticales se examina además su proximidad a las fallas cartografiadas.
+    \item \textbf{Curvas de recurrencia.} Se caracteriza, por sismofuente, la frecuencia de excedencia de magnitudes mediante el catálogo y su periodo de completitud. Se construyen las curvas requeridas para el modelo característico.
+    \item \textbf{Relaciones de atenuación.} Se seleccionan y justifican ecuaciones apropiadas para cada ambiente tectónico; estas estiman el movimiento del suelo en función de la magnitud, la distancia y las condiciones consideradas.
+    \item \textbf{Cálculo de la amenaza.} Se integran las contribuciones de las sismofuentes y sus incertidumbres para obtener la amenaza total en cada sitio y determinar la magnitud correspondiente al periodo de retorno de 475 años.
+    \item \textbf{Espectros en roca.} Se calculan los espectros de respuesta y se construye el espectro de aceleración en roca para cada sitio de estudio.
+\end{enumerate}
+
+\subsection{Contexto de la asociación de sismos y fallas}
+
+Como antecedente para definir las fuentes, en la Entrega 1 se clasificaron
+espacialmente 2\,691 eventos: 1\,308 corticales (48.61\%), 359 de subducción
+interplaca (13.34\%), 1\,024 de subducción intraplaca (38.05\%) y ninguno en
+el nido de Bucaramanga. La Figura~\ref{fig:e2-asociacion-sismofuentes}
+presenta su distribución respecto a las sismofuentes.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.92\linewidth]{../recursos/Qgis/datos/Figura_asociacion_sismofuentes.png}
+    \caption{Asociación espacial de los eventos clasificados con las sismofuentes del SGC en el entorno de Neiva.}
+    \label{fig:e2-asociacion-sismofuentes}
+\end{figure}
+
+De los 1\,308 eventos corticales, 1\,184 (90.5\%) se encuentran a 15 km o
+menos de una falla cartografiada, mientras que 124 (9.5\%) no tienen una falla
+cercana. La evaluación consideró 809 trazas de falla. Esta distancia es una
+medida epicentral en planta y no demuestra causalidad ni actividad de las
+fallas. La Figura~\ref{fig:e2-areas-fallas} muestra los eventos corticales,
+las áreas asociadas a fallas y los radios de estudio.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.92\linewidth]{../recursos/Qgis/datos/Figura_areas_corticales_fallas.png}
+    \caption{Eventos corticales, fallas cartografiadas y radios de 50 y 260 km alrededor de Neiva.}
+    \label{fig:e2-areas-fallas}
+\end{figure}
+
+El conjunto usado para esta asociación contiene 2\,691 eventos y es distinto
+del catálogo regional depurado de 2\,627 eventos utilizado en las estadísticas
+de la Entrega 1. Por tanto, las dos muestras se mantienen separadas en los
+análisis de esta entrega.
+
+\section{Curvas de recurrencia por sismofuente}
+
+\subsection{Fundamento teórico y procedimiento}
+
+La relación de Gutenberg--Richter caracteriza la frecuencia acumulada de
+excedencia de magnitud mediante una relación aproximadamente lineal entre el
+logaritmo de la tasa anual y la magnitud
+\parencite{gutenbergRichter1944,kramerStewart2024}:
+\begin{equation}
+    \log_{10}\lambda(M_w\geq M_0)=a-bM_0,
+    \qquad
+    \lambda_i=\frac{N_{\mathrm{acum}}(M_i)}{t_i},
+    \qquad
+    T_r=\frac{1}{\lambda}.
+\end{equation}
+Aquí, $N_{\mathrm{acum}}(M_i)$ es el número de eventos que igualan o superan el
+umbral $M_i$ y $t_i$ es el periodo de observación completo para ese umbral;
+$a$ representa el nivel de actividad y $b$ la disminución de la tasa con la
+magnitud. Se grafica $\log_{10}\lambda_i$ frente a $M_i$ y se ajusta una recta
+solo con los umbrales cuyo intervalo tiene completez temporal estimable.
+
+\subsection{Catálogo y completitud}
+
+Se procesó la copia en Entrega 2 de
+\texttt{Sismos\_260\_clasificados\_20261004\_192107.csv}: 2\,691 eventos con
+$M_w$ entre 3.0 y 7.4, registrados entre 1917 y septiembre de 2026. Se
+excluyeron los 199 registros de 2026 porque el año aún no está completo; el
+análisis llega a 2025 y contiene 2\,492 eventos. Los tramos son
+$[3,3.3)$, $[3.3,3.5)$, $[3.5,4)$ y, desde 4 hasta 7.5, intervalos de 0.5
+unidades. Se cierran por la izquierda y se abren por la derecha.
+
+Para cada tramo se construyó la serie anual de eventos $n_{i,y}$ y el
+acumulado $C_{i,y}=\sum_{\tau\leq y} n_{i,\tau}$. Se probaron todos los años
+de quiebre que dejan por lo menos 10 años y 3 eventos a cada lado. En cada
+segmento se ajustó por mínimos cuadrados una recta
+$C_{i,y}=m y+c$. Se seleccionó el quiebre que minimiza la suma de cuadrados
+residual conjunta. El coeficiente de determinación de cada tramo es
+$R^2=1-\mathrm{SSE}/\mathrm{SST}$. Solo se acepta como inicio estimado aquel
+con al menos 10 eventos en el intervalo y $R^2_{\mathrm{post}}\geq0.90$; esta
+regla operativa hace visible cuándo la muestra no permite sostener un ajuste.
+La exposición del intervalo es $t_i=2025-Y_{c,i}+1$, donde $Y_{c,i}$ es el
+primer año del segmento posterior al quiebre.
+
+\begin{table}[htbp]
+\centering
+\caption{Completez del catálogo regional por intervalo de magnitud.}
+\label{tab:completez-tramos}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Intervalo $M_w$ & $N$ & $Y_c$ & $t$ (años) & $R^2_{\mathrm{post}}$ \\
+\midrule
+$[3,3.3)$ & 860 & 1994 & 32 & 0.996 \\
+$[3.3,3.5)$ & 399 & 1995 & 31 & 0.997 \\
+$[3.5,4)$ & 490 & 1995 & 31 & 0.988 \\
+$[4,4.5)$ & 299 & 1991 & 35 & 0.997 \\
+$[4.5,5)$ & 305 & 1985 & 41 & 0.968 \\
+$[5,5.5)$ & 89 & 1971 & 55 & 0.983 \\
+$[5.5,6)$ & 28 & 1991 & 35 & 0.947 \\
+$[6,6.5)$ & 13 & 1974 & 52 & 0.912 \\
+$[6.5,7)$ & 5 & -- & -- & -- \\
+$[7,7.5)$ & 4 & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Los dos últimos tramos no alcanzan el mínimo de eventos para una regresión
+segmentada, por lo que su tiempo completo no se estimó y no se extrapola una
+tasa a partir de ellos. El intervalo $[6,6.5)$ sí supera la regla adoptada,
+pero solo contiene 13 eventos; su quiebre y su tasa deben considerarse
+especialmente inciertos. Los R² altos describen el ajuste lineal de los
+acumulados en el tramo seleccionado; no prueban por sí solos que todos los
+eventos estén detectados.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.92\linewidth]{../figuras/completez_acumulada_catalogo_regional.png}
+    \caption{Conteo acumulado por año e intervalo de magnitud, con los ajustes lineales segmentados.}
+    \label{fig:completez-acumulada-tramos}
+\end{figure}
+
+La tabla de recurrencia conserva la exposición específica de cada umbral. Para
+la fila $i$, el conteo incremental es
+$N_i=\#\{Y\geq Y_{c,i},\,M_i\leq M_w<M_{i+1}\}$. El acumulado se recalcula en
+esa misma ventana:
+\begin{equation}
+    N_{\mathrm{acum}}(M_i)
+    =\#\{Y\geq Y_{c,i},\,M_w\geq M_i\}
+    =\sum_{k\geq i}N_{k\mid i}.
+\end{equation}
+\begin{equation}
+    \lambda_i=\frac{N_{\mathrm{acum}}(M_i)}{t_i}.
+\end{equation}
+\begin{equation}
+    \log_{10}\lambda_i
+    =\log_{10}\!\left(\frac{N_{\mathrm{acum}}(M_i)}{t_i}\right).
+\end{equation}
+Aquí, $N_{k\mid i}$ es el número incremental en el tramo $k$, contado en la
+ventana que comienza en $Y_{c,i}$. Esto evita sumar conteos observados durante
+ventanas temporales distintas. El periodo medio es $T_{r,i}=1/\lambda_i$.
+En la tabla exportada, \emph{Conjunto} identifica el catálogo regional o la
+sismofuente; \emph{Intervalo}, \emph{$M_w$ mínimo} y \emph{$M_w$ máximo}
+corresponden a $[M_i,M_{i+1})$, $M_i$ y $M_{i+1}$, respectivamente.
+\emph{$N_i$} y \emph{$N_{\mathrm{acum}}$} siguen las definiciones anteriores;
+\emph{Año inicio completo} es $Y_{c,i}$ y \emph{$t_i$} se calcula como
+$2025-Y_{c,i}+1$. Las columnas \emph{$\lambda_i$} y
+\emph{$\log_{10}\lambda_i$} son la tasa anual y su logaritmo decimal. El campo
+\emph{Estado completez} registra si el umbral pasó los criterios; si no, los
+conteos/tasas que requieren una ventana completa se dejan sin estimar. Las
+columnas \emph{$a$}, \emph{$b$} y \emph{$R^2$ ajuste} contienen los parámetros y
+la bondad de ajuste del modelo lineal del conjunto, repetidos en sus filas.
+La salida \texttt{conteos\_incrementales\_ventana\_umbral.csv} desglosa cada
+$N_{\mathrm{acum}}$ en los $N_{k\mid i}$ que lo forman.
+
+\begin{table}[htbp]
+\centering
+\caption{Tabla de recurrencia Gutenberg--Richter del catálogo regional.}
+\label{tab:recurrencia-tramos}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Intervalo $M_w$ & $N_i$ & $N_{\mathrm{acum}}$ & $t_i$ & $\lambda_i$ & $\log_{10}\lambda_i$ \\
+\midrule
+$[3,3.3)$ & 845 & 2\,289 & 32 & 71.531 & 1.854 \\
+$[3.3,3.5)$ & 389 & 1\,407 & 31 & 45.387 & 1.657 \\
+$[3.5,4)$ & 470 & 1\,018 & 31 & 32.839 & 1.516 \\
+$[4,4.5)$ & 283 & 631 & 35 & 18.029 & 1.256 \\
+$[4.5,5)$ & 270 & 374 & 41 & 9.122 & 0.960 \\
+$[5,5.5)$ & 84 & 127 & 55 & 2.309 & 0.363 \\
+$[5.5,6)$ & 24 & 35 & 35 & 1.000 & 0.000 \\
+$[6,6.5)$ & 9 & 15 & 52 & 0.288 & -0.540 \\
+$[6.5,7)$ & -- & -- & -- & -- & -- \\
+$[7,7.5)$ & -- & -- & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Se ajustó $\log_{10}\lambda_i=a-bM_i$ por mínimos cuadrados usando el límite
+inferior $M_i$ de cada tramo, solo tasas positivas y completez validada; se
+requieren al menos tres intervalos. Los resultados son: catálogo regional
+($a=4.297$, $b=0.785$, $R^2=0.985$), cortical ($a=3.987$, $b=0.799$,
+$R^2=0.983$), subducción interplaca ($a=3.209$, $b=0.745$, $R^2=0.994$) y
+subducción intraplaca ($a=3.443$, $b=0.648$, $R^2=0.969$). La
+Figura~\ref{fig:curvas-recurrencia} muestra las tasas y sus ajustes.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.82\linewidth]{../figuras/curvas_recurrencia_sismofuentes.png}
+    \caption{Tasas acumuladas con completez por umbral y ajustes Gutenberg--Richter por sismofuente.}
+    \label{fig:curvas-recurrencia}
+\end{figure}
+
+El notebook y el módulo Python generan, además, resultados por fuente y tramo:
+conteos anuales/acumulados, pendientes y R² pre/postquiebre, matriz de
+incrementos en la ventana de cada umbral, tasas y parámetros $a$ y $b$. Están
+en \texttt{datos/datos estadistica/}; los gráficos de acumulados por fuente,
+en \texttt{figuras/}.
+
+La estimación es exploratoria. El catálogo está truncado en $M_w=3.0$, por lo
+que no permite probar completez bajo ese límite. La selección de quiebres por
+R² no sustituye la validación sismológica de cambios en la red, homogeneidad
+de magnitudes, independencia y agrupamiento de eventos. No se aplicó
+declustering; las tasas reflejan todos los eventos catalogados. En los tramos
+con pocos eventos, especialmente desde $M_w=6$, $a$, $b$ y las tasas tienen
+incertidumbre elevada y no deben extrapolarse como parámetros definitivos de
+amenaza.
+
+\section{Curvas de atenuación para Neiva}
+
+\subsection{Modelo y cálculo de la distancia}
+
+Como primera aproximación se implementó la relación de Zhao et al. (2006)
+\parencite{zhao2006}, que el documento de referencia propone para predecir PGA
+o aceleración espectral amortiguada al 5\,\%. En este análisis se seleccionó
+PGA, en cm/s$^2$, para no confundirla con $Sa(T)$; el código también permite
+seleccionar $Sa(0.5\,\mathrm{s})$ con sus coeficientes propios. Para cada
+registro se calculó la distancia epicentral entre el epicentro y el punto de
+referencia del Parque Santander ($2.9262767^\circ$ N,
+$-75.2892111^\circ$), mediante la fórmula de Haversine y radio terrestre de
+6\,371 km. Esas coordenadas se adoptan del punto de referencia ya usado en el
+proyecto; pueden cambiarse en la configuración.
+
+La relación empleada es
+\begin{equation}
+    \begin{aligned}
+        \ln y_{ij}={}&aM_{w,i}+b x_{ij}-\ln r_{ij}
+        +e(h_i-h_c)\delta_{h,i}+F_R+S_I+S_S\\
+        &+S_{SL}\ln x_{ij}+C_k+\xi_{ij}+\eta_i,\\
+        r_{ij}={}&x_{ij}+c\exp(dM_{w,i}),
+    \end{aligned}
+\end{equation}
+donde $y_{ij}$ es PGA, $x_{ij}$ la distancia epicentral en km,
+$r_{ij}$ la distancia ajustada, $h_i$ la profundidad focal, $h_c=15$ km y
+$\delta_{h,i}=1$ cuando $h_i\geq h_c$ (cero en caso contrario). Para
+profundidades mayores de 125 km se usa 125 km, según la formulación referida.
+Los coeficientes del caso PGA y el término de clase III usados en esta corrida
+son:
+
+\begin{table}[htbp]
+\centering
+\caption{Parámetros de Zhao et al. (2006) adoptados para PGA y clase III.}
+\label{tab:zhao-pga-neiva}
+\small
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lrrrrrrrrrr}
+\toprule
+$a$ & $b$ & $c$ & $d$ & $e$ & $S_R$ & $S_I$ & $S_S$ & $S_{SL}$ & $C_3$ \\
+\midrule
+1.101 & -0.00564 & 0.0055 & 1.080 & 0.01412 & 0.251 & 0.000 & 2.607 & -0.528 & 1.355 \\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+\subsection{Entradas y suposiciones}
+
+La ejecución usa los 2\,691 eventos del catálogo clasificado de 260 km. A
+diferencia del conteo de recurrencia, aquí se incluyen los registros de 2026:
+la salida es una predicción por evento, no una tasa anual. Se usa el campo
+\texttt{Mw} tal como está en el catálogo, sin una conversión adicional. El
+campo \texttt{Z} se interpreta como profundidad focal en km.
+
+Para representar un suelo medio se adoptó la clase de sitio III del modelo y
+su coeficiente $C_3=1.355$. Es una hipótesis de escenario tomada de la tabla
+del documento de referencia, no una medición de $V_{S30}$ del Parque
+Santander. Por ello, las predicciones corresponden a esa condición de suelo y
+\textbf{no son movimientos en roca}; para una salida en roca debe usarse la
+clase/condición correspondiente y justificarse por separado.
+
+La clasificación de fuente se mapeó así: cortical a corteza, subducción
+interplaca a interfaz y subducción intraplaca a sismos de slab. Se aplicaron
+$S_I$ solo a interfaz y $S_S,S_{SL}$ solo a slab; los demás términos de fuente
+se fijaron en cero. No hay mecanismos focales en el catálogo, por lo que el
+término de falla inversa $F_R$ se fijó en cero también para la fuente
+cortical: la etiqueta cortical o la proximidad a una falla no demuestran un
+mecanismo inverso. Se tomó $\xi_{ij}=\eta_i=0$, por lo que $\exp(\ln y)$ es la
+mediana condicional del modelo al fijar los residuales, no un percentil
+superior ni la media aritmética de una distribución lognormal.
+En particular, para PGA se aplicó $S_I=0$ a interfaz y
+$(S_S,S_{SL})=(2.607,-0.528)$ a slab. Aunque la tabla proporciona $S_R=0.251$,
+no se aplicó porque no hay mecanismos focales que permitan identificar
+eventos inversos.
+
+Los valores de profundidad negativa se llevaron a 0 km y los mayores de
+125 km se limitaron a 125 km; en total se ajustaron 312 registros (7 negativos
+y 305 profundos). No hubo distancias menores que el piso numérico de 0.1 km.
+Estas decisiones quedan expuestas en la configuración y registradas junto con
+los resultados. La distancia media se informa por fuente y tramo de magnitud,
+pero no se usa como sustituto de la distancia individual: cada aceleración se
+calcula con la magnitud, profundidad y distancia epicentral de su propio
+evento. Las curvas sólidas se evalúan para magnitudes de referencia y la
+profundidad mediana observada de cada fuente, solo en el rango de distancias
+de sus registros y cuando la magnitud de referencia está dentro del rango
+observado para esa fuente.
+
+\begin{table}[htbp]
+\centering
+\caption{Distancias al Parque Santander y resumen descriptivo de las predicciones por fuente.}
+\label{tab:distancia-atenuacion-neiva}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+Sismofuente & $N$ & $M_w$ media & Distancia media (km) & PGA mediana (cm/s$^2$) \\
+\midrule
+Cortical & 1\,308 & 3.64 & 147.68 & 0.66 \\
+Subducción interplaca & 359 & 3.56 & 168.64 & 0.42 \\
+Subducción intraplaca & 1\,024 & 3.94 & 197.78 & 1.28 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Las medianas de PGA de esta tabla describen los eventos de cada fuente tal
+como están representados en el catálogo; las distribuciones de magnitud y
+distancia difieren entre fuentes, por lo que no se interpretan como una
+comparación a magnitud fija. La figura muestra las predicciones por evento y
+las curvas del modelo:
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\linewidth]{../figuras/curvas_atenuacion_neiva_pga.png}
+    \caption{PGA condicional según Zhao et al. (2006) para los eventos catalogados y curvas a magnitudes de referencia. Se usa clase de sitio III, distancia epicentral al Parque Santander y profundidad mediana por fuente para las curvas.}
+    \label{fig:atenuacion-neiva}
+\end{figure}
+
+El programa editable está en \texttt{codigo/analisis\_atenuacion.py}; las
+entradas (coordenadas, clase de sitio, medida de intensidad, tramos de
+magnitud, magnitudes de referencia, mapeo de fuente y límites de profundidad)
+se configuran al inicio del archivo. El notebook permite ajustar las
+entradas principales antes de correrlo. Se guardan las predicciones por
+evento, los resúmenes por fuente y magnitud, la figura y un JSON con los
+parámetros usados.
+
+La transferencia de una relación calibrada principalmente con datos de Japón
+a Colombia es una limitación sustancial: no se ha validado su desempeño para
+Neiva ni se incorporó la dispersión del modelo. El rango de magnitudes,
+distancias y profundidades observado tampoco garantiza aplicabilidad en una
+evaluación probabilista de amenaza. Estas curvas son una primera comparación
+metodológica, no una GMPE regional validada ni el cálculo de amenaza total.
+
+\section{Determinar la amenaza total para cada uno de los sitios de estudio.}
+
+\section{Determinar la magnitud del sismo esperado para un periodo de retorno de 475 años.}
+
+\section{Determinar los espectros de respuesta en roca para cada sitio de estudio.}
+
+\section{Construir el espectro de aceleración en roca para cada sitio de estudio.}
+
+\clearpage
+\section*{Referencias}
+\addcontentsline{toc}{section}{Referencias}
+\printbibliography[heading=none]
+
+\end{document}

@@ -1,0 +1,81 @@
+{
+  "configuration": {
+    "site_name": "Neiva - Parque Santander",
+    "site_latitude": 2.9262767,
+    "site_longitude": -75.2892111,
+    "site_class": "III",
+    "intensity_measure": "PGA",
+    "source_type_mapping": {
+      "Cortical": "crustal",
+      "Subducción interplaca": "interface",
+      "Subducción intraplaca": "slab"
+    },
+    "reverse_fault_by_source": {
+      "Cortical": false,
+      "Subducción interplaca": false,
+      "Subducción intraplaca": false
+    },
+    "magnitude_edges": [
+      3.0,
+      3.3,
+      3.5,
+      4.0,
+      4.5,
+      5.0,
+      5.5,
+      6.0,
+      6.5,
+      7.0,
+      7.5
+    ],
+    "reference_magnitudes": [
+      3.0,
+      3.5,
+      4.0,
+      4.5,
+      5.0,
+      5.5,
+      6.0
+    ],
+    "reference_depth": "source_median",
+    "depth_cap_km": 125.0,
+    "depth_reference_km": 15.0,
+    "minimum_distance_km": 0.1,
+    "earth_radius_km": 6371.0
+  },
+  "model_parameters": {
+    "label": "PGA",
+    "period_s": 0.0,
+    "a": 1.101,
+    "b": -0.00564,
+    "c": 0.0055,
+    "d": 1.08,
+    "e": 0.01412,
+    "reverse_fault": 0.251,
+    "interface": 0.0,
+    "slab": 2.607,
+    "slab_distance": -0.528,
+    "site_terms": {
+      "I": 1.111,
+      "II": 1.344,
+      "III": 1.355,
+      "IV": 1.42
+    }
+  },
+  "depth_adjustments_by_source": {
+    "Cortical": 7,
+    "Subducción interplaca": 0,
+    "Subducción intraplaca": 305
+  },
+  "distance_adjustments": 0,
+  "assumptions": [
+    "Site class III is an assumed medium-soil scenario, not a measured site profile.",
+    "Epicentral distance is calculated from each event to the configured site.",
+    "Negative catalog depths are set to 0 km and depths above the configured cap are capped.",
+    "Reverse-fault, intra-event and inter-event terms are zero unless explicitly changed in the inputs.",
+    "Catalog Mw values are used as supplied; this is not a local Colombian ground-motion model validation."
+  ],
+  "predicted_quantity": "Conditional median ground motion; inter-event and intra-event residuals set to zero.",
+  "magnitude_source": "Catalog Mw column; no additional conversion applied.",
+  "reference": "Zhao et al. (2006), as formulated and tabulated in the Entrega 2 reference document."
+}
