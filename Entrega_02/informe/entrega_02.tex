@@ -28,7 +28,7 @@
     linkcolor=black,
     urlcolor=blue,
     citecolor=black,
-    pdftitle={TRABAJO AMENAZA SÍSMICA (20\%)},
+    pdftitle={TRABAJO AMENAZA SÍSMICA},
     pdfauthor={Andrés Stiven Jaramillo Cataño, Emmel Escovitch Riaño, Laury Yocely Perea Mena}
 ]{hyperref}
 \usepackage[backend=biber,style=apa,sortcites=true]{biblatex}
@@ -186,8 +186,7 @@ solo con los umbrales cuyo intervalo tiene completez temporal estimable.
 
 \subsection{Catálogo y completitud}
 
-Se procesó la copia en Entrega 2 de
-\texttt{Sismos\_260\_clasificados\_20261004\_192107.csv}: 2\,691 eventos con
+Se procesó el catálogo sísmico clasificado para este análisis: 2\,691 eventos con
 $M_w$ entre 3.0 y 7.4, registrados entre 1917 y septiembre de 2026. Se
 excluyeron los 199 registros de 2026 porque el año aún no está completo; el
 análisis llega a 2025 y contiene 2\,492 eventos. Los tramos son
@@ -274,8 +273,9 @@ $2025-Y_{c,i}+1$. Las columnas \emph{$\lambda_i$} y
 conteos/tasas que requieren una ventana completa se dejan sin estimar. Las
 columnas \emph{$a$}, \emph{$b$} y \emph{$R^2$ ajuste} contienen los parámetros y
 la bondad de ajuste del modelo lineal del conjunto, repetidos en sus filas.
-La salida \texttt{conteos\_incrementales\_ventana\_umbral.csv} desglosa cada
-$N_{\mathrm{acum}}$ en los $N_{k\mid i}$ que lo forman.
+Cada conteo acumulado $N_{\mathrm{acum}}$ corresponde a la suma de los conteos
+incrementales $N_{k\mid i}$ de los tramos de magnitud iguales o superiores al
+umbral considerado.
 
 \begin{table}[htbp]
 \centering
@@ -315,11 +315,9 @@ Figura~\ref{fig:curvas-recurrencia} muestra las tasas y sus ajustes.
     \label{fig:curvas-recurrencia}
 \end{figure}
 
-El notebook y el módulo Python generan, además, resultados por fuente y tramo:
-conteos anuales/acumulados, pendientes y R² pre/postquiebre, matriz de
-incrementos en la ventana de cada umbral, tasas y parámetros $a$ y $b$. Están
-en \texttt{datos/datos estadistica/}; los gráficos de acumulados por fuente,
-en \texttt{figuras/}.
+El análisis también se realizó por sismofuente y tramo de magnitud, calculando
+conteos anuales y acumulados, pendientes y $R^2$ antes y después del quiebre,
+incrementos en la ventana de cada umbral, tasas y parámetros $a$ y $b$.
 
 La estimación es exploratoria. El catálogo está truncado en $M_w=3.0$, por lo
 que no permite probar completez bajo ese límite. La selección de quiebres por
@@ -442,18 +440,32 @@ las curvas del modelo:
 
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=\linewidth]{../figuras/curvas_atenuacion_neiva_pga.png}
-    \caption{PGA condicional según Zhao et al. (2006) para los eventos catalogados y curvas a magnitudes de referencia. Se usa clase de sitio III, distancia epicentral al Parque Santander y profundidad mediana por fuente para las curvas.}
+    \includegraphics[width=0.98\linewidth,height=0.68\textheight,keepaspectratio]{../figuras/curvas_atenuacion_neiva_pga_cortical.png}
+    \caption{Atenuación para sismos corticales en Neiva: PGA condicional por evento y curvas a magnitudes de referencia. Se usa clase de sitio III y profundidad mediana cortical.}
     \label{fig:atenuacion-neiva}
 \end{figure}
+\clearpage
 
-El programa editable está en \texttt{codigo/analisis\_atenuacion.py}; las
-entradas (coordenadas, clase de sitio, medida de intensidad, tramos de
-magnitud, magnitudes de referencia, mapeo de fuente y límites de profundidad)
-se configuran al inicio del archivo. El notebook permite ajustar las
-entradas principales antes de correrlo. Se guardan las predicciones por
-evento, los resúmenes por fuente y magnitud, la figura y un JSON con los
-parámetros usados.
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.98\linewidth,height=0.68\textheight,keepaspectratio]{../figuras/curvas_atenuacion_neiva_pga_interplaca.png}
+    \caption{Atenuación de subducción interplaca: PGA condicional por evento y curvas a magnitudes de referencia. Se usa clase de sitio III y profundidad mediana de la fuente.}
+    \label{fig:atenuacion-neiva-interplaca}
+\end{figure}
+\clearpage
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.98\linewidth,height=0.68\textheight,keepaspectratio]{../figuras/curvas_atenuacion_neiva_pga_intraplaca.png}
+    \caption{Atenuación de subducción intraplaca (slab): PGA condicional por evento y curvas a magnitudes de referencia. Se usa clase de sitio III y profundidad mediana de la fuente.}
+    \label{fig:atenuacion-neiva-intraplaca}
+\end{figure}
+\clearpage
+
+Las predicciones se calcularon para cada evento y se resumieron por
+sismofuente y magnitud, usando las coordenadas, la clase de sitio, la medida
+de intensidad, los tramos y las magnitudes de referencia descritos en este
+capítulo.
 
 La transferencia de una relación calibrada principalmente con datos de Japón
 a Colombia es una limitación sustancial: no se ha validado su desempeño para

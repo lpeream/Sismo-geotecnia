@@ -399,12 +399,9 @@ def _plot_attenuation_curves(
     events: pd.DataFrame,
     parameters: dict[str, Any],
     config: dict[str, Any],
-    output_path: Path,
-) -> None:
+) -> list[Path]:
     sources = list(config["source_type_mapping"])
-    fig, axes = plt.subplots(
-        1, len(sources), figsize=(17, 5.5), sharey=True, constrained_layout=True
-    )
+    figure_paths = []
     magnitude_edges = np.asarray(config["magnitude_edges"], dtype=float)
     magnitude_cmap = plt.get_cmap("viridis")
     magnitude_norm = plt.Normalize(
@@ -415,18 +412,23 @@ def _plot_attenuation_curves(
         for magnitude in config["reference_magnitudes"]
         if events["Mw"].min() <= float(magnitude) <= events["Mw"].max()
     ]
-    for axis, source in zip(axes, sources):
+    source_slugs = {
+        "Cortical": "cortical",
+        "Subducción interplaca": "interplaca",
+        "Subducción intraplaca": "intraplaca",
+    }
+    for source in sources:
         subset = events[events["fuente"] == source]
+        fig, axis = plt.subplots(figsize=(10, 7))
         scatter = axis.scatter(
             subset["distancia_epicentral_km"],
             subset["intensidad_predicha_cm_s2"],
             c=subset["Mw"],
             cmap=magnitude_cmap,
             norm=magnitude_norm,
-            s=13,
-            alpha=0.52,
+            s=22,
+            alpha=0.42,
             edgecolors="none",
-            label="Predicción por evento",
         )
         reference_depth = (
             float(subset["profundidad_ajustada_km"].median())
@@ -461,37 +463,60 @@ def _plot_attenuation_curves(
             )
         axis.set_yscale("log")
         axis.set_xlabel("Distancia epicentral al sitio (km)")
+        axis.set_ylabel(
+            f"{parameters['label']} predicha (cm/s², mediana condicional)"
+        )
         axis.set_title(source)
         axis.grid(True, which="both", alpha=0.25)
         axis.set_xlim(left=0)
-    axes[0].set_ylabel(
-        f"{parameters['label']} predicha (cm/s², mediana condicional)"
-    )
-    colorbar = fig.colorbar(scatter, ax=axes, shrink=0.82, pad=0.02)
-    colorbar.set_label("Magnitud Mw")
-    handles = [
-        Line2D(
-            [0],
-            [0],
-            color=magnitude_cmap(magnitude_norm(magnitude)),
-            linewidth=1.5,
-            label=f"Mw={magnitude:g}",
+        colorbar = fig.colorbar(scatter, ax=axis, pad=0.02)
+        colorbar.set_label("Magnitud Mw")
+        handles = [
+            Line2D(
+                [0],
+                [0],
+                color=magnitude_cmap(magnitude_norm(magnitude)),
+                linewidth=2,
+                label=f"Mw={magnitude:g}",
+            )
+            for magnitude in reference_magnitudes
+            if float(subset["Mw"].min())
+            <= magnitude
+            <= float(subset["Mw"].max())
+        ]
+        if handles:
+            axis.legend(
+                handles=handles,
+                title="Curvas para magnitud fija",
+                loc="upper right",
+                framealpha=0.9,
+                fontsize=9,
+                title_fontsize=9,
+            )
+        reference_depth = (
+            float(subset["profundidad_ajustada_km"].median())
+            if config["reference_depth"] == "source_median"
+            else float(config["reference_depth"])
         )
-        for magnitude in reference_magnitudes
-    ]
-    fig.legend(
-        handles=handles,
-        loc="lower center",
-        ncol=min(7, len(handles)),
-        fontsize=8,
-        bbox_to_anchor=(0.5, -0.08),
-    )
-    fig.suptitle(
-        f"{parameters['label']} según Zhao et al. (2006) — "
-        f"{config['site_name']}, clase de sitio {config['site_class']}"
-    )
-    fig.savefig(output_path, dpi=250, bbox_inches="tight")
-    plt.close(fig)
+        fig.suptitle(
+            f"{parameters['label']} según Zhao et al. (2006)\n"
+            f"{config['site_name']} — {source}; clase {config['site_class']}; "
+            f"h de referencia={reference_depth:.1f} km",
+            fontsize=15,
+        )
+        fig.tight_layout(rect=(0, 0, 1, 0.93))
+        figure_path = FIGURES_DIRECTORY / (
+            f"curvas_atenuacion_neiva_{measure_slug(parameters)}_"
+            f"{source_slugs.get(source, 'fuente')}.png"
+        )
+        fig.savefig(figure_path, dpi=300, bbox_inches="tight")
+        plt.close(fig)
+        figure_paths.append(figure_path)
+    return figure_paths
+
+
+def measure_slug(parameters: dict[str, Any]) -> str:
+    return "pga" if parameters["period_s"] == 0 else "sa_0p5s"
 
 
 def run_analysis(
@@ -539,12 +564,11 @@ def run_analysis(
     metadata_path = OUTPUT_DIRECTORY / (
         f"parametros_atenuacion_neiva_{measure_slug}.json"
     )
-    figure_path = FIGURES_DIRECTORY / (
-        f"curvas_atenuacion_neiva_{measure_slug}.png"
-    )
     events.to_csv(events_path, index=False, encoding="utf-8-sig")
     summary.to_csv(summary_path, index=False, encoding="utf-8-sig")
-    _plot_attenuation_curves(events, parameters, active_config, figure_path)
+    figure_paths = _plot_attenuation_curves(
+        events, parameters, active_config
+    )
 
     depth_adjustments = int(events["profundidad_ajustada"].sum())
     distance_adjustments = int(events["distancia_ajustada"].sum())
@@ -597,7 +621,9 @@ def run_analysis(
     print(summary.to_string(index=False))
     print(f"\nPredicciones por evento: {events_path}")
     print(f"Resumen: {summary_path}")
-    print(f"Figura: {figure_path}")
+    print("Figuras:")
+    for figure_path in figure_paths:
+        print(f"  {figure_path}")
     print(f"Parámetros reproducibles: {metadata_path}")
     return {"eventos": events, "resumen": summary}
 

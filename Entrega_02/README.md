@@ -23,7 +23,7 @@ El análisis exploratorio de atenuación de Neiva está en
 `codigo/analisis_atenuacion.py`. Sus entradas editables (sitio, coordenadas,
 clase de sitio, PGA o `Sa(0.5 s)`, fuentes, intervalos y profundidad) están al
 inicio del módulo. Genera predicciones por evento, resúmenes por fuente y
-magnitud, una figura y un JSON con la configuración aplicada. La clase III
+magnitud, una figura ampliada por sismofuente y un JSON con la configuración aplicada. La clase III
 representa la hipótesis de suelo medio; esos resultados no son movimientos
 en roca ni una GMPE validada localmente.
 
