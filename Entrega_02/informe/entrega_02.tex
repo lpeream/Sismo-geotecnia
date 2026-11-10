@@ -130,33 +130,29 @@
 
 \section{Introducción y caracterización de sismofuentes}
 
-La evaluación probabilística de amenaza sísmica sigue cuatro pasos: (1)
-caracterización de las sismofuentes, (2) modelación de la recurrencia, (3)
-predicción del movimiento del suelo condicionada a la magnitud, la distancia y
-el sitio, y (4) integración de las contribuciones para obtener la amenaza
-\parencite{kramerStewart2024}. Esta segunda entrega desarrolla los pasos 2 y 3
-para Neiva; la definición de las fuentes del Paso 1 se adopta como base de
-clasificación de los eventos.
+La metodología de Kramer y Stewart organiza la evaluación probabilística de
+amenaza sísmica en cuatro pasos: caracterizar las sismofuentes, modelar su
+recurrencia, estimar el movimiento del suelo condicionado a magnitud,
+distancia y sitio, e integrar las contribuciones para obtener la amenaza
+\parencite{kramerStewart2024}. En esta entrega, la clasificación de las
+fuentes proporciona el marco para cuantificar la recurrencia (Paso 2) y
+estimar la atenuación del movimiento (Paso 3), con el catálogo regional como
+base del análisis.
 
 El sitio de referencia es el Parque Santander de Neiva
-($2.9262767^\circ$ N, $-75.2892111^\circ$). Su ubicación proporciona un punto
-urbano definido para medir distancias y comparar escenarios de movimiento. Se
-analizan dos dominios concéntricos: el radio local de 50 km representa la
-sismicidad próxima al sitio, y el radio regional de 260 km incorpora
-sismicidad de fuentes potencialmente influyentes en Neiva. Estos radios
-delimitan áreas de consulta del catálogo y no límites físicos de las
-sismofuentes.
+($2.9262767^\circ$ N, $-75.2892111^\circ$), punto urbano de referencia para
+medir distancias y comparar escenarios de movimiento. En el mapa, el radio
+local de 50 km representa el entorno sísmico próximo y el radio regional de
+260 km enmarca la sismicidad de las fuentes que inciden en Neiva. Ambos
+dominios estructuran la consulta del catálogo y la lectura espacial de los
+eventos y las fallas.
 
-El catálogo clasificado contiene 2\,691 eventos: 1\,308 corticales, 359 de
-subducción interplaca y 1\,024 de subducción intraplaca. Para las tasas de
-recurrencia se excluye 2026 porque el año aún está incompleto; así se evita
-contabilizar una exposición anual parcial como si fuera completa. El periodo
-común de referencia sin corrección es 1917--2025, con 2\,492 eventos. La
-caracterización de recurrencia del Paso 2 se enfoca exclusivamente en el
-catálogo regional de 260 km. El radio local de 50 km se conserva solo como
-contexto espacial en el mapa de la Figura~\ref{fig:fuentes-neiva}; la
-cartografía también sitúa la sismicidad clasificada y las fallas respecto al
-Parque Santander.
+El catálogo clasificado reúne 2\,691 eventos: 1\,308 corticales, 359 de
+subducción interplaca y 1\,024 de subducción intraplaca. La exposición anual
+de referencia se fija en los 109 años completos comprendidos entre 1917 y
+2025, con 2\,492 eventos; esta ventana proporciona una base temporal común
+para estimar las tasas regionales. La Figura~\ref{fig:fuentes-neiva} sitúa las tres
+sismofuentes, la red de fallas y los dos radios respecto al Parque Santander.
 
 \begin{figure}[H]
     \centering
@@ -167,15 +163,14 @@ Parque Santander.
 
 \section{Análisis de recurrencia sísmica y completez}
 
-Los catálogos históricos tienden a registrar menos sismos pequeños en sus
-primeras décadas, principalmente por la ausencia de instrumentación y redes
-sismológicas con cobertura suficiente. Si se usan esos periodos de
-subregistro para calcular tasas, la tasa anual de ocurrencia $\lambda$ se
-subestima. El análisis de completez determina el intervalo de exposición
-$\Delta t_{\mathrm{completo}}$ durante el cual se asume que el catálogo
-captura el 100\% de los sismos de una magnitud dada; de este modo, el conteo
-usado en el cálculo de $\lambda$ se divide por una duración compatible con la
-capacidad de detección del catálogo.
+Los catálogos históricos reflejan la evolución de las redes sismológicas:
+durante sus primeras décadas, la instrumentación limitada registró con menor
+eficiencia los eventos de magnitud baja. El análisis de completez identifica,
+para cada intervalo de magnitud, el periodo $\Delta t_{\mathrm{completo}}$ en
+el que el catálogo ofrece cobertura representativa del 100\% de los sismos de
+ese rango. Al relacionar el número de eventos con esta duración, se obtiene
+una tasa anual $\lambda$ consistente con la capacidad de registro del
+catálogo.
 
 Para cada sismofuente del catálogo regional, la recurrencia acumulada se
 describe con la relación de Gutenberg--Richter
@@ -183,29 +178,30 @@ describe con la relación de Gutenberg--Richter
     \log_{10}\lambda(M_w\geq M)=a-bM,
 \end{equation*}
 donde $\lambda=N(M_w\geq M)/\Delta t_{\mathrm{completo}}$ es la tasa anual de
-excedencia, $a$ es el nivel de actividad y $b$ controla la disminución de la
-tasa al aumentar la magnitud \parencite{gutenbergRichter1944}. Los parámetros
-se ajustan a las tasas corregidas disponibles para umbrales entre $M_w=3.0$ y
-7.0. Este ajuste regional constituye la única caracterización de recurrencia
-del informe.
+excedencia, $a$ representa el nivel de actividad sísmica y $b$ caracteriza
+cómo disminuye la frecuencia de excedencia al aumentar la magnitud
+\parencite{gutenbergRichter1944}. Los parámetros se ajustan a las tasas
+corregidas disponibles para umbrales entre $M_w=3.0$ y 7.0, y describen la
+recurrencia de cada sismofuente en el dominio regional.
 
-Para los intervalos con magnitud inferior a $M_w=5.0$, la ventana completa se
-estima mediante regresión segmentada del acumulado anual. Se elige el quiebre
-que minimiza el error cuadrático, sujeto a un mínimo de 10 años y 3 eventos
-por segmento, y se acepta cuando $R^2_{\mathrm{post}}\geq0.90$. Para
-$M_w\geq5.0$ se adopta como hipótesis de trabajo la completez histórica en
-todo el periodo 1917--2025, equivalente a 109 años. El análisis se realiza
-independientemente para cada intervalo y sismofuente del catálogo regional.
-La tasa corregida por intervalo es $\lambda=N_{\mathrm{completo}}/
-\Delta t_{\mathrm{completo}}$; si el quiebre no cumple el criterio, se usa el
-periodo de referencia completo y se indica en la tabla. Esta tasa por
-intervalo es distinta de la tasa acumulada por umbral utilizada en el ajuste
-Gutenberg--Richter.
+Para los intervalos por debajo de $M_w=5.0$, la ventana completa se determina
+con una regresión segmentada del acumulado anual. El punto de quiebre se
+selecciona mediante el mínimo error cuadrático, con al menos 10 años y 3
+eventos en cada segmento, y un coeficiente de determinación
+$R^2_{\mathrm{post}}\geq0.90$. Para $M_w\geq5.0$, la cobertura histórica de
+1917--2025, equivalente a 109 años, define el periodo completo. El procedimiento se aplica
+por intervalo y por sismofuente. La tasa de cada rango se calcula como
+$\lambda=N_{\mathrm{completo}}/\Delta t_{\mathrm{completo}}$; los intervalos
+cuyo ajuste segmentado presenta $R^2_{\mathrm{post}}<0.90$ utilizan el
+periodo histórico completo como exposición de referencia. Estas tasas incrementales
+caracterizan cada intervalo, mientras que el ajuste Gutenberg--Richter usa
+tasas acumuladas por umbral.
 
-La Figura~\ref{fig:completez-regional} presenta, para el catálogo regional,
-el número de eventos por intervalo (panel A) y las tasas anuales corregidas
-(panel B) para las tres sismofuentes. Los ejes verticales están en escala
-logarítmica; los intervalos sin observaciones no se incluyen.
+La Figura~\ref{fig:completez-regional} sintetiza el comportamiento de las
+tres sismofuentes regionales. El panel A compara los conteos por intervalo y
+el panel B presenta las tasas anuales corregidas; la escala logarítmica
+permite apreciar en una misma lectura la variación de frecuencia entre
+magnitudes observadas.
 
 \begin{figure}[H]
     \centering
@@ -261,10 +257,11 @@ Subducción intraplaca & 4.025 & 0.821 & 0.992 \\
 \end{tabular}
 \end{table}
 
-En la escala regional se obtienen ajustes para las tres sismofuentes y para el
-catálogo total regional. La Figura~\ref{fig:recurrencia-regional} muestra las
-tasas corregidas y las rectas de las tres sismofuentes, con sus ecuaciones y
-coeficientes $R^2$.
+Los ajustes regionales describen las tres sismofuentes y el catálogo total.
+En la Figura~\ref{fig:recurrencia-regional}, las tasas corregidas y sus rectas
+de regresión permiten comparar la actividad sísmica y la pendiente de
+atenuación de frecuencia con la magnitud; cada ecuación se acompaña de su
+coeficiente $R^2$.
 
 \begin{figure}[H]
     \centering
@@ -275,14 +272,14 @@ coeficientes $R^2$.
 
 \section{Selección y parametrización de modelos de atenuación}
 
-El Paso 3 de Kramer y Stewart estima la intensidad del movimiento del suelo
-condicionada a la magnitud, la distancia y el sitio. Para esta entrega se
+El Paso 3 de Kramer y Stewart caracteriza el movimiento del suelo en función
+de la magnitud, la distancia y las condiciones del sitio. Para estimar PGA se
 adopta la relación de predicción de movimiento fuerte de Zhao et al. (2006)
-como modelo de referencia para PGA \parencite{zhao2006}. La distancia
-epicentral $X$ se calcula desde el Parque Santander hasta cada evento mediante
-la fórmula de Haversine. Las sismofuentes cortical, de subducción interplaca
-y de subducción intraplaca se asocian, respectivamente, con los términos
-tectónicos de corteza, interfaz y slab de la formulación.
+\parencite{zhao2006}. La distancia epicentral $X$ entre el Parque Santander y
+cada evento se calcula mediante la fórmula de Haversine. La clasificación
+tectónica vincula la fuente cortical con el término de corteza, la
+subducción interplaca con el de interfaz y la subducción intraplaca con el
+término slab.
 
 \begin{equation*}
 \begin{aligned}
@@ -291,12 +288,12 @@ tectónicos de corteza, interfaz y slab de la formulación.
 R=X+c\exp(dM_w),
 \end{aligned}
 \end{equation*}
-donde $Y$ es PGA en cm/s$^2$, $X$ y $R$ se expresan en km, $h$ es la
-profundidad focal y $h_c=15$ km. La profundidad se limita al intervalo
-0--125 km; $\delta_h$ activa el ajuste de profundidad para $h\geq h_c$. Los
-parámetros de regresión de PGA son comunes a las tres sismofuentes, mientras
-que los términos tectónicos y de sitio definen las diferencias entre
-escenarios.
+donde $Y$ es PGA en cm/s$^2$, $X$ y $R$ se expresan en kilómetros, $h$ es la
+profundidad focal y $h_c=15$ km es la profundidad de referencia. En los
+cálculos se acota $h$ al intervalo de 0 a 125 km y se activa el ajuste de
+profundidad para $h\geq h_c$. Los coeficientes de regresión describen la
+atenuación común; los términos tectónicos y de sitio representan las
+características de cada escenario.
 
 \begin{table}[H]
 \centering
@@ -315,8 +312,8 @@ Profundidad & $h_c$ & 15 km & Profundidad focal de referencia \\
 Profundidad & $h_{\max}$ & 125 km & Límite superior aplicado a la profundidad \\
 Sitio & $C_3$ & 1.355 & Clase III de Zhao; escenario de suelo medio \\
 \midrule
-Falla inversa & $F_R$ & 0.251 & Coeficiente disponible en el modelo; término no activado \\
-Corteza / cortical & Términos adicionales & 0 & Términos tectónicos adicionales desactivados \\
+Falla inversa & $F_R$ & 0.251 & Coeficiente correspondiente a este mecanismo \\
+Corteza / cortical & Términos tectónicos & 0 & Valor aplicado al escenario cortical \\
 Interfaz / interplaca & $S_I$ & 0 & Término de interfaz adoptado \\
 Slab / intraplaca & $S_S$ & 2.607 & Término de slab adoptado \\
 Slab / intraplaca & $S_{SL}$ & $-0.528$ & Coeficiente aplicado a $\ln X$ \\
@@ -324,22 +321,23 @@ Slab / intraplaca & $S_{SL}$ & $-0.528$ & Coeficiente aplicado a $\ln X$ \\
 \end{tabular}
 \end{table}
 
-Ante la ausencia de un valor Vs30 específico para el emplazamiento, se adopta
-la clase III de Zhao como escenario de suelo medio, con $C_3=1.355$. Esta
-categoría pertenece al modelo Zhao y no equivale directamente a una clase de
-sitio de la NSR-10. El coeficiente de falla inversa de la GMPE es 0.251, pero
-su contribución se mantiene desactivada para las tres sismofuentes en los
-escenarios actuales. Los residuales intra e interevento se fijan en cero; por
-ello, las curvas corresponden a medianas condicionales y no incluyen la
-dispersión aleatoria del modelo.
+La clase III de Zhao, con $C_3=1.355$, representa el escenario de suelo medio
+adoptado para el análisis. Esta clasificación sigue el esquema de la GMPE y
+se vincula con la caracterización geotécnica del sitio prevista en la
+NSR-10. El término de falla inversa se fija en cero para los mecanismos
+tectónicos analizados; su coeficiente de referencia en el modelo es
+$0.251$. Los residuales intraevento e interevento se fijan en cero para
+obtener las medianas condicionales de PGA. La dispersión $\sigma$ se
+incorporará en la integración probabilística, donde permitirá representar la
+variabilidad del movimiento del suelo.
 
-La Figura~\ref{fig:atenuacion-neiva} reúne en un panel triple las tres
-sismofuentes; tanto la distancia epicentral como la PGA se presentan en
-escala logarítmica. Los puntos representan los eventos del catálogo y las
-curvas las predicciones medianas para magnitudes de referencia. La relación
-se desarrolló con registros de Japón y se utiliza aquí como modelo empírico
-seleccionado para esta fase; su incertidumbre y pertinencia regional deberán
-considerarse en la integración de la amenaza.
+La Figura~\ref{fig:atenuacion-neiva} reúne en un panel triple la respuesta de
+las tres sismofuentes, con distancia epicentral y PGA en escala logarítmica.
+Los puntos representan los eventos del catálogo y las curvas muestran las
+medianas para magnitudes de referencia. La relación de Zhao et al. ofrece una
+base común para comparar la atenuación de las fuentes cortical, interplaca e
+intraplaca; su variabilidad y selección se incorporarán como ramas del
+análisis probabilístico.
 
 \begin{figure}[H]
     \centering
@@ -350,29 +348,19 @@ considerarse en la integración de la amenaza.
 
 \section{Conclusiones y precondiciones para la integración de la amenaza}
 
-Para cada sismofuente del catálogo regional se presentan tasas de recurrencia,
-parámetros de Gutenberg--Richter y predicciones de PGA condicionadas a
-magnitud, distancia y clase tectónica. Esta matriz regional,
-fuente--magnitud--PGA, constituye la base para la siguiente entrega, en la que
-se integrarán las contribuciones cortical, de subducción interplaca y de
-subducción intraplaca.
+El estudio reúne las tasas de recurrencia por fuente regional, los parámetros
+de Gutenberg--Richter y la PGA mediana condicionada a magnitud, distancia y
+mecanismo tectónico. Esta base articula la integración probabilística de la
+amenaza.
 
-Antes de calcular la curva de amenaza total se deben completar cuatro
-definiciones: (1) incorporar la dispersión intraevento e interevento ($\sigma$)
-de la relación de atenuación; (2) establecer la magnitud máxima $M_{w,\max}$
-para cada sismofuente; (3) definir la geometría de las fallas y las
-distribuciones de distancia asociadas; y (4) caracterizar el sitio con los
-parámetros requeridos por la NSR-10, a partir de información geotécnica
-representativa del emplazamiento. También se deberán mantener consistentes
-las ventanas de completez, las tasas y las distribuciones de magnitud
-asignadas a cada fuente.
-
-Con esos insumos, el Paso 4 combinará la recurrencia del Paso 2 con las
-distribuciones de intensidad condicional del Paso 3 para calcular la curva de
-amenaza total y el PGA de diseño asociado a un periodo de retorno de 475
-años. Ese cálculo se reserva para la siguiente entrega y se realizará una vez
-definidos los parámetros de fuente, movimiento y sitio que aún están
-pendientes.
+La siguiente etapa desarrollará el Paso 4 de Kramer y Stewart mediante la
+combinación de las tasas de excedencia con las distribuciones del movimiento
+del suelo y la suma de las contribuciones cortical, interplaca e intraplaca.
+El cálculo incorporará la dispersión intraevento e interevento ($\sigma$), la
+magnitud máxima y la geometría de cada fuente, junto con la caracterización
+geotécnica del emplazamiento conforme a la NSR-10. Esta integración
+proporcionará la curva de amenaza total y el PGA correspondiente a un periodo
+de retorno de 475 años.
 
 \section*{Referencias}
 \small

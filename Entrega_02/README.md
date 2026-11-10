@@ -4,7 +4,7 @@ Esta entrega conserva la estructura de carpetas de `Entrega_01`: `codigo`,
 `datos`, `figuras`, `informe` y `recursos`, además de `requirements.txt`.
 
 El informe está en `informe/entrega_02.tex` y su PDF compilado es
-``informe/entrega_02.pdf`. Se organiza en cuatro secciones: sismofuentes,
+`informe/entrega_02.pdf`. Se organiza en cuatro secciones: sismofuentes,
 recurrencia y completez, modelos de atenuación, y conclusiones para integrar
 la amenaza. El Paso 2 se enfoca exclusivamente en el catálogo regional
 (260 km); el radio local (50 km) se conserva como contexto espacial en el
@@ -25,19 +25,17 @@ con un ajuste segmentado; para Mw >= 5.0 se adopta el periodo histórico
 `conteos_incrementales_ventana_umbral.csv` conservan las métricas de los
 ajustes y el desglose de conteos para cada ventana completa;
 `ajustes_crudos_y_corregidos_gutenberg_richter.csv` compara los parámetros
-antes y después de corregir por completez. La atenuación solo se ejecuta
-después de completar la recurrencia y sus gráficas. Esta entrega
-también contiene copias de todos los CSV de `Entrega_01/datos/`, con la misma
-estructura de subcarpetas. El inventario general está en `datos/README.md`.
+antes y después de corregir por completez. Esta entrega también contiene
+copias de los CSV de `Entrega_01/datos/`, con la misma estructura de
+subcarpetas. El inventario general está en `datos/README.md`.
 
 El análisis de atenuación de Neiva está en
 `codigo/analisis_atenuacion.py`. Sus entradas editables (sitio, coordenadas,
 clase de sitio, PGA o `Sa(0.5 s)`, fuentes, intervalos y profundidad) están al
 inicio del módulo. Genera predicciones por evento, resúmenes por fuente y
 magnitud, una figura comparativa logarítmica para las tres sismofuentes y un
-JSON con la configuración aplicada. La clase III
-representa la hipótesis de suelo medio; esos resultados no son movimientos
-en roca ni una GMPE validada localmente.
+JSON con la configuración aplicada. La clase III representa el escenario de
+suelo medio adoptado por el modelo Zhao et al. (2006).
 
 Para compilar desde la raíz del proyecto:
 
