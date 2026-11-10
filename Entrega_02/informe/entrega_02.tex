@@ -295,9 +295,28 @@ profundidad para $h\geq h_c$. Los coeficientes de regresión describen la
 atenuación común; los términos tectónicos y de sitio representan las
 características de cada escenario.
 
+La estructura de Zhao et al. (2006) resulta especialmente pertinente para
+Neiva porque distingue y parametriza de manera explícita la sismicidad
+cortical mediante $F_R$, la subducción interplaca mediante $S_I$ y la
+subducción intraplaca mediante $S_S$ y $S_{SL}$. Esta diferenciación refleja
+la interacción del sistema de fallas corticales andinas con la subducción de
+la placa de Nazca, que define el entorno sismotectónico regional. Además, el
+término $e(h-h_c)\delta_h$ incorpora un ajuste continuo por profundidad focal
+para eventos con $h>h_c=15$ km, dentro del intervalo de cálculo de 0 a 125 km;
+así, la predicción representa de forma coherente tanto los sismos corticales
+someros como los eventos de subducción de profundidad intermedia. Para esta
+entrega se adopta la Clase I como condición de roca base limpia, definida por
+$V_{S30}>600$ m/s y $T_p<0.2$ s, con constante de sitio $C_1=0.0$. Esta
+parametrización estima la aceleración mediana del terreno en roca
+($\mathrm{PGA}_{\mathrm{roca}}$) para las tres sismofuentes y establece la
+condición de referencia para los posteriores análisis de respuesta
+geotécnica. En el Paso 3 de Kramer y Stewart, el modelo proporciona la
+mediana condicional de PGA en cm/s$^2$ en función de magnitud, distancia,
+profundidad y mecanismo tectónico.
+
 \begin{table}[H]
 \centering
-\customtablecaption{Tabla 3}{Parámetros adoptados para Zhao et al. (2006), PGA y clase III.}
+\customtablecaption{Tabla 3}{Parámetros adoptados para Zhao et al. (2006), PGA en roca base (Clase I).}
 \scriptsize
 \begin{tabular}{p{0.17\linewidth}p{0.13\linewidth}p{0.12\linewidth}p{0.42\linewidth}}
 \toprule
@@ -310,10 +329,10 @@ Regresión PGA & $d$ & 1.080 & Exponente de magnitud en la distancia $R$ \\
 Regresión PGA & $e$ & 0.01412 & Coeficiente del ajuste por profundidad \\
 Profundidad & $h_c$ & 15 km & Profundidad focal de referencia \\
 Profundidad & $h_{\max}$ & 125 km & Límite superior aplicado a la profundidad \\
-Sitio & $C_3$ & 1.355 & Clase III de Zhao; escenario de suelo medio \\
+Sitio & $C_1$ & 0.0 & Clase I; roca base ($V_{S30}>600$ m/s; $T_p<0.2$ s) \\
 \midrule
-Falla inversa & $F_R$ & 0.251 & Coeficiente correspondiente a este mecanismo \\
-Corteza / cortical & Términos tectónicos & 0 & Valor aplicado al escenario cortical \\
+Falla inversa & $F_R$ & 0.251 & Coeficiente del modelo; mecanismo desactivado en el cálculo \\
+Corteza / cortical & Término aplicado & 0 & Aporte cortical por falla inversa desactivado \\
 Interfaz / interplaca & $S_I$ & 0 & Término de interfaz adoptado \\
 Slab / intraplaca & $S_S$ & 2.607 & Término de slab adoptado \\
 Slab / intraplaca & $S_{SL}$ & $-0.528$ & Coeficiente aplicado a $\ln X$ \\
@@ -321,29 +340,40 @@ Slab / intraplaca & $S_{SL}$ & $-0.528$ & Coeficiente aplicado a $\ln X$ \\
 \end{tabular}
 \end{table}
 
-La clase III de Zhao, con $C_3=1.355$, representa el escenario de suelo medio
-adoptado para el análisis. Esta clasificación sigue el esquema de la GMPE y
-se vincula con la caracterización geotécnica del sitio prevista en la
-NSR-10. El término de falla inversa se fija en cero para los mecanismos
-tectónicos analizados; su coeficiente de referencia en el modelo es
-$0.251$. Los residuales intraevento e interevento se fijan en cero para
-obtener las medianas condicionales de PGA. La dispersión $\sigma$ se
-incorporará en la integración probabilística, donde permitirá representar la
-variabilidad del movimiento del suelo.
+La Clase I y $C_1=0.0$ definen la referencia de roca base para calcular
+$\mathrm{PGA}_{\mathrm{roca}}$ de las fuentes cortical, interplaca e
+intraplaca. El coeficiente de falla inversa del modelo es $0.251$ y su
+contribución se mantiene desactivada para los mecanismos parametrizados. Los
+residuales intraevento e interevento se fijan en cero para obtener las
+medianas condicionales de PGA; la dispersión $\sigma$ se incorporará en la
+integración probabilística de la amenaza.
 
-La Figura~\ref{fig:atenuacion-neiva} reúne en un panel triple la respuesta de
-las tres sismofuentes, con distancia epicentral y PGA en escala logarítmica.
-Los puntos representan los eventos del catálogo y las curvas muestran las
-medianas para magnitudes de referencia. La relación de Zhao et al. ofrece una
-base común para comparar la atenuación de las fuentes cortical, interplaca e
-intraplaca; su variabilidad y selección se incorporarán como ramas del
-análisis probabilístico.
+Las Figuras~\ref{fig:atenuacion-cortical}--\ref{fig:atenuacion-intraplaca}
+presentan por separado la atenuación mediana de PGA en roca para cada
+sismofuente. En cada gráfica, los puntos representan los eventos del
+catálogo y las curvas muestran las medianas para magnitudes de referencia;
+ambos ejes se presentan en escala logarítmica. Esta separación permite
+examinar individualmente la respuesta cortical, interplaca e intraplaca.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.98\linewidth]{../figuras/curvas_atenuacion_neiva_pga_fuentes_logx.png}
-    \caption{PGA condicional según Zhao et al. (2006) para las sismofuentes cortical, de subducción interplaca y de subducción intraplaca. Distancia epicentral y PGA en escala log--log; puntos de catálogo y curvas para magnitudes de referencia.}
-    \label{fig:atenuacion-neiva}
+    \includegraphics[width=0.88\linewidth]{../figuras/curvas_atenuacion_neiva_pga_cortical_logx.png}
+    \caption{PGA mediana en roca base (Clase I) según Zhao et al. (2006) para la sismofuente cortical. Distancia epicentral y PGA en escala log--log; puntos de catálogo y curvas para magnitudes de referencia.}
+    \label{fig:atenuacion-cortical}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{../figuras/curvas_atenuacion_neiva_pga_interplaca_logx.png}
+    \caption{PGA mediana en roca base (Clase I) según Zhao et al. (2006) para la sismofuente de subducción interplaca. Distancia epicentral y PGA en escala log--log; puntos de catálogo y curvas para magnitudes de referencia.}
+    \label{fig:atenuacion-interplaca}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.88\linewidth]{../figuras/curvas_atenuacion_neiva_pga_intraplaca_logx.png}
+    \caption{PGA mediana en roca base (Clase I) según Zhao et al. (2006) para la sismofuente de subducción intraplaca. Distancia epicentral y PGA en escala log--log; puntos de catálogo y curvas para magnitudes de referencia.}
+    \label{fig:atenuacion-intraplaca}
 \end{figure}
 
 \section{Conclusiones y precondiciones para la integración de la amenaza}
