@@ -18,12 +18,13 @@ CATALOG_PATH = (
     / "Sismos_260_clasificados_20261004_192107.csv"
 )
 MAGNITUDE_EDGES = np.array(
-    [3.0, 3.3, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5]
+    [3.0, 3.5, 4.0, 4.5, 5.0, 5.5, 6.0, 6.5, 7.0, 7.5]
 )
 MIN_SEGMENT_YEARS = 10
 MIN_SEGMENT_EVENTS = 3
 MIN_POST_R2 = 0.90
 MIN_FIT_BINS = 3
+FULL_CATALOG_FROM_MAGNITUDE = 4.5
 NEIVA_LATITUDE = 2.9262767
 NEIVA_LONGITUDE = -75.2892111
 LOCAL_RADIUS_KM = 50.0
@@ -171,7 +172,30 @@ def _make_completeness_tables(
     for group_name, group in groups:
         for lower, upper, label in _magnitude_bins():
             band = group[group["Mw"].between(lower, upper, inclusive="left")]
-            fit = _fit_completeness(band, years)
+            if lower >= FULL_CATALOG_FROM_MAGNITUDE:
+                annual_counts = (
+                    band.groupby("year")
+                    .size()
+                    .reindex(years, fill_value=0)
+                    .to_numpy()
+                )
+                fit = CompletenessFit(
+                    int(years[0]),
+                    int(annual_counts.sum()),
+                    None,
+                    None,
+                    None,
+                    None,
+                    None,
+                    "Asumido completo: catálogo total (Mw >= 4.5)",
+                    years,
+                    np.cumsum(annual_counts),
+                    None,
+                    None,
+                    None,
+                )
+            else:
+                fit = _fit_completeness(band, years)
             fits[(group_name, label)] = fit
             start_year = fit.start_year
             rows.append(
@@ -374,11 +398,12 @@ def _make_recurrence_tables(
             }
             if pd.notna(start_year_value):
                 start_year = int(start_year_value)
-                rate_basis = (
-                    "Completez aproximada (N<10)"
-                    if str(status).startswith("Aproximado:")
-                    else "Completez estimada"
-                )
+                if str(status).startswith("Aproximado:"):
+                    rate_basis = "Completez aproximada (N<10)"
+                elif str(status).startswith("Asumido completo:"):
+                    rate_basis = "Completez asumida: catálogo total"
+                else:
+                    rate_basis = "Completez estimada"
             else:
                 start_year = first_complete_year
                 rate_basis = "Referencia cruda; completez no estimable"
@@ -578,7 +603,9 @@ def _save_source_comparison_figures(
             corrected = recurrence[
                 recurrence["Escala"].eq(scale_name)
                 & recurrence["Conjunto"].eq(source)
-                & recurrence["Base tasa"].eq("Completez estimada")
+                & recurrence["Base tasa"].str.startswith(
+                    "Completez", na=False
+                )
                 & recurrence["log10(lambda)"].notna()
             ]
             reference = recurrence[
@@ -586,6 +613,14 @@ def _save_source_comparison_figures(
                 & recurrence["Conjunto"].eq(source)
                 & recurrence["Base tasa"].str.startswith(
                     "Referencia cruda", na=False
+                )
+                & recurrence["log10(lambda)"].notna()
+            ]
+            approximate = recurrence[
+                recurrence["Escala"].eq(scale_name)
+                & recurrence["Conjunto"].eq(source)
+                & recurrence["Base tasa"].eq(
+                    "Completez aproximada (N<10)"
                 )
                 & recurrence["log10(lambda)"].notna()
             ]
@@ -610,12 +645,6 @@ def _save_source_comparison_figures(
                     label="Tasas corregidas por completez",
                     zorder=4,
                 )
-            approximate = recurrence[
-                recurrence["Escala"].eq(scale_name)
-                & recurrence["Conjunto"].eq(source)
-                & recurrence["Base tasa"].eq("Completez aproximada (N<10)")
-                & recurrence["log10(lambda)"].notna()
-            ]
             if not approximate.empty:
                 ax.scatter(
                     approximate["Mw mínimo"],
@@ -648,17 +677,10 @@ def _save_source_comparison_figures(
                 fit = fit_rows.iloc[0]
                 if not np.isfinite(fit["a"]) or not np.isfinite(fit["b"]):
                     continue
-                subset = (
-                    raw
-                    if fit_kind == "sin corrección"
-                    else pd.concat([corrected, approximate])
-                )
-                if subset.empty:
-                    continue
                 x_fit = np.linspace(
-                    float(subset["Mw mínimo"].min()),
-                    float(subset["Mw mínimo"].max()),
-                    100,
+                    float(MAGNITUDE_EDGES[0]),
+                    float(MAGNITUDE_EDGES[-2]),
+                    200,
                 )
                 equation = (
                     f"{fit_kind}: y = -{fit['b']:.3f}*x + "
@@ -686,7 +708,7 @@ def _save_source_comparison_figures(
                     0.02,
                     0.03,
                     "Sin ajuste corregido: menos de tres intervalos "
-                    "con completez estimada.",
+                    "con completez estimada o asumida.",
                     ha="left",
                     va="bottom",
                     transform=ax.transAxes,
@@ -712,103 +734,179 @@ def _save_source_comparison_figures(
 def _save_recurrence_plot(
     recurrence: pd.DataFrame,
     fits: pd.DataFrame,
+    raw_recurrence: pd.DataFrame,
     figures_dir: Path,
 ) -> None:
-    fig, ax = plt.subplots(figsize=(9, 6.5))
     colors = {
+        "Catálogo regional": "#303030",
+        "Catálogo local": "#303030",
         "Cortical": "#1f77b4",
         "Subducción interplaca": "#9467bd",
         "Subducción intraplaca": "#e377c2",
     }
-    styles = {"Regional (260 km)": "-", "Local (50 km)": "--"}
-    for fit in fits.itertuples(index=False):
-        if fit.Conjunto not in colors:
-            continue
-        if not np.isfinite(fit.a) or not np.isfinite(fit.b):
-            continue
-        subset = recurrence[
-            recurrence["Escala"].eq(fit.Escala)
-            & recurrence["Conjunto"].eq(fit.Conjunto)
-            & recurrence["Base tasa"].isin(
-                ["Completez estimada", "Completez aproximada (N<10)"]
-            )
-            & recurrence["log10(lambda)"].notna()
+    max_threshold = float(MAGNITUDE_EDGES[-2])
+    for scale_name, scale_slug in (
+        ("Local (50 km)", "local"),
+        ("Regional (260 km)", "regional"),
+    ):
+        scale_fits = fits[fits["Escala"].eq(scale_name)]
+        positive_logs = pd.concat(
+            [
+                recurrence.loc[
+                    recurrence["Escala"].eq(scale_name), "log10(lambda)"
+                ].dropna(),
+                raw_recurrence.loc[
+                    raw_recurrence["Escala"].eq(scale_name),
+                    "log10(lambda sin corrección)",
+                ].dropna(),
+            ],
+            ignore_index=True,
+        )
+        finite_fits = scale_fits[
+            scale_fits["Conjunto"].isin(colors)
+            & scale_fits["a"].notna()
+            & scale_fits["b"].notna()
         ]
-        if subset.empty:
-            continue
-        color = colors.get(fit.Conjunto, None)
-        ax.scatter(
-            subset["Mw mínimo"],
-            subset["log10(lambda)"],
-            marker="o" if fit.Escala == "Regional (260 km)" else "s",
-            color=color,
-            s=30,
-            label="_nolegend_",
+        fit_endpoints = pd.concat(
+            [
+                finite_fits["a"] - finite_fits["b"] * MAGNITUDE_EDGES[0],
+                finite_fits["a"] - finite_fits["b"] * max_threshold,
+            ],
+            ignore_index=True,
         )
-        x_fit = np.linspace(
-            float(subset["Mw mínimo"].min()),
-            float(subset["Mw mínimo"].max()),
-            100,
+        lowest_fit = (
+            float(fit_endpoints.min()) if not fit_endpoints.empty else -1
         )
-        ax.plot(
-            x_fit,
-            fit.a - fit.b * x_fit,
-            color=color,
-            linestyle=styles.get(fit.Escala, "-"),
-            linewidth=1.8,
-            label=(
-                f"{fit.Escala} — {fit.Conjunto}: "
-                f"y = -{fit.b:.3f}x + {fit.a:.3f}; R²={fit.R2:.3f}"
-            ),
+        lowest_data = (
+            float(positive_logs.min()) if not positive_logs.empty else -1
         )
-    references = recurrence[
-        recurrence["Base tasa"].str.startswith("Referencia cruda", na=False)
-        & recurrence["log10(lambda)"].notna()
-    ]
-    for (scale, source), subset in references.groupby(["Escala", "Conjunto"]):
-        ax.scatter(
-            subset["Mw mínimo"],
-            subset["log10(lambda)"],
-            marker="x",
-            color=colors.get(source, "#777777"),
-            alpha=0.55,
-            s=24,
-            label="_nolegend_",
+        plot_bottom = min(lowest_data - 0.35, lowest_fit - 0.2)
+        zero_y = plot_bottom + 0.08
+        fig, ax = plt.subplots(figsize=(10, 8))
+        raw_legend_added = False
+        corrected_legend_added = False
+        has_zero_rates = False
+
+        for fit in scale_fits.itertuples(index=False):
+            color = colors.get(fit.Conjunto)
+            if color is None:
+                continue
+            corrected = recurrence[
+                recurrence["Escala"].eq(scale_name)
+                & recurrence["Conjunto"].eq(fit.Conjunto)
+                & recurrence["Base tasa"].str.startswith(
+                    "Completez", na=False
+                )
+            ]
+            raw = raw_recurrence[
+                raw_recurrence["Escala"].eq(scale_name)
+                & raw_recurrence["Conjunto"].eq(fit.Conjunto)
+            ]
+            raw_positive = raw[
+                raw["log10(lambda sin corrección)"].notna()
+            ]
+            corrected_positive = corrected[
+                corrected["log10(lambda)"].notna()
+            ]
+            if not raw_positive.empty:
+                ax.scatter(
+                    raw_positive["Mw mínimo"],
+                    raw_positive["log10(lambda sin corrección)"],
+                    marker="o",
+                    facecolors="none",
+                    edgecolors=color,
+                    s=32,
+                    label=(
+                        "Sin corrección (círculos)"
+                        if not raw_legend_added
+                        else "_nolegend_"
+                    ),
+                    zorder=3,
+                )
+                raw_legend_added = True
+            if not corrected_positive.empty:
+                ax.scatter(
+                    corrected_positive["Mw mínimo"],
+                    corrected_positive["log10(lambda)"],
+                    marker="s",
+                    color=color,
+                    s=27,
+                    label=(
+                        "Corregida (cuadrados)"
+                        if not corrected_legend_added
+                        else "_nolegend_"
+                    ),
+                    zorder=4,
+                )
+                corrected_legend_added = True
+
+            raw_zeros = raw[raw["lambda sin corrección (año^-1)"].eq(0)]
+            corrected_zeros = corrected[
+                corrected["lambda acumulada (año^-1)"].eq(0)
+            ]
+            if not raw_zeros.empty:
+                has_zero_rates = True
+                ax.scatter(
+                    raw_zeros["Mw mínimo"],
+                    np.full(len(raw_zeros), zero_y),
+                    marker="o",
+                    facecolors="none",
+                    edgecolors=color,
+                    s=32,
+                    zorder=3,
+                )
+            if not corrected_zeros.empty:
+                has_zero_rates = True
+                ax.scatter(
+                    corrected_zeros["Mw mínimo"],
+                    np.full(len(corrected_zeros), zero_y),
+                    marker="s",
+                    color=color,
+                    s=27,
+                    zorder=4,
+                )
+
+            if not np.isfinite(fit.a) or not np.isfinite(fit.b):
+                continue
+            x_fit = np.linspace(
+                float(MAGNITUDE_EDGES[0]), max_threshold, 200
+            )
+            ax.plot(
+                x_fit,
+                fit.a - fit.b * x_fit,
+                color=color,
+                linewidth=1.8,
+                label=(
+                    f"{fit.Conjunto}: y = -{fit.b:.3f}*x + "
+                    f"{fit.a:.3f}; R²={fit.R2:.3f}"
+                ),
+            )
+
+        ax.set_xlabel(r"Magnitud umbral $M_w$", fontsize=13)
+        ax.set_ylabel(
+            r"$\log_{10}\lambda(M_w\geq M)$ (eventos/año)", fontsize=13
         )
-    approximate = recurrence[
-        recurrence["Base tasa"].eq("Completez aproximada (N<10)")
-        & recurrence["log10(lambda)"].notna()
-    ]
-    for (scale, source), subset in approximate.groupby(["Escala", "Conjunto"]):
-        ax.scatter(
-            subset["Mw mínimo"],
-            subset["log10(lambda)"],
-            marker="D",
-            facecolors="none",
-            edgecolors=colors.get(source, "#777777"),
-            s=30,
-            label="_nolegend_",
+        ax.tick_params(axis="both", labelsize=11)
+        ax.set_xlim(float(MAGNITUDE_EDGES[0]), max_threshold)
+        ax.set_ylim(bottom=plot_bottom)
+        ax.set_title(
+            f"Recurrencia Gutenberg--Richter — {scale_name}", fontsize=15
         )
-    ax.set_xlabel(r"Magnitud umbral $M_w$")
-    ax.set_ylabel(r"$\log_{10}\lambda(M_w\geq M)$ (eventos/año)")
-    ax.set_title(
-        "Curvas de recurrencia y completez - Escala local/regional"
-    )
-    ax.text(
-        0.01,
-        0.01,
-        "x: referencia cruda; rombo: completez aproximada con N<10",
-        transform=ax.transAxes,
-        fontsize=8,
-        va="bottom",
-    )
-    ax.grid(True, alpha=0.25)
-    ax.legend(fontsize=8, loc="best")
-    fig.tight_layout()
-    fig.savefig(
-        figures_dir / "curvas_recurrencia_sismofuentes.png", dpi=250
-    )
-    plt.close(fig)
+        if has_zero_rates:
+            fig.text(
+                0.12,
+                0.015,
+                "Marcadores en el límite inferior: λ=0; log10(λ) no definido.",
+                fontsize=9,
+            )
+        ax.grid(True, alpha=0.25)
+        ax.legend(fontsize=10, loc="best")
+        fig.tight_layout(rect=(0, 0.04, 1, 1))
+        fig.savefig(
+            figures_dir / f"curvas_recurrencia_sismofuentes_{scale_slug}.png",
+            dpi=250,
+        )
+        plt.close(fig)
 
 
 def run_analysis() -> dict[str, pd.DataFrame]:
@@ -1027,7 +1125,7 @@ def run_analysis() -> dict[str, pd.DataFrame]:
         recurrence, gr_fits, raw_recurrence, raw_fits, sources, figures_dir
     )
     _save_recurrence_plot(
-        recurrence, gr_fits, figures_dir
+        recurrence, gr_fits, raw_recurrence, figures_dir
     )
 
     print("\nCompletez por intervalos:")

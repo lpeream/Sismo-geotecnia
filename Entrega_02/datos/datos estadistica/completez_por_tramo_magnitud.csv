@@ -1,81 +1,73 @@
 ﻿Escala,Conjunto,Intervalo Mw,N total catálogo,Año de inicio completo,t completo (años),Pendiente prequiebre (eventos/año),Pendiente postquiebre (eventos/año),R2 prequiebre,R2 postquiebre,R2 segmentado,Estado
-Regional (260 km),Catálogo regional,"[3, 3.3)",860,1994.0,32.0,0.01958567748041428,24.50971407624655,0.06490655047163263,0.9959312913276743,0.9989024416256145,Estimado
-Regional (260 km),Catálogo regional,"[3.3, 3.5)",399,1995.0,31.0,0.01599666156628182,12.900403225806306,0.09609098969591057,0.9969626561747567,0.9990140286588649,Estimado
+Regional (260 km),Catálogo regional,"[3, 3.5)",1259,1994.0,32.0,0.026184341973815597,37.362353372434356,0.08706770528337959,0.997606530647899,0.9993038689414885,Estimado
 Regional (260 km),Catálogo regional,"[3.5, 4)",490,1995.0,31.0,0.028806636401573094,15.93225806451594,0.07449176828468296,0.9880065431779368,0.9959786202751479,Estimado
 Regional (260 km),Catálogo regional,"[4, 4.5)",299,1991.0,35.0,0.11971862273232113,7.626890756302472,0.4686524684354936,0.9974803665095809,0.9988057002141106,Estimado
-Regional (260 km),Catálogo regional,"[4.5, 5)",305,1985.0,41.0,0.23720273313738063,6.520557491289241,0.3407299645526547,0.9683581288596103,0.9859740387068407,Estimado
-Regional (260 km),Catálogo regional,"[5, 5.5)",89,1971.0,55.0,0.03975605107680538,1.515656565656575,0.2387652280601249,0.9831851833968764,0.9924981466789851,Estimado
-Regional (260 km),Catálogo regional,"[5.5, 6)",28,1991.0,35.0,0.05115142539800064,0.6882352941176432,0.7745319742907226,0.9468658067649032,0.9811916404308302,Estimado
-Regional (260 km),Catálogo regional,"[6, 6.5)",13,1974.0,52.0,0.05003889032927147,0.14710151114146938,0.8835920265045192,0.9124693292876526,0.9757492386554897,Estimado
-Regional (260 km),Catálogo regional,"[6.5, 7)",5,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Regional (260 km),Catálogo regional,"[7, 7.5)",4,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Regional (260 km),Cortical,"[3, 3.3)",477,1994.0,32.0,0.015589673484410297,13.592741935483994,0.07535889063854095,0.994827994827183,0.9985555678321901,Estimado
-Regional (260 km),Cortical,"[3.3, 3.5)",220,1995.0,31.0,0.013075532062873837,7.060887096774113,0.12183084703499303,0.9974001640675216,0.9990996096005353,Estimado
+Regional (260 km),Catálogo regional,"[4.5, 5)",305,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Catálogo regional,"[5, 5.5)",89,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Catálogo regional,"[5.5, 6)",28,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Catálogo regional,"[6, 6.5)",13,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Catálogo regional,"[6.5, 7)",5,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Catálogo regional,"[7, 7.5)",4,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Cortical,"[3, 3.5)",697,1994.0,32.0,0.022188337977811615,20.620417888563246,0.10282199860967045,0.9970742677667596,0.9991226067518348,Estimado
 Regional (260 km),Cortical,"[3.5, 4)",244,1994.0,32.0,0.007834270992165705,7.676502932551399,0.085929819400686,0.9950744863263424,0.9984275299509409,Estimado
 Regional (260 km),Cortical,"[4, 4.5)",146,1989.0,37.0,0.027686667952922964,3.8155523944996395,0.3260546959987849,0.9892154416713379,0.9964414402351902,Estimado
-Regional (260 km),Cortical,"[4.5, 5)",102,1986.0,40.0,0.05516989404457494,2.1021575984990672,0.2717031225422675,0.9259310145003924,0.9717111224361793,Estimado
-Regional (260 km),Cortical,"[5, 5.5)",37,1968.0,58.0,0.013393665158371142,0.5367436709834181,0.1027392120075048,0.9502442723159317,0.9788566428628214,Estimado
-Regional (260 km),Cortical,"[5.5, 6)",9,,,0.027534176903040674,0.43137254901959743,0.8351102135873759,0.8446771378708586,0.9573407373420515,No validado: R² posterior < 0.90
-Regional (260 km),Cortical,"[6, 6.5)",4,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Regional (260 km),Cortical,"[6.5, 7)",1,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Regional (260 km),Cortical,"[7, 7.5)",2,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Regional (260 km),Subducción interplaca,"[3, 3.3)",113,1999.0,27.0,0.0286892828767647,3.1050061050060775,0.1719511388747338,0.945288580670698,0.9889870049471563,Estimado
-Regional (260 km),Subducción interplaca,"[3.3, 3.5)",65,2000.0,26.0,0.02357163847025732,2.0680341880341624,0.0718237610387128,0.9662917606638539,0.9852741062602252,Estimado
+Regional (260 km),Cortical,"[4.5, 5)",102,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Cortical,"[5, 5.5)",37,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Cortical,"[5.5, 6)",9,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Cortical,"[6, 6.5)",4,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Cortical,"[6.5, 7)",1,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Cortical,"[7, 7.5)",2,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción interplaca,"[3, 3.5)",178,1999.0,27.0,0.03627518202892896,5.11843711843707,0.17152044738241512,0.9582069041705527,0.9916874556290691,Estimado
 Regional (260 km),Subducción interplaca,"[3.5, 4)",61,1999.0,27.0,0.007651201010002119,1.7509157509157336,0.149309794658964,0.9663168133982759,0.9935746774206192,Estimado
 Regional (260 km),Subducción interplaca,"[4, 4.5)",33,1999.0,27.0,0.018426007553248327,0.904761904761896,0.29682164360492425,0.9480737143755007,0.990298181378293,Estimado
-Regional (260 km),Subducción interplaca,"[4.5, 5)",17,1996.0,30.0,0.021835443037974703,0.534593993325913,0.4099960254372018,0.944163873263399,0.9732420930289098,Estimado
-Regional (260 km),Subducción interplaca,"[5, 5.5)",3,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Regional (260 km),Subducción interplaca,"[5.5, 6)",3,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Regional (260 km),Subducción interplaca,"[6, 6.5)",2,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Regional (260 km),Subducción interplaca,"[6.5, 7)",0,,,,,,,,Sin eventos
-Regional (260 km),Subducción interplaca,"[7, 7.5)",0,,,,,,,,Sin eventos
-Regional (260 km),Subducción intraplaca,"[3, 3.3)",270,1995.0,31.0,0.016477193692383554,7.504435483870895,0.053329186157942576,0.9945669580875792,0.998581274120832,Estimado
-Regional (260 km),Subducción intraplaca,"[3.3, 3.5)",114,1996.0,30.0,0.009444985394352526,3.726362625139015,0.054914205672930816,0.989625024909715,0.9965319276155876,Estimado
+Regional (260 km),Subducción interplaca,"[4.5, 5)",17,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción interplaca,"[5, 5.5)",3,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción interplaca,"[5.5, 6)",3,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción interplaca,"[6, 6.5)",2,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción interplaca,"[6.5, 7)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción interplaca,"[7, 7.5)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción intraplaca,"[3, 3.5)",384,1995.0,31.0,0.01842461336132221,11.202822580645048,0.05155063297210183,0.9975464891412903,0.9992386571892277,Estimado
 Regional (260 km),Subducción intraplaca,"[3.5, 4)",185,1998.0,28.0,0.04295392953929501,6.72495894909676,0.13190815445469062,0.9693673614303469,0.9885174728181114,Estimado
 Regional (260 km),Subducción intraplaca,"[4, 4.5)",120,1991.0,35.0,0.07588300629396505,2.809523809523793,0.525361795108833,0.9888285780933452,0.9968357526052986,Estimado
-Regional (260 km),Subducción intraplaca,"[4.5, 5)",186,1983.0,43.0,0.14061162717878903,3.918755662941623,0.31888954234328204,0.9712947046103568,0.9871370259087585,Estimado
-Regional (260 km),Subducción intraplaca,"[5, 5.5)",49,1975.0,51.0,0.017933495339752397,0.8995475113122154,0.22814266795273763,0.9876860299167334,0.9952481226697423,Estimado
-Regional (260 km),Subducción intraplaca,"[5.5, 6)",16,1993.0,33.0,0.027532467532467422,0.3582887700534792,0.5682618136987072,0.9505642364940572,0.9822111686859845,Estimado
-Regional (260 km),Subducción intraplaca,"[6, 6.5)",7,,,0.02861906085023633,0.09693877551020538,0.604049849912772,0.8647949405902642,0.9669167057300246,No validado: R² posterior < 0.90
-Regional (260 km),Subducción intraplaca,"[6.5, 7)",4,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Regional (260 km),Subducción intraplaca,"[7, 7.5)",2,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Local (50 km),Catálogo local,"[3, 3.3)",40,,,0.004843258007814967,0.7931451612903166,0.055606260463283874,0.899319656736956,0.9880277961448438,No validado: R² posterior < 0.90
-Local (50 km),Catálogo local,"[3.3, 3.5)",15,2003.0,23.0,0.009840086796547045,0.49901185770750456,0.20497819449063437,0.9551784323125787,0.9817427748961977,Estimado
+Regional (260 km),Subducción intraplaca,"[4.5, 5)",186,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción intraplaca,"[5, 5.5)",49,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción intraplaca,"[5.5, 6)",16,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción intraplaca,"[6, 6.5)",7,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción intraplaca,"[6.5, 7)",4,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Regional (260 km),Subducción intraplaca,"[7, 7.5)",2,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Catálogo local,"[3, 3.5)",55,1995.0,31.0,0.004843258007814967,1.2794354838709572,0.055606260463283874,0.9561694639031135,0.9926809846437855,Estimado
 Local (50 km),Catálogo local,"[3.5, 4)",23,1998.0,28.0,0.006165311653116482,0.7077175697865273,0.11692413086223485,0.9567665009914756,0.9907158216524774,Estimado
 Local (50 km),Catálogo local,"[4, 4.5)",13,,,0.021132913735653423,0.1299719887955173,0.3783644328005318,0.8883607314979866,0.9851828293267547,No validado: R² posterior < 0.90
-Local (50 km),Catálogo local,"[4.5, 5)",11,,,0.017150251512721305,0.38226990400903055,0.615267151880792,0.8094296204592757,0.9485954536823752,No validado: R² posterior < 0.90
-Local (50 km),Catálogo local,"[5, 5.5)",3,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Local (50 km),Catálogo local,"[5.5, 6)",1,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Local (50 km),Catálogo local,"[6, 6.5)",0,,,,,,,,Sin eventos
-Local (50 km),Catálogo local,"[6.5, 7)",0,,,,,,,,Sin eventos
-Local (50 km),Catálogo local,"[7, 7.5)",0,,,,,,,,Sin eventos
-Local (50 km),Cortical,"[3, 3.3)",38,1995.0,31.0,0.004843258007814967,0.762903225806446,0.055606260463283874,0.9056754240375663,0.9879749753408216,Estimado
-Local (50 km),Cortical,"[3.3, 3.5)",14,2003.0,23.0,0.009840086796547045,0.4614624505928804,0.20497819449063437,0.9688366266259162,0.9813766185736841,Estimado
+Local (50 km),Catálogo local,"[4.5, 5)",11,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Catálogo local,"[5, 5.5)",3,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Catálogo local,"[5.5, 6)",1,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Catálogo local,"[6, 6.5)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Catálogo local,"[6.5, 7)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Catálogo local,"[7, 7.5)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Cortical,"[3, 3.5)",52,1995.0,31.0,0.004843258007814967,1.2032258064516028,0.055606260463283874,0.9579907732562141,0.9927014149340743,Estimado
 Local (50 km),Cortical,"[3.5, 4)",22,1998.0,28.0,0.006165311653116482,0.6871921182265927,0.11692413086223485,0.9618774327747542,0.9910015207887222,Estimado
 Local (50 km),Cortical,"[4, 4.5)",10,1991.0,35.0,0.007389855609033679,0.12521008403361253,0.11285269157120714,0.9002351859861588,0.9854987639101562,Estimado
-Local (50 km),Cortical,"[4.5, 5)",7,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Local (50 km),Cortical,"[5, 5.5)",2,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Local (50 km),Cortical,"[5.5, 6)",1,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Local (50 km),Cortical,"[6, 6.5)",0,,,,,,,,Sin eventos
-Local (50 km),Cortical,"[6.5, 7)",0,,,,,,,,Sin eventos
-Local (50 km),Cortical,"[7, 7.5)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción interplaca,"[3, 3.3)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción interplaca,"[3.3, 3.5)",0,,,,,,,,Sin eventos
+Local (50 km),Cortical,"[4.5, 5)",7,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Cortical,"[5, 5.5)",2,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Cortical,"[5.5, 6)",1,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Cortical,"[6, 6.5)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Cortical,"[6.5, 7)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Cortical,"[7, 7.5)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción interplaca,"[3, 3.5)",0,,,,,,,,Sin eventos
 Local (50 km),Subducción interplaca,"[3.5, 4)",0,,,,,,,,Sin eventos
 Local (50 km),Subducción interplaca,"[4, 4.5)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción interplaca,"[4.5, 5)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción interplaca,"[5, 5.5)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción interplaca,"[5.5, 6)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción interplaca,"[6, 6.5)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción interplaca,"[6.5, 7)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción interplaca,"[7, 7.5)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción intraplaca,"[3, 3.3)",2,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Local (50 km),Subducción intraplaca,"[3.3, 3.5)",1,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
+Local (50 km),Subducción interplaca,"[4.5, 5)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción interplaca,"[5, 5.5)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción interplaca,"[5.5, 6)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción interplaca,"[6, 6.5)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción interplaca,"[6.5, 7)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción interplaca,"[7, 7.5)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción intraplaca,"[3, 3.5)",3,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
 Local (50 km),Subducción intraplaca,"[3.5, 4)",1,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
 Local (50 km),Subducción intraplaca,"[4, 4.5)",3,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Local (50 km),Subducción intraplaca,"[4.5, 5)",4,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Local (50 km),Subducción intraplaca,"[5, 5.5)",1,,,,,,,,Sin quiebre; usar tasa de referencia sin corregir
-Local (50 km),Subducción intraplaca,"[5.5, 6)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción intraplaca,"[6, 6.5)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción intraplaca,"[6.5, 7)",0,,,,,,,,Sin eventos
-Local (50 km),Subducción intraplaca,"[7, 7.5)",0,,,,,,,,Sin eventos
+Local (50 km),Subducción intraplaca,"[4.5, 5)",4,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción intraplaca,"[5, 5.5)",1,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción intraplaca,"[5.5, 6)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción intraplaca,"[6, 6.5)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción intraplaca,"[6.5, 7)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)
+Local (50 km),Subducción intraplaca,"[7, 7.5)",0,1917.0,109.0,,,,,,Asumido completo: catálogo total (Mw >= 4.5)

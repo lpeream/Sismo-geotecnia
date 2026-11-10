@@ -1,23 +1,13 @@
 ﻿Escala,Conjunto,Umbral acumulado Mw,Intervalo incremental Mw,Año inicio ventana,t ventana (años),N incremental en ventana
-Regional (260 km),Catálogo regional,"[3, 3.3)","[3, 3.3)",1994,32,845
-Regional (260 km),Catálogo regional,"[3, 3.3)","[3.3, 3.5)",1994,32,397
-Regional (260 km),Catálogo regional,"[3, 3.3)","[3.5, 4)",1994,32,483
-Regional (260 km),Catálogo regional,"[3, 3.3)","[4, 4.5)",1994,32,243
-Regional (260 km),Catálogo regional,"[3, 3.3)","[4.5, 5)",1994,32,234
-Regional (260 km),Catálogo regional,"[3, 3.3)","[5, 5.5)",1994,32,54
-Regional (260 km),Catálogo regional,"[3, 3.3)","[5.5, 6)",1994,32,22
-Regional (260 km),Catálogo regional,"[3, 3.3)","[6, 6.5)",1994,32,6
-Regional (260 km),Catálogo regional,"[3, 3.3)","[6.5, 7)",1994,32,3
-Regional (260 km),Catálogo regional,"[3, 3.3)","[7, 7.5)",1994,32,2
-Regional (260 km),Catálogo regional,"[3.3, 3.5)","[3.3, 3.5)",1995,31,389
-Regional (260 km),Catálogo regional,"[3.3, 3.5)","[3.5, 4)",1995,31,470
-Regional (260 km),Catálogo regional,"[3.3, 3.5)","[4, 4.5)",1995,31,236
-Regional (260 km),Catálogo regional,"[3.3, 3.5)","[4.5, 5)",1995,31,226
-Regional (260 km),Catálogo regional,"[3.3, 3.5)","[5, 5.5)",1995,31,54
-Regional (260 km),Catálogo regional,"[3.3, 3.5)","[5.5, 6)",1995,31,22
-Regional (260 km),Catálogo regional,"[3.3, 3.5)","[6, 6.5)",1995,31,6
-Regional (260 km),Catálogo regional,"[3.3, 3.5)","[6.5, 7)",1995,31,2
-Regional (260 km),Catálogo regional,"[3.3, 3.5)","[7, 7.5)",1995,31,2
+Regional (260 km),Catálogo regional,"[3, 3.5)","[3, 3.5)",1994,32,1242
+Regional (260 km),Catálogo regional,"[3, 3.5)","[3.5, 4)",1994,32,483
+Regional (260 km),Catálogo regional,"[3, 3.5)","[4, 4.5)",1994,32,243
+Regional (260 km),Catálogo regional,"[3, 3.5)","[4.5, 5)",1994,32,234
+Regional (260 km),Catálogo regional,"[3, 3.5)","[5, 5.5)",1994,32,54
+Regional (260 km),Catálogo regional,"[3, 3.5)","[5.5, 6)",1994,32,22
+Regional (260 km),Catálogo regional,"[3, 3.5)","[6, 6.5)",1994,32,6
+Regional (260 km),Catálogo regional,"[3, 3.5)","[6.5, 7)",1994,32,3
+Regional (260 km),Catálogo regional,"[3, 3.5)","[7, 7.5)",1994,32,2
 Regional (260 km),Catálogo regional,"[3.5, 4)","[3.5, 4)",1995,31,470
 Regional (260 km),Catálogo regional,"[3.5, 4)","[4, 4.5)",1995,31,236
 Regional (260 km),Catálogo regional,"[3.5, 4)","[4.5, 5)",1995,31,226
@@ -33,46 +23,36 @@ Regional (260 km),Catálogo regional,"[4, 4.5)","[5.5, 6)",1991,35,24
 Regional (260 km),Catálogo regional,"[4, 4.5)","[6, 6.5)",1991,35,6
 Regional (260 km),Catálogo regional,"[4, 4.5)","[6.5, 7)",1991,35,3
 Regional (260 km),Catálogo regional,"[4, 4.5)","[7, 7.5)",1991,35,2
-Regional (260 km),Catálogo regional,"[4.5, 5)","[4.5, 5)",1985,41,270
-Regional (260 km),Catálogo regional,"[4.5, 5)","[5, 5.5)",1985,41,68
-Regional (260 km),Catálogo regional,"[4.5, 5)","[5.5, 6)",1985,41,24
-Regional (260 km),Catálogo regional,"[4.5, 5)","[6, 6.5)",1985,41,7
-Regional (260 km),Catálogo regional,"[4.5, 5)","[6.5, 7)",1985,41,3
-Regional (260 km),Catálogo regional,"[4.5, 5)","[7, 7.5)",1985,41,2
-Regional (260 km),Catálogo regional,"[5, 5.5)","[5, 5.5)",1971,55,84
-Regional (260 km),Catálogo regional,"[5, 5.5)","[5.5, 6)",1971,55,27
-Regional (260 km),Catálogo regional,"[5, 5.5)","[6, 6.5)",1971,55,9
-Regional (260 km),Catálogo regional,"[5, 5.5)","[6.5, 7)",1971,55,5
-Regional (260 km),Catálogo regional,"[5, 5.5)","[7, 7.5)",1971,55,2
-Regional (260 km),Catálogo regional,"[5.5, 6)","[5.5, 6)",1991,35,24
-Regional (260 km),Catálogo regional,"[5.5, 6)","[6, 6.5)",1991,35,6
-Regional (260 km),Catálogo regional,"[5.5, 6)","[6.5, 7)",1991,35,3
-Regional (260 km),Catálogo regional,"[5.5, 6)","[7, 7.5)",1991,35,2
-Regional (260 km),Catálogo regional,"[6, 6.5)","[6, 6.5)",1974,52,9
-Regional (260 km),Catálogo regional,"[6, 6.5)","[6.5, 7)",1974,52,4
-Regional (260 km),Catálogo regional,"[6, 6.5)","[7, 7.5)",1974,52,2
+Regional (260 km),Catálogo regional,"[4.5, 5)","[4.5, 5)",1917,109,305
+Regional (260 km),Catálogo regional,"[4.5, 5)","[5, 5.5)",1917,109,89
+Regional (260 km),Catálogo regional,"[4.5, 5)","[5.5, 6)",1917,109,28
+Regional (260 km),Catálogo regional,"[4.5, 5)","[6, 6.5)",1917,109,13
+Regional (260 km),Catálogo regional,"[4.5, 5)","[6.5, 7)",1917,109,5
+Regional (260 km),Catálogo regional,"[4.5, 5)","[7, 7.5)",1917,109,4
+Regional (260 km),Catálogo regional,"[5, 5.5)","[5, 5.5)",1917,109,89
+Regional (260 km),Catálogo regional,"[5, 5.5)","[5.5, 6)",1917,109,28
+Regional (260 km),Catálogo regional,"[5, 5.5)","[6, 6.5)",1917,109,13
+Regional (260 km),Catálogo regional,"[5, 5.5)","[6.5, 7)",1917,109,5
+Regional (260 km),Catálogo regional,"[5, 5.5)","[7, 7.5)",1917,109,4
+Regional (260 km),Catálogo regional,"[5.5, 6)","[5.5, 6)",1917,109,28
+Regional (260 km),Catálogo regional,"[5.5, 6)","[6, 6.5)",1917,109,13
+Regional (260 km),Catálogo regional,"[5.5, 6)","[6.5, 7)",1917,109,5
+Regional (260 km),Catálogo regional,"[5.5, 6)","[7, 7.5)",1917,109,4
+Regional (260 km),Catálogo regional,"[6, 6.5)","[6, 6.5)",1917,109,13
+Regional (260 km),Catálogo regional,"[6, 6.5)","[6.5, 7)",1917,109,5
+Regional (260 km),Catálogo regional,"[6, 6.5)","[7, 7.5)",1917,109,4
 Regional (260 km),Catálogo regional,"[6.5, 7)","[6.5, 7)",1917,109,5
 Regional (260 km),Catálogo regional,"[6.5, 7)","[7, 7.5)",1917,109,4
 Regional (260 km),Catálogo regional,"[7, 7.5)","[7, 7.5)",1917,109,4
-Regional (260 km),Cortical,"[3, 3.3)","[3, 3.3)",1994,32,466
-Regional (260 km),Cortical,"[3, 3.3)","[3.3, 3.5)",1994,32,218
-Regional (260 km),Cortical,"[3, 3.3)","[3.5, 4)",1994,32,239
-Regional (260 km),Cortical,"[3, 3.3)","[4, 4.5)",1994,32,119
-Regional (260 km),Cortical,"[3, 3.3)","[4.5, 5)",1994,32,83
-Regional (260 km),Cortical,"[3, 3.3)","[5, 5.5)",1994,32,22
-Regional (260 km),Cortical,"[3, 3.3)","[5.5, 6)",1994,32,7
-Regional (260 km),Cortical,"[3, 3.3)","[6, 6.5)",1994,32,2
-Regional (260 km),Cortical,"[3, 3.3)","[6.5, 7)",1994,32,1
-Regional (260 km),Cortical,"[3, 3.3)","[7, 7.5)",1994,32,0
-Regional (260 km),Cortical,"[3.3, 3.5)","[3.3, 3.5)",1995,31,213
-Regional (260 km),Cortical,"[3.3, 3.5)","[3.5, 4)",1995,31,229
-Regional (260 km),Cortical,"[3.3, 3.5)","[4, 4.5)",1995,31,116
-Regional (260 km),Cortical,"[3.3, 3.5)","[4.5, 5)",1995,31,77
-Regional (260 km),Cortical,"[3.3, 3.5)","[5, 5.5)",1995,31,22
-Regional (260 km),Cortical,"[3.3, 3.5)","[5.5, 6)",1995,31,7
-Regional (260 km),Cortical,"[3.3, 3.5)","[6, 6.5)",1995,31,2
-Regional (260 km),Cortical,"[3.3, 3.5)","[6.5, 7)",1995,31,0
-Regional (260 km),Cortical,"[3.3, 3.5)","[7, 7.5)",1995,31,0
+Regional (260 km),Cortical,"[3, 3.5)","[3, 3.5)",1994,32,684
+Regional (260 km),Cortical,"[3, 3.5)","[3.5, 4)",1994,32,239
+Regional (260 km),Cortical,"[3, 3.5)","[4, 4.5)",1994,32,119
+Regional (260 km),Cortical,"[3, 3.5)","[4.5, 5)",1994,32,83
+Regional (260 km),Cortical,"[3, 3.5)","[5, 5.5)",1994,32,22
+Regional (260 km),Cortical,"[3, 3.5)","[5.5, 6)",1994,32,7
+Regional (260 km),Cortical,"[3, 3.5)","[6, 6.5)",1994,32,2
+Regional (260 km),Cortical,"[3, 3.5)","[6.5, 7)",1994,32,1
+Regional (260 km),Cortical,"[3, 3.5)","[7, 7.5)",1994,32,0
 Regional (260 km),Cortical,"[3.5, 4)","[3.5, 4)",1994,32,239
 Regional (260 km),Cortical,"[3.5, 4)","[4, 4.5)",1994,32,119
 Regional (260 km),Cortical,"[3.5, 4)","[4.5, 5)",1994,32,83
@@ -88,17 +68,17 @@ Regional (260 km),Cortical,"[4, 4.5)","[5.5, 6)",1989,37,7
 Regional (260 km),Cortical,"[4, 4.5)","[6, 6.5)",1989,37,2
 Regional (260 km),Cortical,"[4, 4.5)","[6.5, 7)",1989,37,1
 Regional (260 km),Cortical,"[4, 4.5)","[7, 7.5)",1989,37,0
-Regional (260 km),Cortical,"[4.5, 5)","[4.5, 5)",1986,40,92
-Regional (260 km),Cortical,"[4.5, 5)","[5, 5.5)",1986,40,26
-Regional (260 km),Cortical,"[4.5, 5)","[5.5, 6)",1986,40,7
-Regional (260 km),Cortical,"[4.5, 5)","[6, 6.5)",1986,40,2
-Regional (260 km),Cortical,"[4.5, 5)","[6.5, 7)",1986,40,1
-Regional (260 km),Cortical,"[4.5, 5)","[7, 7.5)",1986,40,0
-Regional (260 km),Cortical,"[5, 5.5)","[5, 5.5)",1968,58,33
-Regional (260 km),Cortical,"[5, 5.5)","[5.5, 6)",1968,58,8
-Regional (260 km),Cortical,"[5, 5.5)","[6, 6.5)",1968,58,2
-Regional (260 km),Cortical,"[5, 5.5)","[6.5, 7)",1968,58,1
-Regional (260 km),Cortical,"[5, 5.5)","[7, 7.5)",1968,58,0
+Regional (260 km),Cortical,"[4.5, 5)","[4.5, 5)",1917,109,102
+Regional (260 km),Cortical,"[4.5, 5)","[5, 5.5)",1917,109,37
+Regional (260 km),Cortical,"[4.5, 5)","[5.5, 6)",1917,109,9
+Regional (260 km),Cortical,"[4.5, 5)","[6, 6.5)",1917,109,4
+Regional (260 km),Cortical,"[4.5, 5)","[6.5, 7)",1917,109,1
+Regional (260 km),Cortical,"[4.5, 5)","[7, 7.5)",1917,109,2
+Regional (260 km),Cortical,"[5, 5.5)","[5, 5.5)",1917,109,37
+Regional (260 km),Cortical,"[5, 5.5)","[5.5, 6)",1917,109,9
+Regional (260 km),Cortical,"[5, 5.5)","[6, 6.5)",1917,109,4
+Regional (260 km),Cortical,"[5, 5.5)","[6.5, 7)",1917,109,1
+Regional (260 km),Cortical,"[5, 5.5)","[7, 7.5)",1917,109,2
 Regional (260 km),Cortical,"[5.5, 6)","[5.5, 6)",1917,109,9
 Regional (260 km),Cortical,"[5.5, 6)","[6, 6.5)",1917,109,4
 Regional (260 km),Cortical,"[5.5, 6)","[6.5, 7)",1917,109,1
@@ -109,25 +89,15 @@ Regional (260 km),Cortical,"[6, 6.5)","[7, 7.5)",1917,109,2
 Regional (260 km),Cortical,"[6.5, 7)","[6.5, 7)",1917,109,1
 Regional (260 km),Cortical,"[6.5, 7)","[7, 7.5)",1917,109,2
 Regional (260 km),Cortical,"[7, 7.5)","[7, 7.5)",1917,109,2
-Regional (260 km),Subducción interplaca,"[3, 3.3)","[3, 3.3)",1999,27,104
-Regional (260 km),Subducción interplaca,"[3, 3.3)","[3.3, 3.5)",1999,27,63
-Regional (260 km),Subducción interplaca,"[3, 3.3)","[3.5, 4)",1999,27,58
-Regional (260 km),Subducción interplaca,"[3, 3.3)","[4, 4.5)",1999,27,29
-Regional (260 km),Subducción interplaca,"[3, 3.3)","[4.5, 5)",1999,27,13
-Regional (260 km),Subducción interplaca,"[3, 3.3)","[5, 5.5)",1999,27,3
-Regional (260 km),Subducción interplaca,"[3, 3.3)","[5.5, 6)",1999,27,3
-Regional (260 km),Subducción interplaca,"[3, 3.3)","[6, 6.5)",1999,27,1
-Regional (260 km),Subducción interplaca,"[3, 3.3)","[6.5, 7)",1999,27,0
-Regional (260 km),Subducción interplaca,"[3, 3.3)","[7, 7.5)",1999,27,0
-Regional (260 km),Subducción interplaca,"[3.3, 3.5)","[3.3, 3.5)",2000,26,46
-Regional (260 km),Subducción interplaca,"[3.3, 3.5)","[3.5, 4)",2000,26,44
-Regional (260 km),Subducción interplaca,"[3.3, 3.5)","[4, 4.5)",2000,26,23
-Regional (260 km),Subducción interplaca,"[3.3, 3.5)","[4.5, 5)",2000,26,13
-Regional (260 km),Subducción interplaca,"[3.3, 3.5)","[5, 5.5)",2000,26,2
-Regional (260 km),Subducción interplaca,"[3.3, 3.5)","[5.5, 6)",2000,26,1
-Regional (260 km),Subducción interplaca,"[3.3, 3.5)","[6, 6.5)",2000,26,0
-Regional (260 km),Subducción interplaca,"[3.3, 3.5)","[6.5, 7)",2000,26,0
-Regional (260 km),Subducción interplaca,"[3.3, 3.5)","[7, 7.5)",2000,26,0
+Regional (260 km),Subducción interplaca,"[3, 3.5)","[3, 3.5)",1999,27,167
+Regional (260 km),Subducción interplaca,"[3, 3.5)","[3.5, 4)",1999,27,58
+Regional (260 km),Subducción interplaca,"[3, 3.5)","[4, 4.5)",1999,27,29
+Regional (260 km),Subducción interplaca,"[3, 3.5)","[4.5, 5)",1999,27,13
+Regional (260 km),Subducción interplaca,"[3, 3.5)","[5, 5.5)",1999,27,3
+Regional (260 km),Subducción interplaca,"[3, 3.5)","[5.5, 6)",1999,27,3
+Regional (260 km),Subducción interplaca,"[3, 3.5)","[6, 6.5)",1999,27,1
+Regional (260 km),Subducción interplaca,"[3, 3.5)","[6.5, 7)",1999,27,0
+Regional (260 km),Subducción interplaca,"[3, 3.5)","[7, 7.5)",1999,27,0
 Regional (260 km),Subducción interplaca,"[3.5, 4)","[3.5, 4)",1999,27,58
 Regional (260 km),Subducción interplaca,"[3.5, 4)","[4, 4.5)",1999,27,29
 Regional (260 km),Subducción interplaca,"[3.5, 4)","[4.5, 5)",1999,27,13
@@ -143,12 +113,12 @@ Regional (260 km),Subducción interplaca,"[4, 4.5)","[5.5, 6)",1999,27,3
 Regional (260 km),Subducción interplaca,"[4, 4.5)","[6, 6.5)",1999,27,1
 Regional (260 km),Subducción interplaca,"[4, 4.5)","[6.5, 7)",1999,27,0
 Regional (260 km),Subducción interplaca,"[4, 4.5)","[7, 7.5)",1999,27,0
-Regional (260 km),Subducción interplaca,"[4.5, 5)","[4.5, 5)",1996,30,14
-Regional (260 km),Subducción interplaca,"[4.5, 5)","[5, 5.5)",1996,30,3
-Regional (260 km),Subducción interplaca,"[4.5, 5)","[5.5, 6)",1996,30,3
-Regional (260 km),Subducción interplaca,"[4.5, 5)","[6, 6.5)",1996,30,1
-Regional (260 km),Subducción interplaca,"[4.5, 5)","[6.5, 7)",1996,30,0
-Regional (260 km),Subducción interplaca,"[4.5, 5)","[7, 7.5)",1996,30,0
+Regional (260 km),Subducción interplaca,"[4.5, 5)","[4.5, 5)",1917,109,17
+Regional (260 km),Subducción interplaca,"[4.5, 5)","[5, 5.5)",1917,109,3
+Regional (260 km),Subducción interplaca,"[4.5, 5)","[5.5, 6)",1917,109,3
+Regional (260 km),Subducción interplaca,"[4.5, 5)","[6, 6.5)",1917,109,2
+Regional (260 km),Subducción interplaca,"[4.5, 5)","[6.5, 7)",1917,109,0
+Regional (260 km),Subducción interplaca,"[4.5, 5)","[7, 7.5)",1917,109,0
 Regional (260 km),Subducción interplaca,"[5, 5.5)","[5, 5.5)",1917,109,3
 Regional (260 km),Subducción interplaca,"[5, 5.5)","[5.5, 6)",1917,109,3
 Regional (260 km),Subducción interplaca,"[5, 5.5)","[6, 6.5)",1917,109,2
@@ -164,25 +134,15 @@ Regional (260 km),Subducción interplaca,"[6, 6.5)","[7, 7.5)",1917,109,0
 Regional (260 km),Subducción interplaca,"[6.5, 7)","[6.5, 7)",1917,109,0
 Regional (260 km),Subducción interplaca,"[6.5, 7)","[7, 7.5)",1917,109,0
 Regional (260 km),Subducción interplaca,"[7, 7.5)","[7, 7.5)",1917,109,0
-Regional (260 km),Subducción intraplaca,"[3, 3.3)","[3, 3.3)",1995,31,256
-Regional (260 km),Subducción intraplaca,"[3, 3.3)","[3.3, 3.5)",1995,31,112
-Regional (260 km),Subducción intraplaca,"[3, 3.3)","[3.5, 4)",1995,31,181
-Regional (260 km),Subducción intraplaca,"[3, 3.3)","[4, 4.5)",1995,31,89
-Regional (260 km),Subducción intraplaca,"[3, 3.3)","[4.5, 5)",1995,31,135
-Regional (260 km),Subducción intraplaca,"[3, 3.3)","[5, 5.5)",1995,31,29
-Regional (260 km),Subducción intraplaca,"[3, 3.3)","[5.5, 6)",1995,31,12
-Regional (260 km),Subducción intraplaca,"[3, 3.3)","[6, 6.5)",1995,31,3
-Regional (260 km),Subducción intraplaca,"[3, 3.3)","[6.5, 7)",1995,31,2
-Regional (260 km),Subducción intraplaca,"[3, 3.3)","[7, 7.5)",1995,31,2
-Regional (260 km),Subducción intraplaca,"[3.3, 3.5)","[3.3, 3.5)",1996,30,106
-Regional (260 km),Subducción intraplaca,"[3.3, 3.5)","[3.5, 4)",1996,30,173
-Regional (260 km),Subducción intraplaca,"[3.3, 3.5)","[4, 4.5)",1996,30,84
-Regional (260 km),Subducción intraplaca,"[3.3, 3.5)","[4.5, 5)",1996,30,135
-Regional (260 km),Subducción intraplaca,"[3.3, 3.5)","[5, 5.5)",1996,30,28
-Regional (260 km),Subducción intraplaca,"[3.3, 3.5)","[5.5, 6)",1996,30,12
-Regional (260 km),Subducción intraplaca,"[3.3, 3.5)","[6, 6.5)",1996,30,2
-Regional (260 km),Subducción intraplaca,"[3.3, 3.5)","[6.5, 7)",1996,30,1
-Regional (260 km),Subducción intraplaca,"[3.3, 3.5)","[7, 7.5)",1996,30,2
+Regional (260 km),Subducción intraplaca,"[3, 3.5)","[3, 3.5)",1995,31,368
+Regional (260 km),Subducción intraplaca,"[3, 3.5)","[3.5, 4)",1995,31,181
+Regional (260 km),Subducción intraplaca,"[3, 3.5)","[4, 4.5)",1995,31,89
+Regional (260 km),Subducción intraplaca,"[3, 3.5)","[4.5, 5)",1995,31,135
+Regional (260 km),Subducción intraplaca,"[3, 3.5)","[5, 5.5)",1995,31,29
+Regional (260 km),Subducción intraplaca,"[3, 3.5)","[5.5, 6)",1995,31,12
+Regional (260 km),Subducción intraplaca,"[3, 3.5)","[6, 6.5)",1995,31,3
+Regional (260 km),Subducción intraplaca,"[3, 3.5)","[6.5, 7)",1995,31,2
+Regional (260 km),Subducción intraplaca,"[3, 3.5)","[7, 7.5)",1995,31,2
 Regional (260 km),Subducción intraplaca,"[3.5, 4)","[3.5, 4)",1998,28,168
 Regional (260 km),Subducción intraplaca,"[3.5, 4)","[4, 4.5)",1998,28,76
 Regional (260 km),Subducción intraplaca,"[3.5, 4)","[4.5, 5)",1998,28,127
@@ -198,46 +158,36 @@ Regional (260 km),Subducción intraplaca,"[4, 4.5)","[5.5, 6)",1991,35,14
 Regional (260 km),Subducción intraplaca,"[4, 4.5)","[6, 6.5)",1991,35,3
 Regional (260 km),Subducción intraplaca,"[4, 4.5)","[6.5, 7)",1991,35,2
 Regional (260 km),Subducción intraplaca,"[4, 4.5)","[7, 7.5)",1991,35,2
-Regional (260 km),Subducción intraplaca,"[4.5, 5)","[4.5, 5)",1983,43,164
-Regional (260 km),Subducción intraplaca,"[4.5, 5)","[5, 5.5)",1983,43,39
-Regional (260 km),Subducción intraplaca,"[4.5, 5)","[5.5, 6)",1983,43,14
-Regional (260 km),Subducción intraplaca,"[4.5, 5)","[6, 6.5)",1983,43,4
-Regional (260 km),Subducción intraplaca,"[4.5, 5)","[6.5, 7)",1983,43,2
-Regional (260 km),Subducción intraplaca,"[4.5, 5)","[7, 7.5)",1983,43,2
-Regional (260 km),Subducción intraplaca,"[5, 5.5)","[5, 5.5)",1975,51,45
-Regional (260 km),Subducción intraplaca,"[5, 5.5)","[5.5, 6)",1975,51,15
-Regional (260 km),Subducción intraplaca,"[5, 5.5)","[6, 6.5)",1975,51,5
-Regional (260 km),Subducción intraplaca,"[5, 5.5)","[6.5, 7)",1975,51,3
-Regional (260 km),Subducción intraplaca,"[5, 5.5)","[7, 7.5)",1975,51,2
-Regional (260 km),Subducción intraplaca,"[5.5, 6)","[5.5, 6)",1993,33,13
-Regional (260 km),Subducción intraplaca,"[5.5, 6)","[6, 6.5)",1993,33,3
-Regional (260 km),Subducción intraplaca,"[5.5, 6)","[6.5, 7)",1993,33,2
-Regional (260 km),Subducción intraplaca,"[5.5, 6)","[7, 7.5)",1993,33,2
+Regional (260 km),Subducción intraplaca,"[4.5, 5)","[4.5, 5)",1917,109,186
+Regional (260 km),Subducción intraplaca,"[4.5, 5)","[5, 5.5)",1917,109,49
+Regional (260 km),Subducción intraplaca,"[4.5, 5)","[5.5, 6)",1917,109,16
+Regional (260 km),Subducción intraplaca,"[4.5, 5)","[6, 6.5)",1917,109,7
+Regional (260 km),Subducción intraplaca,"[4.5, 5)","[6.5, 7)",1917,109,4
+Regional (260 km),Subducción intraplaca,"[4.5, 5)","[7, 7.5)",1917,109,2
+Regional (260 km),Subducción intraplaca,"[5, 5.5)","[5, 5.5)",1917,109,49
+Regional (260 km),Subducción intraplaca,"[5, 5.5)","[5.5, 6)",1917,109,16
+Regional (260 km),Subducción intraplaca,"[5, 5.5)","[6, 6.5)",1917,109,7
+Regional (260 km),Subducción intraplaca,"[5, 5.5)","[6.5, 7)",1917,109,4
+Regional (260 km),Subducción intraplaca,"[5, 5.5)","[7, 7.5)",1917,109,2
+Regional (260 km),Subducción intraplaca,"[5.5, 6)","[5.5, 6)",1917,109,16
+Regional (260 km),Subducción intraplaca,"[5.5, 6)","[6, 6.5)",1917,109,7
+Regional (260 km),Subducción intraplaca,"[5.5, 6)","[6.5, 7)",1917,109,4
+Regional (260 km),Subducción intraplaca,"[5.5, 6)","[7, 7.5)",1917,109,2
 Regional (260 km),Subducción intraplaca,"[6, 6.5)","[6, 6.5)",1917,109,7
 Regional (260 km),Subducción intraplaca,"[6, 6.5)","[6.5, 7)",1917,109,4
 Regional (260 km),Subducción intraplaca,"[6, 6.5)","[7, 7.5)",1917,109,2
 Regional (260 km),Subducción intraplaca,"[6.5, 7)","[6.5, 7)",1917,109,4
 Regional (260 km),Subducción intraplaca,"[6.5, 7)","[7, 7.5)",1917,109,2
 Regional (260 km),Subducción intraplaca,"[7, 7.5)","[7, 7.5)",1917,109,2
-Local (50 km),Catálogo local,"[3, 3.3)","[3, 3.3)",1917,109,40
-Local (50 km),Catálogo local,"[3, 3.3)","[3.3, 3.5)",1917,109,15
-Local (50 km),Catálogo local,"[3, 3.3)","[3.5, 4)",1917,109,23
-Local (50 km),Catálogo local,"[3, 3.3)","[4, 4.5)",1917,109,13
-Local (50 km),Catálogo local,"[3, 3.3)","[4.5, 5)",1917,109,11
-Local (50 km),Catálogo local,"[3, 3.3)","[5, 5.5)",1917,109,3
-Local (50 km),Catálogo local,"[3, 3.3)","[5.5, 6)",1917,109,1
-Local (50 km),Catálogo local,"[3, 3.3)","[6, 6.5)",1917,109,0
-Local (50 km),Catálogo local,"[3, 3.3)","[6.5, 7)",1917,109,0
-Local (50 km),Catálogo local,"[3, 3.3)","[7, 7.5)",1917,109,0
-Local (50 km),Catálogo local,"[3.3, 3.5)","[3.3, 3.5)",2003,23,12
-Local (50 km),Catálogo local,"[3.3, 3.5)","[3.5, 4)",2003,23,14
-Local (50 km),Catálogo local,"[3.3, 3.5)","[4, 4.5)",2003,23,4
-Local (50 km),Catálogo local,"[3.3, 3.5)","[4.5, 5)",2003,23,10
-Local (50 km),Catálogo local,"[3.3, 3.5)","[5, 5.5)",2003,23,0
-Local (50 km),Catálogo local,"[3.3, 3.5)","[5.5, 6)",2003,23,1
-Local (50 km),Catálogo local,"[3.3, 3.5)","[6, 6.5)",2003,23,0
-Local (50 km),Catálogo local,"[3.3, 3.5)","[6.5, 7)",2003,23,0
-Local (50 km),Catálogo local,"[3.3, 3.5)","[7, 7.5)",2003,23,0
+Local (50 km),Catálogo local,"[3, 3.5)","[3, 3.5)",1995,31,51
+Local (50 km),Catálogo local,"[3, 3.5)","[3.5, 4)",1995,31,22
+Local (50 km),Catálogo local,"[3, 3.5)","[4, 4.5)",1995,31,5
+Local (50 km),Catálogo local,"[3, 3.5)","[4.5, 5)",1995,31,10
+Local (50 km),Catálogo local,"[3, 3.5)","[5, 5.5)",1995,31,0
+Local (50 km),Catálogo local,"[3, 3.5)","[5.5, 6)",1995,31,1
+Local (50 km),Catálogo local,"[3, 3.5)","[6, 6.5)",1995,31,0
+Local (50 km),Catálogo local,"[3, 3.5)","[6.5, 7)",1995,31,0
+Local (50 km),Catálogo local,"[3, 3.5)","[7, 7.5)",1995,31,0
 Local (50 km),Catálogo local,"[3.5, 4)","[3.5, 4)",1998,28,20
 Local (50 km),Catálogo local,"[3.5, 4)","[4, 4.5)",1998,28,5
 Local (50 km),Catálogo local,"[3.5, 4)","[4.5, 5)",1998,28,10
@@ -274,25 +224,15 @@ Local (50 km),Catálogo local,"[6, 6.5)","[7, 7.5)",1917,109,0
 Local (50 km),Catálogo local,"[6.5, 7)","[6.5, 7)",1917,109,0
 Local (50 km),Catálogo local,"[6.5, 7)","[7, 7.5)",1917,109,0
 Local (50 km),Catálogo local,"[7, 7.5)","[7, 7.5)",1917,109,0
-Local (50 km),Cortical,"[3, 3.3)","[3, 3.3)",1995,31,34
-Local (50 km),Cortical,"[3, 3.3)","[3.3, 3.5)",1995,31,14
-Local (50 km),Cortical,"[3, 3.3)","[3.5, 4)",1995,31,21
-Local (50 km),Cortical,"[3, 3.3)","[4, 4.5)",1995,31,4
-Local (50 km),Cortical,"[3, 3.3)","[4.5, 5)",1995,31,7
-Local (50 km),Cortical,"[3, 3.3)","[5, 5.5)",1995,31,0
-Local (50 km),Cortical,"[3, 3.3)","[5.5, 6)",1995,31,1
-Local (50 km),Cortical,"[3, 3.3)","[6, 6.5)",1995,31,0
-Local (50 km),Cortical,"[3, 3.3)","[6.5, 7)",1995,31,0
-Local (50 km),Cortical,"[3, 3.3)","[7, 7.5)",1995,31,0
-Local (50 km),Cortical,"[3.3, 3.5)","[3.3, 3.5)",2003,23,11
-Local (50 km),Cortical,"[3.3, 3.5)","[3.5, 4)",2003,23,14
-Local (50 km),Cortical,"[3.3, 3.5)","[4, 4.5)",2003,23,3
-Local (50 km),Cortical,"[3.3, 3.5)","[4.5, 5)",2003,23,7
-Local (50 km),Cortical,"[3.3, 3.5)","[5, 5.5)",2003,23,0
-Local (50 km),Cortical,"[3.3, 3.5)","[5.5, 6)",2003,23,1
-Local (50 km),Cortical,"[3.3, 3.5)","[6, 6.5)",2003,23,0
-Local (50 km),Cortical,"[3.3, 3.5)","[6.5, 7)",2003,23,0
-Local (50 km),Cortical,"[3.3, 3.5)","[7, 7.5)",2003,23,0
+Local (50 km),Cortical,"[3, 3.5)","[3, 3.5)",1995,31,48
+Local (50 km),Cortical,"[3, 3.5)","[3.5, 4)",1995,31,21
+Local (50 km),Cortical,"[3, 3.5)","[4, 4.5)",1995,31,4
+Local (50 km),Cortical,"[3, 3.5)","[4.5, 5)",1995,31,7
+Local (50 km),Cortical,"[3, 3.5)","[5, 5.5)",1995,31,0
+Local (50 km),Cortical,"[3, 3.5)","[5.5, 6)",1995,31,1
+Local (50 km),Cortical,"[3, 3.5)","[6, 6.5)",1995,31,0
+Local (50 km),Cortical,"[3, 3.5)","[6.5, 7)",1995,31,0
+Local (50 km),Cortical,"[3, 3.5)","[7, 7.5)",1995,31,0
 Local (50 km),Cortical,"[3.5, 4)","[3.5, 4)",1998,28,19
 Local (50 km),Cortical,"[3.5, 4)","[4, 4.5)",1998,28,4
 Local (50 km),Cortical,"[3.5, 4)","[4.5, 5)",1998,28,7
@@ -329,25 +269,15 @@ Local (50 km),Cortical,"[6, 6.5)","[7, 7.5)",1917,109,0
 Local (50 km),Cortical,"[6.5, 7)","[6.5, 7)",1917,109,0
 Local (50 km),Cortical,"[6.5, 7)","[7, 7.5)",1917,109,0
 Local (50 km),Cortical,"[7, 7.5)","[7, 7.5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3, 3.3)","[3, 3.3)",1917,109,0
-Local (50 km),Subducción interplaca,"[3, 3.3)","[3.3, 3.5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3, 3.3)","[3.5, 4)",1917,109,0
-Local (50 km),Subducción interplaca,"[3, 3.3)","[4, 4.5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3, 3.3)","[4.5, 5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3, 3.3)","[5, 5.5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3, 3.3)","[5.5, 6)",1917,109,0
-Local (50 km),Subducción interplaca,"[3, 3.3)","[6, 6.5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3, 3.3)","[6.5, 7)",1917,109,0
-Local (50 km),Subducción interplaca,"[3, 3.3)","[7, 7.5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3.3, 3.5)","[3.3, 3.5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3.3, 3.5)","[3.5, 4)",1917,109,0
-Local (50 km),Subducción interplaca,"[3.3, 3.5)","[4, 4.5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3.3, 3.5)","[4.5, 5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3.3, 3.5)","[5, 5.5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3.3, 3.5)","[5.5, 6)",1917,109,0
-Local (50 km),Subducción interplaca,"[3.3, 3.5)","[6, 6.5)",1917,109,0
-Local (50 km),Subducción interplaca,"[3.3, 3.5)","[6.5, 7)",1917,109,0
-Local (50 km),Subducción interplaca,"[3.3, 3.5)","[7, 7.5)",1917,109,0
+Local (50 km),Subducción interplaca,"[3, 3.5)","[3, 3.5)",1917,109,0
+Local (50 km),Subducción interplaca,"[3, 3.5)","[3.5, 4)",1917,109,0
+Local (50 km),Subducción interplaca,"[3, 3.5)","[4, 4.5)",1917,109,0
+Local (50 km),Subducción interplaca,"[3, 3.5)","[4.5, 5)",1917,109,0
+Local (50 km),Subducción interplaca,"[3, 3.5)","[5, 5.5)",1917,109,0
+Local (50 km),Subducción interplaca,"[3, 3.5)","[5.5, 6)",1917,109,0
+Local (50 km),Subducción interplaca,"[3, 3.5)","[6, 6.5)",1917,109,0
+Local (50 km),Subducción interplaca,"[3, 3.5)","[6.5, 7)",1917,109,0
+Local (50 km),Subducción interplaca,"[3, 3.5)","[7, 7.5)",1917,109,0
 Local (50 km),Subducción interplaca,"[3.5, 4)","[3.5, 4)",1917,109,0
 Local (50 km),Subducción interplaca,"[3.5, 4)","[4, 4.5)",1917,109,0
 Local (50 km),Subducción interplaca,"[3.5, 4)","[4.5, 5)",1917,109,0
@@ -384,25 +314,15 @@ Local (50 km),Subducción interplaca,"[6, 6.5)","[7, 7.5)",1917,109,0
 Local (50 km),Subducción interplaca,"[6.5, 7)","[6.5, 7)",1917,109,0
 Local (50 km),Subducción interplaca,"[6.5, 7)","[7, 7.5)",1917,109,0
 Local (50 km),Subducción interplaca,"[7, 7.5)","[7, 7.5)",1917,109,0
-Local (50 km),Subducción intraplaca,"[3, 3.3)","[3, 3.3)",1917,109,2
-Local (50 km),Subducción intraplaca,"[3, 3.3)","[3.3, 3.5)",1917,109,1
-Local (50 km),Subducción intraplaca,"[3, 3.3)","[3.5, 4)",1917,109,1
-Local (50 km),Subducción intraplaca,"[3, 3.3)","[4, 4.5)",1917,109,3
-Local (50 km),Subducción intraplaca,"[3, 3.3)","[4.5, 5)",1917,109,4
-Local (50 km),Subducción intraplaca,"[3, 3.3)","[5, 5.5)",1917,109,1
-Local (50 km),Subducción intraplaca,"[3, 3.3)","[5.5, 6)",1917,109,0
-Local (50 km),Subducción intraplaca,"[3, 3.3)","[6, 6.5)",1917,109,0
-Local (50 km),Subducción intraplaca,"[3, 3.3)","[6.5, 7)",1917,109,0
-Local (50 km),Subducción intraplaca,"[3, 3.3)","[7, 7.5)",1917,109,0
-Local (50 km),Subducción intraplaca,"[3.3, 3.5)","[3.3, 3.5)",1917,109,1
-Local (50 km),Subducción intraplaca,"[3.3, 3.5)","[3.5, 4)",1917,109,1
-Local (50 km),Subducción intraplaca,"[3.3, 3.5)","[4, 4.5)",1917,109,3
-Local (50 km),Subducción intraplaca,"[3.3, 3.5)","[4.5, 5)",1917,109,4
-Local (50 km),Subducción intraplaca,"[3.3, 3.5)","[5, 5.5)",1917,109,1
-Local (50 km),Subducción intraplaca,"[3.3, 3.5)","[5.5, 6)",1917,109,0
-Local (50 km),Subducción intraplaca,"[3.3, 3.5)","[6, 6.5)",1917,109,0
-Local (50 km),Subducción intraplaca,"[3.3, 3.5)","[6.5, 7)",1917,109,0
-Local (50 km),Subducción intraplaca,"[3.3, 3.5)","[7, 7.5)",1917,109,0
+Local (50 km),Subducción intraplaca,"[3, 3.5)","[3, 3.5)",1917,109,3
+Local (50 km),Subducción intraplaca,"[3, 3.5)","[3.5, 4)",1917,109,1
+Local (50 km),Subducción intraplaca,"[3, 3.5)","[4, 4.5)",1917,109,3
+Local (50 km),Subducción intraplaca,"[3, 3.5)","[4.5, 5)",1917,109,4
+Local (50 km),Subducción intraplaca,"[3, 3.5)","[5, 5.5)",1917,109,1
+Local (50 km),Subducción intraplaca,"[3, 3.5)","[5.5, 6)",1917,109,0
+Local (50 km),Subducción intraplaca,"[3, 3.5)","[6, 6.5)",1917,109,0
+Local (50 km),Subducción intraplaca,"[3, 3.5)","[6.5, 7)",1917,109,0
+Local (50 km),Subducción intraplaca,"[3, 3.5)","[7, 7.5)",1917,109,0
 Local (50 km),Subducción intraplaca,"[3.5, 4)","[3.5, 4)",1917,109,1
 Local (50 km),Subducción intraplaca,"[3.5, 4)","[4, 4.5)",1917,109,3
 Local (50 km),Subducción intraplaca,"[3.5, 4)","[4.5, 5)",1917,109,4

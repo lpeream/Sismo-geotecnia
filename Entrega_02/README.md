@@ -3,17 +3,21 @@
 Esta entrega conserva la estructura de carpetas de `Entrega_01`: `codigo`,
 `datos`, `figuras`, `informe` y `recursos`, además de `requirements.txt`.
 
-El informe está en `informe/entrega_02.tex` y su PDF compilado en
-`informe/entrega_02.pdf`. Incluye un capítulo inicial de descripción del
-proyecto y procedimiento, con el contexto de asociación sísmica y proximidad a
-fallas de la Entrega 1. El capítulo de recurrencia ejecuta primero la
-completez por intervalos y el ajuste Gutenberg--Richter en escalas local
-(50 km) y regional (260 km). Incluye regresiones segmentadas, R², comparación
-de tasas crudas y corregidas, gráficos por sismofuente y una curva conjunta
-con los ajustes corregidos estimables y las aproximaciones de baja muestra.
-No se descartan intervalos por tener menos de 10 eventos: si no se estima la
-completez, se conserva su tasa cruda de referencia, identificada como no
-corregida y sin incluirla en el ajuste final corregido. El notebook reproducible está en
+El informe está en `informe/entrega_02.tex` y su PDF compilado es
+``informe/entrega_02.pdf`. Se organiza en cuatro secciones: sismofuentes,
+recurrencia y completez, modelos de atenuación, y conclusiones para integrar
+la amenaza. El Paso 2 se enfoca exclusivamente en el catálogo regional
+(260 km); el radio local (50 km) se conserva como contexto espacial en el
+mapa.
+La completez y las tasas anuales por sismofuente regional se agrupan en
+intervalos semiabiertos de magnitud 1.0, desde Mw 3.0 hasta 8.0. El script
+`codigo/analisis_completez_agregada.py` reproduce la tabla regional depurada,
+el gráfico pareado de conteos y tasas corregidas y la curva regional
+Gutenberg--Richter por sismofuente. Para la recurrencia Gutenberg--Richter se
+mantiene el ajuste por umbral en intervalos semiabiertos de 0.5, desde Mw 3.0
+hasta 7.5. Para magnitudes inferiores a Mw 5.0 se estima la ventana completa
+con un ajuste segmentado; para Mw >= 5.0 se adopta el periodo histórico
+1917--2025. El notebook reproducible de recurrencia está en
 `codigo/codigo_entrega2.ipynb`; usa la copia del catálogo en
 `recursos/Qgis/datos/` y genera figuras en `figuras/` y tablas CSV en
 `datos/datos estadistica/`. Entre ellas, `completez_por_tramo_magnitud.csv`,
@@ -26,12 +30,12 @@ después de completar la recurrencia y sus gráficas. Esta entrega
 también contiene copias de todos los CSV de `Entrega_01/datos/`, con la misma
 estructura de subcarpetas. El inventario general está en `datos/README.md`.
 
-El análisis exploratorio de atenuación de Neiva está en
+El análisis de atenuación de Neiva está en
 `codigo/analisis_atenuacion.py`. Sus entradas editables (sitio, coordenadas,
 clase de sitio, PGA o `Sa(0.5 s)`, fuentes, intervalos y profundidad) están al
 inicio del módulo. Genera predicciones por evento, resúmenes por fuente y
-magnitud, figuras con distancia en escalas lineal y logarítmica por sismofuente
-y un JSON con la configuración aplicada. La clase III
+magnitud, una figura comparativa logarítmica para las tres sismofuentes y un
+JSON con la configuración aplicada. La clase III
 representa la hipótesis de suelo medio; esos resultados no son movimientos
 en roca ni una GMPE validada localmente.
 
