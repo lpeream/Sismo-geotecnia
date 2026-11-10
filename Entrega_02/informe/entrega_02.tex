@@ -343,10 +343,9 @@ Slab / intraplaca & $S_{SL}$ & $-0.528$ & Coeficiente aplicado a $\ln X$ \\
 La Clase I y $C_1=0.0$ definen la referencia de roca base para calcular
 $\mathrm{PGA}_{\mathrm{roca}}$ de las fuentes cortical, interplaca e
 intraplaca. El coeficiente de falla inversa del modelo es $0.251$ y su
-contribución se mantiene desactivada para los mecanismos parametrizados. Los
-residuales intraevento e interevento se fijan en cero para obtener las
-medianas condicionales de PGA; la dispersión $\sigma$ se incorporará en la
-integración probabilística de la amenaza.
+contribución se mantiene desactivada para los mecanismos parametrizados. La
+curva mediana de PGA caracteriza la respuesta condicional de referencia para
+cada sismofuente.
 
 Las Figuras~\ref{fig:atenuacion-cortical}--\ref{fig:atenuacion-intraplaca}
 presentan por separado la atenuación mediana de PGA en roca para cada
@@ -376,21 +375,128 @@ examinar individualmente la respuesta cortical, interplaca e intraplaca.
     \label{fig:atenuacion-intraplaca}
 \end{figure}
 
+\section{Integración probabilística de la amenaza y PGA de diseño en roca}
+
+La integración del Paso 4 combina la recurrencia Gutenberg--Richter truncada
+de cada sismofuente con la distribución condicional de PGA en roca de Zhao et
+al. (2006). Se adoptan $M_{w,\min}=3.0$ y magnitudes máximas de 7.2 para la
+fuente cortical, 8.0 para subducción interplaca y 7.8 para subducción
+intraplaca. La tasa incremental de cada intervalo $[M_k,M_{k+1})$ se obtiene
+como
+\[
+\Delta\nu_{i,k}
+=10^{a_i-b_iM_k}-10^{a_i-b_iM_{k+1}}.
+\]
+
+La tasa anual de excedencia para un nivel $y$ se evalúa sumando las
+contribuciones de magnitud y fuente, y promediando la probabilidad condicional
+entre las distancias epicentrales observadas para cada fuente:
+\begin{equation*}
+\lambda_{\mathrm{total}}(Y>y)
+=\sum_i\sum_k\Delta\nu_{i,k}
+\frac{1}{N_i}\sum_{j=1}^{N_i}
+\Pr\!\left(Y>y\mid M_k,R_{i,j},i\right),
+\end{equation*}
+donde la probabilidad condicional se evalúa para cada punto medio del
+intervalo de magnitud, la distancia epicentral observada entre el evento
+$j$ y el Parque Santander, y la profundidad mediana de la fuente. La
+geometría se representa con la distribución empírica de distancias del
+catálogo regional de 260 km; las profundidades se limitan a 0--125 km y la
+condición de sitio es roca base Clase I ($C_1=0.0$). La suma de las tres
+tasas entrega la curva total de amenaza en roca.
+
+La Figura~\ref{fig:amenaza-total-roca} presenta la curva de amenaza
+probabilística integrada en roca, con PGA en escala lineal y tasa anual de
+excedencia en escala logarítmica. La curva total suma las contribuciones de
+las tres sismofuentes; la intersección con $\lambda=1/475$ año$^{-1}$ define
+el PGA de diseño de 465.2 cm/s$^2$ (0.474 $g$). Como resumen descriptivo del
+rango bajo de aceleraciones, la Tabla~\ref{tab:ajustes-exponenciales-amenaza}
+presenta los ajustes exponenciales a las curvas integradas; el PGA de diseño
+se obtiene directamente de la integración numérica, no de esos ajustes.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\linewidth]{../figuras/curva_amenaza_neiva_roca_pga_semi_log.png}
+    \caption{Curva de amenaza sísmica probabilística en roca para Neiva (Parque Santander), calculada con Zhao et al. (2006), Clase I. La curva negra representa la amenaza total y las curvas punteadas las contribuciones cortical, de subducción interplaca e intraplaca. La intersección con $\lambda=1/475$ año$^{-1}$ determina un PGA de diseño de 465.2 cm/s$^2$ (0.474 $g$).}
+    \label{fig:amenaza-total-roca}
+\end{figure}
+
+El PGA de diseño se obtiene al resolver $\lambda_{\mathrm{total}}=1/T_r$
+mediante interpolación directa en la curva numérica, extendida hasta
+1\,200 cm/s$^2$ para incluir los cuatro periodos de retorno. La probabilidad
+de excedencia en 50 años se calcula como $1-\exp(-50/T_r)$.
+
+\begin{table}[H]
+\centering
+\customtablecaption{Tabla 4}{PGA de diseño en roca para periodos de retorno estándar.}
+\label{tab:pga-diseno-roca}
+\scriptsize
+\begin{tabular}{rrrrr}
+\toprule
+$T_r$ (años) & $\lambda=1/T_r$ (año$^{-1}$) & PGA (cm/s$^2$) & PGA (g) & Excedencia en 50 años \\
+\midrule
+100  & 0.010000 & 201.5  & 0.205 & 39.35\% \\
+475  & 0.002105 & 465.2  & 0.474 & 9.99\% \\
+975  & 0.001026 & 666.2  & 0.679 & 5.00\% \\
+2475 & 0.000404 & 1028.8 & 1.049 & 2.00\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Para $T_r=475$ años, la tasa objetivo es
+$\lambda=1/475=0.002105$ año$^{-1}$ y el PGA mediano de diseño obtenido en
+roca es $465.2$ cm/s$^2$ ($0.474\,g$). La probabilidad de excedencia
+correspondiente en 50 años es 9.99\%.
+
+La Tabla~\ref{tab:ajustes-exponenciales-amenaza} reúne los ajustes
+exponenciales descriptivos de la curva numérica integrada en el intervalo de
+0--100 cm/s$^2$. La Tabla~\ref{tab:pga-diseno-roca} conserva los PGA de diseño
+obtenidos mediante la integración numérica completa de la amenaza, extendida
+hasta 1\,200 cm/s$^2$; los periodos de retorno estándar se determinan
+directamente de esa curva, no de los ajustes exponenciales.
+
+\begin{table}[H]
+\centering
+\customtablecaption{Tabla 5}{Ajustes exponenciales descriptivos de las tasas de excedencia integradas en roca para 0--100 cm/s$^2$.}
+\label{tab:ajustes-exponenciales-amenaza}
+\scriptsize
+\begin{tabular}{lrrr}
+\toprule
+Sismofuente & $A$ (año$^{-1}$) & $B$ ((cm/s$^2$)$^{-1}$) & $R^2$ \\
+\midrule
+Cortical & 0.10397 & 0.06402 & 0.8459 \\
+Subducción interplaca & 0.00497 & 0.07849 & 0.8438 \\
+Subducción intraplaca & 0.49641 & 0.03155 & 0.7905 \\
+Amenaza total en roca & 0.60799 & 0.03414 & 0.7637 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+La Figura~\ref{fig:amenaza-local-aritmetica} representa directamente las tasas
+de excedencia obtenidas por integración para el catálogo regional y las tres
+sismofuentes, con ambos ejes aritméticos acotados entre 0 y 20. Las tasas
+superiores a 20 año$^{-1}$ quedan recortadas en la presentación; esto es
+únicamente un límite gráfico y no altera la curva numérica ni los PGA de
+diseño reportados en la Tabla~\ref{tab:pga-diseno-roca}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.92\linewidth]{../figuras/amenaza_sismica_neiva_figura8_local_aritmetica.png}
+    \caption{Curva regional de amenaza sísmica probabilística en roca para Neiva, obtenida de la integración numérica por sismofuente. Ejes aritméticos: PGA de 0 a 20 cm/s$^2$ y $\lambda$ de 0 a 20 año$^{-1}$. Las tasas superiores a 20 año$^{-1}$ quedan recortadas por el límite vertical.}
+    \label{fig:amenaza-local-aritmetica}
+\end{figure}
+
 \section{Conclusiones y precondiciones para la integración de la amenaza}
 
 El estudio reúne las tasas de recurrencia por fuente regional, los parámetros
 de Gutenberg--Richter y la PGA mediana condicionada a magnitud, distancia y
-mecanismo tectónico. Esta base articula la integración probabilística de la
-amenaza.
+mecanismo tectónico. La integración probabilística consolida estas
+contribuciones en la curva total de amenaza en roca y determina un PGA de
+diseño de 465.2 cm/s$^2$ ($0.474\,g$) para 475 años de periodo de retorno.
 
-La siguiente etapa desarrollará el Paso 4 de Kramer y Stewart mediante la
-combinación de las tasas de excedencia con las distribuciones del movimiento
-del suelo y la suma de las contribuciones cortical, interplaca e intraplaca.
-El cálculo incorporará la dispersión intraevento e interevento ($\sigma$), la
-magnitud máxima y la geometría de cada fuente, junto con la caracterización
-geotécnica del emplazamiento conforme a la NSR-10. Esta integración
-proporcionará la curva de amenaza total y el PGA correspondiente a un periodo
-de retorno de 475 años.
+La siguiente etapa desarrollará los análisis de respuesta geotécnica y la
+construcción de espectros en roca para el emplazamiento de Neiva, tomando la
+curva integrada y el PGA de diseño como base de referencia.
 
 \section*{Referencias}
 \small
