@@ -45,7 +45,16 @@ SOURCE_TYPES = {
 }
 MINIMUM_MAGNITUDE = 3.0
 MAGNITUDE_STEP = 0.025
-SIGMA_LN = 0.65
+# Desviación estándar total de Zhao et al. (2006) para PGA (Tabla 5, sigma_T).
+SIGMA_LN = 0.723
+# Término de sitio de Zhao et al. (2006) para PGA en roca, Clase I (Tabla 5).
+SITE_TERM_ROCK_C1 = 1.111
+# Sensibilidad a la magnitud máxima de cada fuente (+/- 0.5).
+SENSITIVITY_CASES: tuple[dict[str, Any], ...] = (
+    {"caso": "Caso base"},
+    {"caso": "Mw_max menor en 0.5", "delta_mmax": -0.5},
+    {"caso": "Mw_max mayor en 0.5", "delta_mmax": 0.5},
+)
 PGA_DISPLAY_MAX_CM_S2 = 100.0
 PGA_HAZARD_FIGURE_MAX_CM_S2 = 600.0
 PGA_CALCULATION_MAX_CM_S2 = 1200.0
@@ -68,10 +77,6 @@ def _read_inputs() -> tuple[pd.DataFrame, dict[str, Any], dict[str, Any]]:
     metadata = json.loads(ATTENUATION_PATH.read_text(encoding="utf-8"))
     configuration = metadata["configuration"]
     parameters = metadata["model_parameters"]
-    if configuration["site_class"] != "I":
-        raise ValueError("La integración requiere atenuación en roca, Clase I.")
-    if float(parameters["site_terms"]["I"]) != 0.0:
-        raise ValueError("La Clase I debe usar el término de sitio C1 = 0.0.")
     if parameters["label"] != "PGA":
         raise ValueError("La configuración de atenuación debe corresponder a PGA.")
 
@@ -123,14 +128,15 @@ def _epicentral_distance_km(
 def _attenuation_median(
     magnitude: float,
     distances_km: np.ndarray,
-    depth_km: float,
+    depths_km: np.ndarray,
     source: str,
     parameters: dict[str, Any],
     depth_reference_km: float,
     depth_cap_km: float,
+    site_term: float,
 ) -> np.ndarray:
     distance = np.maximum(distances_km, MINIMUM_DISTANCE_KM)
-    depth = float(np.clip(depth_km, 0.0, depth_cap_km))
+    depth = np.clip(depths_km, 0.0, depth_cap_km)
     tectonic_type = SOURCE_TYPES[source]
     interface_term = (
         float(parameters["interface"]) if tectonic_type == "interface" else 0.0
@@ -141,10 +147,10 @@ def _attenuation_median(
         if tectonic_type == "slab"
         else 0.0
     )
-    depth_term = (
-        float(parameters["e"]) * (depth - depth_reference_km)
-        if depth >= depth_reference_km
-        else 0.0
+    depth_term = np.where(
+        depth >= depth_reference_km,
+        float(parameters["e"]) * (depth - depth_reference_km),
+        0.0,
     )
     adjusted_distance = distance + float(parameters["c"]) * np.exp(
         float(parameters["d"]) * magnitude
@@ -157,7 +163,7 @@ def _attenuation_median(
         + interface_term
         + slab_term
         + slab_distance_term * np.log(distance)
-        + float(parameters["site_terms"]["I"])
+        + site_term
     )
     return np.exp(ln_median)
 
@@ -168,9 +174,13 @@ def _source_hazard(
     pga: np.ndarray,
     parameters: dict[str, Any],
     configuration: dict[str, Any],
+    site_term: float = SITE_TERM_ROCK_C1,
+    sigma_ln: float = SIGMA_LN,
+    delta_mmax: float = 0.0,
+    distance_column: str = "distancia_hipocentral_km",
 ) -> tuple[np.ndarray, dict[str, float]]:
     recurrence = RECURRENCE[source]
-    maximum_magnitude = recurrence["Mw_max"]
+    maximum_magnitude = recurrence["Mw_max"] + delta_mmax
     if maximum_magnitude <= MINIMUM_MAGNITUDE:
         raise ValueError(f"Mw_max debe superar 3.0 para {source}.")
     if source_events.empty:
@@ -211,10 +221,11 @@ def _source_hazard(
             f"Las tasas incrementales no conservan la tasa truncada de {source}."
         )
 
-    distances = source_events["distancia_epicentral_km"].to_numpy(dtype=float)
-    reference_depth = float(source_events["Z"].clip(lower=0).median())
+    distances = source_events[distance_column].to_numpy(dtype=float)
+    # Cada evento del catálogo aporta su propia pareja (distancia, profundidad).
+    depths = source_events["Z"].to_numpy(dtype=float)
     reference_depth = float(
-        np.clip(reference_depth, 0.0, configuration["depth_cap_km"])
+        np.clip(np.median(depths), 0.0, configuration["depth_cap_km"])
     )
     source_curve = np.zeros_like(pga)
     positive_pga = pga > 0.0
@@ -223,15 +234,16 @@ def _source_hazard(
         median = _attenuation_median(
             float(magnitude),
             distances,
-            reference_depth,
+            depths,
             source,
             parameters,
             float(configuration["depth_reference_km"]),
             float(configuration["depth_cap_km"]),
+            site_term,
         )
         standardized = (
             log_pga[:, np.newaxis] - np.log(median)[np.newaxis, :]
-        ) / SIGMA_LN
+        ) / sigma_ln
         conditional_exceedance = ndtr(-standardized).mean(axis=1)
         source_curve[positive_pga] += annual_rate * conditional_exceedance
     source_curve[0] = expected_truncated_rate
@@ -374,6 +386,177 @@ def _plot_hazard(
     return path
 
 
+DISAGGREGATION_MAGNITUDE_BIN = 0.1
+DISAGGREGATION_DISTANCE_EDGES_KM = (0, 25, 50, 75, 100, 150, 200, np.inf)
+SOURCE_COLORS = {
+    "Cortical": "#1f77b4",
+    "Subducción interplaca": "#ff7f0e",
+    "Subducción intraplaca": "#2ca02c",
+}
+
+
+def _weighted_median(values: np.ndarray, weights: np.ndarray) -> float:
+    order = np.argsort(values)
+    cumulative = np.cumsum(weights[order])
+    return float(values[order][np.searchsorted(cumulative, 0.5 * cumulative[-1])])
+
+
+def _disaggregate(
+    catalog: pd.DataFrame,
+    target_pga: float,
+    parameters: dict[str, Any],
+    configuration: dict[str, Any],
+) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, float]]:
+    """Desagrega la tasa de excedencia de target_pga en fuente, Mw y R.
+
+    Cada contribución es Delta_nu(M_k) * (1/N_i) * P(PGA > y* | M_k, R_j, h_j),
+    con la misma configuración que la curva de amenaza del caso base.
+    """
+    rows = []
+    for source, recurrence in RECURRENCE.items():
+        events = catalog[catalog["fuente"] == source]
+        distances = events["distancia_hipocentral_km"].to_numpy(dtype=float)
+        depths = events["Z"].to_numpy(dtype=float)
+        edges = np.append(
+            np.arange(MINIMUM_MAGNITUDE, recurrence["Mw_max"], MAGNITUDE_STEP),
+            recurrence["Mw_max"],
+        )
+        edges = np.unique(np.round(edges, 6))
+        for lower, upper in zip(edges[:-1], edges[1:]):
+            magnitude = (lower + upper) / 2.0
+            rate = 10.0 ** (recurrence["a"] - recurrence["b"] * lower) - 10.0 ** (
+                recurrence["a"] - recurrence["b"] * upper
+            )
+            median = _attenuation_median(
+                float(magnitude),
+                distances,
+                depths,
+                source,
+                parameters,
+                float(configuration["depth_reference_km"]),
+                float(configuration["depth_cap_km"]),
+                SITE_TERM_ROCK_C1,
+            )
+            probability = ndtr(-(np.log(target_pga) - np.log(median)) / SIGMA_LN)
+            contribution = rate * probability / len(distances)
+            rows.append(
+                pd.DataFrame(
+                    {
+                        "Sismofuente": source,
+                        "Mw": magnitude,
+                        "R_hipocentral_km": distances,
+                        "profundidad_km": np.clip(depths, 0.0, None),
+                        "contribucion_anual": contribution,
+                    }
+                )
+            )
+    detail = pd.concat(rows, ignore_index=True)
+    total = float(detail["contribucion_anual"].sum())
+    detail["fraccion"] = detail["contribucion_anual"] / total
+
+    summary_rows = []
+    for source, group in [*detail.groupby("Sismofuente", sort=False), ("Total", detail)]:
+        weights = group["fraccion"].to_numpy()
+        share = float(weights.sum())
+        normalized = weights / share
+        summary_rows.append(
+            {
+                "Sismofuente": source,
+                "Aporte_pct": 100.0 * share,
+                "Mw_media": float(np.sum(normalized * group["Mw"])),
+                "R_media_km": float(np.sum(normalized * group["R_hipocentral_km"])),
+                "R_mediana_km": _weighted_median(
+                    group["R_hipocentral_km"].to_numpy(), weights
+                ),
+                "profundidad_media_km": float(
+                    np.sum(normalized * group["profundidad_km"])
+                ),
+            }
+        )
+    summary = pd.DataFrame(summary_rows)
+
+    magnitude_bins = (
+        np.floor(detail["Mw"] / DISAGGREGATION_MAGNITUDE_BIN + 1e-9)
+        * DISAGGREGATION_MAGNITUDE_BIN
+    )
+    by_magnitude = detail.groupby(magnitude_bins)["fraccion"].sum()
+    extra = {
+        "lambda_total_por_anio": total,
+        "Mw_modal": float(by_magnitude.idxmax() + DISAGGREGATION_MAGNITUDE_BIN / 2),
+    }
+    return detail, summary, extra
+
+
+def _plot_disaggregation(detail: pd.DataFrame, target_pga: float) -> Path:
+    figure, (axis_m, axis_r) = plt.subplots(1, 2, figsize=(12, 4.8), dpi=300)
+    magnitude_bins = (
+        np.floor(detail["Mw"] / DISAGGREGATION_MAGNITUDE_BIN + 1e-9)
+        * DISAGGREGATION_MAGNITUDE_BIN
+    ).round(2)
+    distance_edges = np.asarray(DISAGGREGATION_DISTANCE_EDGES_KM, dtype=float)
+    distance_labels = [
+        f"≥{int(lower)}" if np.isinf(upper) else f"{int(lower)}-{int(upper)}"
+        for lower, upper in zip(distance_edges[:-1], distance_edges[1:])
+    ]
+    distance_bins = pd.cut(
+        detail["R_hipocentral_km"],
+        bins=distance_edges,
+        labels=distance_labels,
+        right=False,
+    )
+    all_magnitudes = np.sort(magnitude_bins.unique())
+    bottom_m = np.zeros(len(all_magnitudes))
+    bottom_r = np.zeros(len(distance_labels))
+    for source, color in SOURCE_COLORS.items():
+        mask = detail["Sismofuente"] == source
+        per_m = (
+            detail.loc[mask, "fraccion"]
+            .groupby(magnitude_bins[mask])
+            .sum()
+            .reindex(all_magnitudes, fill_value=0.0)
+            .to_numpy()
+            * 100.0
+        )
+        axis_m.bar(
+            all_magnitudes + DISAGGREGATION_MAGNITUDE_BIN / 2,
+            per_m,
+            width=DISAGGREGATION_MAGNITUDE_BIN * 0.9,
+            bottom=bottom_m,
+            color=color,
+            label=source,
+        )
+        bottom_m += per_m
+        per_r = (
+            detail.loc[mask, "fraccion"]
+            .groupby(distance_bins[mask], observed=False)
+            .sum()
+            .reindex(distance_labels, fill_value=0.0)
+            .to_numpy()
+            * 100.0
+        )
+        axis_r.bar(distance_labels, per_r, bottom=bottom_r, color=color, label=source)
+        bottom_r += per_r
+    axis_m.set_xlabel("Magnitud Mw")
+    axis_m.set_ylabel("Contribución a λ(475) (%)")
+    axis_m.set_title("Desagregación en magnitud")
+    axis_m.legend(frameon=False, loc="upper left")
+    axis_r.set_xlabel("Distancia hipocentral (km)")
+    axis_r.set_ylabel("Contribución a λ(475) (%)")
+    axis_r.set_title("Desagregación en distancia")
+    axis_m.set_ylim(0.0, 1.12 * bottom_m.max())
+    axis_r.set_ylim(0.0, 1.12 * bottom_r.max())
+    for axis in (axis_m, axis_r):
+        axis.grid(True, axis="y", alpha=0.3)
+    figure.suptitle(
+        f"Desagregación para Tr = 475 años (PGA = {target_pga / 981.0:.3f} g, roca)"
+    )
+    figure.tight_layout()
+    path = FIGURE_DIRECTORY / "desagregacion_neiva_475.png"
+    figure.savefig(path, dpi=250, bbox_inches="tight")
+    plt.close(figure)
+    return path
+
+
 def run_analysis() -> dict[str, pd.DataFrame]:
     catalog, configuration, parameters = _read_inputs()
     catalog["distancia_epicentral_km"] = _epicentral_distance_km(
@@ -385,6 +568,11 @@ def run_analysis() -> dict[str, pd.DataFrame]:
     catalog["distancia_epicentral_km"] = catalog[
         "distancia_epicentral_km"
     ].clip(lower=MINIMUM_DISTANCE_KM)
+    # Distancia hipocentral: sqrt(Repi^2 + h^2), con h >= 0 (sin el tope de
+    # 125 km, que solo aplica al término de profundidad de Zhao).
+    catalog["distancia_hipocentral_km"] = np.hypot(
+        catalog["distancia_epicentral_km"], catalog["Z"].clip(lower=0.0)
+    ).clip(lower=MINIMUM_DISTANCE_KM)
 
     pga_visible = np.arange(
         0.0,
@@ -477,10 +665,50 @@ def run_analysis() -> dict[str, pd.DataFrame]:
         encoding="utf-8-sig",
     )
     figure_path = _plot_hazard(pga, source_curves, total_curve, design)
+
+    sensitivity_rows = []
+    for case in SENSITIVITY_CASES:
+        case_total = np.zeros_like(pga)
+        for source in RECURRENCE:
+            curve, _ = _source_hazard(
+                source,
+                catalog[catalog["fuente"] == source],
+                pga,
+                parameters,
+                configuration,
+                site_term=case.get("site_term", SITE_TERM_ROCK_C1),
+                sigma_ln=case.get("sigma", SIGMA_LN),
+                delta_mmax=case.get("delta_mmax", 0.0),
+                distance_column=case.get(
+                    "distance_column", "distancia_hipocentral_km"
+                ),
+            )
+            case_total += curve
+        target = 1.0 / 475.0
+        if case_total[-1] > target:
+            case_pga = float("nan")  # fuera del rango calculado
+        else:
+            case_pga = float(
+                np.interp(np.log(target), np.log(case_total[::-1]), pga[::-1])
+            )
+        sensitivity_rows.append(
+            {
+                "Caso": case["caso"],
+                "PGA_475_cm_s2": case_pga,
+                "PGA_475_g": case_pga / 981.0,
+            }
+        )
+    sensitivity = pd.DataFrame(sensitivity_rows)
+    sensitivity.to_csv(
+        DATA_DIRECTORY / "sensibilidad_pga_475_paso4.csv",
+        index=False,
+        encoding="utf-8-sig",
+    )
+
     metadata = {
         "site": configuration["site_name"],
         "site_class": "I",
-        "site_term_C1": 0.0,
+        "site_term_C1": SITE_TERM_ROCK_C1,
         "intensity_measure": "PGA (cm/s2)",
         "sigma_ln": SIGMA_LN,
         "magnitude_minimum": MINIMUM_MAGNITUDE,
@@ -489,12 +717,13 @@ def run_analysis() -> dict[str, pd.DataFrame]:
         },
         "recurrence_parameters": RECURRENCE,
         "distance_model": (
-            "Empirical discrete epicentral-distance distribution by source "
-            "from the classified 260-km catalog; Haversine to Parque Santander."
+            "Empirical discrete hypocentral-distance distribution by source "
+            "from the classified 260-km catalog: sqrt(Repi^2 + h^2), with "
+            "Repi by Haversine to Parque Santander."
         ),
         "depth_model": (
-            "Source median catalog depth, clipped to 0-125 km; depth adjustment "
-            "is active for h >= 15 km."
+            "Each catalog event uses its own depth, clipped to 0-125 km for "
+            "the Zhao depth term; depth adjustment is active for h >= 15 km."
         ),
         "magnitude_distribution": (
             "Truncated Gutenberg-Richter incremental rates over Mw 3.0 to "
@@ -532,6 +761,27 @@ def run_analysis() -> dict[str, pd.DataFrame]:
     print(design.to_string(index=False))
     print("\nAjustes exponenciales lambda=A*exp(-B*PGA):")
     print(fits.to_string(index=False))
+    design_pga_475 = float(
+        design.loc[design["Periodo_retorno_anios"] == 475, "PGA_roca_cm_s2"].iloc[0]
+    )
+    disaggregation_detail, disaggregation, disaggregation_extra = _disaggregate(
+        catalog, design_pga_475, parameters, configuration
+    )
+    disaggregation.to_csv(
+        DATA_DIRECTORY / "desagregacion_475_paso4.csv",
+        index=False,
+        encoding="utf-8-sig",
+    )
+    disaggregation_figure = _plot_disaggregation(
+        disaggregation_detail, design_pga_475
+    )
+    print("\nDesagregación para Tr = 475 años:")
+    print(disaggregation.to_string(index=False))
+    print(disaggregation_extra)
+    print(f"Figura: {disaggregation_figure}")
+
+    print("\nSensibilidad del PGA para Tr = 475 años:")
+    print(sensitivity.to_string(index=False))
     print(f"\nCurva: {DATA_DIRECTORY / 'curva_amenaza_neiva_roca_paso4.csv'}")
     print(f"Figura: {figure_path}")
     return {

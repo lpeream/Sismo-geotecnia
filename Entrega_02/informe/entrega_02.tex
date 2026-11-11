@@ -270,14 +270,34 @@ coeficiente $R^2$.
     \label{fig:recurrencia-regional}
 \end{figure}
 
+No se adoptó el modelo característico (Youngs \& Coppersmith, 1985)
+\nocite{youngs1985}porque
+este requiere datos geológicos para acotar la tasa y la magnitud de los
+eventos máximos, información que no está disponible para las sismofuentes
+regionales consideradas (cortical, interplaca e intraplaca). Se usó
+Gutenberg--Richter acotado a tasa de sismicidad constante, con $M_{\max}$ por
+fuente y análisis de sensibilidad ($\pm0.5$).
+
 \section{Selección y parametrización de modelos de atenuación}
 
 El Paso 3 de Kramer y Stewart caracteriza el movimiento del suelo en función
 de la magnitud, la distancia y las condiciones del sitio. Para estimar PGA se
 adopta la relación de predicción de movimiento fuerte de Zhao et al. (2006)
-\parencite{zhao2006}. La distancia epicentral $X$ entre el Parque Santander y
-cada evento se calcula mediante la fórmula de Haversine. La clasificación
-tectónica vincula la fuente cortical con el término de corteza, la
+\parencite{zhao2006}.
+
+En todo el trabajo se usa la distancia hipocentral, que es la distancia en
+línea recta entre el Parque Santander y el punto bajo tierra donde se origina
+cada sismo (el hipocentro). Se calcula como $X=\sqrt{X_{\mathrm{epi}}^2+h^2}$,
+donde $X_{\mathrm{epi}}$ es la distancia medida sobre la superficie entre el
+sitio y el epicentro (fórmula de Haversine) y $h$ es la profundidad focal.
+Esta distancia representa el camino real que recorren las ondas sísmicas hasta
+el sitio. Es importante en Neiva porque muchos sismos de subducción
+intraplaca ocurren a más de 100 km de profundidad: aunque su epicentro quede
+cerca de la ciudad, las ondas deben viajar una distancia grande y llegan
+atenuadas. Además, es la distancia con la que Zhao et al. (2006) formularon
+su ecuación.
+
+La clasificación tectónica vincula la fuente cortical con el término de corteza, la
 subducción interplaca con el de interfaz y la subducción intraplaca con el
 término slab.
 
@@ -305,8 +325,9 @@ término $e(h-h_c)\delta_h$ incorpora un ajuste continuo por profundidad focal
 para eventos con $h>h_c=15$ km, dentro del intervalo de cálculo de 0 a 125 km;
 así, la predicción representa de forma coherente tanto los sismos corticales
 someros como los eventos de subducción de profundidad intermedia. Para esta
-entrega se adopta la Clase I como condición de roca base limpia, definida por
-$V_{S30}>600$ m/s y $T_p<0.2$ s, con constante de sitio $C_1=0.0$. Esta
+entrega se adopta la Clase I como condición de roca, definida por
+$V_{S30}>600$ m/s y $T_p<0.2$ s, con el término de sitio de Zhao et al.
+(2006) para PGA, $C_1=1.111$. Esta
 parametrización estima la aceleración mediana del terreno en roca
 ($\mathrm{PGA}_{\mathrm{roca}}$) para las tres sismofuentes y establece la
 condición de referencia para los posteriores análisis de respuesta
@@ -316,20 +337,20 @@ profundidad y mecanismo tectónico.
 
 \begin{table}[H]
 \centering
-\customtablecaption{Tabla 3}{Parámetros adoptados para Zhao et al. (2006), PGA en roca base (Clase I).}
+\customtablecaption{Tabla 3}{Parámetros adoptados para Zhao et al. (2006), PGA en roca (Clase I, $C_1=1.111$).}
 \scriptsize
 \begin{tabular}{p{0.17\linewidth}p{0.13\linewidth}p{0.12\linewidth}p{0.42\linewidth}}
 \toprule
 Grupo & Parámetro & Valor & Adopción e interpretación \\
 \midrule
 Regresión PGA & $a$ & 1.101 & Coeficiente de magnitud \\
-Regresión PGA & $b$ & $-0.00564$ & Coeficiente de distancia epicentral (km) \\
+Regresión PGA & $b$ & $-0.00564$ & Coeficiente de distancia hipocentral (km) \\
 Regresión PGA & $c$ & 0.0055 & Constante de distancia en $R=X+c\exp(dM_w)$ \\
 Regresión PGA & $d$ & 1.080 & Exponente de magnitud en la distancia $R$ \\
 Regresión PGA & $e$ & 0.01412 & Coeficiente del ajuste por profundidad \\
 Profundidad & $h_c$ & 15 km & Profundidad focal de referencia \\
 Profundidad & $h_{\max}$ & 125 km & Límite superior aplicado a la profundidad \\
-Sitio & $C_1$ & 0.0 & Clase I; roca base ($V_{S30}>600$ m/s; $T_p<0.2$ s) \\
+Sitio & $C_1$ & 1.111 & Clase I; roca ($V_{S30}>600$ m/s; $T_p<0.2$ s) \\
 \midrule
 Falla inversa & $F_R$ & 0.251 & Coeficiente del modelo; mecanismo desactivado en el cálculo \\
 Corteza / cortical & Término aplicado & 0 & Aporte cortical por falla inversa desactivado \\
@@ -340,10 +361,13 @@ Slab / intraplaca & $S_{SL}$ & $-0.528$ & Coeficiente aplicado a $\ln X$ \\
 \end{tabular}
 \end{table}
 
-La Clase I y $C_1=0.0$ definen la referencia de roca base para calcular
+La Clase I y $C_1=1.111$ definen la condición de roca para calcular
 $\mathrm{PGA}_{\mathrm{roca}}$ de las fuentes cortical, interplaca e
 intraplaca. El coeficiente de falla inversa del modelo es $0.251$ y su
-contribución se mantiene desactivada para los mecanismos parametrizados. La
+contribución se mantiene desactivada ($F_R=0$): el catálogo no incluye
+mecanismos focales que permitan asignar un mecanismo inverso a los sismos
+corticales, y el sistema de fallas cercano a Neiva, Algeciras--Garzón, es
+principalmente de rumbo. La
 curva mediana de PGA caracteriza la respuesta condicional de referencia para
 cada sismofuente.
 
@@ -357,21 +381,21 @@ examinar individualmente la respuesta cortical, interplaca e intraplaca.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.88\linewidth]{../figuras/curvas_atenuacion_neiva_pga_cortical_logx.png}
-    \caption{PGA mediana en roca base (Clase I) según Zhao et al. (2006) para la sismofuente cortical. Distancia epicentral y PGA en escala log--log; puntos de catálogo y curvas para magnitudes de referencia.}
+    \caption{PGA mediana en roca (Clase I, $C_1=1.111$) según Zhao et al. (2006) para la sismofuente cortical. Distancia hipocentral y PGA en escala log--log; puntos de catálogo y curvas para magnitudes de referencia.}
     \label{fig:atenuacion-cortical}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.88\linewidth]{../figuras/curvas_atenuacion_neiva_pga_interplaca_logx.png}
-    \caption{PGA mediana en roca base (Clase I) según Zhao et al. (2006) para la sismofuente de subducción interplaca. Distancia epicentral y PGA en escala log--log; puntos de catálogo y curvas para magnitudes de referencia.}
+    \caption{PGA mediana en roca (Clase I, $C_1=1.111$) según Zhao et al. (2006) para la sismofuente de subducción interplaca. Distancia hipocentral y PGA en escala log--log; puntos de catálogo y curvas para magnitudes de referencia.}
     \label{fig:atenuacion-interplaca}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.88\linewidth]{../figuras/curvas_atenuacion_neiva_pga_intraplaca_logx.png}
-    \caption{PGA mediana en roca base (Clase I) según Zhao et al. (2006) para la sismofuente de subducción intraplaca. Distancia epicentral y PGA en escala log--log; puntos de catálogo y curvas para magnitudes de referencia.}
+    \caption{PGA mediana en roca (Clase I, $C_1=1.111$) según Zhao et al. (2006) para la sismofuente de subducción intraplaca. Distancia hipocentral y PGA en escala log--log; puntos de catálogo y curvas para magnitudes de referencia.}
     \label{fig:atenuacion-intraplaca}
 \end{figure}
 
@@ -388,28 +412,36 @@ como
 =10^{a_i-b_iM_k}-10^{a_i-b_iM_{k+1}}.
 \]
 
+La magnitud mínima $M_{w,\min}=3.0$ corresponde a la menor magnitud
+conservada en la depuración del catálogo y en la asociación de eventos a
+sismofuentes, y las magnitudes máximas corresponden al máximo adoptado para
+cada sismofuente.
+
 La tasa anual de excedencia para un nivel $y$ se evalúa sumando las
 contribuciones de magnitud y fuente, y promediando la probabilidad condicional
-entre las distancias epicentrales observadas para cada fuente:
+entre las parejas de distancia y profundidad observadas para cada fuente:
 \begin{equation*}
 \lambda_{\mathrm{total}}(Y>y)
 =\sum_i\sum_k\Delta\nu_{i,k}
 \frac{1}{N_i}\sum_{j=1}^{N_i}
-\Pr\!\left(Y>y\mid M_k,R_{i,j},i\right),
+\Pr\!\left(Y>y\mid M_k,R_{i,j},h_{i,j}\right),
 \end{equation*}
 donde la probabilidad condicional se evalúa para cada punto medio del
-intervalo de magnitud, la distancia epicentral observada entre el evento
-$j$ y el Parque Santander, y la profundidad mediana de la fuente. La
-geometría se representa con la distribución empírica de distancias del
-catálogo regional de 260 km; las profundidades se limitan a 0--125 km y la
-condición de sitio es roca base Clase I ($C_1=0.0$). La suma de las tres
-tasas entrega la curva total de amenaza en roca.
+intervalo de magnitud y para cada evento $j$ del catálogo de la fuente $i$,
+con su distancia hipocentral $R_{i,j}=\sqrt{X_{i,j}^2+h_{i,j}^2}$ al Parque
+Santander (definida en la Sección~3) y su profundidad focal $h_{i,j}$. La
+probabilidad es lognormal, centrada en
+la mediana de Zhao, con la desviación estándar total del modelo para PGA,
+$\sigma_{\ln}=0.723$. La condición de sitio es roca, Clase I de Zhao, con
+término de sitio $C_1=1.111$. Las profundidades se limitan a 0--125 km en el
+término de profundidad. La suma de las tres tasas entrega la curva total de
+amenaza en roca.
 
 La Figura~\ref{fig:amenaza-total-roca} presenta la curva de amenaza
 probabilística integrada en roca, con PGA en escala lineal y tasa anual de
 excedencia en escala logarítmica. La curva total suma las contribuciones de
 las tres sismofuentes; la intersección con $\lambda=1/475$ año$^{-1}$ define
-el PGA de diseño de 465.2 cm/s$^2$ (0.474 $g$). Como resumen descriptivo del
+el PGA de diseño de 185.2 cm/s$^2$ (0.189 $g$). Como resumen descriptivo del
 rango bajo de aceleraciones, la Tabla~\ref{tab:ajustes-exponenciales-amenaza}
 presenta los ajustes exponenciales a las curvas integradas; el PGA de diseño
 se obtiene directamente de la integración numérica, no de esos ajustes.
@@ -417,7 +449,7 @@ se obtiene directamente de la integración numérica, no de esos ajustes.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.92\linewidth]{../figuras/curva_amenaza_neiva_roca_pga_semi_log.png}
-    \caption{Curva de amenaza sísmica probabilística en roca para Neiva (Parque Santander), calculada con Zhao et al. (2006), Clase I. La curva negra representa la amenaza total y las curvas punteadas las contribuciones cortical, de subducción interplaca e intraplaca. La intersección con $\lambda=1/475$ año$^{-1}$ determina un PGA de diseño de 465.2 cm/s$^2$ (0.474 $g$).}
+    \caption{Curva de amenaza sísmica probabilística en roca para Neiva (Parque Santander), calculada con Zhao et al. (2006), Clase I ($C_1=1.111$) y distancia hipocentral. La curva negra representa la amenaza total y las curvas punteadas las contribuciones cortical, de subducción interplaca e intraplaca. La intersección con $\lambda=1/475$ año$^{-1}$ determina un PGA de diseño de 185.2 cm/s$^2$ (0.189 $g$).}
     \label{fig:amenaza-total-roca}
 \end{figure}
 
@@ -435,18 +467,40 @@ de excedencia en 50 años se calcula como $1-\exp(-50/T_r)$.
 \toprule
 $T_r$ (años) & $\lambda=1/T_r$ (año$^{-1}$) & PGA (cm/s$^2$) & PGA (g) & Excedencia en 50 años \\
 \midrule
-100  & 0.010000 & 201.5  & 0.205 & 39.35\% \\
-475  & 0.002105 & 465.2  & 0.474 & 9.99\% \\
-975  & 0.001026 & 666.2  & 0.679 & 5.00\% \\
-2475 & 0.000404 & 1028.8 & 1.049 & 2.00\% \\
+100  & 0.010000 & 96.7  & 0.099 & 39.35\% \\
+475  & 0.002105 & 185.2 & 0.189 & 9.99\% \\
+975  & 0.001026 & 243.9 & 0.249 & 5.00\% \\
+2475 & 0.000404 & 341.7 & 0.348 & 2.00\% \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 Para $T_r=475$ años, la tasa objetivo es
-$\lambda=1/475=0.002105$ año$^{-1}$ y el PGA mediano de diseño obtenido en
-roca es $465.2$ cm/s$^2$ ($0.474\,g$). La probabilidad de excedencia
-correspondiente en 50 años es 9.99\%.
+$\lambda=1/475=0.002105$ año$^{-1}$ y el PGA de diseño obtenido en
+roca es $185.2$ cm/s$^2$ ($0.189\,g$), cerca del 76\% del $A_a=0.25$ que
+asigna la NSR-10 a Neiva. La probabilidad de excedencia correspondiente en
+50 años es 9.99\%.
+
+Como la magnitud máxima de cada fuente no puede acotarse con datos
+geológicos, la Tabla~\ref{tab:sensibilidad-pga} muestra cuánto cambia el PGA
+de 475 años al variarla en $\pm0.5$ unidades: el resultado queda entre 0.168
+y 0.207 $g$.
+
+\begin{table}[H]
+\centering
+\customtablecaption{Tabla 5}{Sensibilidad del PGA de 475 años en roca a la magnitud máxima de cada fuente.}
+\label{tab:sensibilidad-pga}
+\scriptsize
+\begin{tabular}{lr}
+\toprule
+Caso & PGA (g) \\
+\midrule
+Caso base & 0.189 \\
+$M_{w,\max}$ menor en 0.5 & 0.168 \\
+$M_{w,\max}$ mayor en 0.5 & 0.207 \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 La Tabla~\ref{tab:ajustes-exponenciales-amenaza} reúne los ajustes
 exponenciales descriptivos de la curva numérica integrada en el intervalo de
@@ -457,17 +511,17 @@ directamente de esa curva, no de los ajustes exponenciales.
 
 \begin{table}[H]
 \centering
-\customtablecaption{Tabla 5}{Ajustes exponenciales descriptivos de las tasas de excedencia integradas en roca para 0--100 cm/s$^2$.}
+\customtablecaption{Tabla 6}{Ajustes exponenciales descriptivos de las tasas de excedencia integradas en roca para 0--100 cm/s$^2$.}
 \label{tab:ajustes-exponenciales-amenaza}
 \scriptsize
 \begin{tabular}{lrrr}
 \toprule
 Sismofuente & $A$ (año$^{-1}$) & $B$ ((cm/s$^2$)$^{-1}$) & $R^2$ \\
 \midrule
-Cortical & 0.10397 & 0.06402 & 0.8459 \\
-Subducción interplaca & 0.00497 & 0.07849 & 0.8438 \\
-Subducción intraplaca & 0.49641 & 0.03155 & 0.7905 \\
-Amenaza total en roca & 0.60799 & 0.03414 & 0.7637 \\
+Cortical & 0.65377 & 0.05437 & 0.8437 \\
+Subducción interplaca & 0.05155 & 0.06367 & 0.8207 \\
+Subducción intraplaca & 0.35527 & 0.05634 & 0.8303 \\
+Amenaza total en roca & 1.06466 & 0.05541 & 0.8360 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -486,13 +540,72 @@ diseño reportados en la Tabla~\ref{tab:pga-diseno-roca}.
     \label{fig:amenaza-local-aritmetica}
 \end{figure}
 
+\section{Magnitud del sismo esperado para 475 años}
+
+Para identificar el sismo que controla la amenaza se desagrega la tasa
+$\lambda=1/475$ año$^{-1}$, correspondiente al PGA de diseño en roca de
+0.189 $g$, en fuente, magnitud y distancia hipocentral. Cada término de la
+integración del Paso 4 aporta
+$\Delta\nu_{i,k}\,\frac{1}{N_i}\Pr(\mathrm{PGA}>y^*\mid M_k,R_{i,j},h_{i,j})$,
+y la suma de todos los aportes reproduce exactamente $\lambda=1/475$. La
+Figura~\ref{fig:desagregacion} muestra la distribución en magnitud y en
+distancia, y la Tabla~\ref{tab:desagregacion} resume el aporte de cada
+fuente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\linewidth]{../figuras/desagregacion_neiva_475.png}
+    \caption{Desagregación en magnitud y distancia hipocentral del nivel de 475 años en roca (PGA $=0.189\,g$).}
+    \label{fig:desagregacion}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\customtablecaption{Tabla 7}{Desagregación de la amenaza para $T_r=475$ años.}
+\label{tab:desagregacion}
+\scriptsize
+\begin{tabular}{lrrrrr}
+\toprule
+Fuente & Aporte (\%) & $M_w$ media & $R$ media (km) & $R$ mediana (km) & $h$ media (km) \\
+\midrule
+Cortical & 67.3 & 5.83 & 30 & 30 & 8 \\
+Subducción interplaca & 2.1 & 7.14 & 80 & 74 & 9 \\
+Subducción intraplaca & 30.6 & 6.86 & 130 & 105 & 94 \\
+\midrule
+Total & 100 & 6.17 & 62 & 45 & 35 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+El sismo esperado para 475 años tiene, en promedio, $M_w\approx6.2$ a unos
+60 km del sitio (mediana de 45 km). Ese promedio combina dos escenarios
+distintos que controlan la amenaza. El principal es un sismo cortical cercano,
+con $M_w\approx5.8$ a unos 30 km de Neiva y poca profundidad, que aporta el
+67\% de la amenaza. El segundo es un sismo intraplaca grande,
+con $M_w\approx6.9$ a unos 130 km de distancia hipocentral y unos 94 km de
+profundidad, que aporta el 31\%. La subducción interplaca casi no influye
+(2\%). La magnitud más frecuente en la desagregación es $M_w\approx7.15$,
+justo debajo de la magnitud máxima cortical (7.2): a este nivel de
+aceleración pesan mucho los sismos más grandes que admite cada fuente, y por
+eso la magnitud máxima es el parámetro que más influye en el resultado
+(Tabla~\ref{tab:sensibilidad-pga}).
+
 \section{Conclusiones y precondiciones para la integración de la amenaza}
 
 El estudio reúne las tasas de recurrencia por fuente regional, los parámetros
 de Gutenberg--Richter y la PGA mediana condicionada a magnitud, distancia y
 mecanismo tectónico. La integración probabilística consolida estas
 contribuciones en la curva total de amenaza en roca y determina un PGA de
-diseño de 465.2 cm/s$^2$ ($0.474\,g$) para 475 años de periodo de retorno.
+diseño en roca de 185.2 cm/s$^2$ ($0.189\,g$) para 475 años de periodo de
+retorno, cerca del 76\% del $A_a=0.25$ de la NSR-10 para Neiva. Al variar la
+magnitud máxima de cada fuente en $\pm0.5$, el PGA queda entre 0.168 y
+0.207 $g$.
+
+La desagregación indica que el sismo esperado para 475 años tiene en
+promedio $M_w\approx6.2$ a unos 60 km del sitio. La amenaza la controlan un
+sismo cortical cercano ($M_w\approx5.8$ a unos 30 km, 67\%) y un sismo
+intraplaca profundo ($M_w\approx6.9$ a unos 130 km, 31\%); la subducción
+interplaca casi no influye.
 
 La siguiente etapa desarrollará los análisis de respuesta geotécnica y la
 construcción de espectros en roca para el emplazamiento de Neiva, tomando la

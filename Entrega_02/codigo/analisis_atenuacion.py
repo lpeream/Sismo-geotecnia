@@ -70,8 +70,9 @@ MODEL_PARAMETERS: dict[str, dict[str, Any]] = {
         "interface": 0.000,
         "slab": 2.607,
         "slab_distance": -0.528,
+        # Términos de sitio de Zhao et al. (2006), Tabla 5, para PGA.
         "site_terms": {
-            "I": 0.0,
+            "I": 1.111,
             "II": 1.344,
             "III": 1.355,
             "IV": 1.420,
@@ -312,12 +313,17 @@ def _prepare_catalog(
         catalog["profundidad_original_km"]
         != catalog["profundidad_ajustada_km"]
     )
+    # Distancia hipocentral sqrt(Repi^2 + h^2), con h >= 0 sin el tope de
+    # 125 km (el tope solo aplica al término de profundidad de Zhao).
+    catalog["distancia_hipocentral_km"] = np.hypot(
+        catalog["distancia_epicentral_km"], catalog["Z"].clip(lower=0.0)
+    )
     distance_floor = float(config["minimum_distance_km"])
     catalog["distancia_usada_km"] = catalog[
-        "distancia_epicentral_km"
+        "distancia_hipocentral_km"
     ].clip(lower=distance_floor)
     catalog["distancia_ajustada"] = (
-        catalog["distancia_epicentral_km"] < distance_floor
+        catalog["distancia_hipocentral_km"] < distance_floor
     )
 
     magnitude_bins = pd.cut(
@@ -352,7 +358,7 @@ def _summarize_by_source_and_bin(
             representative_depth = float(
                 subset["profundidad_ajustada_km"].mean()
             )
-            mean_distance = float(subset["distancia_epicentral_km"].mean())
+            mean_distance = float(subset["distancia_usada_km"].mean())
             representative_intensity = float(
                 _predict_intensity(
                     np.array([representative_magnitude]),
@@ -372,9 +378,9 @@ def _summarize_by_source_and_bin(
                     "N eventos": int(len(subset)),
                     "Mw media": representative_magnitude,
                     "Profundidad media ajustada (km)": representative_depth,
-                    "Distancia epicentral media (km)": mean_distance,
-                    "Distancia epicentral mediana (km)": float(
-                        subset["distancia_epicentral_km"].median()
+                    "Distancia hipocentral media (km)": mean_distance,
+                    "Distancia hipocentral mediana (km)": float(
+                        subset["distancia_usada_km"].median()
                     ),
                     "intensidad modelo en R media (cm/s2)": representative_intensity,
                     "intensidad mediana por evento (cm/s2)": float(
@@ -428,14 +434,14 @@ def _plot_attenuation_curves(
             else float(config["reference_depth"])
         )
         distance_min = max(
-            float(subset["distancia_epicentral_km"].min()),
+            float(subset["distancia_usada_km"].min()),
             float(config["minimum_distance_km"]),
         )
-        distance_max = float(subset["distancia_epicentral_km"].max())
+        distance_max = float(subset["distancia_usada_km"].max())
         distance_grid = np.geomspace(distance_min, distance_max, 160)
         fig, axis = plt.subplots(figsize=(7.4, 5.6))
         scatter = axis.scatter(
-            subset["distancia_epicentral_km"],
+            subset["distancia_usada_km"],
             subset["intensidad_predicha_cm_s2"],
             c=subset["Mw"],
             cmap=magnitude_cmap,
@@ -469,7 +475,7 @@ def _plot_attenuation_curves(
         axis.set_xlim(distance_min, distance_max)
         axis.set_ylabel("PGA (cm/s²)")
         axis.grid(True, which="both", alpha=0.25)
-        axis.set_xlabel("Distancia epicentral (km)")
+        axis.set_xlabel("Distancia hipocentral (km)")
         axis.set_title(
             f"{parameters['label']} — Zhao et al. (2006); "
             f"{config['site_name']}, clase {config['site_class']}; "
@@ -518,7 +524,7 @@ def run_analysis(
         source_events = events.loc[indexes]
         events.loc[indexes, "intensidad_predicha_cm_s2"] = _predict_intensity(
             source_events["Mw"].to_numpy(dtype=float),
-            source_events["distancia_epicentral_km"].to_numpy(dtype=float),
+            source_events["distancia_usada_km"].to_numpy(dtype=float),
             source_events["profundidad_original_km"].to_numpy(dtype=float),
             source,
             parameters,
@@ -565,8 +571,8 @@ def run_analysis(
         ),
         "distance_adjustments": distance_adjustments,
         "assumptions": [
-            "Site class I represents the rock-base reference scenario (Vs30 > 600 m/s; Tp < 0.2 s) with site term C1 = 0.0.",
-            "Epicentral distance is calculated from each event to the configured site.",
+            "Site class I represents rock (Vs30 > 600 m/s; Tp < 0.2 s) with the Zhao et al. (2006) PGA site term C1 = 1.111.",
+            "Hypocentral distance sqrt(Repi^2 + h^2) is used; Repi is the Haversine distance from each event to the configured site.",
             "Negative catalog depths are set to 0 km and depths above the configured cap are capped.",
             "Reverse-fault, intra-event and inter-event terms are zero unless explicitly changed in the inputs.",
             "Catalog Mw values are used as supplied; this is not a local Colombian ground-motion model validation.",

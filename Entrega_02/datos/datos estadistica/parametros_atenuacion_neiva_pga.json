@@ -56,7 +56,7 @@
     "slab": 2.607,
     "slab_distance": -0.528,
     "site_terms": {
-      "I": 0.0,
+      "I": 1.111,
       "II": 1.344,
       "III": 1.355,
       "IV": 1.42
@@ -69,8 +69,8 @@
   },
   "distance_adjustments": 0,
   "assumptions": [
-    "Site class I represents the rock-base reference scenario (Vs30 > 600 m/s; Tp < 0.2 s) with site term C1 = 0.0.",
-    "Epicentral distance is calculated from each event to the configured site.",
+    "Site class I represents rock (Vs30 > 600 m/s; Tp < 0.2 s) with the Zhao et al. (2006) PGA site term C1 = 1.111.",
+    "Hypocentral distance sqrt(Repi^2 + h^2) is used; Repi is the Haversine distance from each event to the configured site.",
     "Negative catalog depths are set to 0 km and depths above the configured cap are capped.",
     "Reverse-fault, intra-event and inter-event terms are zero unless explicitly changed in the inputs.",
     "Catalog Mw values are used as supplied; this is not a local Colombian ground-motion model validation."

@@ -1,9 +1,9 @@
 {
   "site": "Neiva - Parque Santander",
   "site_class": "I",
-  "site_term_C1": 0.0,
+  "site_term_C1": 1.111,
   "intensity_measure": "PGA (cm/s2)",
-  "sigma_ln": 0.65,
+  "sigma_ln": 0.723,
   "magnitude_minimum": 3.0,
   "maximum_magnitudes": {
     "Cortical": 7.2,
@@ -27,8 +27,8 @@
       "Mw_max": 7.8
     }
   },
-  "distance_model": "Empirical discrete epicentral-distance distribution by source from the classified 260-km catalog; Haversine to Parque Santander.",
-  "depth_model": "Source median catalog depth, clipped to 0-125 km; depth adjustment is active for h >= 15 km.",
+  "distance_model": "Empirical discrete hypocentral-distance distribution by source from the classified 260-km catalog: sqrt(Repi^2 + h^2), with Repi by Haversine to Parque Santander.",
+  "depth_model": "Each catalog event uses its own depth, clipped to 0-125 km for the Zhao depth term; depth adjustment is active for h >= 15 km.",
   "magnitude_distribution": "Truncated Gutenberg-Richter incremental rates over Mw 3.0 to the configured source Mw_max; 0.025-Mw bins.",
   "hazard_definition": "Sum over source and magnitude-bin rate mass of the mean lognormal conditional exceedance probability over empirical source distances.",
   "exponential_fit": "lambda = A*exp(-B*PGA), fitted by linear regression of ln(lambda) over 0-100 cm/s2; R2 calculated in ln(lambda) space.",
