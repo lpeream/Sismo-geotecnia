@@ -33,10 +33,13 @@ DATA_DIRECTORY = (
 )
 FIGURE_DIRECTORY = ENTREGA_2 / "figuras"
 
+# Mw_max = mayor magnitud registrada en el catálogo de cada fuente + 0.5
+# (7.05, 6.10 y 7.40). El caso de sensibilidad "-0.5" equivale a usar
+# directamente las magnitudes registradas.
 RECURRENCE: dict[str, dict[str, float]] = {
-    "Cortical": {"a": 4.197, "b": 0.882, "Mw_max": 7.2},
-    "Subducción interplaca": {"a": 3.911, "b": 0.964, "Mw_max": 8.0},
-    "Subducción intraplaca": {"a": 4.025, "b": 0.821, "Mw_max": 7.8},
+    "Cortical": {"a": 4.197, "b": 0.882, "Mw_max": 7.55},
+    "Subducción interplaca": {"a": 3.911, "b": 0.964, "Mw_max": 6.60},
+    "Subducción intraplaca": {"a": 4.025, "b": 0.821, "Mw_max": 7.90},
 }
 SOURCE_TYPES = {
     "Cortical": "crustal",
