@@ -137,7 +137,7 @@ PGA para distintos periodos de retorno, el sismo que controla la amenaza de
 475 años y el espectro de aceleración en roca.
 
 Se sigue el análisis probabilístico de amenaza sísmica en cuatro pasos de
-Kramer y Stewart \parencite{kramerStewart2024}, al que se añade un quinto
+\textcite{kramerStewart2024}, al que se añade un quinto
 paso para obtener los espectros de respuesta y el espectro de aceleración
 (Figura~\ref{fig:metodologia}):
 \begin{enumerate}
@@ -157,26 +157,23 @@ paso para obtener los espectros de respuesta y el espectro de aceleración
 \begin{figure}[H]
     \centering
     \includegraphics[width=\linewidth]{../figuras/metodologia_cinco_pasos.png}
-    \caption[Pasos del análisis de amenaza sísmica]{Pasos del análisis de amenaza sísmica. Cada panel muestra el resultado de un paso con los datos de este estudio.}
+    \caption{Pasos del análisis de amenaza sísmica.}
     \label{fig:metodologia}
 \end{figure}
 
 \section{Paso 1: caracterización de sismofuentes}
 
-Se usó el catálogo de sismicidad del Servicio Geológico Colombiano
-\parencite{sgcCatalogoSismicidad} en un radio regional de 260 km alrededor
-del sitio. Cada sismo se asoció a una de tres fuentes según su ubicación,
-profundidad y relación con la placa de Nazca y las fallas corticales
-\parencite{criteriosAsociacionNeiva2026}. El catálogo clasificado tiene
-2\,691 sismos con $M_w\geq3.0$: 1\,308 corticales, 359 de subducción
+Se usó el catálogo depurado en la Entrega 1, que une los registros del
+\textcite{sgcCatalogoSismicidad} y del \textcite{usgsComCat}, en un radio regional de 260 km
+alrededor del sitio. El catálogo clasificado tiene 2\,691 sismos con $M_w\geq3.0$: 1\,308 corticales, 359 de subducción
 interplaca y 1\,024 de subducción intraplaca
 (Figura~\ref{fig:fuentes-neiva}). El periodo de análisis es 1917--2025
 (109 años).
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.62\linewidth,height=0.38\textheight,keepaspectratio]{../recursos/Qgis/datos/Figura_areas_corticales_fallas.png}
-    \caption[Sismofuentes y fallas alrededor de Neiva]{Sismofuentes y fallas alrededor de Neiva. La sismicidad cortical rodea el sitio y la de subducción se concentra al noroccidente; el análisis usa el círculo de 260 km (el de 50 km es solo de referencia).}
+    \includegraphics[width=0.72\linewidth,height=0.38\textheight,keepaspectratio]{../figuras/mapa_sismicidad_fallas_neiva.png}
+    \caption{Sismicidad y fallas alrededor de Neiva.}
     \label{fig:fuentes-neiva}
 \end{figure}
 
@@ -188,9 +185,8 @@ La red sismológica solo registra de forma completa los sismos pequeños desde
 las últimas décadas. Por eso, para cada fuente e intervalo de magnitud se
 buscó el año desde el cual el catálogo está completo. Para $M_w<5.0$ se usó
 una regresión segmentada del número acumulado de sismos por año: el punto
-de quiebre marca el inicio del periodo completo (con $R^2\geq0.90$ y al menos
-10 años y 3 eventos por tramo). Para $M_w\geq5.0$ se usó todo el periodo
-1917--2025. La tasa anual de cada intervalo es
+de quiebre, elegido por mínimo error cuadrático con al menos 10 años y 3
+sismos en cada tramo, marca el inicio del periodo completo. La tasa anual de cada intervalo es
 \begin{equation*}
 \lambda=\frac{N_{\mathrm{completo}}}{\Delta t_{\mathrm{completo}}},
 \end{equation*}
@@ -199,8 +195,8 @@ periodo completo y $\Delta t_{\mathrm{completo}}$ su duración en años.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.89\linewidth]{../figuras/completez_recurrencia_fuentes_intervalos_1mw.png}
-    \caption[Conteos y tasas anuales por fuente]{Conteos y tasas anuales por fuente. La fuente cortical domina en magnitudes bajas y la intraplaca en $M_w$ 5--7.}
+    \includegraphics[width=0.99\linewidth]{../figuras/completez_recurrencia_fuentes_intervalos_1mw.png}
+    \caption{Conteos y tasas anuales por fuente.}
     \label{fig:completez-regional}
 \end{figure}
 
@@ -239,7 +235,7 @@ cortical).
 \subsection{Curvas de Gutenberg--Richter}
 
 Con las tasas anteriores se ajustó, para cada fuente, la relación de
-Gutenberg--Richter \parencite{gutenbergRichter1944}:
+\textcite{gutenbergRichter1944}:
 \begin{equation*}
 \log_{10}\lambda(M_w\geq M)=a-bM,
 \end{equation*}
@@ -267,7 +263,7 @@ Subducción intraplaca & 4.025 & 0.821 & 0.992 & 7.90 \\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.72\linewidth]{../figuras/curvas_recurrencia_sismofuentes_regional.png}
-    \caption[Curvas de recurrencia por fuente]{Curvas de recurrencia por fuente. La intraplaca tiene la menor pendiente ($b=0.821$), es decir, la mayor proporción de sismos grandes.}
+    \caption{Curvas de recurrencia por fuente.}
     \label{fig:recurrencia-regional}
 \end{figure}
 
@@ -288,7 +284,7 @@ que no están disponibles para estas fuentes regionales.
 
 \section{Paso 3: atenuación del movimiento}
 
-Se adoptó la ecuación de Zhao et al. (2006) \parencite{zhao2006} porque tiene
+Se adoptó la ecuación de \textcite{zhao2006} porque tiene
 términos propios para los tres tipos de fuente de Neiva y un término de
 profundidad, necesario para los sismos intraplaca, que ocurren a unos
 100 km de profundidad:
@@ -325,7 +321,7 @@ $b$ & $-0.00564$ & Distancia \\
 $c$ & 0.0055 & Distancia ajustada \\
 $d$ & 1.080 & Distancia ajustada \\
 $e$ & 0.01412 & Profundidad \\
-$F_R$ & 0 & Cortical (coeficiente 0.251 desactivado) \\
+$F_R$ & 0 & Cortical \\
 $S_I$ & 0.000 & Interplaca \\
 $S_S$ & 2.607 & Intraplaca \\
 $S_{SL}$ & $-0.528$ & Intraplaca \\
@@ -344,9 +340,7 @@ Las decisiones adoptadas son:
     \item \textbf{Sitio en roca, Clase I de Zhao} ($V_{S30}>600$ m/s,
     $C_1=1.111$). Es la condición de referencia para el análisis de respuesta
     de sitio de la siguiente etapa.
-    \item \textbf{$F_R=0$.} El catálogo no tiene mecanismos focales para
-    asignar falla inversa a los sismos corticales, y el sistema de fallas
-    cercano, Algeciras--Garzón, es principalmente de rumbo.
+    \item \textbf{$F_R=0$.}
 \end{itemize}
 
 Las Figuras~\ref{fig:atenuacion-cortical}--\ref{fig:atenuacion-intraplaca}
@@ -357,22 +351,22 @@ de 3.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.64\linewidth]{../figuras/curvas_atenuacion_neiva_pga_cortical_logx.png}
-    \caption[Atenuación de PGA, fuente cortical]{Atenuación de PGA, fuente cortical. Es la fuente con los sismos más cercanos al sitio.}
+    \includegraphics[width=0.74\linewidth]{../figuras/curvas_atenuacion_neiva_pga_cortical_logx.png}
+    \caption{Atenuación de PGA, fuente cortical.}
     \label{fig:atenuacion-cortical}
 \end{figure}
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.64\linewidth]{../figuras/curvas_atenuacion_neiva_pga_interplaca_logx.png}
-    \caption[Atenuación de PGA, subducción interplaca]{Atenuación de PGA, subducción interplaca. Los sismos están lejos del sitio y producen aceleraciones bajas.}
+    \includegraphics[width=0.84\linewidth]{../figuras/curvas_atenuacion_neiva_pga_interplaca_logx.png}
+    \caption{Atenuación de PGA, subducción interplaca.}
     \label{fig:atenuacion-interplaca}
 \end{figure}
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.64\linewidth]{../figuras/curvas_atenuacion_neiva_pga_intraplaca_logx.png}
-    \caption[Atenuación de PGA, subducción intraplaca]{Atenuación de PGA, subducción intraplaca. Por los términos de profundidad y $S_S$, a igual distancia da PGA mayores que la cortical.}
+    \caption{Atenuación de PGA, subducción intraplaca.}
     \label{fig:atenuacion-intraplaca}
 \end{figure}
 
@@ -392,8 +386,8 @@ probabilidad de que produzcan más de $y$:
 donde:
 \begin{itemize}
     \item $\Delta\nu_{i,k}$: tasa anual de sismos de la fuente $i$ con
-    magnitud entre $M_k$ y $M_{k+1}$ (intervalos de 0.025), con $a_i$ y
-    $b_i$ de la Tabla~\ref{tab:gr-regional}.
+    magnitud entre $M_k$ y $M_{k+1}$, con $a_i$ y $b_i$ de la
+    Tabla~\ref{tab:gr-regional}.
     \item $X_{i,j}$, $h_{i,j}$: distancia hipocentral y profundidad de cada
     uno de los $N_i$ sismos del catálogo de la fuente; así la ubicación de
     los sismos futuros sigue la de los sismos registrados.
@@ -405,7 +399,7 @@ donde:
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.74\linewidth]{../figuras/curva_amenaza_neiva_roca_pga_semi_log.png}
-    \caption[Curva de amenaza sísmica en roca]{Curva de amenaza sísmica en roca. La fuente cortical aporta entre el 62 y el 70\% de la amenaza total, la intraplaca cerca del 30\% y la interplaca menos del 6\%.}
+    \caption{Curva de amenaza sísmica en roca.}
     \label{fig:amenaza-total-roca}
 \end{figure}
 
@@ -476,7 +470,7 @@ Amenaza total & 1.05965 & 0.05480 & 0.8325 \\
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.68\linewidth]{../figuras/amenaza_sismica_neiva_figura8_local_aritmetica.png}
-    \caption[Amenaza para aceleraciones bajas]{Amenaza para aceleraciones bajas. En Neiva se superan 5 cm/s$^2$ unas 2.4 veces por año y 20 cm/s$^2$ unas 0.23 veces por año.}
+    \caption{Amenaza para aceleraciones bajas.}
     \label{fig:amenaza-local-aritmetica}
 \end{figure}
 
@@ -490,7 +484,7 @@ catálogo (Figura~\ref{fig:desagregacion} y Tabla~\ref{tab:desagregacion}).
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.9\linewidth]{../figuras/desagregacion_neiva_475.png}
-    \caption[Desagregación de la amenaza de 475 años]{Desagregación de la amenaza de 475 años. La mitad del aporte viene de sismos a menos de 46 km del sitio.}
+    \caption{Desagregación de la amenaza de 475 años.}
     \label{fig:desagregacion}
 \end{figure}
 
@@ -526,7 +520,7 @@ Se calculó el espectro de respuesta (5\% de amortiguamiento) del sismo de
 control de cada fuente (Tabla~\ref{tab:desagregacion}), con una ecuación
 según el tipo de fuente:
 \begin{itemize}
-    \item \textbf{Cortical: Sadigh et al. (1997)} \parencite{sadigh1997}, hecha
+    \item \textbf{Cortical: \textcite{sadigh1997}}, hecha
     para sismos corticales poco profundos:
     \begin{equation*}
     \ln S_a=C_1+C_2M+C_3(8.5-M)^{2.5}+C_4\ln\!\left[r+e^{C_5+C_6M}\right]+C_7\ln(r+2),
@@ -534,13 +528,16 @@ según el tipo de fuente:
     donde $S_a$ es la aceleración espectral en $g$, $M$ la magnitud
     momento, $r$ la distancia a la ruptura en km y $C_1$ a $C_7$ los
     coeficientes de cada periodo, tomados de la tabla de Sadigh et al.
-    (1997) para roca y $M\leq6.5$. Para el sismo de control
-    ($M_w\approx6.0$) la ruptura mide pocos kilómetros, así que $r$ se toma
-    igual a la distancia hipocentral.
+    (1997) para roca y $M\leq6.5$. Como no se conoce la geometría de la
+    ruptura, $r$ se toma igual a la distancia hipocentral (33 km). Una
+    ruptura de $M_w\approx6.0$ mide unos 13 km \parencite{wells1994}, así que
+    $r$ real podría ser hasta unos 10 km menor. Esto no afecta el resultado
+    del Paso 5, porque el espectro se escala al PGA de 475 años y solo se usa
+    su forma: con $r=23$ km la forma cambia menos del 4\% hasta 0.5 s.
     \item \textbf{Subducción: Zhao et al. (2006)}, la misma ecuación del
     Paso 3 con los coeficientes de cada periodo. Sadigh no sirve para estas
     fuentes porque no tiene en cuenta la profundidad ni el tipo de fuente;
-    el SGC también usa Zhao para subducción \parencite{sgc2018amenaza}.
+    el \textcite{sgc2018amenaza} también usa Zhao para subducción.
 \end{itemize}
 
 \begin{table}[H]
@@ -562,13 +559,13 @@ Subducción intraplaca & Zhao et al. (2006) & 6.9 & 132 & 0.069 & 0.169 & 0.15 \
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.74\linewidth]{../figuras/espectros_respuesta_fuentes_neiva.png}
-    \caption[Espectros de respuesta en roca por fuente]{Espectros de respuesta en roca por fuente. La intraplaca domina hasta 0.25 s y la cortical en periodos mayores.}
+    \caption{Espectros de respuesta en roca por fuente.}
     \label{fig:espectros-fuentes}
 \end{figure}
 
 En las tres fuentes el pico del espectro es de 2.3 a 2.5 veces el PGA,
-dentro del rango de 2.1 a 2.7 que proponen Newmark y Hall para 5\% de
-amortiguamiento \parencite{newmark1982}. El pico ocurre en periodos cortos
+dentro del rango de 2.1 a 2.7 que proponen \textcite{newmark1982} para
+5\% de amortiguamiento. El pico ocurre en periodos cortos
 (0.15 a 0.2 s). La interplaca da valores mucho menores porque su sismo de
 control es pequeño y lejano.
 
@@ -601,7 +598,7 @@ $T_C=0.28$ s. La intraplaca define la meseta y la cortical la caída.
 \begin{figure}[H]
     \centering
     \includegraphics[width=0.95\linewidth,height=0.5\textheight,keepaspectratio]{../figuras/espectro_diseno_roca_neiva.png}
-    \caption[Espectro de aceleración en roca]{Espectro de aceleración en roca para 475 años, comparado con el espectro NSR-10 en roca de la Entrega 1. El espectro obtenido queda por debajo de la norma en todos los periodos.}
+    \caption{Espectro de aceleración en roca.}
     \label{fig:espectro-diseno}
 \end{figure}
 
@@ -648,31 +645,6 @@ para diseño sigue rigiendo la norma.
     \item El espectro de aceleración en roca tiene PGA de 0.196 $g$ y meseta
     de 0.481 $g$ entre 0.10 y 0.28 s. Queda por debajo del espectro NSR-10 en
     todos los periodos.
-\end{itemize}
-
-\section{Limitaciones y recomendaciones}
-
-\begin{itemize}
-    \item El catálogo cubre 109 años y tiene pocos sismos grandes; la
-    magnitud máxima se fijó sin datos geológicos y el resultado es sensible
-    a ella (Tabla~\ref{tab:sensibilidad-pga}).
-    \item Las ecuaciones de Zhao (Japón) y Sadigh (California) no se
-    calibraron con registros colombianos, y se usó una sola ecuación por
-    fuente. El SGC combina varias en un árbol lógico; se recomienda incluir
-    al menos una segunda ecuación por tipo de fuente.
-    \item Las fuentes se representan con la ubicación de los sismos
-    registrados, no con la geometría de las fallas; las zonas sin sismicidad
-    reciente pueden quedar subrepresentadas.
-    \item Sin mecanismos focales se desactivó el término de falla inversa de
-    Zhao. Si se confirmara un mecanismo inverso, la amenaza cortical
-    aumentaría.
-    \item Todos los resultados son en roca. Los suelos de Neiva pueden
-    amplificar el movimiento; eso se evaluará en el análisis de respuesta de
-    sitio.
-    \item Como el PGA y el espectro obtenidos son menores que los de la
-    NSR-10, se recomienda compararlos con el modelo nacional del SGC
-    \parencite{sgc2018amenaza} antes de usarlos para algo distinto a este
-    ejercicio académico.
 \end{itemize}
 
 \section*{Referencias}
