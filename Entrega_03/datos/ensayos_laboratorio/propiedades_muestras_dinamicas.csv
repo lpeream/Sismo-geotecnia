@@ -1,0 +1,4 @@
+﻿muestra,profundidad_m,ensayo,Gs,e,n_pct,S_pct,humedad_pct,densidad_humeda_g_cm3,densidad_seca_g_cm3,sigma3_kPa
+P1-M5,5.0,Triaxial cíclico ASTM D3999,2.568,1.05,55.3,98.0,33.5,1.891,1.416,200
+P1-M10,10.0,Columna resonante ASTM D4015,2.588,1.02,53.5,95.1,37.8,1.928,1.399,200
+P1-M20,20.0,Columna resonante ASTM D4015,2.685,0.91,43.5,93.8,44.9,1.965,1.356,400
