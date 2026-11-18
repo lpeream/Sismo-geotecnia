@@ -29,9 +29,6 @@ crudos del down hole están en `recursos/`.
   5. `calculo_vs_excel.py`: Excel con fórmulas para revisar el cálculo de Vs
      (`datos/downhole/calculo_vs_downhole.xlsx`).
   6. `figura_esquema_tz.py`: esquema de la corrección a tiempo vertical.
-  7. `informe_puntos_1_2.py`: escribe el texto y las tablas de los puntos 1 y 2
-     en `informe/entrega_03.tex` con los resultados anteriores. Ojo: reemplaza
-     esas secciones; si se edita el texto a mano, hacerlo en este script.
 - `datos/ensayos_laboratorio/`: ensayos del enunciado transcritos a CSV.
   - `clasificacion_muestras.csv` y `granulometrias.csv`: humedad, granulometría,
     límites y USCS informado (sondeo P-1).
@@ -46,7 +43,7 @@ crudos del down hole están en `recursos/`.
 - `datos/deepsoil/`: archivos de entrada y resultados de DEEPSOIL.
 - `datos/resultados/`: tablas generadas por los scripts.
 - `figuras/`: figuras del informe.
-- `informe/`: informe LaTeX y PDF.
+- `informe/`: informe en LaTeX (`entrega_03.tex`, se edita directamente) y su PDF.
 - `recursos/`: enunciado (`TRABAJO ANALISIS LOCAL 2026-2.pdf`) y registros
   crudos del down hole (`DATOS DOWN HOLE 2026.xlsx`: hojas `VP`, 40 canales Z,
   y `VS`, 40 canales X/Y; 4000 muestras con dt = 0.5 ms; fuente a 3 m del
