@@ -17,11 +17,21 @@ crudos del down hole están en `recursos/`.
 
 ## Estructura
 
-- `codigo/`: scripts de cálculo. Orden de ejecución:
-  1. `procesamiento_downhole.py`: llegadas P y S del down hole crudo, perfiles de
-     Vp y Vs (canales cada 1 m, fuente a 3 m) y comparación con la referencia.
+- `codigo/`: scripts de cálculo. Orden de ejecución (desde cualquier carpeta,
+  `python codigo/<script>.py`):
+  1. `procesamiento_downhole.py`: tiempos de llegada P y S leídos a mano (están
+     escritos en el script, `T_P_MS` y `T_S_MS`), Vp y Vs por estrato, figuras
+     de los registros P y S y tiempos contra profundidad.
   2. `perfil_estratigrafico.py`: estratos, Vs30, Gmax y figura del perfil.
   3. `curvas_degradacion.py`: curvas G/Gmax y D por estrato.
+  4. `lectura_downhole_pdf.py`: PDF de lectura de la onda S canal por canal
+     (`figuras/lectura_downhole_S/`), con instrucciones y decisiones.
+  5. `calculo_vs_excel.py`: Excel con fórmulas para revisar el cálculo de Vs
+     (`datos/downhole/calculo_vs_downhole.xlsx`).
+  6. `figura_esquema_tz.py`: esquema de la corrección a tiempo vertical.
+  7. `informe_puntos_1_2.py`: escribe el texto y las tablas de los puntos 1 y 2
+     en `informe/entrega_03.tex` con los resultados anteriores. Ojo: reemplaza
+     esas secciones; si se edita el texto a mano, hacerlo en este script.
 - `datos/ensayos_laboratorio/`: ensayos del enunciado transcritos a CSV.
   - `clasificacion_muestras.csv` y `granulometrias.csv`: humedad, granulometría,
     límites y USCS informado (sondeo P-1).
