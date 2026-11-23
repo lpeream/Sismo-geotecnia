@@ -17,58 +17,54 @@ crudos del down hole están en `recursos/`.
 
 ## Estructura
 
-- `codigo/`: scripts de cálculo. Orden de ejecución (desde cualquier carpeta,
-  `python codigo/<script>.py`):
-  1. `procesamiento_downhole.py`: tiempos de llegada P y S leídos a mano (están
-     escritos en el script, `T_P_MS` y `T_S_MS`), Vp y Vs por estrato, figuras
-     de los registros P y S y tiempos contra profundidad.
-  2. `perfil_estratigrafico.py`: estratos, Vs30, Gmax y figura del perfil.
-  3. `curvas_degradacion.py`: curvas G/Gmax y D por estrato.
-  4. `lectura_downhole_pdf.py`: PDF de lectura de la onda S canal por canal
-     (`figuras/lectura_downhole_S/`), con instrucciones y decisiones.
-  5. `calculo_vs_excel.py`: Excel con fórmulas para revisar el cálculo de Vs
-     (`datos/downhole/calculo_vs_downhole.xlsx`).
-  6. `figura_esquema_tz.py`: esquema de la corrección a tiempo vertical.
+- `recursos/`: enunciado, datos y los dos Excel de trabajo, que son la base del
+  informe (sus gráficas se exportan a `figuras/`):
+  - `DATOS_DOWN_HOLE_Interpretación.xlsx`: registros del down hole y hojas
+    `GRÁFICA VP` y `GRÁFICA VS` (registros apilados). En `GRÁFICA VS` están los
+    tiempos leídos por canal (T23:U53), el Vs adoptado por estrato (V18:V19),
+    las rectas de esas pendientes dibujadas sobre la gráfica (T56:V62) y una
+    verificación por regresión (V15:V16).
+  - `ensayos_analisis_sitio_Neiva (1).xlsx`: clasificación, granulometría,
+    límites y ensayos dinámicos. En `Sheet1` están Vs, γ, ρ y Gmax por estrato
+    y las curvas G/Gmax y ξ; en `Perfil Vs`, el perfil y el Vs30; en
+    `Seed-Idriss E1` (borrador) la arena frente a Seed e Idriss (1970); en
+    `Vucetic-Dobry E2` la arcilla frente a Vucetic y Dobry (1991), con los
+    valores de las curvas para IP 0 a 200.
+  - `DATOS DOWN HOLE 2026.xlsx` (original, no se modifica), enunciado y
+    trabajo de referencia.
 - `datos/ensayos_laboratorio/`: ensayos del enunciado transcritos a CSV.
-  - `clasificacion_muestras.csv` y `granulometrias.csv`: humedad, granulometría,
-    límites y USCS informado (sondeo P-1).
-  - `propiedades_muestras_dinamicas.csv`, `triaxial_ciclico_5m.csv` y
-    `columna_resonante.csv`: ensayos dinámicos a 5, 10 y 20 m.
-  - `triaxial_cu.csv` y `triaxial_cu_parametros.csv`: triaxial CU a 4 y 28 m.
-  - `vs_downhole_leido_de_grafica.csv`: Vs del down hole **leído de la
-    gráfica** del enunciado (valores aproximados, por verificar).
-- `datos/downhole/`: copia de trabajo del Excel del down hole (la que leen los
-  scripts; el original de `recursos/` no se modifica).
-- `datos/sismos/`: registros de los tres sismos elegidos.
-- `datos/deepsoil/`: archivos de entrada y resultados de DEEPSOIL.
-- `datos/resultados/`: tablas generadas por los scripts.
-- `figuras/`: figuras del informe.
+- `datos/sismos/` y `datos/deepsoil/`: para los puntos 4 a 6.
+- `figuras/`: figuras del informe (las `*_excel.png` salen de los Excel).
 - `informe/`: informe en LaTeX (`entrega_03.tex`, se edita directamente) y su PDF.
-- `recursos/`: enunciado (`TRABAJO ANALISIS LOCAL 2026-2.pdf`) y registros
-  crudos del down hole (`DATOS DOWN HOLE 2026.xlsx`: hojas `VP`, 40 canales Z,
-  y `VS`, 40 canales X/Y; 4000 muestras con dt = 0.5 ms; fuente a 3 m del
-  pozo según el esquema de la hoja `REFERENCIAS PARA ENSAYO`).
 
 ## Notas para continuar (puntos 3 a 7)
 
-- **Perfil adoptado (puntos 1 y 2):** dos estratos. E1, arena SP-SM de 0 a
-  16.5 m: Vs = 151 m/s (tres rectas: 145, 148 y 160 m/s), gamma = 18.6 kN/m3,
-  Gmax = 43.1 MPa. E2, arcilla CL (CH en la base) de 16.5 a 30 m: Vs = 380 m/s
-  (una recta, canales 17 a 30), gamma = 18.7 kN/m3, Gmax = 275.7 MPa.
-  Vs30 = 207 m/s, perfil tipo D. Valores en `datos/resultados/`.
-- **Curva de la arcilla (para DEEPSOIL):** solo hay datos hasta gamma = 0.05 %
-  (columna resonante de 20 m). El resto se completó por ahora con la forma de
-  Darendeli ajustada a esos puntos (gamma_r = 0.65 %, a = 0.919). La idea es
-  reemplazarla, como en el trabajo de referencia, por la curva de Vucetic y
-  Dobry (1991) que trae DEEPSOIL: probar IP = 15 e IP = 30 (la arcilla tiene
-  IP de 18), compararlas con los 5 puntos de la columna resonante y escoger la
-  que mejor se ajuste. Luego actualizar la figura de curvas, la tabla de
-  parámetros y el texto del punto 2 (está la nota en rojo).
-- **Dmin de la arcilla:** el ajuste da 0 % (el ensayo mide 0.02 %). Hay que
-  fijar un valor razonable para DEEPSOIL (usual 0.5 a 2 %; la referencia usó
-  5 % en todas las capas).
-- **Down hole:** el canal 18 de la onda S se ajustó a mano de 129 a 127 ms
-  (la correlación saltaba un ciclo). Detalles en
-  `figuras/lectura_downhole_S/canales_1_a_30.pdf`.
-- **Muestras M3 y M12:** tienen los mismos datos; por granulometría darían
-  GP-GM. Se dejaron como SP-SM; consultar con el profesor.
+- **Perfil adoptado (puntos 1 y 2):** dos estratos cortados en 15 m, una
+  pendiente por estrato en la gráfica de la onda S. E1, arena y grava con limo
+  (SP-SM y GP-GM) de 0 a 15 m: Vs = 150 m/s, γ = 18.6 kN/m3, ρ = 1896 kg/m3,
+  Gmax = 42.7 MPa. E2, arcilla CL (CH en la base) de 15 a 30 m: Vs = 385 m/s,
+  γ = 18.7 kN/m3, ρ = 1906 kg/m3, Gmax = 282.5 MPa. Vs30 = 216 m/s, perfil
+  tipo D. La columna resonante queda por debajo del Gmax del down hole en los
+  dos estratos (0.94 y 0.94).
+- **Curvas de degradación (punto 2):** la arena (E1) queda con los ensayos
+  (columna resonante de 10 m y triaxial cíclico de 5 m, de 0.002 a 10 %). La
+  arcilla (E2) se completa con la curva de Vucetic y Dobry (1991) de IP = 50
+  para G/Gmax y amortiguamiento (Tabla 12 del informe): es la que mejor pasa
+  por los puntos de la columna resonante, aunque el IP real es 18 (efecto del
+  confinamiento de 400 kPa). Valores leídos de Kramer (1996), Figuras 6.42 y
+  6.45; las de IP 0, 15 y 30 de G/Gmax se verificaron con la tesis
+  `recursos/TTS1127.pdf`. Las curvas llegan hasta cerca de 1 %.
+- **Amortiguamiento mínimo:** la columna resonante mide valores muy bajos a
+  deformaciones pequeñas (0.02 % en la arcilla, 0.25 % en la arena). La curva
+  de IP = 50 arranca en cerca de 1.3 %; revisar qué valor mínimo se usa en el
+  programa de respuesta de sitio (la referencia usó 5 % en todas las capas).
+- **Programa:** DEEPSOIL ya no se descarga de la Universidad de Illinois; desde
+  julio de 2025 es RSSeismic (Rocscience). Confirmar con el profesor.
+- **Muestras M3 y M12:** clasificadas como GP-GM (grava 47 % > arena 43 %,
+  Cc < 1), como en el Excel de ensayos. Tienen los
+  mismos datos; consultar con el profesor.
+- **Errores por corregir en el Excel de ensayos:** (1) `Sheet1` D14: el
+  amortiguamiento de la columna resonante a 0.05 % es 2.05, no 1.05;
+  (2) `Granulometría` N4 y N6: D10 de M3 y M12 es 0.078 mm, no 0.8;
+  (3) `Resumen clasificación` K: la columna "PI" es la línea A, 0.73(LL−20);
+  (4) `Triaxial cíclico M5` I: τ = G·γ/100 (31.8 kPa en el primer ensayo).
