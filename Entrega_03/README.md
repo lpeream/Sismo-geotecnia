@@ -40,8 +40,8 @@ crudos del down hole están en `recursos/`.
 ## Notas para continuar (puntos 3 a 7)
 
 - **Perfil adoptado (puntos 1 y 2):** dos estratos cortados en 15 m, una
-  pendiente por estrato en la gráfica de la onda S. E1, arena y grava con limo
-  (SP-SM y GP-GM) de 0 a 15 m: Vs = 150 m/s, γ = 18.6 kN/m3, ρ = 1896 kg/m3,
+  pendiente por estrato en la gráfica de la onda S. E1, arena con grava y limo
+  (SP-SM) de 0 a 15 m: Vs = 150 m/s, γ = 18.6 kN/m3, ρ = 1896 kg/m3,
   Gmax = 42.7 MPa. E2, arcilla CL (CH en la base) de 15 a 30 m: Vs = 385 m/s,
   γ = 18.7 kN/m3, ρ = 1906 kg/m3, Gmax = 282.5 MPa. Vs30 = 216 m/s, perfil
   tipo D. La columna resonante queda por debajo del Gmax del down hole en los
@@ -60,9 +60,10 @@ crudos del down hole están en `recursos/`.
   programa de respuesta de sitio (la referencia usó 5 % en todas las capas).
 - **Programa:** DEEPSOIL ya no se descarga de la Universidad de Illinois; desde
   julio de 2025 es RSSeismic (Rocscience). Confirmar con el profesor.
-- **Muestras M3 y M12:** clasificadas como GP-GM (grava 47 % > arena 43 %,
-  Cc < 1), como en el Excel de ensayos. Tienen los
-  mismos datos; consultar con el profesor.
+- **Muestras M3 y M12:** clasificadas como SP-SM, como dice el profesor:
+  pasa por el No. 4 el 52.9 % del total. Ojo: con la fracción gruesa (ASTM
+  D2487) darían GP-GM (la grava es el 52 % de la fracción gruesa); están en
+  el límite. Tienen los mismos datos.
 - **Errores por corregir en el Excel de ensayos:** (1) `Sheet1` D14: el
   amortiguamiento de la columna resonante a 0.05 % es 2.05, no 1.05;
   (2) `Granulometría` N4 y N6: D10 de M3 y M12 es 0.078 mm, no 0.8;
